@@ -50,7 +50,7 @@ driver_try <- function(...) {
 # Construct L0 data ---------------------------------------------
 # L0 data are raw but in long CSV form, with Logger/Table/ID columns added
 
-message("Running L0")
+message(Sys.time(), " Running L0")
 new_section("Starting L0")
 
 outfile <- paste0("L0_", now_string(), ".html")
@@ -65,12 +65,11 @@ driver_try(
 )
 copy_output("L0.html", outfile)
 
-
 # 'Normalize' L0 data -------------------------------------------
 # Matched with design_link info
 # This is an intermediate step, not exposed to data users
 
-message("Running L1_normalize.qmd")
+message(Sys.time(), " Running L1_normalize.qmd")
 new_section("Starting L1_normalize")
 
 outfile <- paste0("L1_normalize_", now_string(), ".html")
@@ -91,7 +90,7 @@ copy_output("L1_normalize.html", outfile)
 # File are written into folders based on site, year, and month;
 # see write_to_folders() in helpers.R
 
-message("Running L1.qmd")
+message(Sys.time(), " Running L1.qmd")
 new_section("Starting L1")
 
 outfile <- paste0("L1_", now_string(), ".html")
@@ -124,7 +123,7 @@ copy_output("L1.html", outfile)
 # L2 data are semi-wide form, organized around experimental units for
 # each timestamp. They have been matched with plot/experimental info, and ready for analysis
 
-message("Running L2.qmd")
+message(Sys.time(), " Running L2.qmd")
 new_section("Starting L2")
 
 outfile <- paste0("L2_", now_string(), ".html")
@@ -142,4 +141,4 @@ outfile <- file.path(LOGS, outfile)
 
 if(ERROR_OCCURRED) warning ("One or more errors occurred!")
 
-message("All done.")
+message(Sys.time(), " All done.")
