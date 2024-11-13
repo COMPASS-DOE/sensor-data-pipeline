@@ -1,7 +1,7 @@
-# data-workflows
+# sensor-data-pipeline
 
 <!-- badges: start -->
-[![check-workflow](https://github.com/COMPASS-DOE/data-workflows/actions/workflows/check-workflow.yaml/badge.svg)](https://github.com/COMPASS-DOE/data-workflows/actions/workflows/check-workflow.yaml)
+[![check-workflow](https://github.com/COMPASS-DOE/data-workflows/actions/workflows/check-workflow.yaml/badge.svg)](https://github.com/COMPASS-DOE/sensor-data-pipeline/actions/workflows/check-workflow.yaml)
 <!-- badges: end -->
 
 COMPASS-FME processing pipeline for environmental sensor data.
