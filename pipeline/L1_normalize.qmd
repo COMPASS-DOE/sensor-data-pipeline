@@ -254,7 +254,7 @@ f <- function(fn, out_dir, design_table) {
     # The Chesapeake Bay synoptic site design overlaps with TEMPEST,
     # and the latter's control ("C") plot functions as the former's
     # upland plot. So if we're handling TMP C data, also write a copy
-    # as GCW UP. https://github.com/COMPASS-DOE/data-workflows/issues/116
+    # as GCW UP. https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/116
     if(dat$Site[1] == "TMP" && dat$Plot[1] == "C") {
         dat$Site <- "GCW"
         dat$Plot <- "UP"

@@ -16,7 +16,7 @@ files <- list.files("./", pattern = regex, recursive = TRUE, full.names = TRUE)
 # Helper function to read the files and filter to just the variable we want
 # Use readr::read_csv for easy timestamp handling
 # Note that we set "col_types" to force the "Plot" column to be read as a
-# character; see https://github.com/COMPASS-DOE/data-workflows/issues/186
+# character; see https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/186
 library(readr)
 f <- function(f) {
     message("Reading ", basename(f))

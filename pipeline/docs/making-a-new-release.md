@@ -3,13 +3,13 @@
 1. Make sure you're up-to-date with the latest version of `main`.
 
 2. Add new raw files from the Dropbox folder(s) into
-`./synoptic/data/Raw/`. Right now, this should include files from the
+`./pipeline/data/Raw/`. Right now, this should include files from the
 TEMPEST, synoptic, and GCReW met Dropbox shares. Basically, bring your
 raw data files up to date. Using the terminal can make this easy:
 
 ```
 # v1-1 update copy steps for June 2024 files
-# Working directory is Dropbox, and $PATH points to data-workflows/synoptic
+# Working directory is Dropbox, and $PATH points to sensor-data-pipeline/pipeline
 # Note that the folder organization in Raw/ is for user convenience only
 
 cp TEMPEST_PNNL_Data/Loggernet_Rawdata_Archive/*202406* $PATH/data/Raw/Synoptics
@@ -26,24 +26,24 @@ These are archived with each release.
 4. Set the release version in `driver.R`.
 
 5. Make sure there's a README for your release number in
-`./synoptic/metadata/L1_metadata/`. The L1 step will error if a file
+`./pipeline/metadata/L1_metadata/`. The L1 step will error if a file
 named `README_vXXX.txt` doesn't exist there, where "XXX" is the version
 number you set in step 4. Make sure that the citation and changelog
 sections of this document are up to date.
 
 6. Update the out-of-service files in
-`./synoptic/metadata/out-of-service` (see the README in that folder).
+`./pipeline/metadata/out-of-service` (see the README in that folder).
 
 7. Occasionally, check with site PIs to see if the site-specific contact
 information should be updated, and if so, update the various site files
-in `./synoptic/metadata/L1_metadata`.
+in `./pipeline/metadata/L1_metadata`.
 
 8. Commit all your changes. Now set the `ROOT` variable in `driver.R`
 (if that's what you're using) to "./data" instead of "./data_TEST". This
 change does NOT get committed, however, because you want GitHub Actions
 to continue to use the _test_ data.
 
-9. From the `./synoptic` folder, run `reset("data/")` (this function
+9. From the `./pipeline` folder, run `reset("data/")` (this function
 should be sourced from `helpers.R`). This will clean out any previous
 files.
 

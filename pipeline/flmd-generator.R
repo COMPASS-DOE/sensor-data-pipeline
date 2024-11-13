@@ -6,9 +6,9 @@
 library(tidyr)
 library(dplyr)
 
-# Need to run this script from within synoptic directory
-if(basename(getwd()) != "synoptic") {
-    stop("Working directory needs to be synoptic/")
+# Need to run this script from within pipeline directory
+if(basename(getwd()) != "pipeline") {
+    stop("Working directory needs to be pipeline/")
 }
 
 # Get all the files and fill in path and name data

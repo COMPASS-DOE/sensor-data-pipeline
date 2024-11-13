@@ -5,9 +5,9 @@
 
 library(quarto)
 
-# Need to run this script from within synoptic directory
-if(basename(getwd()) != "synoptic") {
-    stop("Working directory needs to be synoptic/")
+# Need to run this script from within pipeline directory
+if(basename(getwd()) != "pipeline") {
+    stop("Working directory needs to be pipeline/")
 }
 if(!require("compasstools")) {
     stop("Need to remotes::install_github('COMPASS-DOE/compasstools')")
