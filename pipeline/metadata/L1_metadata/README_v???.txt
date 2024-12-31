@@ -10,7 +10,7 @@ Level 1 (L1) data are close to raw, but are units-transformed
 and have out-of-instrument-bounds and out-of-service flags added.
 Duplicates are removed but otherwise these data are not filtered,
 and have not been subject to any additional algorithmic or human QA/QC.
-Any use of L1 data for science analyses should be performed with care.
+Any analyses using L1 data should be performed with care.
 
 CONTACT
 —----------------------------------
