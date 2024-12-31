@@ -1,0 +1,10 @@
+"TOA5","Compass_GWI_TR_412","CR1000X","28731","CR1000X.Std.05.01","CPU:COMPASS_v3.32CR1X.CR1X","63875","CheckTable"
+"TIMESTAMP","RECORD","BattV","SolarV","Batt_CHECK","Solar_CHECK","Flag(1)","Flag(2)","Flag(3)","Flag(4)","Flag(5)","Flag(6)","Flag(7)","Flag(8)","Flag(9)","Flag(10)","Flag(11)","Flag(12)","Flag(13)","Flag(14)","Statname","PB"
+"TS","RN","Volts","Volts","","","","","","","","","","","","","","","","","",""
+"","","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp"
+"2024-11-15 11:45:00",0,11.96,26.95,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
+"2024-11-15 13:00:00",0,11.96,26.03,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
+"2024-11-15 13:15:00",1,11.96,25.99,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
+"2024-11-15 13:30:00",2,11.96,26.1,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
+"2024-11-15 13:45:00",3,11.96,26.68,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
+"2024-11-15 14:00:00",4,11.96,26.3,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_GWI_TR",412
