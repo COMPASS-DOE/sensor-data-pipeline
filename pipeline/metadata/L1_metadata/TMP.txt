@@ -8,12 +8,26 @@ NOTE: Meteorological data for TEMPEST are available in the GCW-W files
 and are from the GCReW met station. See notes in the GCW metadata.
 
 The TEMPEST flood events occurred on the following dates. They
-lasted for ~10 hours each day and delivered ~80,000 gallons to each plot;
-many data streams are available at 1 or 5 minute frequency during these periods.
-* Tests: Aug 25 (fresh plot) and Sep 9 (salt plot), 2021
-* TEMPEST 1: June 22, 2022
-* TEMPEST 2: June 6-7, 2023
-* TEMPEST 3: June 11-13, 2024
+lasted for ~10 hours each day and delivered ~80,000 gallons to each plot.
+Many data streams are available at 1 or 5 minute frequency during these periods.
+
+Event       | Date       | S-pump_on | S-pump_off | S-vol | F-pump_on | F-pump_off | F-vol 
+----------- | ---------- | --------- | ---------- | ----- | --------- | ---------- | ----- 
+TEST        | 2021-08-25 |           |            |       | 06:00     | 16:00      | 81212 
+            | 2021-09-09 | 06:00     | 16:00      | 76805 |           |            |       
+TEMPEST I   | 2022-06-22 | 05:05     | 14:38      | 70489 | 05:07     | 15:00      | 69452  
+TEMPEST II  | 2023-06-06 | 04:45     | 15:07      | 81206 | 04:45     | 14:50      | 81265   
+            | 2023-06-07 | 04:52     | 15:00      | 80801 | 04:57     | 14:39      | 80811   
+TEMPEST III | 2024-06-11 | 05:10     | 15:36      | 80003 | 05:10     | 15:36      | 79996   
+            | 2024-06-12 | 05:08     | 15:19      | 80008 | 05:10     | 15:25      | 79994   
+            | 2024-06-13 | 05:21     | 15:29      | 80005 | 05:22     | 15:28      | 79989   
+
+NOTES:
+* For the 2021 TEST event, times are estimated and freshwater was applied to both plots
+* "S-pump_on" and "S-pump_off" are the times (EST) water flow started and stopped into the saltwater plot
+* "F-pump_on" and "F-pump_off" are the times (EST) water flow started and stopped into the freshwater plot
+* "S-vol" and "F-vol" are the total volumes (gallons) of water delivered to each plot
+
 
 Contact for the TEMPEST site: 
 J. Patrick Megonigal megonialp@si.edu
