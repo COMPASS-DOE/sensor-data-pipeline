@@ -2,7 +2,7 @@
 
 
 # Find and count lines for all files in the L1 folder
-fls <- list.files("./data/L1/", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
+fls <- list.files("~/Documents/v1-1/", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
 
 library(tibble)
 results <- tibble(file = basename(fls), rows = NA_real_)
@@ -43,18 +43,46 @@ ggsave("~/Desktop/heatmap.png", height = 6, width = 10)
 # Compute cumulative observations by site and date
 results %>%
     complete(Site, Date, fill = list(rows = 0)) %>%
-    group_by(Site, Date) %>%
+    group_by(Site, year(Date)) %>%
     summarise(n = sum(rows, na.rm = TRUE), .groups = "drop") %>%
-    arrange(Date) %>%
+    rename(Year = `year(Date)`) %>%
     group_by(Site) %>%
     mutate(cum_n = cumsum(n)) ->
     smry
 
-p2 <- ggplot(smry, aes(Date, cum_n, fill = Site)) +
-    geom_area(alpha = 0.8 , linewidth = 0.5, colour = "white") +
+smry
+p2 <- ggplot(smry, aes(x = Date, y = cum_n, fill = Site)) +
+    geom_line(alpha = 0.8 , linewidth = 0.5, colour = "white") +
     xlab("Year") + ylab("COMPASS-FME environmental sensor observations") +
     scale_fill_viridis(discrete = TRUE) +
     theme(axis.title = element_text(size = 14)) +
-    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
+    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6)) +
+    transition_reveal(Date) + view_follow(fixed_y = TRUE)
+animate(p2)
 print(p2)
 ggsave("~/Desktop/sensors.png", height = 6, width = 8)
+
+ggplot(smry, aes(x = factor(Year), y = n, fill = Site)) +
+    geom_bar(position = "stack", stat = "identity") +
+    theme(axis.title = element_text(size = 30), axis.text = element_text(size = 30),
+          legend.text = element_text(size =20), legend.title = element_text(size =20)) +
+    scale_fill_manual(values = site_colors) +
+    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6)) +
+    xlab("Year") + ylab("COMPASS-FME environmental sensor observations") +
+    transition_states(Year) +
+    shadow_mark() -> gif
+
+site_colors <- c(
+    "CRC" = "#29363b",
+    "GCW" = "#009875",
+    "GWI" = "#99b898",
+    "MSM" = "#fecea8",
+    "OWC" = "#ff857b",
+    "PTR" = "#e94a5f",
+    "SWH" = "#c03a2b",
+    "TMP" = "#96281b")
+
+animate(gif, fps = 10, duration = 10,
+        width = 1000, height = 800, renderer = gifski_renderer(loop = FALSE))
+
+anim_save("~/Documents/bar_chart.gif")
