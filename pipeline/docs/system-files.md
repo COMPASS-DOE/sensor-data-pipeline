@@ -13,6 +13,7 @@ The root of the system, holding main Quarto files, helper files, and the driver 
 File | Description
 ---- | -------------
 `data/` | Data folder that holds inputs (raw data), outputs, and logs; see below
+`data_PREFLIGHT/` | Preflight data folder for testing updated data only; see below
 `data_TEST/` | Test data folder that holds inputs (raw data), outputs, and logs; see below
 `docs/` | Documentation folder; see below
 `driver.R` | A 'driver' script that runs all the Quarto files sequentially and by default in parallel mode, which is fast but generates no logs
@@ -40,6 +41,12 @@ File | Description
 `Logs/` | Folder of all log files
 `Raw/` | Folder of Raw data, copied (occasionally with edits) from the SERC Dropbox
 `Raw_done/` | Folder of completely processed raw data; not used currently
+
+## ./pipeline/data_PREFLIGHT
+
+This directory tree is empty by default and intended as a convenience: you can
+copy new data into its `Raw/`, and then run the data system to confirm there are
+no problems. See `docs/making-a-new-release.md`.
 
 ## ./pipeline/data_TEST
 
