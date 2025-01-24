@@ -97,20 +97,20 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
         for(m in unique(months)) {
             write_this_plot <- FALSE
 
-            # Sanity checks
-            if(is.na(m)) {
-                stop(data_level, " invalid month ", m)
-            }
-            if(y > nowyr || (y == nowyr && m > nowmo)) {
-                stop("I am being asked to write future data: ",
-                     paste(site, logger, table, y, m))
-            }
-
             # Isolate the data to write
             dat <- x[y == years & m == months,]
             if(!nrow(dat)) {
                 message("No data for ", y, "_", m, " - skipping")
                 next
+            }
+
+            # Sanity checks
+            if(is.na(m)) {
+                stop(data_level, " invalid month ", m)
+            }
+            if(y > nowyr || (y == nowyr && m > nowmo)) {
+                stop("I am being asked to write ", nrow(dat), " rows of future data: ",
+                     paste(site, logger, table, y, m))
             }
 
             # Construct folder and file names
