@@ -77,8 +77,11 @@ relatively fast, because highly parallelized, but you don't get
 informative html logs, because the parallel processes can't write to
 output. If you want the full, detailed logs, run without parallelism
 (either by rendering the Quarto files one by one, or changing the driver
-script). Of course, this is much slower.
-
+script). Of course, this is much slower. 
+If errors happen, they almost always will occur in the `L1_normalize` 
+step, as this has multiple complex data merges and checks. 
+See https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/232
+for examples of how to resolve these.
 
 ## Check, clean up, upload
 
