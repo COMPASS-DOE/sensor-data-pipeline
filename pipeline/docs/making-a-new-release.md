@@ -19,7 +19,7 @@ cp GCREW_LOGGERNET_DATA/GCREW_MET_GCREW_MET_15min_202406* $PATH/data/Raw/GCREW\ 
 cp COMPASS_PNNL_Data/COMPASS_PNNL_Rawdata_Archive/*202406* $PATH/data/Raw/Synoptics
 ```
 
-If there are have lots of files to copy, you can use a regular expression and `xargs`:
+If there are lots of files to copy, you can use `grep` and `xargs`:
 ```
 # Copy September-December 2024 met files
 ls | grep -E 'GCREW_MET_GCREW_MET_15min_2024(09|10|11|12)' | xargs -I {} cp {} $PATH/data/Raw/GCReW\ Met
@@ -37,10 +37,10 @@ rsync -av <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/
 ```
 
 4. You might want to do a test run with _only_ the new data. In that
-case, use the `./pipline/data_PREFLIGHT`: copy the new files to its
+case, use `./pipline/data_PREFLIGHT`: copy the new files to its
 `Raw/` folder and run the pipeline by setting the `ROOT` variable in
 `driver.R`. If everything looks good, move the raw files over to the
-main `data/Raw/` folder and proceed.
+`./pipeline/data/Raw/` folder and proceed.
 
 
 ## Update the metadata
@@ -50,8 +50,8 @@ main `data/Raw/` folder and proceed.
 6. Make sure there's a README for your release number in
 `./pipeline/metadata/L1_metadata/`. The L1 step will error if a file
 named `README_vXXX.txt` doesn't exist there, where "XXX" is the version
-number you set in step 4. Make sure that the citation and changelog
-sections of this document are up to date.
+number you set in the previous step. Make sure that the citation and
+changelog sections of this document are up to date.
 
 7. Update the out-of-service files in
 `./pipeline/metadata/out-of-service` (see the README in that folder).
@@ -68,9 +68,8 @@ various site files in `./pipeline/metadata/L1_metadata`.
 **This change does NOT get committed**, however, because you want GitHub
 Actions to continue to use the _test_ data.
 
-10. From the `./pipeline` folder, run `reset("data/")` (this function
-should be sourced from `helpers.R`). This will clean out any previous
-files.
+10. From the `./pipeline` folder, run `reset("data/")` (sourced from 
+`helpers.R`) to remove any previous files.
 
 11. Run the processing pipeline. If you use `driver.R` it will be
 relatively fast, because highly parallelized, but you don't get
@@ -82,6 +81,7 @@ If errors happen, they almost always will occur in the `L1_normalize`
 step, as this has multiple complex data merges and checks. 
 See https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/232
 for examples of how to resolve these.
+
 
 ## Check, clean up, upload
 
