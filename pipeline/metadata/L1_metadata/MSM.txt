@@ -1,10 +1,10 @@
 Moneystump Swamp (MSM) is one of COMPASS-FME synoptic sites located in
 the Blackwater National Wildlife Refuge along the mesohaline Beaverdam
 Creek. This synoptic site consists of three plots: upland ("UP"; located
-at 38.4315N, 76.2267W), transition ("TR"; 38.4310N, 76.2277W), and
-wetland ("W"; 38.4308N, 76.2286W). The site was established in June
-2022. The transect spans a coastal loblolly pine forest and a mesohaline
-marsh dominated by Spartina and Distichlis.
+at 38.4315N, 76.2267W), transition ("TR"; 38.4310N, 76.2277W),
+wetland ("W"; 38.4308N, 76.2286W), and open water ("OW"; 38.4289N,
+76.2374W). The site was established in June 2022. The transect spans a coastal
+loblolly pine forest and a mesohaline marsh dominated by Spartina and Distichlis.
 
 NOTE: Meteorological data for MSM are available in the MSM-W files.
 
@@ -13,9 +13,9 @@ Stephanie J. Wilson <wilsonsj@si.edu>
 Pat Megonigal <megonigalp@si.edu>
 Nick Ward <nicholas.ward@pnnl.gov>
 
-Contacts for Moneystump Swamp data streams: 
+Contacts for Moneystump Swamp data streams:
 Overall: S. Wilson
-Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu> 
+Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu>
 TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
 AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
 ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
