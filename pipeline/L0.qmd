@@ -156,7 +156,7 @@ f <- function(fn, new_dir) {
 if(params$run_parallel) {
     library(parallel)
     apply_func = mclapply
-    options(mc.cores = detectCores())
+    options(mc.cores = max(detectCores() - 4, 1))
     message("Using parallel::mclapply with ", getOption("mc.cores"), " cores")
 } else {
     apply_func = lapply
