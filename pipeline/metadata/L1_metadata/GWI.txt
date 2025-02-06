@@ -1,7 +1,8 @@
 Goodwin Island (GWI) is one of COMPASS-FME synoptic sites, and has three
 plots: upland ("UP"; located at 37.2192N, 76.4087W), transition ("TR";
 37.2194N, 76.4092W), and wetland ("W"; 37.2189N, 76.4101W). The site was
-established in June 2022.
+established in June 2022. This site is also identified as a Chesapeake Bay
+National Research Reserve site.
 
 NOTE: Meteorological data for GWI are available in the GWI-W files.
 
@@ -12,7 +13,7 @@ Nick Ward <nicholas.ward@pnnl.gov>
 
 Contacts for Goodwin Island data streams:
 Overall: S. Wilson
-Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu> 
+Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu>
 TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
 AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
 ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
@@ -20,4 +21,4 @@ EXO: S. Wilson; Drew Peresta <PerestaA@si.edu>; R. Rich; Lydia LaGorga <LaGorgaL
 Dataloggers: S. Wilson; E. Phillips; A. Stearns; R. Rich
 
 Key publications:
-N/A as of yet 
+N/A as of yet

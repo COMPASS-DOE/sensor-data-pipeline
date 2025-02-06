@@ -4,8 +4,9 @@ the confluence of the Portage and Little Portage rivers, 5.25 miles (8.5
 km) east of Oak Harbor, Ohio. This site is owned by the USFWS and
 managed as a part of the Ottawa National Wildlife Refuge complex. This
 site consists of three plots: upland ("UP"; located at 41.5015N,
-83.0461W), transition ("TR"; 41.5020N, 83.0456W), and wetland ("W";
-41.5016N, 83.0444W). The site was established in December 2021.
+83.0461W), transition ("TR"; 41.5020N, 83.0456W), wetland ("W"; 41.5016N,
+83.0444W), and open water ("OW"; 41.5016N, 83.0416W). The site was established
+in December 2021.
 
 NOTE: Meteorological data for PTR are available in the PTR-W files.
 
