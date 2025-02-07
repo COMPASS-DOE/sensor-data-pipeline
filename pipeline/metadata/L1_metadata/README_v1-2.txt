@@ -37,7 +37,7 @@ Island), MSM (Moneystump Marsh), OWC (Old Woman Creek), PTR (Portage
 River), SWH (Sweet Hall Marsh), and TMP (TEMPEST experiment). See
 site-specific metadata files in each folder.
 
-Data are normally logged at a 15 minute interval, but this is **not** 
+Data are normally logged at a 15 minute interval, but this is **not**
 guaranteed. In particular, there may be:
 * Missing data points (due to offline sensors, for example);
 * Multiple, numerically different observations for a given timestamp (rare);
@@ -45,21 +45,21 @@ guaranteed. In particular, there may be:
 
 DATA VERSIONS
 —----------------------------------
-COMPASS-FME L1 data releases use semantic versioning (https://semver.org). 
-This means that given a version number MAJOR-MINOR-PATCH, we increment the: 
-* MAJOR number when we make incompatible changes to the data structure; 
-* MINOR version when we add data in a backwards-compatible manner; and 
+COMPASS-FME L1 data releases use semantic versioning (https://semver.org).
+This means that given a version number MAJOR-MINOR-PATCH, we increment the:
+* MAJOR number when we make incompatible changes to the data structure;
+* MINOR version when we add data in a backwards-compatible manner; and
 * PATCH version when we fix documentation and the like.
 
 Importantly, “backward compatible” does NOT mean that the data don’t
-change, only that your scripts using L1 data will probably still work. 
+change, only that your scripts using L1 data will probably still work.
 
 CHANGELOG
 —----------------------------------
 Version 1-2 released 2025-02-07
 * Covers late 2019 through December 2024 for TEMPEST and all synoptic sites
 * All sonde (EXO) data now appear in their own "OW" (open water) plot
-* The TEMPEST (TMP) folder README files now include detail information on flood timings, volumes, etc.
+* The TEMPEST (TMP) folder README files now include detailed information on flood timings, volumes, etc.
 
 Version 1-1 released 2024-08-05
 * Covers late 2019 through July 2024 for TEMPEST and all synoptic sites
@@ -71,7 +71,7 @@ Version 1-0 released 2024-05-29
 * Restructured for ease of use, with metadata (location, sensor ID, etc) in separate columns
 * SWH plot naming reworked for new upland plot
 * Mirroring TMP C to GCW UP for synoptic site consistency
-* GCReW weather station variables are now included in GCW-W 
+* GCReW weather station variables are now included in GCW-W
 * Many fixes to variable units and bounds
 * Out-of-service is valid for AquaTROLL and EXO
 
