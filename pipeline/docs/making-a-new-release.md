@@ -96,6 +96,7 @@ use find's `-print` option to make sure you know what you're deleting!)
 COMPASS HPC. For example:
 
 ```
+# this shows for L1, but you also do this for Raw, L0, and Logs as well
 rsync -av --exclude=".*" L1/ <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Level1/v1-0/
 ```
 

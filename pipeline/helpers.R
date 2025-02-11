@@ -78,10 +78,16 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 
 # The data (x) should be a data frame with a POSIXct 'TIMESTAMP' column
 # This is used to split the data for sorting into <yyyy>_<mm> folders
+# Assumption: x represents a single site and plot
 # Returns a list of filenames written (names) and number of data lines (values)
 write_to_folders <- function(x, root_dir, data_level, site, plot,
                              logger, table, version = "???",
                              quiet = FALSE, write_plots = TRUE) {
+    # Sanity check
+    if("Plot" %in% names(x)) {
+        stopifnot(length(unique(x$Plot)) == 1)
+    }
+
     years <- year(x$TIMESTAMP)
     months <- sprintf("%02i", month(x$TIMESTAMP)) # add leading zero if needed
     vversion <- paste0("v", version)

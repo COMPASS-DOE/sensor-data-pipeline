@@ -272,11 +272,11 @@ f <- function(fn, out_dir, design_table) {
     return(smry)
 }
 
-# We can optionally process in parallel using all available cores
+# We can optionally process in parallel
 if(params$run_parallel) {
     library(parallel)
     apply_func = mclapply
-    options(mc.cores = detectCores())
+    options(mc.cores = max(detectCores() - 2, 1))
     message("Using parallel::mclapply with ", getOption("mc.cores"), " cores")
 } else {
     apply_func = lapply
