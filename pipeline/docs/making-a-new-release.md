@@ -100,10 +100,10 @@ COMPASS HPC. For example:
 rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --exclude=".*" L1/ <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Level1/v1-2/
 
 # Important note w.r.t. MacOS: we use the -chown option to ensure that
-# the correct group is associated with the uploaded files uploaded, but
-# by default MacOS comes with a VERY old (2.6.9, 2006) rsync that
-# doesn't support this. You can either do the 'chown' step subsequently
-# on the COMPASS HPC, or use Homebrew (https://brew.sh) to install an
+# the correct group is associated with the uploaded files, but by
+# default MacOS comes with an old (2.6.9, 2006) rsync that doesn't
+# support this. You can either do the 'chown' step subsequently on the
+# COMPASS HPC, or use Homebrew (https://brew.sh) to install an
 # up-to-date version of rsync.
 ```
 
