@@ -96,15 +96,14 @@ use find's `-print` option to make sure you know what you're deleting!)
 COMPASS HPC. For example:
 
 ```
-# this shows for L1 v1-2, but you also do this for Raw, L0, and Logs as well
+# this example is for for L1 v1-2; use similar calls this for Raw, L0, and Logs
 rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --exclude=".*" L1/ <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Level1/v1-2/
 
-# Important note w.r.t. MacOS: we use the -chown option to ensure that
-# the correct group is associated with the uploaded files, but by
-# default MacOS comes with an old (2.6.9, 2006) rsync that doesn't
-# support this. You can either do the 'chown' step subsequently on the
-# COMPASS HPC, or use Homebrew (https://brew.sh) to install an
-# up-to-date version of rsync.
+# Important note: we use the -chown option to ensure that the correct
+# group is associated with the uploaded files, but by default MacOS
+# comes with an old (2.6.9, 2006) rsync that doesn't support this. You
+# can either do the 'chown' step subsequently on the COMPASS HPC, or use
+# Homebrew (https://brew.sh) to install an up-to-date version of rsync.
 ```
 
 15. Upload to the Google Drive, renaming the folder to the correct
