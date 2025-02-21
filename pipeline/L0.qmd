@@ -72,12 +72,20 @@ Working directory is `r getwd()`.
 overwrites <- 0
 errors <- 0
 
+time_reading <- 0
+time_reshaping <- 0
+time_writing <- 0
+
 f <- function(fn, new_dir) {
 
     basefn <- basename(fn)
     message(Sys.time(), " Processing ", basefn)
     
-    dat <- read_datalogger_file(fn, col_types = cols(.default = col_character()))
+    x <- system.time({
+        dat <- read_datalogger_file(fn, col_types = cols(.default = col_character()))
+    })
+    time_reading <<- time_reading + x[3]
+    
     message("\tOriginal data is ", nrow(dat), " x ", ncol(dat))
     note <- ""
     long_rows <- long_cols <- short_hash <- NA
@@ -99,9 +107,13 @@ f <- function(fn, new_dir) {
         note <- "Too short; skipped"
     } else {
         # Pivot to long form. We need to do this now to calculate unique observation IDs
-        dat_long <- pivot_longer(dat, c(-Logger, -Table, -TIMESTAMP),
-                                 names_to = "loggernet_variable",
-                                 values_to = "value")
+        x <- system.time({
+            dat_long <- pivot_longer(dat, c(-Logger, -Table, -TIMESTAMP),
+                                     names_to = "loggernet_variable",
+                                     values_to = "value")
+        })
+        time_reshaping <<- time_reshaping + x[3]
+
         long_rows <- nrow(dat_long)
         long_cols <- ncol(dat_long)
         message("\tPivoted data is ", long_rows, " x ", long_cols)
@@ -128,7 +140,7 @@ f <- function(fn, new_dir) {
         stripped_fn <- gsub("\\.dat$", "", basefn)
         short_hash <- substr(digest::digest(dat_long, algo = "md5"), 1, 4)
         new_fn <- paste0(stripped_fn, "_", long_rows, "x", long_cols, "_", short_hash, ".csv")
-        
+
         if(file.exists(file.path(new_dir, new_fn))) {
             note <- "Overwriting existing file"
             message("\t", note)
@@ -138,7 +150,10 @@ f <- function(fn, new_dir) {
         # Write the new file
         new_fqfn <- file.path(new_dir, new_fn)
         message("\tWriting ", new_fqfn)
-        write.csv(dat_long, new_fqfn, row.names = FALSE)
+        x <- system.time({
+            readr::write_csv(dat_long, new_fqfn)
+        })
+        time_writing <<- time_writing + x[3]
         rm(dat_long)
     }
     
@@ -181,7 +196,17 @@ if(errors) {
     log_warning(paste("File read/write error(s)", params$html_outfile), 
                 logfile = params$logfile)
 }
+
+time_total <- time_reading + time_reshaping + time_writing
 ```
+
+Time reading = `r time_reading` (`r round(time_reading / time_total * 100, 0)`%)
+
+Time reshaping = `r time_reshaping` (`r round(time_reshaping / time_total * 100, 0)`%)
+
+Time writing = `r time_writing` (`r round(time_writing / time_total * 100, 0)`%)
+
+Total time = `r time_total`
 
 ```{r summary_table}
 out_df <- do.call("rbind", out)
