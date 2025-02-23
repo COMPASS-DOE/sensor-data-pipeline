@@ -24,5 +24,5 @@ Pennington, Rich, Cheng, and Bond-Lamberty (2024). COMPASS-FME Level 1 Sensor Da
 
 CHANGELOG
 —----------------------------------
-Version ??? released YYYY-MM-DD
+Version ??? released [DATESTAMP]
 * Release notes here

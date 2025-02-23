@@ -12,6 +12,7 @@ params:
   METADATA_VARS_TABLE: "L1_metadata_variables.csv"
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
   L1_VERSION: "???"
+  L1_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""
   run_parallel: false
@@ -178,7 +179,7 @@ readme_fn <- file.path(params$METADATA_ROOT, params$L1_METADATA,
 if(!file.exists(readme_fn)) stop("Couln't find ", readme_fn)
 readme <- readLines(readme_fn)
 readme <- gsub("[VERSION]", params$L1_VERSION, readme, fixed = TRUE)
-readme <- gsub("[DATESTAMP]", format(Sys.time(), "%Y-%m-%d"), readme, fixed = TRUE)
+readme <- gsub("[DATESTAMP]", params$L1_RELEASE_DATE, readme, fixed = TRUE)
 readme <- gsub("[OBSERVATIONS]", n_obs, readme, fixed = TRUE)
 readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
 readme_outfn <- file.path(L1, basename(readme_fn))

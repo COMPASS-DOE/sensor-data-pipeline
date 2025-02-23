@@ -56,7 +56,7 @@ change, only that your scripts using L1 data will probably still work.
 
 CHANGELOG
 —----------------------------------
-Version 1-2 released 2025-02-07
+Version 1-2 released [DATESTAMP]
 * Covers late 2019 through December 2024 for TEMPEST and all synoptic sites
 * All sonde (EXO) data now appear in their own "OW" (open water) plot
 * The TEMPEST (TMP) folder README files now include detailed information on flood timings, volumes, etc.
