@@ -7,6 +7,7 @@ params:
   DATA_ROOT: "data_TEST/"
   RAW: "Raw/"
   L0: "L0/"
+  SKIP_IF_EXISTS: true
   logfile: ""
   run_parallel: false
 date: now
@@ -21,13 +22,15 @@ This script
 
 -   Reads in the raw data files one by one
 
+-   By default skip a raw file if a corresponding L0 file already exists
+
 -   Extracts `Logger` and `Table` information from the header and adds them as columns
 
 -   Reshapes from wide to long; only `Logger`, `Table`, and `TIMESTAMP` don't get reshaped
 
 -   Adds a unique observation ID (using `digest::digest()` )
 
--   Writes as CSV files with row/col/hash info in filename
+-   Writes as CSV files with raw file hash info in filename
 
 ## Initializing
 
@@ -69,7 +72,6 @@ Working directory is `r getwd()`.
 ## Processing
 
 ```{r processing}
-overwrites <- 0
 errors <- 0
 
 time_reading <- 0
@@ -81,6 +83,24 @@ f <- function(fn, new_dir) {
     basefn <- basename(fn)
     message(Sys.time(), " Processing ", basefn)
     
+    # Immediately construct the new filename and check if L0 file exists
+    # The new filename is old filename + hash of dat file
+    # This is so we can distinguish datasets with identical raw filenames
+    # but differing data contents (can happen sometimes with dataloggers)
+    stripped_fn <- gsub("\\.dat$", "", basefn)
+    short_hash <- substr(digest::digest(file = fn, algo = "md5"), 1, 6)
+    new_fn <- paste0(stripped_fn, "_", short_hash, ".csv")
+    new_fqfn <- file.path(new_dir, new_fn)
+    if(params$SKIP_IF_EXISTS && file.exists(new_fqfn)) {
+        message("\tL0 file already exists; skipping")
+        return(data.frame(File = basefn,
+               Rows = NA,
+               Columns = NA,
+               Raw_hash = short_hash,
+               Note = "L0 exists; skipped"))
+    }
+
+    # Read the raw data. This is an expensive step
     x <- system.time({
         dat <- read_datalogger_file(fn, col_types = cols(.default = col_character()))
     })
@@ -88,7 +108,7 @@ f <- function(fn, new_dir) {
     
     message("\tOriginal data is ", nrow(dat), " x ", ncol(dat))
     note <- ""
-    long_rows <- long_cols <- short_hash <- NA
+    long_rows <- long_cols <- NA
 
     # read_datalogger_file() adds a "Table" column giving the name of the 
     # datalogger table. If this ends with "_1min" or "_5min" then strip that
@@ -134,21 +154,7 @@ f <- function(fn, new_dir) {
                                   substr(digest::digest(x, algo = "md5"), 1, 16)
                               })
         
-        # Construct the new filename: old filename + nrow + ncol + short hash
-        # This is so we can distinguish datasets with identical raw filename but
-        # differing data contents (can happen sometimes with dataloggers)
-        stripped_fn <- gsub("\\.dat$", "", basefn)
-        short_hash <- substr(digest::digest(dat_long, algo = "md5"), 1, 4)
-        new_fn <- paste0(stripped_fn, "_", long_rows, "x", long_cols, "_", short_hash, ".csv")
-
-        if(file.exists(file.path(new_dir, new_fn))) {
-            note <- "Overwriting existing file"
-            message("\t", note)
-            overwrites <<- overwrites + 1
-        }
-        
         # Write the new file
-        new_fqfn <- file.path(new_dir, new_fn)
         message("\tWriting ", new_fqfn)
         x <- system.time({
             readr::write_csv(dat_long, new_fqfn)
@@ -159,11 +165,9 @@ f <- function(fn, new_dir) {
     
     # Return an informational data frame about file processed, dimensions, etc.
     data.frame(File = basefn,
-               Orig_rows = nrow(dat),
-               Orig_columns = ncol(dat),
                Rows = long_rows,
                Columns = long_cols,
-               Hash = short_hash,
+               Raw_hash = short_hash,
                Note = note)
 }
 
@@ -186,11 +190,6 @@ out <- apply_func(files_to_process, f, new_dir = L0)
 ```{r summary}
 #| echo: false
 #| output: asis
-if(overwrites) {
-    cat("#### NOTE: ", overwrites, " file overwrite(s)\n")
-    log_warning(paste("File overwrite(s)", params$html_outfile), 
-                logfile = params$logfile)
-}
 if(errors) {
     cat("#### WARNING: ", errors, " file read/write error(s)\n")
     log_warning(paste("File read/write error(s)", params$html_outfile), 
