@@ -45,20 +45,24 @@ case, use `./pipline/data_PREFLIGHT`: copy the new files to its
 
 ## Update the metadata
 
-5. Set the release version in `driver.R`.
+5. Set the release version and date in `driver.R`.
 
 6. Make sure there's a README for your release number in
 `./pipeline/metadata/L1_metadata/`. The L1 step will error if a file
 named `README_vXXX.txt` doesn't exist there, where "XXX" is the version
 number you set in the previous step. Make sure that the citation and
-changelog sections of this document are up to date.
+changelog sections of this document are up to date. **NOTE**: if you
+copy the previous version's README template as a starting point, replace
+the older "[DATESTAMP]" in the changelog with the release date of the
+previous version.
 
 7. Update the out-of-service files in
 `./pipeline/metadata/out-of-service` (see the README in that folder).
 
 8. For major (v2-0, etc) releases, check with site PIs to see if the
 site-specific contact information is correct and, if needed, update the
-various site files in `./pipeline/metadata/L1_metadata`.
+various site files in `./pipeline/metadata/L1_metadata`. Also update the
+key publications for each site.
 
 
 ## Run the pipeline
@@ -107,7 +111,7 @@ rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --exclude=".*" L1/ <use
 ```
 
 15. Upload to the Google Drive, renaming the folder to the correct
-version number, again for `L1`, `Raw`, `L0`, and `Logs`.
+version number, for `L1` and `Raw`.
 
 16. Make a Git release corresponding to the version number.
 

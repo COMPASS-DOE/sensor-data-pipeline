@@ -20,6 +20,7 @@ source("helpers.R")
 
 ROOT <- "./data_TEST"
 VERSION <- "1-2"
+RELEASE_DATE <- "2024-02-21"
 
 # Log file ----------------------------------------------------
 
@@ -108,6 +109,7 @@ driver_try(
     quarto_render("L1.qmd",
                   execute_params = list(DATA_ROOT = ROOT,
                                         L1_VERSION = VERSION,
+                                        L1_RELEASE_DATE = RELEASE_DATE,
                                         html_outfile = outfile,
                                         logfile = LOGFILE,
                                         run_parallel = FALSE))
