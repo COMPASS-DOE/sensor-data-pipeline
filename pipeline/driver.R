@@ -3,6 +3,7 @@
 # This calls the quarto (*.qmd) files that handle data processing for
 # each step (raw data to L0, L0 to L1_normalize, etc).
 
+begin_overall <- Sys.time()
 library(quarto)
 
 # Need to run this script from within pipeline directory
@@ -56,6 +57,7 @@ new_section("Starting L0")
 outfile <- paste0("L0_", now_string(), ".html")
 outfile <- file.path(LOGS, outfile)
 
+begin <- Sys.time()
 driver_try(
     quarto_render("L0.qmd",
                   execute_params = list(DATA_ROOT = ROOT,
@@ -64,7 +66,8 @@ driver_try(
                                         run_parallel = TRUE))
 )
 copy_output("L0.html", outfile)
-
+L0_time <- format(round(difftime(Sys.time(), begin), 1))
+message("L0 step: ", L0_time)
 
 # 'Normalize' L0 data -------------------------------------------
 # Matched with design_link info
@@ -76,14 +79,17 @@ new_section("Starting L1_normalize")
 outfile <- paste0("L1_normalize_", now_string(), ".html")
 outfile <- file.path(LOGS, outfile)
 
+begin <- Sys.time()
 driver_try(
     quarto_render("L1_normalize.qmd",
-              execute_params = list(DATA_ROOT = ROOT,
-                                    html_outfile = outfile,
-                                    logfile = LOGFILE,
-                                    run_parallel = TRUE))
+                  execute_params = list(DATA_ROOT = ROOT,
+                                        html_outfile = outfile,
+                                        logfile = LOGFILE,
+                                        run_parallel = TRUE))
 )
 copy_output("L1_normalize.html", outfile)
+L1_normalize_time <- format(round(difftime(Sys.time(), begin), 1))
+message("L1_normalize step: ", L1_normalize_time)
 
 
 # Construct L1 data --------------------------------------------
@@ -97,15 +103,18 @@ new_section("Starting L1")
 outfile <- paste0("L1_", now_string(), ".html")
 outfile <- file.path(LOGS, outfile)
 
+begin <- Sys.time()
 driver_try(
     quarto_render("L1.qmd",
-              execute_params = list(DATA_ROOT = ROOT,
-                                    L1_VERSION = VERSION,
-                                    html_outfile = outfile,
-                                    logfile = LOGFILE,
-                                    run_parallel = FALSE))
+                  execute_params = list(DATA_ROOT = ROOT,
+                                        L1_VERSION = VERSION,
+                                        html_outfile = outfile,
+                                        logfile = LOGFILE,
+                                        run_parallel = FALSE))
 )
 copy_output("L1.html", outfile)
+L1_time <- format(round(difftime(Sys.time(), begin), 1))
+message("L1 step: ", L1_time)
 
 
 # Manual QA/QC step ---------------------------------------------
@@ -142,4 +151,12 @@ outfile <- file.path(LOGS, outfile)
 
 if(ERROR_OCCURRED) warning ("One or more errors occurred!")
 
+overall_time <- format(round(difftime(Sys.time(), begin_overall), 1))
+
+message("\n-----------------")
+message("L0:\t\t", L0_time)
+message("L1_normalize:\t", L1_normalize_time)
+message("L1:\t\t", L1_time)
+message("Overall:\t", overall_time)
+message("-----------------")
 message("All done.")
