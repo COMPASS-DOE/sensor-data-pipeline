@@ -40,7 +40,9 @@ rsync -av <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/
 case, use `./pipline/data_PREFLIGHT`: copy the new files to its
 `Raw/` folder and run the pipeline by setting the `ROOT` variable in
 `driver.R`. If everything looks good, move the raw files over to the
-`./pipeline/data/Raw/` folder and proceed.
+`./pipeline/data/Raw/` folder and proceed. **NOTE** By default, the 
+computationally-intensive L0 step skips a raw file if a corresponding
+L0 file already exists; this makes updating with new data fast.
 
 
 ## Update the metadata
