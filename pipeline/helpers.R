@@ -155,9 +155,7 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
             # Create folder, if needed
             if(!dir.exists(folder)) {
                 if(!quiet) message("Creating ", basename(folder))
-                if(!dir.create(folder, showWarnings = TRUE)) {
-                    stop("dir.create returned error for ", folder)
-                }
+                dir.create(folder, showWarnings = FALSE)
             }
 
             # Convert timestamp to character to ensure that observations
@@ -170,22 +168,22 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
             if(!quiet) message("Writing ", nrow(dat), "/", nrow(x), " rows of data to ",
                                basename(folder), "/", filename)
 
-            fn <- file.path(folder, filename)
-            if(file.exists(fn)) message("\tNOTE: overwriting existing file")
+            fqfn <- file.path(folder, filename)
+            if(file.exists(fqfn)) message("\tNOTE: overwriting existing file")
             # We were using readr::write_csv for this but it was
             # randomly crashing on GA (Error in `vroom write()`: ! bad value)
-            write.csv(dat, fn, row.names = FALSE, na = na_string)
-            if(!file.exists(fn)) {
-                stop("File ", fn, "was not written")
+            write.csv(dat, fqfn, row.names = FALSE, na = na_string)
+            if(!file.exists(fqfn)) {
+                stop("File ", fqfn, "was not written")
             }
 
             # Write basic QA/QC plot
             if(write_plots && write_this_plot) {
-                fn_p <- gsub("csv$", "pdf", fn)
+                fn_p <- gsub("csv$", "pdf", fqfn)
                 ggsave(fn_p, plot = p, width = 12, height = 8)
             }
 
-            lines_written[[fn]] <- nrow(dat)
+            lines_written[[fqfn]] <- nrow(dat)
         } # for m
     } # for y
     invisible(lines_written)
