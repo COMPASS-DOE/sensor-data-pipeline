@@ -15,6 +15,7 @@ date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 
   html:
+    embed-resources: true
     code-fold: true
 editor: visual
 ---
@@ -155,3 +156,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+
