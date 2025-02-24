@@ -195,26 +195,28 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
 reset <- function(root = here::here("pipeline/data_TEST")) {
     message("root is ", root)
 
-    remove_files_folders <- function(dir, pat = "(pdf|csv)$", rec = TRUE) {
-        items <- list.files(file.path(root, dir), recursive = rec,
-                            pattern = pat,
-                            full.names = TRUE)
-        message("Removing ", length(items), " files in ", dir)
-        lapply(items, file.remove)
-        items <- list.files(file.path(root, dir), recursive = rec,
-                            include.dirs = TRUE, full.names = TRUE)
+    remove_items <- function(dir, pat = "(txt|pdf|csv|html)$") {
+        items <- list.files(file.path(root, dir), include.dirs = TRUE,
+                            recursive = TRUE,
+                            pattern = pat, full.names = TRUE)
+
         # Don't remove READMEs or R files
-        items <- items[basename(items) != "README.md"]
-        items <- items[grep("\\.R$", items, invert = TRUE)]
-        message("Removing ", length(items), " directories in ", dir)
-        lapply(items, file.remove)
+        # items <- items[basename(items) != "README.md"]
+        # items <- items[grep("\\.R$", items, invert = TRUE)]
+
+        message("Removing ", length(items), " items in ", dir)
+        file.remove(items)
     }
 
-    remove_files_folders("L0/")
-    remove_files_folders("L1_normalize/")
-    remove_files_folders("L1/")
-    remove_files_folders("L2/")
-    remove_files_folders("Logs/", pat = "(txt|html)$")
+    remove_items("L0/")
+    remove_items("L1_normalize/")
+    # remove L1_normalize folders
+    remove_items("L1_normalize/", pat = "[A-Z]{3}_[A-Z]+_[0-9]{4}_[0-9]{2}")
+    remove_items("L1/")
+    # remove L1 folders
+    remove_items("L1/", pat = "[A-Z]{3}_[0-9]{4}")
+    remove_items("L2/")
+    remove_items("Logs/")
 
     message("All done.")
 }

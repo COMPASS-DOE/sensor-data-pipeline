@@ -2,7 +2,7 @@ on:
   pull_request:
     branches:
       - main
-      - synoptic
+      - dev-v2
 
 name: Synoptic workflow
 
