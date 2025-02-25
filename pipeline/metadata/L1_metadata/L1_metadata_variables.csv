@@ -1,7 +1,7 @@
 table,variable,research_name,sensor_units,final_units,conversion,low_bound,high_bound,description
 Datalogger,BattV,battery_voltage,V,V,x * 1,11,13,Battery voltage of the data logger
 Datalogger,SolarV,solar_voltage,V,V,x * 1,0,30,Solar/line voltage of the data logger
-Sapflow,DiffVolt_Avg,sapflow_2.5cm,mV,mV,x * 1,0,1,Raw sap flow at 2.5 cm depth
+Sapflow,DiffVolt_Avg,sapflow_3.5cm,mV,mV,x * 1,0,1,Raw sap flow at 3.5 cm depth
 Sapflow,DiffVolt_Avg,sapflow_5cm,mV,mV,x * 1,0,1,Raw sap flow at 5 cm depth
 RedoxTable,Redox,redox_10cm,mV,mV,x * 1,-1000,1000,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox_20cm,mV,mV,x * 1,-1000,1000,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
