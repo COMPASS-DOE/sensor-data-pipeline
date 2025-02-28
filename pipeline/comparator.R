@@ -43,3 +43,8 @@ for(i in seq_along(drfiles)) {
 }
 
 message("\nThere are ", sum(differs), " Dropbox files whose contents differ from Raw")
+message("Copying those files to Raw_edited")
+diff_files <- basename(drfiles[differs])
+for(f in diff_files) {
+    file.copy(file.path("data/Raw/", f), "data/Raw/Raw_edited/")
+}
