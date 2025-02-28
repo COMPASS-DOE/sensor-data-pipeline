@@ -28,6 +28,8 @@ This script
 
 -   By default skip a raw file if a corresponding L0 file already exists
 
+-   Checks whether the file is on a 'removal list', and/or whether it should be replaced by an edited (corrected) version
+
 -   Extracts `Logger` and `Table` information from the header and adds them as columns
 
 -   Reshapes from wide to long; only `Logger`, `Table`, and `TIMESTAMP` don't get reshaped
