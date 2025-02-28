@@ -153,6 +153,10 @@ out <- apply_func(names(dirs_to_process),
                   dirs_to_process = dirs_to_process, 
                   out_dir = L1)
 
+# Check whether any of the parallel jobs errored
+if(params$run_parallel && "try-error" %in% sapply(out, class)) {
+    stop("Error! Rerun non-parallel to diagnose")
+}
 out_df <- do.call("rbind", out)
 
 if(!is.numeric(out_df$Rows)) {
