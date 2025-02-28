@@ -288,6 +288,11 @@ out <- apply_func(files_to_process,
                   f,
                   out_dir = L1_NORMALIZE,
                   design_table = dt_ex)
+
+# Check whether any of the parallel jobs errored
+if(params$run_parallel && "try-error" %in% sapply(out, class)) {
+    stop("Error! Rerun non-parallel to diagnose")
+}
 ```
 
 ## Summary
