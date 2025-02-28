@@ -22,6 +22,11 @@ message("There are ", length(removals), " Dropbox files but not Raw")
 recents <- grep("_2025", removals)
 message("...of these ", length(recents), " have a '_2025' pattern")
 
+rlf <- "data/Raw/removed_raw_files.txt"
+message("Writing removal list to ", rlf)
+if(file.exists(rlf)) stop("Removal file already exists!!")
+writeLines(removals, rlf)
+
 # Identify identically-named files whose contents differ
 differs <- rep(FALSE, length(drfiles))
 pb <- txtProgressBar(1, length(drfiles))
