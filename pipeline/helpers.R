@@ -228,49 +228,6 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
     message("All done.")
 }
 
-# Print a nicely-formatted directory tree and its files
-# Usage:
-# list_directories(list("pipeline/Raw/", "pipeline/L0/", "pipeline/L1_normalize/",
-#                       "pipeline/L1/", "pipeline/L2"))
-list_directories <- function(dir_list, outfile = "", prefix = "",
-                             pattern = NULL, list_files = TRUE) {
-
-    for(d in dir_list) {
-        # Print the directory name
-        cat(paste0(prefix, "|\n"), file = outfile, append = TRUE)
-        cat(paste0(prefix, "|- ", basename(d), "/"), "\n", file = outfile, append = TRUE)
-
-        # As we list items, print a vertical pipe except for the last
-        if(d == tail(dir_list, 1)) {
-            thisprefix <- ""
-        } else {
-            thisprefix <- "|"
-        }
-
-        # Print files in this directory; track but don't print subdirectories
-        files <- list.files(d, full.names = TRUE, pattern = pattern)
-        subdirs <- list()
-        filecount <- 0
-        for(f in files) {
-            if(dir.exists(f)) {
-                subdirs[[f]] <- f
-            } else {
-                filecount <- filecount + 1
-                if(list_files) cat(paste0(prefix, thisprefix, "\t|-"),
-                                   basename(f), "\n",
-                                   file = outfile, append = TRUE)
-            }
-        }
-        if(!list_files) cat(paste0(prefix, thisprefix, "\t|- (", filecount, " file",
-                                   ifelse(filecount == 1, "", "s"), ")\n"),
-                            file = outfile, append = TRUE)
-
-        # Now recurse for any subdirectories
-        newprefix <- paste0(prefix, "|\t")
-        list_directories(subdirs, outfile, prefix = newprefix, list_files = list_files)
-    }
-}
-
 
 # The design links might not be stable over time; for example, if a tree
 # dies, its sensor might get reassigned to a new tree. In this case the
