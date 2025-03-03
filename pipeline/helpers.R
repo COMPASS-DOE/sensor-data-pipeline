@@ -44,9 +44,7 @@ copy_output <- function(from, to, overwrite = TRUE) {
 }
 
 
-# Read a vector of CSV files with the same column structure, optionally
-# removing them as we read, and bind data together. The read error count
-# is returned as an attribute of the output
+# Read a vector of CSV files with the same structure and bind data
 read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
     # Warnings are not allowed here, as this usually means a column format
     # problem that we want to fix immediately
@@ -68,33 +66,42 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 # File data into sub-folders based on what level data it is:
 # L1_normalize outputs
 #   Folders are site_year_month
-#   Filenames are Site_logger_table_year_month
+#   Filenames are Site_logger_table_year_month_hash
 # L1 outputs
 #   Folders are site_year
-#   Filenames are site_timeperiod_L1
+#   Filenames are site_timeperiod_L1_version
 # L2 outputs
 #   Folders are site_year
-#   Filenames are site_timeperiod_table_L2
+#   Filenames are site_timeperiod_table_L2_version
 
 # The data (x) should be a data frame with a POSIXct 'TIMESTAMP' column
 # This is used to split the data for sorting into <yyyy>_<mm> folders
 # Assumption: x represents a single site and plot
 # Returns a list of filenames written (names) and number of data lines (values)
-write_to_folders <- function(x, root_dir, data_level, site, plot,
-                             logger, table, version = "???",
+write_to_folders <- function(x, root_dir,
+                             data_level,
+                             site, plot,
+                             logger, table, # only provided for L1_normalize
+                             version = "???",
                              quiet = FALSE, write_plots = TRUE) {
-    # Sanity check
+    # Sanity checks
     if("Plot" %in% names(x)) {
         stopifnot(length(unique(x$Plot)) == 1)
     }
+    if("Site" %in% names(x)) {
+        stopifnot(length(unique(x$Site)) == 1)
+    }
+    stopifnot("TIMESTAMP" %in% names(x))
 
+    # Prep: identify years and months, along with current date
     years <- year(x$TIMESTAMP)
     months <- sprintf("%02i", month(x$TIMESTAMP)) # add leading zero if needed
-    vversion <- paste0("v", version)
-
-    lines_written <- list()
     nowyr <- year(Sys.Date())
     nowmo <- month(Sys.Date())
+    vversion <- paste0("v", version)
+
+    # Loop by years and months
+    lines_written <- list()
     for(y in unique(years)) {
         if(is.na(y)) {
             stop(data_level, " invalid year ", y)
@@ -119,23 +126,21 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
                      paste(site, logger, table, y, m))
             }
 
-            # Construct folder and file names
-            start <- min(dat$TIMESTAMP)
-            end <- max(dat$TIMESTAMP)
-            time_period <- paste(format(start, format = "%Y%m%d"),
-                        format(end, format = "%Y%m%d"),
-                        sep = "-")
+            # Construct folder and file names based on data_level
+            time_period <- paste(format(min(dat$TIMESTAMP), format = "%Y%m%d"),
+                                 format(max(dat$TIMESTAMP), format = "%Y%m%d"),
+                                 sep = "-")
             if(data_level == "L1_normalize") {
                 folder <- file.path(root_dir, paste(site, plot, y, m, sep = "_"))
                 # A given month's data is usually split across two datalogger
                 # files; add a short hash to end of filename to ensure we don't
                 # overwrite anything that's already there
                 short_hash <- substr(digest::digest(dat, algo = "md5"), 1, 4)
-                filename <- paste0(paste(logger, table, y, m, short_hash, sep = "_"), ".csv")
+                filename <- paste(logger, table, y, m, short_hash, sep = "_")
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste0(paste(site, plot, time_period, data_level, vversion, sep = "_"), ".csv")
+                filename <- paste(site, plot, time_period, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
                 write_this_plot <- TRUE
                 p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
@@ -146,11 +151,12 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
                           strip.text = element_text(size = 8))
             } else if(data_level == "L2") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste0(paste(site, time_period, table, data_level, vversion, sep = "_"), ".csv")
+                filename <- paste(site, time_period, table, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else {
                 stop("Unkown data_level ", data_level)
             }
+            filename <- paste0(filename, ".csv")
 
             # Create folder, if needed
             if(!dir.exists(folder)) {
@@ -165,7 +171,8 @@ write_to_folders <- function(x, root_dir, data_level, site, plot,
             }
 
             # Write data
-            if(!quiet) message("Writing ", nrow(dat), "/", nrow(x), " rows of data to ",
+            if(!quiet) message("Writing ", nrow(dat), "/", nrow(x),
+                               " rows of data to ",
                                basename(folder), "/", filename)
 
             fqfn <- file.path(folder, filename)
