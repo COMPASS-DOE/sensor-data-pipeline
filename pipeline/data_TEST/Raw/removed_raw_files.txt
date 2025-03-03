@@ -1,0 +1,6 @@
+# List of files that should be removed from the processing
+# pipline by L0.qmd
+
+Compass_PTR_Buoy_ExoTable_20220824143832.dat
+Compass_PTR_Buoy_ExoTable_20221010000032.dat
+Compass_PTR_Buoy_ExoTable_20221109000314.dat

@@ -1,0 +1,16 @@
+"TOA5","Compass_CRC_TR_302","CR1000X","28733","CR1000X.Std.06.00","CPU:COMPASS_v3.3.CR1X","12050","CheckTable"
+"TIMESTAMP","RECORD","BattV","SolarV","Batt_CHECK","Solar_CHECK","Flag(1)","Flag(2)","Flag(3)","Flag(4)","Flag(5)","Flag(6)","Flag(7)","Flag(8)","Flag(9)","Flag(10)","Flag(11)","Flag(12)","Flag(13)","Flag(14)","Statname","PB"
+"TS","RN","Volts","Volts","","","","","","","","","","","","","","","","","",""
+"","","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp"
+
+======================================================
+== THIS IS A TEST "BAD" FILE -- 
+== CORRECT ("EDITED") VERSION IS IN THE RAW_EDITED FOLDER
+======================================================
+
+"2023-04-21 08:30:00",0,11.93,28.3,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
+"2023-04-21 08:45:00",1,11.93,28.05,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
+"2023-04-21 09:00:00",2,11.93,28.04,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
+"2023-04-21 09:15:00",3,11.93,28.29,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
+"2023-04-21 09:30:00",4,11.93,27.99,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
+"2023-04-21 09:45:00",5,11.93,28.25,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"COMPASS_CRC_TR",302
