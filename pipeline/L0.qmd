@@ -6,6 +6,9 @@ params:
   html_outfile: "L0.html"
   DATA_ROOT: "data_TEST/"
   RAW: "Raw/"
+  RAW_REMOVED: "removed_raw_files.txt"
+  RAW_ORIGINAL: "Raw_original"
+  RAW_EDITED: "Raw_edited"
   L0: "L0/"
   SKIP_IF_EXISTS: true
   logfile: ""
@@ -25,6 +28,8 @@ This script
 
 -   By default skip a raw file if a corresponding L0 file already exists
 
+-   Checks whether the file is on a 'removal list', and/or whether it should be replaced by an edited (corrected) version
+
 -   Extracts `Logger` and `Table` information from the header and adds them as columns
 
 -   Reshapes from wide to long; only `Logger`, `Table`, and `TIMESTAMP` don't get reshaped
@@ -38,8 +43,11 @@ This script
 ```{r init}
 #| include: false
 
-RAW <- file.path(params$DATA_ROOT, params$RAW)
+raw_root <- file.path(params$DATA_ROOT, params$RAW)
+RAW <- file.path(raw_root, params$RAW_ORIGINAL)
 L0 <- file.path(params$DATA_ROOT, params$L0)
+removal_list <- readLines(file.path(raw_root, params$RAW_REMOVED))
+edit_list <- list.files(file.path(raw_root, params$RAW_EDITED), pattern = "dat$")
 
 library(tidyr)
 library(readr)
@@ -62,6 +70,8 @@ source("helpers.R")
 
 I see `r length(files_to_process)` files to process in `r RAW`.
 
+The removal list has `r length(removal_list)` entries. The edit list has `r length(edit_list)` entries.
+
 Output directory is `r L0`.
 
 HTML outfile is `r params$html_outfile`.
@@ -83,13 +93,33 @@ f <- function(fn, new_dir) {
 
     basefn <- basename(fn)
     message(Sys.time(), " Processing ", basefn)
+    note <- ""
+
+    # Check whether this file is on the edit list, and
+    # if yes, read from the edited directory
+    if(any(grepl(basefn, edit_list))) {
+        message("\tFile is on the edit list")
+        fn <- file.path(raw_root, params$RAW_EDITED, basefn)
+        note <- "Used edited version"
+    }
+
+    short_hash <- substr(digest::digest(file = fn, algo = "md5"), 1, 6)
+
+    # Check whether this file is on the removal list
+    if(any(grepl(basefn, removal_list))) {
+        message("\tFile is on the removal list; skipping")
+        return(data.frame(File = basefn,
+               Rows = NA,
+               Columns = NA,
+               Raw_hash = short_hash,
+               Note = "On removal list; skipped"))
+    }
     
-    # Immediately construct the new filename and check if L0 file exists
+    # Construct the new filename and check if L0 file exists
     # The new filename is old filename + hash of dat file
     # This is so we can distinguish datasets with identical raw filenames
     # but differing data contents (can happen sometimes with dataloggers)
     stripped_fn <- gsub("\\.dat$", "", basefn)
-    short_hash <- substr(digest::digest(file = fn, algo = "md5"), 1, 6)
     new_fn <- paste0(stripped_fn, "_", short_hash, ".csv")
     new_fqfn <- file.path(new_dir, new_fn)
     if(params$SKIP_IF_EXISTS && file.exists(new_fqfn)) {
@@ -108,7 +138,6 @@ f <- function(fn, new_dir) {
     time_reading <<- time_reading + x[3]
     
     message("\tOriginal data is ", nrow(dat), " x ", ncol(dat))
-    note <- ""
     long_rows <- long_cols <- NA
 
     # read_datalogger_file() adds a "Table" column giving the name of the 

@@ -5,7 +5,7 @@
 1. Make sure you're up-to-date with the latest version of `main`.
 
 2. Add new raw files from the Dropbox folder(s) into
-`./pipeline/data/Raw/`. Right now, this should include files from the
+`./pipeline/data/Raw/Raw_original/`. Right now, this should include files from the
 TEMPEST, synoptic, and GCReW met Dropbox shares. Basically, bring your
 raw data files up to date. Using the terminal can make this easy:
 
@@ -14,35 +14,33 @@ raw data files up to date. Using the terminal can make this easy:
 # Working directory is Dropbox, and $PATH points to sensor-data-pipeline/pipeline
 # Note that the folder organization in Raw/ is for user convenience only
 
-cp TEMPEST_PNNL_Data/Loggernet_Rawdata_Archive/*202406* $PATH/data/Raw/Synoptics
-cp GCREW_LOGGERNET_DATA/GCREW_MET_GCREW_MET_15min_202406* $PATH/data/Raw/GCREW\ met
-cp COMPASS_PNNL_Data/COMPASS_PNNL_Rawdata_Archive/*202406* $PATH/data/Raw/Synoptics
+cp TEMPEST_PNNL_Data/Loggernet_Rawdata_Archive/*202406* $PATH/data/Raw/Raw_original/Synoptics
+cp GCREW_LOGGERNET_DATA/GCREW_MET_GCREW_MET_15min_202406* $PATH/data/Raw/Raw_original/GCREW\ met
+cp COMPASS_PNNL_Data/COMPASS_PNNL_Rawdata_Archive/*202406* $PATH/data/Raw/Raw_original/Synoptics
 ```
 
 If there are lots of files to copy, you can use `grep` and `xargs`:
 ```
 # Copy September-December 2024 met files
-ls | grep -E 'GCREW_MET_GCREW_MET_15min_2024(09|10|11|12)' | xargs -I {} cp {} $PATH/data/Raw/GCReW\ Met
+ls | grep -E 'GCREW_MET_GCREW_MET_15min_2024(09|10|11|12)' | xargs -I {} cp {} $PATH/data/Raw/Raw_original/GCReW\ Met
 ```
 
 3. **IMPORTANT NOTE:** Some of the raw data files have bad timestamps
-(usually, from when a datalogger is first installed) and I have edited
-those out by hand. So you do NOT want to start with the entire Dropbox
-archive folder, but rather from the raw files of the previous release.
-These are archived with each release. If you don't have these
-raw-but-edited data used in the last release, get it from the HPC:
-```
-# Working directory is ./pipeline/data/Raw
-rsync -av <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Raw/v1-1/ .
-```
+(usually, from when a datalogger is first installed) and have been
+edited by hand, and/or occasionally removed entirely. The `Raw_edited/`
+folder and `removed_raw_files.txt` file in `./pipeline/data/Raw/` are
+for handling these situations; the L0 step uses their contents to
+replace or drop, respectively, the files it reads from
+`./pipeline/data/Raw/Raw_original/`.
 
 4. You might want to do a test run with _only_ the new data. In that
 case, use `./pipline/data_PREFLIGHT`: copy the new files to its
-`Raw/` folder and run the pipeline by setting the `ROOT` variable in
-`driver.R`. If everything looks good, move the raw files over to the
-`./pipeline/data/Raw/` folder and proceed. **NOTE** By default, the 
-computationally-intensive L0 step skips a raw file if a corresponding
-L0 file already exists; this makes updating with new data fast.
+`Raw/Raw_original` folder and run the pipeline by setting the `ROOT`
+variable in `driver.R`. If everything looks good, move the raw files
+over to the `./pipeline/data/Raw/Raw_original` folder and proceed.
+**NOTE** By default, the computationally-intensive L0 step skips a raw
+file if a corresponding L0 file already exists; this makes updating with
+new data fast.
 
 
 ## Update the metadata
