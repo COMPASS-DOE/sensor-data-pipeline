@@ -25,12 +25,6 @@ new_section <- function(name, logfile = LOGFILE, root = ROOT) {
     log_info("")
     log_info("===================================================")
     log_info(name)
-    list_directories(list(file.path(root, "Raw/"),
-                          file.path(root, "L0/"),
-                          file.path(root, "L1_normalize/"),
-                          file.path(root, "L1/"),
-                          file.path(root, "L2")),
-                     list_files = TRUE, outfile = logfile)
 }
 
 
