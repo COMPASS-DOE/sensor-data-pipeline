@@ -63,11 +63,13 @@ mdf$File_Description <- paste("Metadata for all data files in", mdf$File_Path, "
 # Isolate the special files (currently, sample R scripts)
 message("Processing special files...")
 special_files_info <-
-    tribble(~File_Name,                  ~File_Description,
-            "README_v1-1.txt",           "Overall documentation file for the v1-1 release",
-            "README.md",                 "Minimal README about the folder",
-            "create-time-series.R",      "Sample R code to create a time series from data",
-            "cumulative-observations.R", "Sample R code to plot cumulative observations")
+    tribble(~File_Name,                                        ~File_Description,
+            "README_v1-2.txt",                                 "Overall documentation file for the v1-2 release",
+            "README.md",                                       "Minimal README about the folder",
+            "create-time-series.R",                            "Sample R code to create a time series from data",
+            "cumulative-observations.R",                       "Sample R code to plot cumulative observations",
+            "dd.csv",                                          "Data dictionary of all column names present in the datasets",
+            "v1-2 TEMPEST L1 Sensor Package Quick Start.pdf", "Quick start guide with overview descriptions of data package")
 special_files <- which(results$File_Name %in% special_files_info$File_Name)
 sf <- results[special_files,]
 sf <- left_join(sf, special_files_info, by = "File_Name")
