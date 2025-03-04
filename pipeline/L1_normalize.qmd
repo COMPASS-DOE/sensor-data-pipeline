@@ -44,11 +44,7 @@ This script
 library(lubridate)
 library(tidyr)
 library(readr)
-library(compasstools)
-if(packageVersion("compasstools") < "0.2") {
-    stop("Please update to latest version of compasstools!\n",
-         "devtools::install_github('COMPASS-DOE/compasstools')")
-}
+source("L1_normalize-utils.R")
 
 # Warnings are not allowed here, as this usually means a column format
 # problem that we want to fix immediately
@@ -64,7 +60,7 @@ dt <- dt[!is.na(dt$Logger),] # remove empty rows
 # For compactness, the design table may have expansions. For example,
 # "DiffVoltA_Avg({1:8})" -> "DiffVoltA_Avg(1)", "DiffVoltA_Avg(2)", etc.
 # Expand these rows into their individual entries
-dt_ex <- compasstools::expand_df(dt)
+dt_ex <- expand_df(dt)
 
 # The Site-Plot-instrument-which-individual-research_name columns
 # should be unique (for rows with non-empty research_name entries)
@@ -213,7 +209,7 @@ f <- function(fn, out_dir, design_table) {
     message("\tDoing unit conversion")
     # At this point everything in the value column should be numeric
     dat$value <- as.numeric(dat$value)
-    dat <- compasstools::unit_conversion(dat, ut)
+    dat <- unit_conversion(dat, ut)
     nd <- names(dat)
     names(dat)[nd == "value"] <- "value_raw"
     names(dat)[nd == "value_conv"] <- "Value"
@@ -324,4 +320,3 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
-
