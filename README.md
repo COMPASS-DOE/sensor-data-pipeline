@@ -2,8 +2,9 @@
 
 <!-- badges: start -->
 [![check-workflow](https://github.com/COMPASS-DOE/sensor-data-pipeline/actions/workflows/check-workflow.yaml/badge.svg)](https://github.com/COMPASS-DOE/sensor-data-pipeline/actions/workflows/check-workflow.yaml)
-![Static Badge](https://img.shields.io/badge/ESS_DIVE-TEMPEST-violet?style=flat&link=https%3A%2F%2Fdoi.org%2F10.15485%2F2479200)
-![Static Badge](https://img.shields.io/badge/ESS_DIVE-Synoptic-violet?style=flat&link=https%3A%2F%2Fdoi.org%2F10.15485%2F2439400)
+<img alt="Static Badge" src="https://img.shields.io/badge/ESS_DIVE-Synoptic-violet?style=flat&link=https%3A%2F%2Fdoi.org%2F10.15485%2F2439400">
+<img alt="Static Badge" src="https://img.shields.io/badge/ESS_DIVE-TEMPEST-violet?style=flat&link=https%3A%2F%2Fdoi.org%2F10.15485%2F2479200">
+
 
 <!-- badges: end -->
 
