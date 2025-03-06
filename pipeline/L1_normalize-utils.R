@@ -361,23 +361,21 @@ read_oos_data <- function(oos_dir) {
     # Read files and check for required columns
     oos_data <- lapply(oos_files, function(f) {
         message(f)
-        x <- read_csv(f)
-        required <- c("Site", "Table", "oos_begin", "oos_end")
+        x <- read_csv(f, col_types = list(oos_begin = col_character(),
+                                          oos_end = col_character()))
+        required <- c("Site", "oos_begin", "oos_end")
 
         if(!all(required %in% names(x))) {
             missing <- setdiff(required, names(x))
             stop("Required column(s) ", paste(missing, collapse = ","),
                  " not present in ", f)
         }
-        if(length(unique(x$Table)) > 1) {
-            stop("More than one 'Table' value present in ", f)
-        }
         x
     })
 
     # Make list names
-    names(oos_data) <- sapply(oos_data, function(x) {
-        x$Table[1]
+    names(oos_data) <- sapply(oos_files, function(x) {
+        gsub(".csv", "", basename(x), fixed = TRUE)
     })
     return(oos_data)
 }

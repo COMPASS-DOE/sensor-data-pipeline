@@ -1,7 +1,13 @@
 # fme-oos.R
 
-library(lubridate)
+# Need to run this script from within pipeline directory
+if(basename(getwd()) != "pipeline") {
+    stop("Working directory needs to be pipeline/")
+}
 
+library(lubridate)
+library(readr)
+library(tibble)
 
 # We read in a version of the Aquatroll Calibration/Removal Log
 # (in Monitoring Documents on the COMPASS Google Drive) and restructure it
@@ -36,7 +42,7 @@ prep_troll_oos_table <- function(troll) {
 
     # Return a data frame with the needed columns: the oos begin and end,
     # as well as the additional columns to match
-    troll[c("Site", "Plot", "Instrument_ID", "oos_begin", "oos_end")]
+    troll[c("Site", "Table", "Plot", "Instrument_ID", "oos_begin", "oos_end")]
 }
 
 # Restructure the EXO calibration/deployment log
@@ -73,11 +79,13 @@ prep_exo_oos_table <- function(exo) {
 
 
 # Read the Aquatroll out-of-service table
-troll <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "troll_maintenance.csv"),
+troll <- read_csv("out-of-service/compass-fme-oos/troll_maintenance.csv",
                   col_types = "ccccccccc")
 oos_troll <- prep_troll_oos_table(troll)
+# This tibble should be written as "WaterLevel600.csv"
 
 # Read the EXO out-of-service table
-exo <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "exo_log.csv"),
+exo <- read_csv("out-of-service/compass-fme-oos/exo_log.csv",
                 col_types = "cdDDDDcc")
 oos_exo <- prep_exo_oos_table(exo)
+# This tibble should be written as "ExoTable.csv"

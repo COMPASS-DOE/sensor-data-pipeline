@@ -34,7 +34,7 @@ This script
 
 -   Integrated out-of-service records into a `F_OOS` flag
 
--   Writes into <site>_<plot>_<year>_<month> folders
+-   Writes into folders named with site, plot, year, month
 
 ## Initializing
 
@@ -225,9 +225,9 @@ f <- function(fn, out_dir, design_table) {
     # of OOS tables to process
     dat$F_OOS <- 0L
     for(tbl in names(oos_data)) {
-        if(dat$Table[1] == tbl) {
+        if(grepl(pattern = tbl, dat$Table[1], fixed = TRUE)) {
             # This assumes there's only one entry in `oos_data` per 
-            # table type, e.g. "ExoTable" or "WaterLevel"
+            # table type, e.g. "ExoTable" or "WaterLevel600"
             # Is this reasonable? If not, we need to run through
             # all `oos_data` entries, OR'ing the results as we go, 
             # instead of breaking out
