@@ -2,6 +2,7 @@
 # Utility functions, and test code, used exclusively by L1_normalize.qmd
 # BBL March 2024
 
+library(lubridate)
 
 # Expand a string: look for patterns like \{x,y,z\} within a possibly
 # larger string, and break them apart at the commas
@@ -68,9 +69,6 @@ expand_string <- function(s, expand_comma = TRUE, expand_colon = TRUE, quiet = T
     s
 }
 
-
-
-#
 
 #' Expand a data frame by looking for string expansion patterns
 #'
@@ -263,3 +261,121 @@ expect_error(unit_conversion(x, y), regexp = "Error evaluating conversion string
 y <- data.frame(research_name = c("a", "b"), conversion = c("x * 1", "(x * 2) - 1"), new_unit = "")
 expect_silent(unit_conversion(x, y, quiet = TRUE))
 #})
+
+
+# We pass an oos_df data frame to oos()
+# This is a table of out-of-service windows
+# It MUST have `oos_begin` and `oos_end` timestamps; optionally,
+# it can have other columns that must be matched as well
+# (e.g., site, plot, etc)
+
+# The second thing we pass is the observation data frame
+
+# This function returns a logical vector, of the same length as the data_df
+# input, that becomes F_OOS
+oos <- function(oos_df, data_df) {
+    oos_df <- as.data.frame(oos_df)
+
+    # Make sure that any 'extra' condition columns (in addition to the
+    # oos window begin and end) are present in the data d.f.
+    non_ts_fields <- setdiff(colnames(oos_df), c("oos_begin", "oos_end"))
+    if(!all(non_ts_fields %in% colnames(data_df))) {
+        stop("Not all out-of-service condition columns are present in data!")
+    }
+    # For speed, compute the min and max up front
+    min_ts <- min(data_df$TIMESTAMP)
+    max_ts <- max(data_df$TIMESTAMP)
+
+    oos_final <- rep(FALSE, nrow(data_df))
+
+    for(i in seq_len(nrow(oos_df))) {
+        # First quickly check: is there any overlap in timestamps?
+        timestamp_overlap <- min_ts <= oos_df$oos_end[i] &&
+            max_ts >= oos_df$oos_begin[i]
+        #     message("timestamp_overlap = ", timestamp_overlap)
+        if(timestamp_overlap) {
+            oos <- data_df$TIMESTAMP >= oos_df$oos_begin[i] &
+                data_df$TIMESTAMP <= oos_df$oos_end[i]
+            # There are timestamp matches, so check other (optional)
+            # conditions in the oos_df; they must match exactly
+            # For example, if there's a "Site" entry in oos_df then only
+            # data_df entries with the same Site qualify to be o.o.s
+            for(f in non_ts_fields) {
+                matches <- data_df[,f] == oos_df[i,f]
+                #               message("f = ", f, " ", oos_df[i,f], ", matches = ", sum(matches))
+                oos <- oos & matches
+            }
+
+            # The out-of-service flags for this row of the oos_df table
+            # are OR'd with the overall flags that will be returned below
+            # I.e., if ANY of the oos entries triggers TRUE, then the
+            # datum is marked as out of service
+            oos_final <- oos_final | oos
+        }
+    }
+    return(oos_final)
+}
+
+# Test code for oos()
+test_oos <- function() {
+    data_df <- data.frame(TIMESTAMP = 1:3, x = letters[1:3], y = 4:6)
+
+    # No other conditions beyond time window
+    oos_df <- data.frame(oos_begin = 1, oos_end = 1)
+    stopifnot(oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
+    oos_df <- data.frame(oos_begin = 4, oos_end = 5)
+    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+    oos_df <- data.frame(oos_begin = 0, oos_end = 2)
+    stopifnot(oos(oos_df, data_df) == c(TRUE, TRUE, FALSE))
+    oos_df <- data.frame(oos_begin = 0, oos_end = 3)
+    stopifnot(oos(oos_df, data_df) == c(TRUE, TRUE, TRUE))
+
+    # x condition - doesn't match even though timestamp does
+    oos_df <- data.frame(oos_begin = 1, oos_end = 1, x = "b")
+    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+    # x condition - matches and timestamp does
+    oos_df <- data.frame(oos_begin = 1, oos_end = 1, x = "a")
+    stopifnot(oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
+    # x condition - some match, some don't
+    oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "b")
+    stopifnot(oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
+    # x and y condition
+    oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "b", y = 5)
+    stopifnot(oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
+    oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "a", y = 5)
+    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+
+    # Error thrown if condition column(s) not present
+    oos_df <- data.frame(oos_begin = 1, oos_end = 2, z = 1)
+    out <- try(oos(oos_df, data_df), silent = TRUE)
+    stopifnot(class(out) == "try-error")
+}
+test_oos()
+
+# Read all out-of-service files and check their formatting
+read_oos_data <- function(oos_dir) {
+    message("Dir is ", oos_dir)
+    oos_files <- list.files(oos_dir, pattern = "\\.csv$", full.names = TRUE)
+    message("Files: ", length(oos_files))
+
+    # Read files and check for required columns
+    oos_data <- lapply(oos_files, function(f) {
+        message(f)
+        x <- read_csv(f, col_types = list(oos_begin = col_character(),
+                                          oos_end = col_character()))
+        required <- c("Site", "oos_begin", "oos_end")
+
+        if(!all(required %in% names(x))) {
+            missing <- setdiff(required, names(x))
+            stop("Required column(s) ", paste(missing, collapse = ","),
+                 " not present in ", f)
+        }
+        x
+    })
+
+    # Make list names
+    names(oos_data) <- sapply(oos_files, function(x) {
+        gsub(".csv", "", basename(x), fixed = TRUE)
+    })
+    return(oos_data)
+}
