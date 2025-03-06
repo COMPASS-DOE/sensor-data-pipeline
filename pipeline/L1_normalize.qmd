@@ -34,7 +34,7 @@ This script
 
 -   Integrated out-of-service records into a `F_OOS` flag
 
--   Writes into <year><month><site> folders
+-   Writes into <site>_<plot>_<year>_<month> folders
 
 ## Initializing
 
@@ -233,7 +233,7 @@ f <- function(fn, out_dir, design_table) {
             # instead of breaking out
             dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
             message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
-            oos_data_used[tbl] <<- TRUE
+            oos_data_used[tbl] <<- TRUE # won't work when parallelized
             break
         }
     }
@@ -249,10 +249,10 @@ f <- function(fn, out_dir, design_table) {
                      logger = dat$Logger[1],
                      table = dat$Table[1])
     
-    # The Chesapeake Bay synoptic site design overlaps with TEMPEST,
-    # and the latter's control ("C") plot functions as the former's
-    # upland plot. So if we're handling TMP C data, also write a copy
-    # as GCW UP. https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/116
+    # The Chesapeake Bay synoptic site design overlaps with TEMPEST, and
+    # the latter's control ("C") plot functions as the former's upland
+    # plot. So if we're handling TMP C data, also write a copy as GCW
+    # UP. https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/116
     if(dat$Site[1] == "TMP" && dat$Plot[1] == "C") {
         dat$Site <- "GCW"
         dat$Plot <- "UP"
@@ -292,10 +292,9 @@ if(params$run_parallel && "try-error" %in% sapply(out, class)) {
 }
 # Check whether all out-of-service tables were checked
 # If not, this probably indicates a naming mistake
-if(!all(oos_data_used)) {
-    nms <- names(oos_data_used)[!oos_data_used]
+if(!params$run_parallel && !all(oos_data_used)) {
     stop("Warning! Out-of-service tables never used: ",
-         paste(oos_data[[nms]], collapse = ","))
+         paste(names(oos_data_used)[!oos_data_used], collapse = ","))
 }
 ```
 
