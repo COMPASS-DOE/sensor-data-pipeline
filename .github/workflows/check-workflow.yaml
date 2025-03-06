@@ -28,7 +28,7 @@ jobs:
             any::ggplot2
       - name: Install other needed packages
         run: |
-          pak::pkg_install("COMPASS-DOE/compasstools")
+          pak::pkg_install("COMPASS-DOE/compasstools@v0.2")
         shell: Rscript {0}
       - name: Run data workflow
         run: |
