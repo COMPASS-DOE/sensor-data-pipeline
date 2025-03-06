@@ -1,7 +1,7 @@
-# out-of-service
+# compass-fme-oos
 
 This folder holds COMPASS-FME instrument maintenance records that are
-read by `L1_normalize.qmd` and used to add out-of-service flags to data.
+transformed into out-of-service (OOS) tables in the folder above.
 
 In both cases,
 - copy new rows from google sheet into the CSV

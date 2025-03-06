@@ -34,7 +34,7 @@ This script
 
 -   Integrated out-of-service records into a `F_OOS` flag
 
--   Writes into <year><month><site> folders
+-   Writes into folders named with site, plot, year, month
 
 ## Initializing
 
@@ -92,16 +92,12 @@ files_to_process <- list.files(L0, pattern = "*.csv$", full.names = TRUE)
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 
 source("helpers.R")
-source("out-of-service.R")
 
-# Read the Aquatroll out-of-service table
-troll <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "troll_maintenance.csv"),
-                  col_types = "ccccccccc")
-oos_troll <- prep_troll_oos_table(troll) # in out-of-service.R
-# Read the EXO out-of-service table
-exo <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "exo_log.csv"),
-                col_types = "cdDDDDcc")
-oos_exo <- prep_exo_oos_table(exo) # in out-of-service.R
+# Read out-of-service data and set up a structure to keep track
+# of whether each table is used or not
+oos_data <- read_oos_data(params$OOS)
+oos_data_used <- rep(FALSE, length.out = length(oos_data))
+names(oos_data_used) <- names(oos_data)
 
 # Restore old warning setting
 options(warn = oldwarn)
@@ -117,7 +113,7 @@ Variable metadata table is "`r METADATA_VARS_TABLE`" and has `r nrow(mt)` rows.
 
 Units table has `r nrow(ut)` rows; bounds table `r nrow(bt)`.
 
-Troll out-of-service table has `r nrow(oos_troll)` rows.
+There are `r length(oos_data)` out-of-service tables to pay attention to.
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -224,17 +220,22 @@ f <- function(fn, out_dir, design_table) {
 
     # ------------- Out-of-service flags
 
-    # It turns out that the out of service check is SUPER expensive (50% of 
-    # driver runtime). Since right now it's only applicable to Aquatroll 
-    # and EXO, check and skip if possible
-    if(grepl("WaterLevel", dat$Table[1])) {
-        dat$F_OOS <- as.integer(oos(oos_troll, dat))
-        message("\tAdding ", sum(dat$F_OOS), " OOS flags for WaterLevel")
-    } else if(grepl("ExoTable", dat$Table[1])) {
-        dat$F_OOS <- as.integer(oos(oos_exo, dat))
-        message("\tAdding ", sum(dat$F_OOS), " OOS flags for ExoTable")
-    } else {
-        dat$F_OOS <- 0L
+    # The out of service check is very expensive, so only do
+    # it when the `Table` of the current data is in our list 
+    # of OOS tables to process
+    dat$F_OOS <- 0L
+    for(tbl in names(oos_data)) {
+        if(grepl(pattern = tbl, dat$Table[1], fixed = TRUE)) {
+            # This assumes there's only one entry in `oos_data` per 
+            # table type, e.g. "ExoTable" or "WaterLevel600"
+            # Is this reasonable? If not, we need to run through
+            # all `oos_data` entries, OR'ing the results as we go, 
+            # instead of breaking out
+            dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
+            message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
+            oos_data_used[tbl] <<- TRUE # won't work when parallelized
+            break
+        }
     }
     smry$`OOS%` <- round(sum(dat$F_OOS) / nrow(dat) * 100, 1)
 
@@ -248,10 +249,10 @@ f <- function(fn, out_dir, design_table) {
                      logger = dat$Logger[1],
                      table = dat$Table[1])
     
-    # The Chesapeake Bay synoptic site design overlaps with TEMPEST,
-    # and the latter's control ("C") plot functions as the former's
-    # upland plot. So if we're handling TMP C data, also write a copy
-    # as GCW UP. https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/116
+    # The Chesapeake Bay synoptic site design overlaps with TEMPEST, and
+    # the latter's control ("C") plot functions as the former's upland
+    # plot. So if we're handling TMP C data, also write a copy as GCW
+    # UP. https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/116
     if(dat$Site[1] == "TMP" && dat$Plot[1] == "C") {
         dat$Site <- "GCW"
         dat$Plot <- "UP"
@@ -288,6 +289,12 @@ out <- apply_func(files_to_process,
 # Check whether any of the parallel jobs errored
 if(params$run_parallel && "try-error" %in% sapply(out, class)) {
     stop("Error! Rerun non-parallel to diagnose")
+}
+# Check whether all out-of-service tables were checked
+# If not, this probably indicates a naming mistake
+if(!params$run_parallel && !all(oos_data_used)) {
+    stop("Warning! Out-of-service tables never used: ",
+         paste(names(oos_data_used)[!oos_data_used], collapse = ","))
 }
 ```
 
