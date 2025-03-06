@@ -92,16 +92,8 @@ files_to_process <- list.files(L0, pattern = "*.csv$", full.names = TRUE)
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 
 source("helpers.R")
-source("out-of-service.R")
 
-# Read the Aquatroll out-of-service table
-troll <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "troll_maintenance.csv"),
-                  col_types = "ccccccccc")
-oos_troll <- prep_troll_oos_table(troll) # in out-of-service.R
-# Read the EXO out-of-service table
-exo <- read_csv(file.path(params$METADATA_ROOT, params$OOS, "exo_log.csv"),
-                col_types = "cdDDDDcc")
-oos_exo <- prep_exo_oos_table(exo) # in out-of-service.R
+oos_data <- read_oos_data(params$OOS)
 
 # Restore old warning setting
 options(warn = oldwarn)
