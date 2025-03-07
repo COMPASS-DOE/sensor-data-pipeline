@@ -59,11 +59,11 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 
 # File data into sub-folders based on what level data it is:
 # L1_normalize outputs
-#   Folders are site_year_month
+#   Folders are site_plot_year_month
 #   Filenames are Site_logger_table_year_month_hash
 # L1 outputs
 #   Folders are site_year
-#   Filenames are site_timeperiod_L1_version
+#   Filenames are site_plot_timeperiod_L1_version
 # L2 outputs
 #   Folders are site_year
 #   Filenames are site_timeperiod_table_L2_version
