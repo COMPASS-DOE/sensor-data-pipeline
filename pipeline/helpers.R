@@ -63,7 +63,7 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 #   Filenames are Site_logger_table_year_month_hash
 # L1 outputs
 #   Folders are site_year
-#   Filenames are site_plot_timeperiod_L1_version
+#   Filenames are site_plot_timeperiod_researchname_L1_version
 # L2 outputs
 #   Folders are site_year
 #   Filenames are site_timeperiod_table_L2_version
@@ -134,7 +134,7 @@ write_to_folders <- function(x, root_dir,
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste(site, plot, time_period, data_level, vversion, sep = "_")
+                filename <- paste(site, plot, time_period, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
                 write_this_plot <- TRUE
                 p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
