@@ -128,8 +128,9 @@ write_to_folders <- function(x, root_dir,
             if(data_level == "L1_normalize") {
                 folder <- file.path(root_dir, paste(site, plot, y, rn, sep = "_"))
                 # Add a short hash to end of filename to ensure we don't
-                # overwrite anything that's already there
-                short_hash <- substr(digest::digest(dat, algo = "md5"), 1, 4)
+                # overwrite anything that's already there (e.g. another
+                # month's data)
+                short_hash <- substr(digest::digest(dat, algo = "md5"), 1, 6)
                 filename <- paste(logger, table, y, rn, short_hash, sep = "_")
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
