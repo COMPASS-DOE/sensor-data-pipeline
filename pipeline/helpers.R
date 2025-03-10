@@ -59,7 +59,7 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 
 # File data into sub-folders based on what level data it is:
 # L1_normalize outputs
-#   Folders are site_plot_year_month
+#   Folders are site_plot_year_researchname
 #   Filenames are Site_logger_table_year_month_hash
 # L1 outputs
 #   Folders are site_year
@@ -86,38 +86,39 @@ write_to_folders <- function(x, root_dir,
         stopifnot(length(unique(x$Site)) == 1)
     }
     stopifnot("TIMESTAMP" %in% names(x))
+    stopifnot("research_name" %in% names(x))
 
-    # Prep: identify years and months, along with current date
+    # Prep: identify years and research names, along with current date
     years <- year(x$TIMESTAMP)
-    months <- sprintf("%02i", month(x$TIMESTAMP)) # add leading zero if needed
+    research_names <- x$research_name
     nowyr <- year(Sys.Date())
     nowmo <- month(Sys.Date())
     vversion <- paste0("v", version)
 
-    # Loop by years and months
+    # Loop by years and research names
     lines_written <- list()
     for(y in unique(years)) {
         if(is.na(y)) {
             stop(data_level, " invalid year ", y)
         }
 
-        for(m in unique(months)) {
+        for(rn in unique(research_names)) {
             write_this_plot <- FALSE
 
             # Isolate the data to write
-            dat <- x[y == years & m == months,]
+            dat <- x[y == years & rn == research_names,]
             if(!nrow(dat)) {
-                message("No data for ", y, "_", m, " - skipping")
+                message("No data for ", y, "_", rn, " - skipping")
                 next
             }
 
             # Sanity checks
-            if(is.na(m)) {
-                stop(data_level, " invalid month ", m)
+            if(is.na(rn)) {
+                stop(data_level, " invalid research_name ", m)
             }
-            if(y > nowyr || (y == nowyr && m > nowmo)) {
+            if(y > nowyr) {
                 stop("I am being asked to write ", nrow(dat), " rows of future data: ",
-                     paste(site, logger, table, y, m))
+                     paste(site, logger, table, y))
             }
 
             # Construct folder and file names based on data_level
@@ -125,12 +126,11 @@ write_to_folders <- function(x, root_dir,
                                  format(max(dat$TIMESTAMP), format = "%Y%m%d"),
                                  sep = "-")
             if(data_level == "L1_normalize") {
-                folder <- file.path(root_dir, paste(site, plot, y, m, sep = "_"))
-                # A given month's data is usually split across two datalogger
-                # files; add a short hash to end of filename to ensure we don't
+                folder <- file.path(root_dir, paste(site, plot, y, rn, sep = "_"))
+                # Add a short hash to end of filename to ensure we don't
                 # overwrite anything that's already there
                 short_hash <- substr(digest::digest(dat, algo = "md5"), 1, 4)
-                filename <- paste(logger, table, y, m, short_hash, sep = "_")
+                filename <- paste(logger, table, y, rn, short_hash, sep = "_")
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
@@ -185,7 +185,7 @@ write_to_folders <- function(x, root_dir,
             }
 
             lines_written[[fqfn]] <- nrow(dat)
-        } # for m
+        } # for rn
     } # for y
     invisible(lines_written)
 }
