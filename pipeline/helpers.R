@@ -213,7 +213,7 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
     remove_items("L0/")
     remove_items("L1_normalize/")
     # remove L1_normalize folders
-    remove_items("L1_normalize/", pat = "[A-Z]{3}_[A-Z]+_[0-9]{4}_[0-9]{2}")
+    remove_items("L1_normalize/", pat = "[A-Z]{3}_[A-Z]+_[0-9]{4}_[a-z-]+")
     remove_items("L1/")
     # remove L1 folders
     remove_items("L1/", pat = "[A-Z]{3}_[0-9]{4}")
