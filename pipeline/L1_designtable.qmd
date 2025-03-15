@@ -1,0 +1,108 @@
+---
+title: "L1_designtable"
+author: "COMPASS workflows team"
+title-block-banner: true
+params:
+  html_outfile: "L1_designtable.html"
+  DATA_ROOT: "data_TEST/"
+  METADATA_ROOT: "metadata/"
+  L0: "L0/"
+  L1_NORMALIZE: "L1_normalize/"
+  DESIGN_TABLE: "design_table.csv"
+  METADATA_VARS_TABLE: "L1_metadata/L1_metadata_variables.csv"
+  logfile: ""
+date: now
+date-format: "YYYY-MM-DD HH:mm:ssZ"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+This script
+
+-   Produces diagnostics tables and plots about the design table
+
+## Initializing
+
+```{r init}
+#| include: false
+
+library(lubridate)
+library(tidyr)
+library(readr)
+source("L1_normalize-utils.R")
+
+# Read the design table (everything must have an entry)
+DESIGN_TABLE <- file.path(params$METADATA_ROOT, params$DESIGN_TABLE)
+dt <- read_csv(DESIGN_TABLE, col_types = "cccccccccDcc")
+dt$note <- NULL
+dt <- dt[!is.na(dt$Logger),] # remove empty rows...
+dt_ex <- expand_df(dt) # ...and expand
+
+# The Site-Plot-instrument-which-individual-research_name columns
+# should be unique (for rows with non-empty research_name entries)
+dt_ex$design_link <- with(dt_ex, paste(Site, Plot, Instrument, Instrument_ID, 
+                                       Sensor_ID, research_name, sep = "-"))
+```
+
+Design table "`r DESIGN_TABLE`" and has `r nrow(dt)` rows, `r nrow(dt_ex)` after expansion.
+
+HTML outfile is "`r params$html_outfile`".
+
+## Research name distribution
+
+```{r research-names}
+
+# Drop rows without research names
+dt_ex_rn <- dt_ex[!is.na(dt_ex$research_name),]
+
+overall <- with(dt_ex_rn, table(Site, Plot))
+knitr::kable(overall)
+
+overall_df <- as.data.frame(overall)
+overall_df$Freq[overall_df$Freq == 0] <- NA_integer_
+library(ggplot2)
+theme_set(theme_bw())
+ggplot(overall_df, aes(Site, Plot, size = Freq)) + 
+    geom_point(na.rm = TRUE) + 
+    ggtitle("research_name distribution by site and plot")
+
+```
+
+## Loggernet variables to research name mapping
+
+```{r variables-to-research-names}
+
+# Make a 'clean' variable column
+# Remove the (1), (2), etc.
+dt_ex$lv_clean <- gsub("\\([0-9,]*\\)", "", dt_ex$loggernet_variable)
+# Remove the A or B or C at end after number
+dt_ex$lv_clean <- gsub("[ABC]$", "", dt_ex$lv_clean)
+dt_ex$lv_clean <- gsub("Volt[ABC]_Avg", "Volt_Avg", dt_ex$lv_clean)
+
+dt_ex$tb_clean <- gsub("[ABC]$", "", dt_ex$Table)
+dt_ex$tb_clean <- tolower(dt_ex$tb_clean)
+dt_ex$lv_clean <- with(dt_ex, paste(tb_clean, lv_clean, sep = "."))
+mappings <- aggregate(lv_clean ~ research_name, data = dt_ex, FUN = function(x) paste(unique(x), sep = ","))
+names(mappings)[2] <- "loggernet variable(s)"
+knitr::kable(mappings)
+
+lv_to_rn <- aggregate(Site ~ lv_clean + research_name, data = dt_ex, FUN = function(x) length(unique(x)))
+
+lv_to_site <- aggregate(research_name ~ Site + tb_clean + lv_clean, data = dt_ex, FUN = length)
+for(tb in unique(lv_to_site$tb_clean)) {
+    x <- lv_to_site[lv_to_site$tb_clean == tb,]
+    p <- ggplot(x, aes(Site, lv_clean, size = research_name)) +
+        geom_point(na.rm = TRUE) +
+        ggtitle(tb)
+    print(p)
+}
+```
+
+## Reproducibility
+
+```{r reproducibility}
+sessionInfo()
+```
