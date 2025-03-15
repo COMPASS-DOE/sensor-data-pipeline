@@ -1,131 +1,131 @@
 table,variable,research_name,sensor_units,final_units,conversion,low_bound,high_bound,description
-Datalogger,BattV,battery_voltage,V,V,x * 1,11,13,Battery voltage of the data logger
-Datalogger,SolarV,solar_voltage,V,V,x * 1,0,30,Solar/line voltage of the data logger
-Sapflow,DiffVolt_Avg,sapflow_3.5cm,mV,mV,x * 1,0,1,Raw sap flow at 3.5 cm depth
-Sapflow,DiffVolt_Avg,sapflow_5cm,mV,mV,x * 1,0,1,Raw sap flow at 5 cm depth
-RedoxTable,Redox,redox_10cm,mV,mV,x * 1,-1000,1000,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox_20cm,mV,mV,x * 1,-1000,1000,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox_35cm,mV,mV,x * 1,-1000,1000,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox_55cm,mV,mV,x * 1,-1000,1000,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-TerosTable,VWC,soil_vwc_5cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 5 cm calibrated for mineral soil
-TerosTable,TSOIL,soil_temp_5cm,degC,degC,x * 1,-40,60,Soil temperature at 5 cm
-TerosTable,EC,soil_EC_5cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 5 cm
-TerosTable,VWC,soil_vwc_10cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 10 cm calibrated for mineral soil
-TerosTable,TSOIL,soil_temp_10cm,degC,degC,x * 1,-40,60,Soil temperature at 10 cm
-TerosTable,EC,soil_EC_10cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 10 cm
-TerosTable,VWC,soil_vwc_15cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 15 cm calibrated for mineral soil
-TerosTable,TSOIL,soil_temp_15cm,degC,degC,x * 1,-40,60,Soil temperature at 15 cm
-TerosTable,EC,soil_EC_15cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 15 cm
-TerosTable,VWC,soil_vwc_30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
-TerosTable,TSOIL,soil_temp_30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
-TerosTable,EC,soil_EC_30cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
-WaterLevel,Barometric_Pressure600,gw_bar_pressure,,,x * 1,,,
-WaterLevel,Temperature600,gw_temperature,degC,degC,x * 1,-5,50,Groundwater temperature
-WaterLevel,Temperature_Int600,gw_temperature_int,degC,degC,x * 1,-5,50,
-WaterLevel,Actual_Conductivity600,gw_act_cond,μS/cm,μS/cm,x * 1,,,
-WaterLevel,Specific_Conductivity600,gw_spec_cond,uS/cm,uS/cm,x * 1,0,350000,Groundwater specific conductivity
-WaterLevel,Salinity600,gw_salinity,PSU,PSU,x * 1,0,350,Groundwater salinity
-WaterLevel,TDS600,gw_tds,,,x * 1,,,
-WaterLevel,Water_Density600,gw_density,g/cm3,g/cm3,x * 1,0.98,1.05,Groundwater density
-WaterLevel,Resistivity600,gw_resistivity,,,x * 1,,,
-WaterLevel,pH600,gw_ph,unitless,unitless,x * 1,0,14,Groundwater pH
-WaterLevel,pH_mV600,gw_ph_mv,mV,mV,x * 1,,,
-WaterLevel,pH_ORP600,gw_ph_orp,mV,mV,x * 1,-1400,1400,Groundwater oxidation-reduction potential
-WaterLevel,RDO_concen600,gw_rdo_conc,mg/L,mg/L,x * 1,0,20,Groundwater dissolved oxygen concentration
-WaterLevel,RDO_perc_sat600,gw_perc_sat,%,%,x * 1,0,100,
-WaterLevel,RDO_part_Pressure600,gw_part_pressure,,,x * 1,,,
-WaterLevel,Pressure600,gw_pressure,psi,mbar,x * 68.948,-10,910,Vented pressure corrected for barometric pressure
-WaterLevel,Depth600,gw_depth,,,x * 1,,,
-WaterLevel,Voltage_Ext600A,gw_voltage_ext,V,V,x * 1,,,External battery voltage coming into the Aquatroll
-WaterLevel,Battery_Int600A,gw_battery,%,%,x * 1,0,100,Internal battery percentage
-ClimaVue50_15min,SlrFD_W_Avg,wx_slr_fd15,W/m2,MJ/m2,x * 1,,,Average solar flux over 15 minute period
-ClimaVue50_15min,SlrTF_MJ_Tot,wx_slr_tf15,MJ/m2,W/m2,x * 1,,,Total solar flux in over minute period
-ClimaVue50_15min,Rain_mm_Tot,wx_rain15,mm,mm,x * 1,,,Total rain over 15 minute period
-ClimaVue50_15min,WS_ms_S_WVT,wx_windspeed15,m/s,m/s,x * 1,,,Wind speed
-ClimaVue50_15min,WindDir_D1_WVT,wx_winddir15,degrees,degrees,x * 1,0,359,Wind direction
-ClimaVue50_15min,WindDir_SD1_WVT,wx_winddir_sd115,degrees,degrees,x * 1,0,359,Standard deviation of wind direction part of CS windvector function
-ClimaVue50_15min,MaxWS_ms_Max,wx_maxws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period
-ClimaVue50_15min,MaxWS_ms_TMx,wx_maxws_tmx15,m/s,m/s,x * 1,,,Time of maximum windspeed in 15 minute period
-ClimaVue50_15min,Invalid_Wind_Tot,wx_invalid_wind15,count,count,x * 1,,,Total invalid wind measurements over 15 minute period
-ClimaVue50_15min,AirT_C_Avg,wx_tempavg15,degC,degC,x * 1,-50,60,Average air temperature over 15 minute period
-ClimaVue50_15min,AirT_C_Max,wx_tempmax15,degC,degC,x * 1,-50,60,Maximum air temperature in 15 minute period
-ClimaVue50_15min,AirT_C_TMx,wx_temptmx15,,,x * 1,,,Time of maximum air temperature in 15 minute period
-ClimaVue50_15min,AirT_C_Min,wx_tempmin15,degC,degC,x * 1,-50,60,Minimum air temperature in 15 minute period
-ClimaVue50_15min,AirT_C_TMn,wx_temptmn15,,,x * 1,,,Time of minimum air temperature in 15 minute period
-ClimaVue50_15min,VP_mbar_Avg,wx_vappress15,mbar,mbar,x * 1,500,1100,Average vapor pressure over 15 minute period
-ClimaVue50_15min,BP_mbar,wx_barpress15,mbar,mbar,x * 1,500,1100,Barometric pressure
-ClimaVue50_15min,BP_mbar_Max,wx_bpmax15,mbar,mbar,x * 1,500,1100,Maximum barometric pressure in 15 minute period
-ClimaVue50_15min,BP_mbar_TMx,wx_bptmx15,,,x * 1,,,Time of maximum barometric pressure in 15 minute period
-ClimaVue50_15min,BP_mbar_Min,wx_bpmin15,mbar,mbar,x * 1,500,1100,Minimum barometric pressure in 15 minute period
-ClimaVue50_15min,BP_mbar_TMn,wx_bptmn15,,,x * 1,,,Time of minimum barometric pressure in 15 minute period
-ClimaVue50_15min,RH,wx_rh15,perc,perc,x * 1,0,100,Relative humidity
-ClimaVue50_15min,RHT_C_Avg,wx_rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
-ClimaVue50_15min,TiltNS_deg_Avg,wx_tilt_ns15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the N/S direction over 15 minute period
-ClimaVue50_15min,TiltWE_deg_Avg,wx_tilt_we15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the E/W direction over 15 minute period
-ClimaVue50_15min,Strikes_Tot,wx_strikes15,count,count,x * 1,0,65535,Total lightning strikes over 15 minute period
-ClimaVue50_15min,Dist_km_Min,wx_dist_min15,km,km,x * 1,,,Minimum lightning strike distance in 15 minute time period
-ClimaVue50_15min,Dist_km_TMn,wx_dist_tmn15,,,x * 1,,,Time of minimum lightning stike distance in 15 minute time period
-ClimaVue50_15min,PAR_Den_C_Avg,wx_par_den15,µmol/m2/s,µmol/m2/s,x * 1,,,Average photosynthetically active radiation (PAR) flux density over 15 minute period; site specific correction factor applied
-ClimaVue50_15min,PAR_Tot_C_Tot,wx_par_tot15,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 15 minute period
+Datalogger,BattV,battery-voltage,V,V,x * 1,11,13,Battery voltage of the data logger
+Datalogger,SolarV,solar-voltage,V,V,x * 1,0,30,Solar/line voltage of the data logger
+Sapflow,DiffVolt_Avg,sapflow-3.5cm,mV,mV,x * 1,0,1,Raw sap flow at 3.5 cm depth
+Sapflow,DiffVolt_Avg,sapflow-5cm,mV,mV,x * 1,0,1,Raw sap flow at 5 cm depth
+RedoxTable,Redox,redox-10cm,mV,mV,x * 1,-1000,1000,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-20cm,mV,mV,x * 1,-1000,1000,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-1000,1000,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-1000,1000,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+TerosTable,VWC,soil-vwc-5cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 5 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-5cm,degC,degC,x * 1,-40,60,Soil temperature at 5 cm
+TerosTable,EC,soil-EC-5cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 5 cm
+TerosTable,VWC,soil-vwc-10cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 10 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-10cm,degC,degC,x * 1,-40,60,Soil temperature at 10 cm
+TerosTable,EC,soil-EC-10cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 10 cm
+TerosTable,VWC,soil-vwc-15cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 15 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-15cm,degC,degC,x * 1,-40,60,Soil temperature at 15 cm
+TerosTable,EC,soil-EC-15cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 15 cm
+TerosTable,VWC,soil-vwc-30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
+TerosTable,EC,soil-EC-30cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
+WaterLevel,Barometric_Pressure600,gw-bar-pressure,,,x * 1,,,
+WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
+WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,
+WaterLevel,Actual_Conductivity600,gw-act-cond,μS/cm,μS/cm,x * 1,,,
+WaterLevel,Specific_Conductivity600,gw-spec-cond,uS/cm,uS/cm,x * 1,0,350000,Groundwater specific conductivity
+WaterLevel,Salinity600,gw-salinity,PSU,PSU,x * 1,0,350,Groundwater salinity
+WaterLevel,TDS600,gw-tds,,,x * 1,,,
+WaterLevel,Water_Density600,gw-density,g/cm3,g/cm3,x * 1,0.98,1.05,Groundwater density
+WaterLevel,Resistivity600,gw-resistivity,,,x * 1,,,
+WaterLevel,pH600,gw-ph,unitless,unitless,x * 1,0,14,Groundwater pH
+WaterLevel,pH_mV600,gw-ph-mv,mV,mV,x * 1,,,
+WaterLevel,pH_ORP600,gw-ph-orp,mV,mV,x * 1,-1400,1400,Groundwater oxidation-reduction potential
+WaterLevel,RDO_concen600,gw-rdo-conc,mg/L,mg/L,x * 1,0,20,Groundwater dissolved oxygen concentration
+WaterLevel,RDO_perc_sat600,gw-perc-sat,%,%,x * 1,0,100,
+WaterLevel,RDO_part_Pressure600,gw-part-pressure,,,x * 1,,,
+WaterLevel,Pressure600,gw-pressure,psi,mbar,x * 68.948,-10,910,Vented pressure corrected for barometric pressure
+WaterLevel,Depth600,gw-depth,,,x * 1,,,
+WaterLevel,Voltage_Ext600A,gw-voltage-ext,V,V,x * 1,,,External battery voltage coming into the Aquatroll
+WaterLevel,Battery_Int600A,gw-battery,%,%,x * 1,0,100,Internal battery percentage
+ClimaVue50_15min,SlrFD_W_Avg,wx-slr-fd15,W/m2,MJ/m2,x * 1,,,Average solar flux over 15 minute period
+ClimaVue50_15min,SlrTF_MJ_Tot,wx-slr-tf15,MJ/m2,W/m2,x * 1,,,Total solar flux in over minute period
+ClimaVue50_15min,Rain_mm_Tot,wx-rain15,mm,mm,x * 1,,,Total rain over 15 minute period
+ClimaVue50_15min,WS_ms_S_WVT,wx-windspeed15,m/s,m/s,x * 1,,,Wind speed
+ClimaVue50_15min,WindDir_D1_WVT,wx-winddir15,degrees,degrees,x * 1,0,359,Wind direction
+ClimaVue50_15min,WindDir_SD1_WVT,wx-winddir-sd115,degrees,degrees,x * 1,0,359,Standard deviation of wind direction part of CS windvector function
+ClimaVue50_15min,MaxWS_ms_Max,wx-maxws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period
+ClimaVue50_15min,MaxWS_ms_TMx,wx-maxws-tmx15,m/s,m/s,x * 1,,,Time of maximum windspeed in 15 minute period
+ClimaVue50_15min,Invalid_Wind_Tot,wx-invalid-wind15,count,count,x * 1,,,Total invalid wind measurements over 15 minute period
+ClimaVue50_15min,AirT_C_Avg,wx-tempavg15,degC,degC,x * 1,-50,60,Average air temperature over 15 minute period
+ClimaVue50_15min,AirT_C_Max,wx-tempmax15,degC,degC,x * 1,-50,60,Maximum air temperature in 15 minute period
+ClimaVue50_15min,AirT_C_TMx,wx-temptmx15,,,x * 1,,,Time of maximum air temperature in 15 minute period
+ClimaVue50_15min,AirT_C_Min,wx-tempmin15,degC,degC,x * 1,-50,60,Minimum air temperature in 15 minute period
+ClimaVue50_15min,AirT_C_TMn,wx-temptmn15,,,x * 1,,,Time of minimum air temperature in 15 minute period
+ClimaVue50_15min,VP_mbar_Avg,wx-vappress15,mbar,mbar,x * 1,500,1100,Average vapor pressure over 15 minute period
+ClimaVue50_15min,BP_mbar,wx-barpress15,mbar,mbar,x * 1,500,1100,Barometric pressure
+ClimaVue50_15min,BP_mbar_Max,wx-bpmax15,mbar,mbar,x * 1,500,1100,Maximum barometric pressure in 15 minute period
+ClimaVue50_15min,BP_mbar_TMx,wx-bptmx15,,,x * 1,,,Time of maximum barometric pressure in 15 minute period
+ClimaVue50_15min,BP_mbar_Min,wx-bpmin15,mbar,mbar,x * 1,500,1100,Minimum barometric pressure in 15 minute period
+ClimaVue50_15min,BP_mbar_TMn,wx-bptmn15,,,x * 1,,,Time of minimum barometric pressure in 15 minute period
+ClimaVue50_15min,RH,wx-rh15,perc,perc,x * 1,0,100,Relative humidity
+ClimaVue50_15min,RHT_C_Avg,wx-rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
+ClimaVue50_15min,TiltNS_deg_Avg,wx-tilt-ns15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the N/S direction over 15 minute period
+ClimaVue50_15min,TiltWE_deg_Avg,wx-tilt-we15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the E/W direction over 15 minute period
+ClimaVue50_15min,Strikes_Tot,wx-strikes15,count,count,x * 1,0,65535,Total lightning strikes over 15 minute period
+ClimaVue50_15min,Dist_km_Min,wx-dist-min15,km,km,x * 1,,,Minimum lightning strike distance in 15 minute time period
+ClimaVue50_15min,Dist_km_TMn,wx-dist-tmn15,,,x * 1,,,Time of minimum lightning stike distance in 15 minute time period
+ClimaVue50_15min,PAR_Den_C_Avg,wx-par-den15,µmol/m2/s,µmol/m2/s,x * 1,,,Average photosynthetically active radiation (PAR) flux density over 15 minute period; site specific correction factor applied
+ClimaVue50_15min,PAR_Tot_C_Tot,wx-par-tot15,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 15 minute period
 ClimaVue50_15min,CVMeta,,,,,,,"Current configuration of ClimaVue sensors (serial number, etc). Format is a13CAMPBELLCLIM50xxxxxx-yyyyyyyyy, where a is the SDI-12 address, xxxxxx is the model, and yyyyyyyyy is the serial number."
-ClimaVue50_24hr,Rain_mm_Tot,wx_rain24,mm,mm,x * 1,0,9600,Sum of rain accumulation over 24 hr period
-ClimaVue50_24hr,SlrFD_W_Avg,wx_slr_fd24,W/m2,W/m2,x * 1,0,1750,Mean solar flux density over 24 hr period
-ClimaVue50_24hr,SlrTF_MJ_Tot,wx_slr_tf24,MJ/m2,MJ/m2,x * 1,0,,Sum of solar flux density over 24 hr period
+ClimaVue50_24hr,Rain_mm_Tot,wx-rain24,mm,mm,x * 1,0,9600,Sum of rain accumulation over 24 hr period
+ClimaVue50_24hr,SlrFD_W_Avg,wx-slr-fd24,W/m2,W/m2,x * 1,0,1750,Mean solar flux density over 24 hr period
+ClimaVue50_24hr,SlrTF_MJ_Tot,wx-slr-tf24,MJ/m2,MJ/m2,x * 1,0,,Sum of solar flux density over 24 hr period
 ClimaVue50_24hr,WS_ms_WVc(1),,m/s,m/s,x * 1,0,30,Mean horizontal wind speed over 24 hr period
 ClimaVue50_24hr,WS_ms_WVc(2),,degrees,degrees,x * 1,0,359,Unit vector mean wind direction over 24 hr period
-ClimaVue50_24hr,WS_ms_S_WVT,wx_winderrors24,,,x * 1,0,,Sum of wind error code over 24 hr period (wind data is invalid if error >0)
-ClimaVue50_24hr,MaxWS_ms_Max,wx_maxws24,m/s,m/s,x * 1,0,30,Maximum wind speed (10s gust) over 24 hr period
-ClimaVue50_24hr,MaxWS_ms_TMx,wx_maxws_tmx24,,,x * 1,,,Time of maximum wind speed over 24 hr period
-ClimaVue50_24hr,AirT_C_Avg,wx_tempavg24,m/s,m/s,x * 1,0,30,Maximum wind speed (10s gust) over 24 hr period
-ClimaVue50_24hr,AirT_C_Max,wx_tempmax24,,,x * 1,,,Time of maximum wind speed over 24 hr period
-ClimaVue50_24hr,AirT_C_TMx,wx_temptmx24,degC,degC,x * 1,-50,60,Average air temperature over 24 hr period
-ClimaVue50_24hr,AirT_C_Min,wx_tempmin24,degC,degC,x * 1,-50,60,Maximum air temperature over 24 hr period
-ClimaVue50_24hr,AirT_C_TMn,wx_temptmn24,,,x * 1,,,Time of maximum air temperature over 24 hr period
-ClimaVue50_24hr,VP_mbar_Avg,wx_vappress24,degC,degC,x * 1,-50,60,Minimum air temperature over 24 hr period
-ClimaVue50_24hr,BP_mbar_Max,wx_bpmax24,,,x * 1,,,Time of minimum air temperature over 24 hr period
-ClimaVue50_24hr,BP_mbar_TMx,wx_bptmx24,mbar,mbar,x * 1,0,470,Mean vapor pressure over 24 hr period
-ClimaVue50_24hr,BP_mbar_Min,wx_bpmin24,mbar,mbar,x * 1,500,1100,Maximum barometric pressure over 24 hr period
-ClimaVue50_24hr,BP_mbar_TMn,wx_bptmn24,,,x * 1,,,Time of maximum barometric pressure over 24 hr period
-ClimaVue50_24hr,RH_Max,wx_rh24,perc,perc,x * 1,0,100,Maximum relative humidity over 24 hr period
-ClimaVue50_24hr,RH_Min,wx_rht24,perc,perc,x * 1,0,100,Minimum relative humidity over 24 hr period
-ClimaVue50_24hr,RHT_C_Max,wx_rhtmax24,degC,degC,x * 1,-50,60,Maximum temperature of humidity sensor over 24 hr period
-ClimaVue50_24hr,RHT_C_Min,wx_rhtmin24,degC,degC,x * 1,-50,60,Minimum temperature of humidity sensor over 24 hr period
-ClimaVue50_24hr,TiltNS_deg_Max,wx_tilt_ns24,degrees,degrees,x * 1,-90,90,Maximum degree of sensor tilt in the N/S direction over 24 hr period
+ClimaVue50_24hr,WS_ms_S_WVT,wx-winderrors24,,,x * 1,0,,Sum of wind error code over 24 hr period (wind data is invalid if error >0)
+ClimaVue50_24hr,MaxWS_ms_Max,wx-maxws24,m/s,m/s,x * 1,0,30,Maximum wind speed (10s gust) over 24 hr period
+ClimaVue50_24hr,MaxWS_ms_TMx,wx-maxws-tmx24,,,x * 1,,,Time of maximum wind speed over 24 hr period
+ClimaVue50_24hr,AirT_C_Avg,wx-tempavg24,m/s,m/s,x * 1,0,30,Maximum wind speed (10s gust) over 24 hr period
+ClimaVue50_24hr,AirT_C_Max,wx-tempmax24,,,x * 1,,,Time of maximum wind speed over 24 hr period
+ClimaVue50_24hr,AirT_C_TMx,wx-temptmx24,degC,degC,x * 1,-50,60,Average air temperature over 24 hr period
+ClimaVue50_24hr,AirT_C_Min,wx-tempmin24,degC,degC,x * 1,-50,60,Maximum air temperature over 24 hr period
+ClimaVue50_24hr,AirT_C_TMn,wx-temptmn24,,,x * 1,,,Time of maximum air temperature over 24 hr period
+ClimaVue50_24hr,VP_mbar_Avg,wx-vappress24,degC,degC,x * 1,-50,60,Minimum air temperature over 24 hr period
+ClimaVue50_24hr,BP_mbar_Max,wx-bpmax24,,,x * 1,,,Time of minimum air temperature over 24 hr period
+ClimaVue50_24hr,BP_mbar_TMx,wx-bptmx24,mbar,mbar,x * 1,0,470,Mean vapor pressure over 24 hr period
+ClimaVue50_24hr,BP_mbar_Min,wx-bpmin24,mbar,mbar,x * 1,500,1100,Maximum barometric pressure over 24 hr period
+ClimaVue50_24hr,BP_mbar_TMn,wx-bptmn24,,,x * 1,,,Time of maximum barometric pressure over 24 hr period
+ClimaVue50_24hr,RH_Max,wx-rh24,perc,perc,x * 1,0,100,Maximum relative humidity over 24 hr period
+ClimaVue50_24hr,RH_Min,wx-rht24,perc,perc,x * 1,0,100,Minimum relative humidity over 24 hr period
+ClimaVue50_24hr,RHT_C_Max,wx-rhtmax24,degC,degC,x * 1,-50,60,Maximum temperature of humidity sensor over 24 hr period
+ClimaVue50_24hr,RHT_C_Min,wx-rhtmin24,degC,degC,x * 1,-50,60,Minimum temperature of humidity sensor over 24 hr period
+ClimaVue50_24hr,TiltNS_deg_Max,wx-tilt-ns24,degrees,degrees,x * 1,-90,90,Maximum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMx,,,,x * 1,,,Time of maximum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_Min,,degrees,degrees,x * 1,-90,90,Minimum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMn,,,,x * 1,,,Time of minimum degree of sensor tilt in the N/S direction over 24 hr period
-ClimaVue50_24hr,TiltWE_deg_Max,wx_tilt_we24,degrees,degrees,x * 1,-90,90,Maximum degree of sensor tilt in the E/W direction over 24 hr period
+ClimaVue50_24hr,TiltWE_deg_Max,wx-tilt-we24,degrees,degrees,x * 1,-90,90,Maximum degree of sensor tilt in the E/W direction over 24 hr period
 ClimaVue50_24hr,TiltWE_deg_TMx,,,,x * 1,,,Time of maximum degree of sensor tilt in the E/W direction over 24 hr period
 ClimaVue50_24hr,TiltWE_deg_Min,,degrees,degrees,x * 1,-90,90,Minimum degree of sensor tilt in the E/W direction over 24 hr period
-ClimaVue50_24hr,PAR_Den_C_Avg,wx_par_den24,µmol/m2/s,µmol/m2/s,x * 1,0,2000,Average photosynthetically active radiation (PAR) flux density over 24 hr period; site specific correction factor applied
-ClimaVue50_24hr,PAR_Tot_C_Tot,wx_par_tot24,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 24 hr period
+ClimaVue50_24hr,PAR_Den_C_Avg,wx-par-den24,µmol/m2/s,µmol/m2/s,x * 1,0,2000,Average photosynthetically active radiation (PAR) flux density over 24 hr period; site specific correction factor applied
+ClimaVue50_24hr,PAR_Tot_C_Tot,wx-par-tot24,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 24 hr period
 ClimaVue50_24hr,CVMeta,,,,,,,"Current configuration of ClimaVue sensors (serial number, etc). Format is a13CAMPBELLCLIM50xxxxxx-yyyyyyyyy, where a is the SDI-12 address, xxxxxx is the model, and yyyyyyyyy is the serial number."
-GCREW_MET_15min,VP,wx_vp15,kPa,kPa,x * 1,,,"Vapor pressure, = RH*SVP/100; from the GCREW met station and only appears at GCW-W"
-GCREW_MET_15min,VPD,wx_vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the GCREW met station and only appears at GCW-W
-GCREW_MET_15min,SVP,wx_svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
-GCREW_MET_15min,WS_ms_RM_Min,wx_minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
-GCREW_MET_15min,Rain_cm_Tot,wx_gcrew_rain15,cm,cm,x * 1,0,960,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
-ExoTable,Conductivity,sonde_conductivity,,,x * 1,,,
-ExoTable,FDOM_QSU,sonde_fdom,QSU,QSU,x * 1,0,300,"Fluorescent dissolved organic matter concentration, Quinine Sulfate Units"
-ExoTable,FDOM_RFU,sonde_fdom_rfu,RFU,RFU,x * 1,0,100,"Fluorescent dissolved organic matter concentration, Relative Fluorescent Units"
-ExoTable,NLF_conductivity,sonde_nlf_cond,,,x * 1,,,
-ExoTable,ODO_sat,sonde_odo_sat,%,%,x * 1,0,200,"Dissolved oxygen concentration, percent air saturation"
-ExoTable,ODO_local,sonde_odo_local,,,x * 1,,,
-ExoTable,ODO_MgL,sonde_odo_mgl,mg/L,mg/L,x * 1,0,50,"Dissolved oxygen concentration, milligrams per liter"
-ExoTable,Pressure_psia,sonde_pressure,psia,psia,x * 1,,,Water pressure
-ExoTable,Salinity_PPT,sonde_salinity,ppt,ppt,x * 1,,,Water salinity
-ExoTable,Specific_Conductivity_uScm,sonde_spcond,µS/cm,µS/cm,x * 1,0,100000,Water specific conductivity
-ExoTable,Wiper_Position_mv,sonde_wiperpos,mV,mV,x * 1,,,
-ExoTable,pH,sonde_ph,unitless,unitless,x * 1,0,14,Water pH
-ExoTable,pH_mv,sonde_ph_mv,mV,mV,x * 1,,,
-ExoTable,Temp_C,sonde_temp,C,C,x * 1,-5,50,Water temperature
-ExoTable,Depth_m,sonde_depth,m,m,x * 1,0,10,Sonde depth
-ExoTable,Battery_v,sonde_battery,V,V,x * 1,,,Sonde battery voltage
-ExoTable,Cable_v,sonde_cable,V,V,x * 1,,,Sonde cable power
-ExoTable,Wiper_Current_ma,sonde_wipercur,mA,mA,x * 1,,,Wiper brush current
-ExoTable,TSS_MgL,sonde_tss,mg/L,mg/L,x * 1,,,Total suspended solids concentration
-ExoTable,ORP_mv,sonde_orp,mV,mV,x * 1,-999,999,Water oxidation reduction potential
-ExoTable,TDS_mg_L,sonde_tds,mg/L,mg/L,x * 1,,,Total dissolved solids concentration
-ExoTable,Vertical_Position_m,sonde_vpos,m,m,x * 1,,,
-ExoTable,Turbidity_FNU,sonde_turbidity,FNU,FNU,x * 1,0,4000,"Turbidity, indirect measurement of the suspended solid concentration in water"
-ExoTable,Turbidity_Raw,sonde_turb_raw,,,x * 1,,,
+GCREW_MET_15min,VP,wx-vp15,kPa,kPa,x * 1,,,"Vapor pressure, = RH*SVP/100; from the GCREW met station and only appears at GCW-W"
+GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the GCREW met station and only appears at GCW-W
+GCREW_MET_15min,SVP,wx-svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
+GCREW_MET_15min,WS_ms_RM_Min,wx-minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
+GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,960,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
+ExoTable,Conductivity,sonde-conductivity,,,x * 1,,,
+ExoTable,FDOM_QSU,sonde-fdom,QSU,QSU,x * 1,0,300,"Fluorescent dissolved organic matter concentration, Quinine Sulfate Units"
+ExoTable,FDOM_RFU,sonde-fdom-rfu,RFU,RFU,x * 1,0,100,"Fluorescent dissolved organic matter concentration, Relative Fluorescent Units"
+ExoTable,NLF_conductivity,sonde-nlf-cond,,,x * 1,,,
+ExoTable,ODO_sat,sonde-odo-sat,%,%,x * 1,0,200,"Dissolved oxygen concentration, percent air saturation"
+ExoTable,ODO_local,sonde-odo-local,,,x * 1,,,
+ExoTable,ODO_MgL,sonde-odo-mgl,mg/L,mg/L,x * 1,0,50,"Dissolved oxygen concentration, milligrams per liter"
+ExoTable,Pressure_psia,sonde-pressure,psia,psia,x * 1,,,Water pressure
+ExoTable,Salinity_PPT,sonde-salinity,ppt,ppt,x * 1,,,Water salinity
+ExoTable,Specific_Conductivity_uScm,sonde-spcond,µS/cm,µS/cm,x * 1,0,100000,Water specific conductivity
+ExoTable,Wiper_Position_mv,sonde-wiperpos,mV,mV,x * 1,,,
+ExoTable,pH,sonde-ph,unitless,unitless,x * 1,0,14,Water pH
+ExoTable,pH_mv,sonde-ph-mv,mV,mV,x * 1,,,
+ExoTable,Temp_C,sonde-temp,C,C,x * 1,-5,50,Water temperature
+ExoTable,Depth_m,sonde-depth,m,m,x * 1,0,10,Sonde depth
+ExoTable,Battery_v,sonde-battery,V,V,x * 1,,,Sonde battery voltage
+ExoTable,Cable_v,sonde-cable,V,V,x * 1,,,Sonde cable power
+ExoTable,Wiper_Current_ma,sonde-wipercur,mA,mA,x * 1,,,Wiper brush current
+ExoTable,TSS_MgL,sonde-tss,mg/L,mg/L,x * 1,,,Total suspended solids concentration
+ExoTable,ORP_mv,sonde-orp,mV,mV,x * 1,-999,999,Water oxidation reduction potential
+ExoTable,TDS_mg_L,sonde-tds,mg/L,mg/L,x * 1,,,Total dissolved solids concentration
+ExoTable,Vertical_Position_m,sonde-vpos,m,m,x * 1,,,
+ExoTable,Turbidity_FNU,sonde-turbidity,FNU,FNU,x * 1,0,4000,"Turbidity, indirect measurement of the suspended solid concentration in water"
+ExoTable,Turbidity_Raw,sonde-turb-raw,,,x * 1,,,
