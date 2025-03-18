@@ -10,10 +10,6 @@ library(quarto)
 if(basename(getwd()) != "pipeline") {
     stop("Working directory needs to be pipeline/")
 }
-# Need compasstools
-if(!require("compasstools")) {
-    stop("Need to remotes::install_github('COMPASS-DOE/compasstools')")
-}
 # If making a release, the repository should be clean
 # Comment out the stop() if doing development work
 git_status <- system2("git", "status", stdout = TRUE)

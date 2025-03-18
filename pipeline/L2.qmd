@@ -34,11 +34,6 @@ This script
 library(tidyr)
 library(readr)
 library(lubridate)
-library(compasstools)
-if(packageVersion("compasstools") < "0.2") {
-    stop("Please update to latest version of compasstools!\n",
-         "devtools::install_github('COMPASS-DOE/compasstools')")
-}
 
 source("helpers.R")
 
@@ -156,4 +151,3 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
-
