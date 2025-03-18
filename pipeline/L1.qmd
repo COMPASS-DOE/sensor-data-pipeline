@@ -40,17 +40,13 @@ This script
 
 library(ggplot2)
 theme_set(theme_bw())
-library(compasstools)
-if(packageVersion("compasstools") < "0.2") {
-    stop("Please update to latest version of compasstools!\n",
-         "devtools::install_github('COMPASS-DOE/compasstools')")
-}
 
 # Warnings are not allowed here
 oldwarn <- options()$warn
 options(warn = 2)
 
 source("helpers.R")
+source("L1-utils.R")
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -299,4 +295,3 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
-

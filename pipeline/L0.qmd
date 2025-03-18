@@ -51,11 +51,6 @@ edit_list <- list.files(file.path(raw_root, params$RAW_EDITED), pattern = "dat$"
 
 library(tidyr)
 library(readr)
-library(compasstools)
-if(packageVersion("compasstools") < "0.2") {
-    stop("Please update to latest version of compasstools!\n",
-         "devtools::install_github('COMPASS-DOE/compasstools')")
-}
 
 # Warnings are not allowed here, as this usually means a file
 # problem that we want to fix immediately
@@ -66,6 +61,7 @@ files_to_process <- list.files(RAW, pattern = "*.dat$",
                                full.names = TRUE, recursive = TRUE)
 
 source("helpers.R")
+source("L0-utils.R")
 ```
 
 I see `r length(files_to_process)` files to process in `r RAW`.
