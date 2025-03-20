@@ -5,8 +5,8 @@ Ohio. This site is owned by the Ohio Department of Natural Resources
 Woman Creek National Estuarine Research Reserve. This site consists of
 four plots: upland ("UP"; located at 41.3763N, 82.5070W), transition
 ("TR"; 41.3758N, 82.5063W), wetland transition edge ("WTE"; 41.3760N,
-82.5071W), wetland ("W"; 41.3761N, 82.5078W), and open water ("OW"; 41.3766N,
-82.5094W). The site was established in December 2021.
+82.5071W), wetland ("W"; 41.3761N, 82.5078W), and open water ("OW";
+41.3766N, 82.5094W). It was established in December 2021.
 
 NOTE: Meteorological data for OWC are available in the OWC-W files.
 

@@ -1,11 +1,11 @@
 GCReW (GCW) is one of COMPASS-FME synoptic sites, and has three plots:
 upland ("UP"; located at 38.8741N, 76.5522W), transition ("TR"; 38.8745,
-76.5515W), wetland ("W"; 38.8750N, 76.5500W), and open water ("OW"; 38.8749N,
-76.5465W). Note that this site overlaps spatially with the TEMPEST (TMP) plots,
-the upland portion of the transect overlaps with the TEMPEST experiment control
-plot. This transect spans a mid- to late-successional (~80 years old) temperate,
-deciduous coastal forest and a mesohaline marsh along the Rhode River in
-Edgewater, MD.
+76.5515W), wetland ("W"; 38.8750N, 76.5500W), and open water ("OW";
+38.8749N, 76.5465W). Note that this site overlaps spatially with the
+TEMPEST (TMP) plots, the upland portion of the transect overlaps with
+the TEMPEST experiment control plot. This transect spans a mid- to
+late-successional (~80 years old) temperate, deciduous coastal forest
+and a mesohaline marsh along the Rhode River in Edgewater, MD.
 
 IMPORTANT DATA NOTE: GCW-W's meteorological data are pulled from the
 GCReW met station, which is a different instrument than at the other
