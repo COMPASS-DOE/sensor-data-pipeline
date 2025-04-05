@@ -52,11 +52,11 @@ ClimaVue50_15min,AirT_C_Max,wx_tempmax15,degC,degC,x * 1,-50,60,Maximum air temp
 ClimaVue50_15min,AirT_C_TMx,wx_temptmx15,,,x * 1,,,Time of maximum air temperature in 15 minute period
 ClimaVue50_15min,AirT_C_Min,wx_tempmin15,degC,degC,x * 1,-50,60,Minimum air temperature in 15 minute period
 ClimaVue50_15min,AirT_C_TMn,wx_temptmn15,,,x * 1,,,Time of minimum air temperature in 15 minute period
-ClimaVue50_15min,VP_mbar_Avg,wx_vappress15,mbar,mbar,x * 1,500,1100,Average vapor pressure over 15 minute period
-ClimaVue50_15min,BP_mbar,wx_barpress15,mbar,mbar,x * 1,500,1100,Barometric pressure
-ClimaVue50_15min,BP_mbar_Max,wx_bpmax15,mbar,mbar,x * 1,500,1100,Maximum barometric pressure in 15 minute period
+ClimaVue50_15min,VP_mbar_Avg,wx_vappress15,mbar,mbar,x * 1,0,470,Average vapor pressure over 15 minute period
+ClimaVue50_15min,BP_mbar,wx_barpress15,mbar,mbar,x * 1,50000,110000,Barometric pressure
+ClimaVue50_15min,BP_mbar_Max,wx_bpmax15,mbar,mbar,x * 1,50000,110000,Maximum barometric pressure in 15 minute period
 ClimaVue50_15min,BP_mbar_TMx,wx_bptmx15,,,x * 1,,,Time of maximum barometric pressure in 15 minute period
-ClimaVue50_15min,BP_mbar_Min,wx_bpmin15,mbar,mbar,x * 1,500,1100,Minimum barometric pressure in 15 minute period
+ClimaVue50_15min,BP_mbar_Min,wx_bpmin15,mbar,mbar,x * 1,50000,110000,Minimum barometric pressure in 15 minute period
 ClimaVue50_15min,BP_mbar_TMn,wx_bptmn15,,,x * 1,,,Time of minimum barometric pressure in 15 minute period
 ClimaVue50_15min,RH,wx_rh15,perc,perc,x * 1,0,100,Relative humidity
 ClimaVue50_15min,RHT_C_Avg,wx_rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
