@@ -1,5 +1,11 @@
 # wx_par_tot15_fixer.R
+# Helper script to correct past wx_par_tot15 data at a variety of sites
 # See https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/287
+# BBL April 2025
+
+# Note: this script should NOT have to be run in the future!
+# It's committed to the repo as documentation of what was done,
+# and how, and in case useful as a model in future work
 
 library(readr)
 
@@ -20,7 +26,7 @@ fix_timestamp <- "2023-01-12 00:00:00" # MSM
 # Where to put the edited files
 EDITED <- "pipeline/data/Raw/Raw_edited/"
 
-
+# Files to fix are assumed to be in the repo's data/Raw folder
 files <- list.files("pipeline/data/Raw/Raw_original/",
                     pattern = file_prefix, full.names = TRUE)
 
