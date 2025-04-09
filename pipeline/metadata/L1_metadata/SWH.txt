@@ -8,15 +8,19 @@ This site is also identified as a Chesapeake Bay National Research
 Reserve site.
 
 NOTE: Meteorological data for SWH are available in the SWH-W files.
+NOTE: The "02" sapflow sensor in the SWAMP plot was accidentally
+installed incorrectly, with the heated probe on the bottom. This does
+not appear to affect data quality (see
+https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/281).
 
-Contacts for the Sweet Hall site: 
+Contacts for the Sweet Hall site:
 Stephanie J. Wilson <wilsonsj@si.edu>
 Pat Megonigal <megonigalp@si.edu>
 Nick Ward <nicholas.ward@pnnl.gov>
 
-Contacts for Sweet Hall data streams: 
+Contacts for Sweet Hall data streams:
 Overall: S. Wilson
-Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu> 
+Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu>
 TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
 AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
 ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
@@ -24,4 +28,4 @@ EXO: S. Wilson; Drew Peresta <PerestaA@si.edu>; R. Rich; Lydia LaGorga <LaGorgaL
 Dataloggers: S. Wilson; E. Phillips; A. Stearns; R. Rich
 
 Key publications:
-N/A as of yet 
+N/A as of yet
