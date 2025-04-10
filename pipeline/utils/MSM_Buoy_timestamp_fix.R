@@ -15,7 +15,9 @@ file_prefix <- "Compass_MSM_Buoy"
 
 # These times are when the wx_par_tot15 problem was fixed,
 # via visual inspection of the L1 data
-fix_timestamp <- "2025-03-31 05:58" # MSM
+library(lubridate)
+fix_timestamp <- ymd_hms("2025-03-31 05:58:00", tz = "UTC") # MSM
+# We use UTC above because that's what readr::read_csv assumes
 
 # Where to put the edited files
 EDITED <- "pipeline/data/Raw/Raw_edited/"
@@ -62,3 +64,6 @@ for(f in files) {
 }
 
 message("All done")
+message("YOU NEED TO HAND-CORRECT THE CHANGEOVER POINT ", fix_timestamp)
+message("so that there's a smooth time series (because the script)")
+message("will have 'fixed' the hour after the changeover too")
