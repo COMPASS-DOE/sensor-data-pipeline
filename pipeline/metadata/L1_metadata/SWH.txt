@@ -8,7 +8,7 @@ This site is also identified as a Chesapeake Bay National Research
 Reserve site.
 
 NOTE: Meteorological data for SWH are available in the SWH-W files.
-NOTE: The "02" sapflow sensor in the SWAMP plot was accidentally
+NOTE: The "02D" sapflow sensor in the SWAMP plot was accidentally
 installed incorrectly, with the heated probe on the bottom. This does
 not appear to affect data quality (see
 https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/281).
