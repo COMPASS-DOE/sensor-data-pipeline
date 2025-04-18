@@ -79,7 +79,7 @@ DESIGN_TABLE_ENTRIES <- with(dt_ex, paste(Logger, Table, loggernet_variable)) # 
 
 # Read the site time zone table
 METADATA_TZ_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_TIMEZONES_TABLE)
-tzt <- read_csv(METADATA_TZ_TABLE, col_types = "cc")
+tzt <- read_csv(METADATA_TZ_TABLE, col_types = "ccc")
 
 # Read the variable metadata table
 METADATA_VARS_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_VARS_TABLE)

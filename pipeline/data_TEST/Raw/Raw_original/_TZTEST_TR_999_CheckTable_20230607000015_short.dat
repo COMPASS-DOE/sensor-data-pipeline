@@ -1,0 +1,10 @@
+"TOA5","Compass_TZTEST_TR_999","CR1000X","28733","CR1000X.Std.06.00","CPU:COMPASS_v3.3.CR1X","12050","CheckTable"
+"TIMESTAMP","RECORD","BattV","SolarV","Batt_CHECK","Solar_CHECK","Flag(1)","Flag(2)","Flag(3)","Flag(4)","Flag(5)","Flag(6)","Flag(7)","Flag(8)","Flag(9)","Flag(10)","Flag(11)","Flag(12)","Flag(13)","Flag(14)","Statname","PB"
+"TS","RN","Volts","Volts","","","","","","","","","","","","","","","","","",""
+"","","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp"
+"2023-05-08 00:00:00",1598,11.93,25.42,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
+"2023-05-08 00:15:00",1599,11.93,25.41,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
+"2023-05-08 00:30:00",1600,11.93,25.4,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
+"2023-05-08 00:45:00",1601,11.93,25.38,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
+"2023-05-08 01:00:00",1602,11.93,25.37,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
+"2023-05-08 01:15:00",1603,11.93,25.36,"LOW","OKAY",0,0,-1,0,-1,0,0,-1,0,0,0,0,0,0,"Compass_TZTEST_TR",999
