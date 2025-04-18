@@ -2,6 +2,7 @@ COMPASS-FME Level 1 data
 Version: [VERSION]
 Date: [DATESTAMP]
 Observations: [OBSERVATIONS]
+Data timestamps: [TIMEZONE]
 Git commit: [GIT_COMMIT]
 
 DESCRIPTION

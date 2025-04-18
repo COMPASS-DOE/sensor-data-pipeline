@@ -11,6 +11,9 @@ params:
   L1_METADATA: "L1_metadata/"
   METADATA_VARS_TABLE: "L1_metadata_variables.csv"
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
+  # We don't use "America/New_York" for L1_DATA_TIMEZONE because we want
+  # all outputs to be in STANDARD time
+  L1_DATA_TIMEZONE: "Etc/GMT+5"
   L1_VERSION: "???"
   L1_RELEASE_DATE: "???"
   write_plots: true
@@ -174,6 +177,7 @@ readme <- gsub("[VERSION]", params$L1_VERSION, readme, fixed = TRUE)
 readme <- gsub("[DATESTAMP]", params$L1_RELEASE_DATE, readme, fixed = TRUE)
 readme <- gsub("[OBSERVATIONS]", n_obs, readme, fixed = TRUE)
 readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
+readme <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, readme, fixed = TRUE)
 readme_outfn <- file.path(L1, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)
@@ -244,6 +248,8 @@ for(dd in data_dirs) {
     md <- md[-col_info_pos]
     # The NA code is an in-line replacement
     md <- gsub("[NA_STRING_L1]", NA_STRING_L1, md, fixed = TRUE)
+    # The time zone is an in-line replacement
+    md <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, md, fixed = TRUE)
 
     # Insert variable metadata
     var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)

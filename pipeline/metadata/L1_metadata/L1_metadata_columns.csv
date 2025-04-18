@@ -2,7 +2,7 @@
 Column,Description
 Site,Site code; see site info above (character)
 Plot,Plot code; see site info above (character)
-TIMESTAMP,Datalogger timestamp in EST (POSIXct)
+TIMESTAMP,Datalogger timestamp in [TIMEZONE] (POSIXct)
 Instrument,Name of measurement instrument (character)
 Instrument_ID,Identifier of instrument within plot (character)
 Sensor_ID,"Identifier of individual sensor, tree, etc. being measured (character)"
