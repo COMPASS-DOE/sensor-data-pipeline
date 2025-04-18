@@ -8,8 +8,8 @@ params:
   L0: "L0/"
   L1_NORMALIZE: "L1_normalize/"
   DESIGN_TABLE: "design_table.csv"
-  # We don't use "America/New_York" for L1_DATA_TIMEZONE because we want
-  # all outputs to be in STANDARD time
+  # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
+  # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
   # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   L1_DATA_TIMEZONE: "Etc/GMT+5"
   METADATA_ROOT: "metadata/"
@@ -249,9 +249,10 @@ f <- function(fn, out_dir, design_table) {
     smry$`OOS%` <- round(sum(dat$F_OOS) / nrow(dat) * 100, 1)
 
     # ------------- Time zone change, if needed
+    
     site <- dat$Site[1]
     if(site %in% tzt$Site) {
-        site_tz <- tzt$Time_zone[which(site == tzt$Site)]
+        site_tz <- tzt$Datalogger_time_zone[which(site == tzt$Site)]
         if(site_tz != params$L1_DATA_TIMEZONE) {
             message("\tChanging timestamps from ", site_tz, " to ", params$L1_DATA_TIMEZONE)
             # The timestamps were recorded in the site's time zone, which differs
@@ -261,7 +262,7 @@ f <- function(fn, out_dir, design_table) {
             dat$TIMESTAMP <- format(timestamps, "%Y-%m-%d %H:%M:%S")
         }
     } else {
-        stop("This site ", site, " is not in time zone table ", 
+        stop("This site ", site, " is not in the time zone table ", 
              params$METADATA_TIMEZONES_TABLE)
     }
     

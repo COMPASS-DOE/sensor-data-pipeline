@@ -1,4 +1,4 @@
-Site,Time_zone,Comment
+Site,Datalogger_time_zone,Comment
 TZTEST,Etc/GMT+6,TEST ONLY
 CRC,Etc/GMT+5,EST
 PTR,Etc/GMT+5,EST
