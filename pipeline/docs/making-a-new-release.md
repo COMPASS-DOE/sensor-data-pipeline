@@ -64,18 +64,22 @@ site-specific contact information is correct and, if needed, update the
 various site files in `./pipeline/metadata/L1_metadata`. Also update the
 key publications for each site.
 
+9. Confirm that the datalogger time zone information listed in
+`./metadata/L1_metadata/L1_metadata_timezones.csv` is correct, and that
+the output time zone (set in `driver.R` or the individual Quarto files)
+is what you want.
 
 ## Run the pipeline
 
-9. Commit all your changes. Now set the `ROOT` variable in `driver.R`
+10. Commit all your changes. Now set the `ROOT` variable in `driver.R`
 (if that's what you're using) to "./data" instead of "./data_TEST".
 **This change does NOT get committed**, however, because you want GitHub
 Actions to continue to use the _test_ data.
 
-10. From the `./pipeline` folder, run `reset("data/")` (sourced from 
+11. From the `./pipeline` folder, run `reset("data/")` (sourced from 
 `helpers.R`) to remove any previous files.
 
-11. Run the processing pipeline. If you use `driver.R` it will be
+12. Run the processing pipeline. If you use `driver.R` it will be
 relatively fast, because highly parallelized, but you don't get
 informative html logs, because the parallel processes can't write to
 output. If you want the full, detailed logs, run without parallelism
@@ -89,14 +93,14 @@ for examples of how to resolve these.
 
 ## Check, clean up, upload
 
-12. Double-check the final release README file.
+13. Double-check the final release README file.
 
-13. You may want to clean up the resulting L1 folder; for example,
+14. You may want to clean up the resulting L1 folder; for example,
 remove unwanted hidden files (`find ./ -name ".DS_Store" | xargs rm`) or
 'stub' data (`find ./ -name "*202407*" | xargs rm`). (Before doing this,
 use find's `-print` option to make sure you know what you're deleting!)
 
-14. Push the data (including `L1`, `Raw`, `L0`, and `Logs`) to the
+15. Push the data (including `L1`, `Raw`, `L0`, and `Logs`) to the
 COMPASS HPC. For example:
 
 ```
@@ -110,9 +114,9 @@ rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --exclude=".*" L1/ <use
 # Homebrew (https://brew.sh) to install an up-to-date version of rsync.
 ```
 
-15. Upload to the Google Drive, renaming the folder to the correct
+16. Upload to the Google Drive, renaming the folder to the correct
 version number, for `L1` and `Raw`.
 
-16. Make a Git release corresponding to the version number.
+17. Make a Git release corresponding to the version number.
 
-17. Let everyone know!
+18. Let everyone know!
