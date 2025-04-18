@@ -13,6 +13,7 @@ params:
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
   # We don't use "America/New_York" for L1_DATA_TIMEZONE because we want
   # all outputs to be in STANDARD time
+  # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   L1_DATA_TIMEZONE: "Etc/GMT+5"
   L1_VERSION: "???"
   L1_RELEASE_DATE: "???"
@@ -301,3 +302,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+
