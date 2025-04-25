@@ -88,6 +88,7 @@ File | Description
 `GWI.txt` | Site description file for the GWI site
 `L1_metadata_columns.csv` | This specifies the names and ordering of the L1 data columns. Upon being generated, L1 files are checked against this list and the process will error if there's a discrepancy
 `L1_metadata_template.txt` | Template for the various metadata files in each site-year folder. Information placeholders in square brackets are replaced in the L1 metadata-generation step
+`L1_metadata_timezones.csv` | Time zone that the dataloggers are set to at each site; used by `L1_normalize.qmd`
 `L1_metadata_variables.csv` | Along with the design table, this is a key 'information center' for the system. Also known as the 'bounds and units table', it specifies unit conversions, expected bands, variable metadata, etc. Every output variable must have an entry here, or the L1_normalize step will error
 `MSM.txt` | Site description file for the MSM site
 `OWC.txt` | Site description file for the OWC site

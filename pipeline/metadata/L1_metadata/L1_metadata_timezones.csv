@@ -1,0 +1,10 @@
+Site,Datalogger_time_zone,Comment
+TZTEST,Etc/GMT+6,TEST ONLY
+CRC,Etc/GMT+5,This is EST
+PTR,Etc/GMT+5,This is EST
+OWC,Etc/GMT+5,This is EST
+GWI,Etc/GMT+5,This is EST
+MSM,Etc/GMT+5,This is EST
+GCW,Etc/GMT+5,This is EST
+SWH,Etc/GMT+5,This is EST
+TMP,Etc/GMT+5,This is EST

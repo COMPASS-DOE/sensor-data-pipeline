@@ -24,6 +24,10 @@ source("helpers.R")
 ROOT <- "./data_TEST"
 VERSION <- "1-2"
 RELEASE_DATE <- "2024-02-21"
+# We use "Etc/GMT+5" rather than e.g. "America/New_York" because
+# outputs should always be in STANDARD time
+# See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+L1_DATA_TZ <- "Etc/GMT+5"
 
 # Log file ----------------------------------------------------
 
@@ -87,6 +91,7 @@ begin <- Sys.time()
 driver_try(
     quarto_render("L1_normalize.qmd",
                   execute_params = list(DATA_ROOT = ROOT,
+                                        L1_DATA_TIMEZONE = L1_DATA_TZ,
                                         html_outfile = outfile,
                                         logfile = LOGFILE,
                                         run_parallel = TRUE))
@@ -113,6 +118,7 @@ driver_try(
                   execute_params = list(DATA_ROOT = ROOT,
                                         L1_VERSION = VERSION,
                                         L1_RELEASE_DATE = RELEASE_DATE,
+                                        L1_DATA_TIMEZONE = L1_DATA_TZ,
                                         html_outfile = outfile,
                                         logfile = LOGFILE,
                                         run_parallel = FALSE))

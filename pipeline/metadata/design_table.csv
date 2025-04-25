@@ -1,4 +1,14 @@
 Logger,Table,loggernet_variable,Site,Plot,Instrument,Instrument_ID,Sensor_ID,Location,valid_through,research_name,note
+Compass_TZTEST_TR_999,CheckTable,Format,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,RECORD,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,BattV,TZTEST,TR,Datalogger,999,,,,battery_voltage,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,SolarV,TZTEST,TR,Datalogger,999,,,,solar_voltage,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,Batt_CHECK,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,Solar_CHECK,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,Flag({1:14}),TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,Statname,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+Compass_TZTEST_TR_999,CheckTable,PB,TZTEST,TR,Datalogger,999,,,,,TEST ONLY
+,,,,,,,,,,,
 Compass_PTR_UP_313,CheckTable,Format,PTR,UP,Datalogger,313,,,,,
 Compass_PTR_UP_313,CheckTable,RECORD,PTR,UP,Datalogger,313,,,,,
 Compass_PTR_UP_313,CheckTable,BattV,PTR,UP,Datalogger,313,,,,battery_voltage,

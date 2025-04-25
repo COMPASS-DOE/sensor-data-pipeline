@@ -5,10 +5,15 @@ title-block-banner: true
 params:
   html_outfile: "L1_normalize.html"
   DATA_ROOT: "data_TEST/"
-  METADATA_ROOT: "metadata/"
   L0: "L0/"
   L1_NORMALIZE: "L1_normalize/"
   DESIGN_TABLE: "design_table.csv"
+  # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
+  # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
+  # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  L1_DATA_TIMEZONE: "Etc/GMT+5"
+  METADATA_ROOT: "metadata/"
+  METADATA_TIMEZONES_TABLE: "L1_metadata/L1_metadata_timezones.csv"
   METADATA_VARS_TABLE: "L1_metadata/L1_metadata_variables.csv"
   OOS: "out-of-service/"
   logfile: ""
@@ -72,6 +77,10 @@ if(any(duplicated(chk))) {
          paste(head(chk[duplicated(chk), "design_link"]), collapse = ", "))
 }
 DESIGN_TABLE_ENTRIES <- with(dt_ex, paste(Logger, Table, loggernet_variable)) # save for later
+
+# Read the site time zone table
+METADATA_TZ_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_TIMEZONES_TABLE)
+tzt <- read_csv(METADATA_TZ_TABLE, col_types = "ccc")
 
 # Read the variable metadata table
 METADATA_VARS_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_VARS_TABLE)
@@ -162,7 +171,7 @@ f <- function(fn, out_dir, design_table) {
                                 times = substr(dat$TIMESTAMP, 1, 10), # isolate YYYY-MM-DD
                                 valid_through = dat$valid_through)
 
-    message("\tDropping ", sum(!dat_retain), " out-of-date design links")
+    if(sum(!dat_retain)) message("\tDropping ", sum(!dat_retain), " out-of-date design links")
     dat <- dat[dat_retain,]
     dat$valid_through <- NULL
     
@@ -232,13 +241,31 @@ f <- function(fn, out_dir, design_table) {
             # all `oos_data` entries, OR'ing the results as we go, 
             # instead of breaking out
             dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
-            message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
+            if(sum(dat$F_OOS)) message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
             oos_data_used[tbl] <<- TRUE # won't work when parallelized
             break
         }
     }
     smry$`OOS%` <- round(sum(dat$F_OOS) / nrow(dat) * 100, 1)
 
+    # ------------- Time zone change, if needed
+    
+    site <- dat$Site[1]
+    if(site %in% tzt$Site) {
+        site_tz <- tzt$Datalogger_time_zone[which(site == tzt$Site)]
+        if(site_tz != params$L1_DATA_TIMEZONE) {
+            message("\tChanging timestamps from ", site_tz, " to ", params$L1_DATA_TIMEZONE)
+            # The timestamps were recorded in the site's time zone, which differs
+            # from the L1 timezone, so convert to POSIXct and change tz
+            timestamps <- ymd_hms(dat$TIMESTAMP, tz = site_tz)
+            timestamps <- with_tz(timestamps, tzone = params$L1_DATA_TIMEZONE)
+            dat$TIMESTAMP <- format(timestamps, "%Y-%m-%d %H:%M:%S")
+        }
+    } else {
+        stop("This site ", site, " is not in the time zone table ", 
+             params$METADATA_TIMEZONES_TABLE)
+    }
+    
     # ------------- Write output files and clean up
 
     write_to_folders(dat, 
