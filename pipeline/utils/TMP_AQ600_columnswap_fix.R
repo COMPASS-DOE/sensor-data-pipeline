@@ -1,7 +1,8 @@
 # TMP_AQ600_columnswap_fix.R
 # Some of the AquaTROLL600s at TEMPEST got mis-configured; see
 # https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/245
-# This script fixes the problem, writing out corrected files
+# This script fixes the problem by swapping columns in bad files
+# and writing out corrected files
 # BBL April 2025
 
 # Note: this script should NOT have to be run in the future!
@@ -10,10 +11,10 @@
 
 library(readr)
 
+# This map file tells us how to move data between columns in bad files
 fixmap <- read_csv("pipeline/utils/TMP_AQ600_bad_column_mapping.csv", col_types = "cc")
 
-test <- as.data.frame(matrix(ncol = nrow(fixmap), data = seq_len(nrow(fixmap))))
-colnames(test) <- fixmap$Column
+# Helper function to swap data between columns
 swapcols <- function(x, fixmap) {
     newx <- x
     n_swap <- 0
@@ -28,9 +29,11 @@ swapcols <- function(x, fixmap) {
     message("\tMoved ", n_swap, " columns")
     invisible(newx)
 }
+# Example
 message("TESTING...")
+test <- as.data.frame(matrix(ncol = nrow(fixmap), data = seq_len(nrow(fixmap))))
+colnames(test) <- fixmap$Column
 swapcols(test, fixmap)
-
 
 # Prefix of files to fix -- files with potentially swapped columns
 file_prefix <- "PNNL_[0-9]{2}_WaterLevel600"
@@ -74,6 +77,7 @@ for(f in files) {
     tf <- tempfile()
     write_csv(newdat, tf)
     x_out <- read_lines(tf)
+    file.remove(tf)
     x_out <- c(x[1:4], x_out[-1])
 
     # Write to a modified version of the original file
