@@ -51,6 +51,8 @@ EDITED <- "pipeline/data/Raw/Raw_edited/"
 files <- list.files("pipeline/data/Raw/Raw_original/",
                     pattern = file_prefix, full.names = TRUE)
 
+fixed_data <- list()
+
 for(f in files) {
 
     message("Reading ", basename(f))
@@ -64,32 +66,82 @@ for(f in files) {
                                      .default = col_character()))
 
     # Do any Water_Density600 values fall out of expected range 0.9-1.1?
-    fixrows <- dat$Water_Density600 < 0.9 | dat$Water_Density600 > 1.1
+    fixrows <- with(dat, !is.na(Water_Density600) &
+                        (Water_Density600 < 0.9 | Water_Density600 > 1.1))
 
     n_fixrows <- sum(fixrows, na.rm = TRUE)
 
-    # QUESTION: do we fix rows with Water_Density600 of NA?
+    # Convert to character so everything swaps cleanly
+    dat$Water_Density600 <- as.character(dat$Water_Density600)
 
     message("\tRows = ", nrow(dat))
     message("\tfixrows = ", n_fixrows)
 
-    if(n_fixrows == 0) next  # nothing to do
+    if(n_fixrows == 0) {
+        fixed_data[[f]] <- dat
+        fixed_data[[f]]$fixed <- FALSE
+        next  # nothing to do
+    }
 
     # Fix
     message("\tFixing...")
-    newdat <- swapcols(dat, fixrows, fixmap)
+    fixed_data[[f]] <- swapcols(dat, fixrows, fixmap)
 
     # Write out data, read, add Campbell header lines back
     tf <- tempfile()
-    write_csv(newdat, tf)
+    write_csv(fixed_data[[f]], tf)
     x_out <- read_lines(tf)
     file.remove(tf)
     x_out <- c(x[1:4], x_out[-1])
+
+    fixed_data[[f]]$fixed <- fixrows
 
     # Write to a modified version of the original file
     bn <- basename(f)
     message("Writing ", bn)
     write_lines(x_out, file.path(EDITED, bn))
-}
+} # for
 
-message("All done")
+message("All done with fixes")
+
+# Plot the data for QA/QC checking
+
+all_data <- dplyr::bind_rows(fixed_data)
+all_data$TIMESTAMP <- lubridate::ymd_hms(all_data$TIMESTAMP)
+library(ggplot2)
+theme_set(theme_bw())
+
+
+all_data$TDS600 <- as.numeric(all_data$TDS600)
+all_data$TDS600[all_data$TDS600 == -99999.00] <- NA
+p <- ggplot(all_data, aes(TIMESTAMP, TDS600, color = fixed)) +
+    geom_point() + facet_grid(Statname ~ ., scales = "free")
+print(p)
+ggsave("~/Desktop/p1-TDS600.png", width = 10, height = 6)
+print(p %+% all_data[all_data$TDS600 < 1,])
+ggsave("~/Desktop/p2-TDS600.png", width = 10, height = 6)
+
+all_data$Water_Density600 <- as.numeric(all_data$Water_Density600)
+all_data$Water_Density600[all_data$Water_Density600 == -99999.00] <- NA
+p <- ggplot(all_data, aes(TIMESTAMP, Water_Density600, color = fixed)) +
+    geom_point() + facet_grid(Statname ~ ., scales = "free")
+print(p)
+ggsave("~/Desktop/p3-Water_Density600.png", width = 10, height = 6)
+
+all_data$Resistivity600 <- as.numeric(all_data$Resistivity600)
+all_data$Resistivity600[all_data$Resistivity600 == -99999.00] <- NA
+p <- ggplot(all_data, aes(TIMESTAMP, Resistivity600, color = fixed)) +
+    geom_point() + facet_grid(Statname ~ ., scales = "free")
+print(p)
+ggsave("~/Desktop/p4-Resistivity600.png", width = 10, height = 6)
+
+# A non-swapped column
+all_data$Temperature600 <- as.numeric(all_data$Temperature600)
+all_data$Temperature600[all_data$Temperature600 == -99999.00] <- NA
+p <- ggplot(all_data, aes(TIMESTAMP, Temperature600, color = fixed)) +
+    geom_point() + facet_grid(Statname ~ ., scales = "free")
+print(p)
+ggsave("~/Desktop/p5-Temperature600.png", width = 10, height = 6)
+
+
+
