@@ -144,4 +144,11 @@ print(p)
 ggsave("~/Desktop/p5-Temperature600.png", width = 10, height = 6)
 
 
+all_data$pH600 <- as.numeric(all_data$pH600)
+all_data$pH600[all_data$pH600 == -99999.00] <- NA
+p <- ggplot(all_data, aes(TIMESTAMP, pH600, color = fixed)) +
+    geom_point() + facet_grid(Statname ~ ., scales = "free")
+print(p)
+ggsave("~/Desktop/p6-pH600.png", width = 10, height = 6)
+
 
