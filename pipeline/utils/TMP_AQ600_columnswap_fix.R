@@ -12,17 +12,22 @@
 library(readr)
 
 # This map file tells us how to move data between columns in bad files
-fixmap <- read_csv("pipeline/utils/TMP_AQ600_bad_column_mapping.csv", col_types = "cc")
+fixmap <- read_csv("pipeline/utils/TMP_AQ600_bad_column_mapping.csv", col_types = "ccc")
 
 # Helper function to swap data between columns
-swapcols <- function(x, fixmap) {
+swapcols <- function(x, fixrows, fixmap) {
+    # There needs to be a 1-to-1 mapping
+    stopifnot(identical(sort(fixmap$Column), sort(fixmap$Should_be_mapped_to)))
+    # fixrows has to be same length as data frame
+    stopifnot(length(fixrows) == nrow(x))
+
     newx <- x
     n_swap <- 0
     for(i in seq_len(nrow(fixmap))) {
         src <- fixmap$Column[i]
         dest <- fixmap$Should_be_mapped_to[i]
         if(src != dest) {
-            newx[dest] <- x[src]
+            newx[fixrows, dest] <- x[fixrows, src]
             n_swap <- n_swap + 1
         }
     }
@@ -33,7 +38,8 @@ swapcols <- function(x, fixmap) {
 message("TESTING...")
 test <- as.data.frame(matrix(ncol = nrow(fixmap), data = seq_len(nrow(fixmap))))
 colnames(test) <- fixmap$Column
-swapcols(test, fixmap)
+test <- rbind(test, test)
+swapcols(test, c(TRUE, FALSE), fixmap)
 
 # Prefix of files to fix -- files with potentially swapped columns
 file_prefix <- "PNNL_[0-9]{2}_WaterLevel600"
@@ -71,7 +77,7 @@ for(f in files) {
 
     # Fix
     message("\tFixing...")
-    newdat <- swapcols(dat, fixmap)
+    newdat <- swapcols(dat, fixrows, fixmap)
 
     # Write out data, read, add Campbell header lines back
     tf <- tempfile()
