@@ -1,24 +1,24 @@
-Column,Should_be_mapped_to
-TIMESTAMP,TIMESTAMP
-RECORD,RECORD
-Statname,Statname
-Aquatroll_ID(1),Aquatroll_ID(1)
-Barometric_Pressure600,Barometric_Pressure600
-Temperature600,Temperature600
-Actual_Conductivity600,Actual_Conductivity600
-Specific_Conductivity600,Specific_Conductivity600
-Salinity600,Salinity600
-TDS600,TDS600
-Water_Density600,Water_Density600
-Resistivity600,Resistivity600
-pH600,pH600
-pH_mV600,pH_mV600
-pH_ORP600,pH_ORP600
-RDO_concen600,RDO_concen600
-RDO_perc_sat600,RDO_perc_sat600
-RDO_part_Pressure600,RDO_part_Pressure600
-Pressure600,Pressure600
-Depth600,Depth600
-Temperature_Int600,Temperature_Int600
-Voltage_Ext600,Voltage_Ext600
-Battery_Int600,Battery_Int600
+Column,Should_be_mapped_to,Notes
+TIMESTAMP,TIMESTAMP,
+RECORD,RECORD,
+Statname,Statname,
+Aquatroll_ID(1),Aquatroll_ID(1),
+Barometric_Pressure600,Barometric_Pressure600,
+Temperature600,Temperature600,
+Actual_Conductivity600,Actual_Conductivity600,
+Specific_Conductivity600,Specific_Conductivity600,
+Salinity600,Salinity600,
+TDS600,Resistivity600,
+Water_Density600,TDS600,
+Resistivity600,Water_Density600,
+pH600,pH600,We think pH sensor got messed up when reinstalling
+pH_mV600,pH_mV600,We think pH sensor got messed up when reinstalling
+pH_ORP600,pH_ORP600,We think pH sensor got messed up when reinstalling
+RDO_concen600,RDO_concen600,
+RDO_perc_sat600,RDO_perc_sat600,
+RDO_part_Pressure600,RDO_part_Pressure600,
+Pressure600,Pressure600,
+Depth600,Depth600,Goofy numbers but what else can it be?
+Temperature_Int600,Temperature_Int600,
+Voltage_Ext600,Voltage_Ext600,
+Battery_Int600,Battery_Int600,
