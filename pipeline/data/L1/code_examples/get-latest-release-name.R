@@ -1,4 +1,5 @@
 # Programmatically get the list of data releases
+# BBL May 2025
 
 tags <- system2("git",
                 args = c("ls-remote", "--tags", "https://github.com/COMPASS-DOE/data-workflows.git"),

@@ -1,8 +1,9 @@
 # Calculate and plot cumulative observations over time
-
+# BBL May 2025
 
 # Find and count lines for all files in the L1 folder
-fls <- list.files("~/Documents/v1-1/", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
+fls <- list.files("~/Documents/v1-1/", pattern = "*.csv$",
+                  full.names = TRUE, recursive = TRUE)
 
 library(tibble)
 results <- tibble(file = basename(fls), rows = NA_real_)
@@ -15,7 +16,8 @@ for(i in seq_along(fls)) {
 # An example of how to parse the filenames into useful information:
 # site, plot, time range, data level, and version number
 library(tidyr)
-results <- separate(results, file, sep = "_", into = c("Site", "Plot", "Timerange","Level","version"))
+results <- separate(results, file, sep = "_",
+                    into = c("Site", "Plot", "Timerange","Level","version"))
 results <- separate(results, Timerange, sep = "-", into = c("Begin", "End"))
 results$Date <- as.Date(results$Begin, format = "%Y%m%d")
 results$Year <- year(results$Date)
@@ -86,3 +88,5 @@ animate(gif, fps = 10, duration = 10,
         width = 1000, height = 800, renderer = gifski_renderer(loop = FALSE))
 
 anim_save("~/Documents/bar_chart.gif")
+
+# All done!

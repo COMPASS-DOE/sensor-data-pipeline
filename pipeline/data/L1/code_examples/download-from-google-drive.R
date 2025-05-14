@@ -1,4 +1,5 @@
-# Locate and read in L1 files from the Google Drive
+# Find and download L1 files from the Google Drive
+# BBL May 2025
 
 # Settings
 
@@ -21,7 +22,6 @@ library(googledrive)
 # googledrive::drive_auth() for more information
 
 # Locate the root of the data release
-
 message("Looking for ", L1_VERSION, " on Google Drive...")
 root <- drive_find(pattern = L1_VERSION, n_max = 30, type = "folder")
 if(nrow(root) > 1) {
@@ -34,13 +34,12 @@ regex <- paste0("^", SITE, ".*", L1_VERSION)
 
 # Get the file list; this might be slow
 files <- drive_ls(path = root$id[1],
-                  pattern = regex, #"^CRC.*v1-2",
+                  pattern = regex,
                   type = "csv",
                   n_max = 3000,
                   recursive = TRUE)
 
 # Download the data, saving the files to DOWNLOAD_PATH
-
 for(i in seq_len(nrow(files))) {
     message("Downloading ", files$name[i])
     drive_download(files$id[i],
