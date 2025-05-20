@@ -34,6 +34,8 @@ This script
 
 -   Drops out of bounds (`F_OOB`) and out of service (`F_OOS`) rows
 
+-   Drop NA data rows (shouldn't be any?)
+
 -   Identifies and drops outliers
 
 -   Averages to `r params$timestamp_round`, recording n_good and n_outliers
@@ -60,11 +62,16 @@ files_to_process <- list.files(L1,
                                pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 
+# **** TEMPORARY **** TODO
+files_to_process <- list.files(L1, 
+                               pattern = "SWH_SWAMP_20241130-[0-9]{8}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
-qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+qaqct <- read_csv(QAQC_TABLE, col_types = "ccccc")
 
 source("helpers.R")
-
+source("L2-utils.R")
 ```
 
 I see `r length(files_to_process)` files to process in `r L1`.
@@ -99,6 +106,28 @@ f <- function(fn, out_dir) {
     # File-based summary
     message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
 
+    # TODO: there might be more than one variable per file
+    rn <- unique(dat$research_name)
+    if(length(rn) > 1) {
+        stop("Why is there more than one research name here?!?")
+    }
+    i <- match(rn, qaqct$variable)
+    if(is.na(i)) stop(rn, " not found in QAQC table")
+    if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
+    
+    # TODO: loop through the QAQC_ columns in the table
+    if(!is.na(qaqct$QAQC_mad[i])) {
+        message("\tRunning QAQC_mad")
+        dotdotdot <- qaqct$QAQC_mad_params[i]
+        dat <- do_outlier_test(dat, 
+                               "QAQC_mad", 
+                               time_grouping = qaqct$time_grouping[i], 
+                               params = params)
+        if(sum(dat$F_mad)) message("\t\t", sum(dat$F_mad), " outliers identified")
+    } else {
+        message("\tNo QAQC requested")
+    }
+    
 #    return(smry)
 }
 
