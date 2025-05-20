@@ -1,15 +1,23 @@
 ---
-title: "L1b"
+title: "L2"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L1b.html"
+  html_outfile: "L2.html"
   DATA_ROOT: "data_TEST/"
-  METADATA_ROOT: "metadata/"
-  L1A: "L1a/"
-  L1B: "L1b/"
+  L1: "L1/"
+  L2: "L2/"
+  QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 minutes"
-  remove_input_files: false
+  METADATA_ROOT: "metadata/"
+  L2_METADATA: "L2_metadata/"
+  # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
+  # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
+  # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  L1_DATA_TIMEZONE: "Etc/GMT+5"
+  L2_VERSION: "???"
+  L2_RELEASE_DATE: "???"
+  write_plots: true
   logfile: ""
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
@@ -22,9 +30,19 @@ editor: visual
 
 This script
 
--   Computes new variables: `sapflow_avg` (a test)
+-   Reads in the L1 data files one by one
 
--   Loads all template tables and generates L1a output tables from them
+-   Drops out of bounds (`F_OOB`) and out of service (`F_OOS`) rows
+
+-   Identifies and drops outliers
+
+-   Averages to `r params$timestamp_round`, recording n_good and n_outliers
+
+-   Fills in (NA) missing timestamps for the year
+
+-   Computes new variables
+
+-   Write L2 files
 
 ## Initializing
 
@@ -35,16 +53,25 @@ library(tidyr)
 library(readr)
 library(lubridate)
 
+L1 <- file.path(params$DATA_ROOT, params$L1)
+L2 <- file.path(params$DATA_ROOT, params$L2)
+
+files_to_process <- list.files(L1, 
+                               pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+
+QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
 source("helpers.R")
 
-L1A <- file.path(params$DATA_ROOT, params$L1A)
-dirs_to_process <- scan_folders(L1A)
-L1B <- file.path(params$DATA_ROOT, params$L1B)
 ```
 
-I see `r length(dirs_to_process)` directories to process in `r L1A`.
+I see `r length(files_to_process)` files to process in `r L1`.
 
-Output directory is `r L1B`.
+QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
+
+Output directory is `r L2`
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -55,63 +82,32 @@ overwrites <- 0
 errors <- 0
 dat_issues <- 0
 
-f <- function(dir_name, dirs_to_process, out_dir) {
-    message(Sys.time(), " Processing ", basename(dir_name))
-    message("\tIt has ", length(dirs_to_process[[dir_name]]), " files")
+f <- function(fn, out_dir) {
+    message(Sys.time(), " Processing ", basename(fn))
+
+    dat <- read_csv(fn, col_types = "ccTccccdccii")
     
-    dat <- read_csv_group(dirs_to_process[[dir_name]],
-                          remove_input_files = params$remove_input_files,
-                          show_col_types = FALSE)
-    errors <<- errors + attr(dat, "errors")
+    # Drop out of bounds/service rows
+    dat <- replace_na(dat, list(F_OOB = 0, F_OOS = 0))
+    oob <- sum(dat$F_OOB)
+    if(oob) message("\tDropping ", oob, " rows marked out of bounds")
+    oos <- sum(dat$F_OOS, na.rm = TRUE)
+    if(oos) message("\tDropping ", oos, " rows marked out of service")
+    dat <- dat[!dat$F_OOB & !dat$F_OOS,]
+    dat$F_OOB <- dat$F_OOS <- NULL
     
     # File-based summary
     message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
-    smry <- data.frame(Dir = dir_name,
-                       Files = length(dirs_to_process[[dir_name]]), 
-                       Rows = nrow(dat),
-                       Note = "")
 
-    # Round timestamps and compute per-period averages
-    # Note that this depends on L1a putting all grouping columns to the left of TIMESTAMP
-    # TODO: maybe don't use dplyr for this? Their NSE approach has changed so many times...
-    grouping_vars <- colnames(dat)[1:which(colnames(dat) == "TIMESTAMP")]
-    grouping_vars <- c(grouping_vars, "units")
-    message("\tRounding timestamps to nearest ", params$timestamp_round)
-    # Note that L1a preserves multiple observations within a given
-    # timestamp, whereas L1b computes their average
-    dat %>% 
-        mutate(TIMESTAMP = round_date(TIMESTAMP, params$timestamp_round)) %>% 
-        group_by(across(all_of(grouping_vars))) %>% 
-        summarise(value = mean(value, na.rm = TRUE),
-                  N = n(),
-                  .groups = "drop") ->
-        dat
-
-    # Reshape to wide form, with one experimental unit (here, tree) per row
-    dat %>% 
-        unite("rn_units", research_name, units) %>% 
-        pivot_wider(names_from = "rn_units", values_from = "value") ->
-        dat_final
-    
-    # Write out to L1b/
-    # Extract table name from dir name (should be last element)
-    x <- strsplit(dir_name, "_")[[1]]
-    write_to_folders(dat_final, 
-                     root_dir = out_dir,
-                     data_level = "L1b",
-                     site = dat_final$Site[1],
-                     table = x[length(x)])
-    
-    return(smry)
+#    return(smry)
 }
 
-log_info("About to L1b", logfile = params$logfile)
+log_info("About to L2", logfile = params$logfile)
 tryCatch({
-out <- lapply(names(dirs_to_process), f, 
-              dirs_to_process = dirs_to_process, out_dir = L1B)
+    out <- lapply(files_to_process, f, out_dir = L2)
 },
 error = function(e) {
-    log_warning("L1b: an error occurred!", logfile = params$logfile)
+    log_warning("L2: an error occurred!", logfile = params$logfile)
     log_info(as.character(e), logfile = params$logfile)
     stop(e)
 })
@@ -122,19 +118,9 @@ error = function(e) {
 ```{r summary}
 #| echo: false
 #| output: asis
-if(overwrites) {
-    cat("### WARNING: ", overwrites, " file overwrite(s)\n")
-    log_warning(paste("File overwrite(s)", params$html_outfile), 
-                logfile = params$logfile)
-}
 if(errors) {
     cat("### WARNING: ", errors, " file read/write error(s)\n")
     log_warning(paste("File read/write error(s)", params$html_outfile), 
-                logfile = params$logfile)
-}
-if(dat_issues) {
-    cat("### WARNING: ", dat_issues, " design/plot table structure problem(s)\n")
-    log_warning(paste("Design/plot table structure problem(s)", params$html_outfile), 
                 logfile = params$logfile)
 }
 ```

@@ -1,0 +1,6 @@
+variable,space_grouping,time_grouping,QC_mad,params,Notes
+soil_temp_30cm,"site, plot",day,X,,No diurnal cycle
+soil_temp_5cm,"site, plot",hour,X,,Diurnal cycle
+soil_temp_5cm,"site, plot",(all),,,Checks calibration drift
+sapflux_2cm,"site, plot",hour,,n=5,"Highly variable, so wider tolerance"
+soil_vwc_5cm,site,day,,,Needs different test for some reason
