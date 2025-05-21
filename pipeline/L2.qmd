@@ -137,19 +137,36 @@ f <- function(fn, out_dir) {
     # loop through all the F_ flags, count, add to summary table,
     # and do a single row removal
     flag_cols <- grep("^F_", colnames(dat))
-    dropflag <- rep(FALSE, nrow(dat)) # signals whether to drop row or not
+    dat$F_drop <- rep(FALSE, nrow(dat)) # signals whether to drop row or not
     for(fname in colnames(dat)[flag_cols]) {
         f_smry <- data.frame(sum(dat[[fname]]))
         colnames(f_smry) <- fname
         smry <- cbind(smry, f_smry)
-        dropflag <- dropflag | as.logical(dat[[fname]]) # OR with dropflag
+        dat$F_drop <- dat$F_drop | as.logical(dat[[fname]]) # OR with dropflag
     }
     
-    smry$Total <- sum(dropflag)
+    smry$Total <- sum(dat$F_drop)
     smry$Pct <- paste0(sprintf("%6.1f", smry$Total / nrow(dat) * 100), "%")
     
-    message("\tWriting...")    
-    write_csv(dat, file.path(params$DATA_ROOT, params$L2, basename(fn)))
+    # Remove flag columns and drop rows
+    #dat <- dat[!dat$F_drop, -flag_cols]
+    
+    # Round timestamps and average
+    dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
+    
+    library(dplyr) # ugh TODO: use dplyr? suck it up and use base R? data.table?
+    dat %>% 
+        group_by(Site, Plot, TIMESTAMP, Instrument, Instrument_ID,
+                 Sensor_ID, Location, research_name) %>% 
+        summarise(Value = mean(Value[!F_drop]),
+                  n = sum(!F_drop),
+                  n_drop = sum(F_drop), .groups = "drop") -> 
+        dat_summarised
+    
+    message("\tWriting...")
+    newfn <- file.path(params$DATA_ROOT, params$L2, basename(fn))
+    newfn <- gsub("_L1_", "_L2_", newfn, fixed = TRUE)
+    write_csv(dat_summarised, newfn, na = "")
     
     return(smry)
 }
