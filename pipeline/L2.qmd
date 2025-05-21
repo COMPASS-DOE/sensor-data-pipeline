@@ -124,7 +124,8 @@ f <- function(fn, out_dir) {
         }
     library(ggplot2)
     p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_mad)) + 
-        geom_point() + ggtitle(basename(fn))
+        geom_point() + ggtitle(basename(fn), 
+                               subtitle = paste(qaqct$time_grouping[i], otherparams))
     print(p)
     
     }
