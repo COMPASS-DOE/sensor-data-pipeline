@@ -1,10 +1,10 @@
 
 library(tidyverse)
 
-fls <- list.files("~/Documents/v1-1", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
+fls <- list.files("~/Documents/ESS-DIVE Releases/Sensor Data Releases/v1-2", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
 
 # filter out TMP
-fls[!grepl("TMP", fls)] -> fls
+fls[grepl("CRC", fls)] -> fls
 
 results <- list()
 
@@ -14,7 +14,7 @@ for(f in fls) {
     results[[f]] <- readr::read_csv(f, col_types = "ccTccccdccii") %>%
         mutate(ts_str = format(TIMESTAMP, "%b-%Y")) %>%
         group_by(Site, Instrument, ts_str) %>%
-            summarise(n = n(),
+            summarise(n = sum(F_OOB != 1 & F_OOS != 1, na.rm = TRUE), t = n(),
                       # retain the timestamp for correct sorting later
                       TIMESTAMP = mean(TIMESTAMP),
                       .groups = "drop")
@@ -23,7 +23,8 @@ for(f in fls) {
 bind_rows(results) %>%
     # each file is a site and plot; sum by site
     group_by(Site, Instrument, ts_str) %>%
-    summarise(n = sum(n),
+    summarise(n = sum(n), t = sum(t),
+              perc = (n/t) * 100,
               TIMESTAMP = mean(TIMESTAMP),
               .groups = "drop") %>%
     # not sure why this next line is here
@@ -33,7 +34,7 @@ bind_rows(results) %>%
     arrange(TIMESTAMP) %>%
     mutate(ts_fct = factor(ts_str, levels = unique(ts_str))) %>%
     # ...and plot
-    ggplot(aes(x = ts_fct, y = Instrument, fill = Instrument)) +
+    ggplot(aes(x = ts_fct, y = Instrument, fill = perc)) +
     geom_raster(hjust = 0, vjust = 0) +
     facet_wrap(~Site, ncol = 1, strip.position = "left") +
     theme_minimal() +
@@ -44,8 +45,8 @@ bind_rows(results) %>%
           panel.grid.minor.y = element_blank(),
           panel.grid = element_line(color="darkgrey"),
           panel.border = element_rect(color = "darkgrey", fill = NA, size = 1)) +
-    labs(x = "", y = "") +
-    scale_fill_viridis_d(option = "rocket", begin = 0, end = 0.85) +
+    labs(x = "", y = "", fill = "In Bounds (%)") +
+    scale_fill_viridis(option = "magma", begin = 1, end = 0) +
     theme(axis.title = element_text(size = 20),
           plot.title = element_text(size=20),
           axis.text.y = element_text(size = 16),
@@ -53,6 +54,6 @@ bind_rows(results) %>%
           strip.text = element_text(size = 18),
           legend.position="bottom",
           legend.text = element_text(size=16),
-          legend.title = element_text(size=18)) -> p
+          legend.title = element_text(size=18))
 
 ggsave("~/Documents/synoptic_avail.png", height = 12, width = 15)
