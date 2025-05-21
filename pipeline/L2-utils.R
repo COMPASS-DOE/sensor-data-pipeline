@@ -3,11 +3,12 @@
 # BBL May 2025
 
 
-# MAD (mean absolute deviation) outlier test, based on
-# how many multiples of the MAD a point is from the
-# sample median
+# MAD (mean absolute deviation) outlier test, based on how many
+# multiples of the MAD a point is from the sample median
 # See https://en.wikipedia.org/wiki/Median_absolute_deviation
-# and e.g. https://doi.org/10.1016/j.jesp.2013.03.013 and
+# and e.g. https://doi.org/10.1016/j.jesp.2013.03.013
+# Returns a logical vector of same length as input, with TRUE
+# indicating that the corresponding value is an outlier
 QAQC_mad <- function(x, threshold = 3, min_n = 100) {
     if(length(x) < min_n) return(rep(FALSE, length(x)))
 
