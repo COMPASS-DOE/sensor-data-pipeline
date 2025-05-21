@@ -16,6 +16,7 @@ for(i in seq_along(fls)) {
 # An example of how to parse the filenames into useful information:
 # site, plot, time range, data level, and version number
 library(tidyr)
+library(lubridate)
 results <- separate(results, file, sep = "_",
                     into = c("Site", "Plot", "Timerange","Level","version"))
 results <- separate(results, Timerange, sep = "-", into = c("Begin", "End"))
@@ -29,6 +30,8 @@ library(ggplot2)
 theme_set(theme_bw())
 library(scales)
 library(viridis)
+library(dplyr)
+library(gganimate)
 
 results %>%
     group_by(Site, Year, Quarter) %>%
@@ -64,6 +67,16 @@ animate(p2)
 print(p2)
 ggsave("~/Desktop/sensors.png", height = 6, width = 8)
 
+site_colors <- c(
+    "CRC" = "#29363b",
+    "GCW" = "#009875",
+    "GWI" = "#99b898",
+    "MSM" = "#fecea8",
+    "OWC" = "#ff857b",
+    "PTR" = "#e94a5f",
+    "SWH" = "#c03a2b",
+    "TMP" = "#96281b")
+
 ggplot(smry, aes(x = factor(Year), y = n, fill = Site)) +
     geom_bar(position = "stack", stat = "identity") +
     theme(axis.title = element_text(size = 30), axis.text = element_text(size = 30),
@@ -74,15 +87,7 @@ ggplot(smry, aes(x = factor(Year), y = n, fill = Site)) +
     transition_states(Year) +
     shadow_mark() -> gif
 
-site_colors <- c(
-    "CRC" = "#29363b",
-    "GCW" = "#009875",
-    "GWI" = "#99b898",
-    "MSM" = "#fecea8",
-    "OWC" = "#ff857b",
-    "PTR" = "#e94a5f",
-    "SWH" = "#c03a2b",
-    "TMP" = "#96281b")
+
 
 animate(gif, fps = 10, duration = 10,
         width = 1000, height = 800, renderer = gifski_renderer(loop = FALSE))
