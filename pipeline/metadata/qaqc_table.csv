@@ -1,6 +1,6 @@
-variable,time_grouping,QAQC_mad,QAQC_mad_params,Notes
+variable,time_grouping,QAQC_mad,params,Notes
 battery-voltage,,,,Don't QAQC voltage
-soil-EC-10cm,1 week,X,,
+soil-EC-10cm,1 week,X,threshold=5,
 soil-EC-30cm,1 week,X,,
 soil-temp-10cm,1 week,X,,
 soil-temp-30cm,1 week,X,,

@@ -113,11 +113,12 @@ f <- function(fn, out_dir) {
         dat$F_mad <- FALSE
     } else {
         message("\tRunning QAQC_mad")
-        dotdotdot <- qaqct$QAQC_mad_params[i]
+        if(!is.na(qaqct$params[i])) message("\t\t", qaqct$params[i])
+        otherparams <- qaqct$params[i]
         dat <- do_outlier_test(dat, 
                                "QAQC_mad", 
                                time_grouping = qaqct$time_grouping[i], 
-                               params = dotdotdot)
+                               otherparams = otherparams)
         if(sum(dat$F_mad)) {
             message("\t\t", sum(dat$F_mad), " outliers identified")
         }
@@ -128,18 +129,23 @@ f <- function(fn, out_dir) {
     
     }
     
-    # Log and remove F_* flags
-    
     # File-based summary
     smry <- data.frame(File = basename(fn), 
-                       Rows = nrow(dat),
-                       F_mad = sum(dat$F_mad),
-                       Pct = paste0(sprintf("%6.1f", 
-                                     sum(dat$F_mad) / nrow(dat) * 100), "%"))
+                       Rows = nrow(dat))
     
-    # TODO
     # loop through all the F_ flags, count, add to summary table,
     # and do a single row removal
+    flag_cols <- grep("^F_", colnames(dat))
+    dropflag <- rep(FALSE, nrow(dat)) # signals whether to drop row or not
+    for(fname in colnames(dat)[flag_cols]) {
+        f_smry <- data.frame(sum(dat[[fname]]))
+        colnames(f_smry) <- fname
+        smry <- cbind(smry, f_smry)
+        dropflag <- dropflag | as.logical(dat[[fname]]) # OR with dropflag
+    }
+    
+    smry$Total <- sum(dropflag)
+    smry$Pct <- paste0(sprintf("%6.1f", smry$Total / nrow(dat) * 100), "%")
     
     message("\tWriting...")    
     write_csv(dat, file.path(params$DATA_ROOT, params$L2, basename(fn)))
