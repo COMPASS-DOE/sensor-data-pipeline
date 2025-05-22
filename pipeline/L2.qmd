@@ -92,7 +92,7 @@ dat_issues <- 0
 f <- function(fn, out_dir) {
     message(Sys.time(), " Processing ", basename(fn))
 
-    dat <- read_csv(fn, col_types = "ccTccccdccll")
+    dat <- read_csv(fn, col_types = "ccTccccdccii")
     message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
 
     # TODO: there might be more than one instrument per file (battery voltage)
@@ -138,7 +138,7 @@ f <- function(fn, out_dir) {
     
     # loop through all the F_ flags, count, and add to summary table,
     flag_cols <- grep("^F_", colnames(dat))
-    dat$F_drop <- rep(FALSE, nrow(dat)) # signals whether to drop row or not
+    dat$F_drop <- rep(0L, nrow(dat)) # signals whether to drop row or not
     for(fname in colnames(dat)[flag_cols]) {
         # OOB and OOS flags might be NA
         dat[[fname]][is.na(dat[[fname]])] <- FALSE
@@ -147,7 +147,7 @@ f <- function(fn, out_dir) {
         colnames(f_smry) <- fname
         smry <- cbind(smry, f_smry)
         
-        dat$F_drop <- dat$F_drop | as.logical(dat[[fname]]) # OR with dropflag
+        dat$F_drop <- dat$F_drop + dat[[fname]]
     }
     smry$Total <- sum(dat$F_drop)
     smry$Pct <- paste0(sprintf("%6.1f", smry$Total / nrow(dat) * 100), "%")
@@ -158,9 +158,13 @@ f <- function(fn, out_dir) {
     # Summarise and filter data
     # This would be easier and faster to do in dplyr or data.table but
     # I'm trying to  minimize dependencies; so... 
-    dat$Value[dat$F_drop] <- NA
+    
+    # TODO: this is logical but in the future we might want to have a cutoff
+    dat$Value[as.logical(dat$F_drop)] <- NA 
+    
     # aggregate() chokes on NAs in grouping variables
     dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
+    
     dat_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
                                     Instrument_ID + Sensor_ID + Location, 
                                 data = dat, 
