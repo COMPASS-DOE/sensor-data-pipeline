@@ -92,13 +92,11 @@ dat_issues <- 0
 f <- function(fn, out_dir) {
     message(Sys.time(), " Processing ", basename(fn))
 
-    dat <- read_csv(fn, col_types = "ccTccccdccii")
+    dat <- read_csv(fn, col_types = "ccTccccdccll")
     message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
 
-    # L1 data may have NA in out of bounds/service flags; fix
-    dat <- replace_na(dat, list(F_OOB = 0, F_OOS = 0))
-
-    # TODO: there might be more than one variable per file
+    # TODO: there might be more than one instrument per file (battery voltage)
+    
     rn <- unique(dat$research_name)
     if(length(rn) > 1) {
         stop("Why is there more than one research name here?!?")
@@ -108,6 +106,7 @@ f <- function(fn, out_dir) {
     if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
     
     # TODO: loop through the QAQC_ columns in the table
+    
     if(is.na(qaqct$QAQC_mad[i])) {
         message("\tNo QAQC requested")
         dat$F_mad <- FALSE
@@ -127,55 +126,59 @@ f <- function(fn, out_dir) {
         geom_point() + ggtitle(basename(fn), 
                                subtitle = paste(qaqct$time_grouping[i], otherparams))
     print(p)
-    
     }
     
     # File-based summary
     smry <- data.frame(File = basename(fn), 
+                       Site = dat$Site[1],
+                       Plot = dat$Plot[1],
+                       research_name = dat$research_name[1],
+                       Year = unique(year(dat$TIMESTAMP)),
                        Rows = nrow(dat))
     
-    # loop through all the F_ flags, count, add to summary table,
-    # and do a single row removal
+    # loop through all the F_ flags, count, and add to summary table,
     flag_cols <- grep("^F_", colnames(dat))
     dat$F_drop <- rep(FALSE, nrow(dat)) # signals whether to drop row or not
     for(fname in colnames(dat)[flag_cols]) {
-        f_smry <- data.frame(sum(dat[[fname]]))
+        # OOB and OOS flags might be NA
+        dat[[fname]][is.na(dat[[fname]])] <- FALSE
+        
+        f_smry <- data.frame(sum(dat[[fname]], na.rm = TRUE))
         colnames(f_smry) <- fname
         smry <- cbind(smry, f_smry)
+        
         dat$F_drop <- dat$F_drop | as.logical(dat[[fname]]) # OR with dropflag
     }
-    
     smry$Total <- sum(dat$F_drop)
     smry$Pct <- paste0(sprintf("%6.1f", smry$Total / nrow(dat) * 100), "%")
-    
-    # Remove flag columns and drop rows
-    #dat <- dat[!dat$F_drop, -flag_cols]
     
     # Round timestamps and average
     dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
     
+    # Summarise and filter data
     # This would be easier and faster to do in dplyr or data.table but
     # I'm trying to  minimize dependencies; so... 
-    dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
     dat$Value[dat$F_drop] <- NA
+    # aggregate() chokes on NAs in grouping variables
+    dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
     dat_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
+                                    Instrument_ID + Sensor_ID + Location, 
+                                data = dat, 
+                                FUN = mean, na.action = na.omit, drop = FALSE)
+    # Summarise number of used and not used values
+    dat$F_keep <- !dat$F_drop
+    dat2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
                           Instrument_ID + Sensor_ID + Location, 
                       data = dat, 
-                      FUN = mean, na.action = na.omit, drop = FALSE)
+                      FUN = sum, na.action = na.omit, drop = FALSE)
     
-     dat$F_keep <- !dat$F_drop
-     dat2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
+    dat3 <- aggregate(F_drop ~ Site + Plot + TIMESTAMP + Instrument +
                           Instrument_ID + Sensor_ID + Location, 
                       data = dat, 
                       FUN = sum, na.action = na.omit, drop = FALSE)
-     
-     dat3 <- aggregate(F_drop ~ Site + Plot + TIMESTAMP + Instrument +
-                          Instrument_ID + Sensor_ID + Location, 
-                      data = dat, 
-                      FUN = sum, na.action = na.omit, drop = FALSE)
-     dat_summarised$n <- dat2$F_keep
-     dat_summarised$n_drop <- dat3$F_drop
-   
+    dat_summarised$n <- dat2$F_keep
+    dat_summarised$n_drop <- dat3$F_drop
+    
     message("\tWriting...")
     newfn <- file.path(params$DATA_ROOT, params$L2, basename(fn))
     newfn <- gsub("_L1_", "_L2_", newfn, fixed = TRUE)
@@ -209,7 +212,7 @@ if(errors) {
 
 ```{r summary_table}
 out_df <- do.call("rbind", out)
-knitr::kable(out_df)
+knitr::kable(out_df[-1]) # don't show filename
 ```
 
 ## Reproducibility
