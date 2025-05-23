@@ -9,7 +9,7 @@ source("pipeline/L2-utils.R")
 L1 <- "/Users/d3x290/Library/CloudStorage/Dropbox/Documents/Work/Current/COMPASS/Data team/v1-2 release/v1-2"
 OUTPUT <- "~/Desktop/mad_testing/"
 
-SITE_YEAR <- "MSM_2024"
+SITE_YEAR <- "TMP_2024"
 
 files <- list.files(file.path(L1, SITE_YEAR), pattern = "csv$", full.names = TRUE)
 
@@ -37,7 +37,7 @@ for(x in dat_list) {
     rn <- x$research_name[1]
     results <- list()
 
-    message(paste(pl, rn))
+    message(paste(SITE_YEAR, pl, rn))
     for(u in 1:3) {
         unit <- c("1 day", "1 week", "1 month")[u]
         unitname <- c("a-1 day", "b-1 week", "c-1 month")[u] # for orderly faceting
@@ -60,7 +60,10 @@ for(x in dat_list) {
         geom_point(size = I(0.25), na.rm = TRUE) +
         facet_grid(threshold ~ unit) +
         ggtitle(outfn)
-    ggsave(paste0(OUTPUT, outfn, ".png"), height = 8, width = 10, plot = p)
+
+    path <- file.path(OUTPUT, rn)
+    if(!dir.exists(path)) dir.create(path)
+    ggsave(file.path(path, paste0(outfn, ".png")), height = 8, width = 10, plot = p)
 } # for x
 
 message("All done!")
