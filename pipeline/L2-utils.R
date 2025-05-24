@@ -63,3 +63,15 @@ L2_complete <- function(x) {
     do.call("rbind", y)
 }
 
+# Gap-fill the L2 data: linearly interpolate gaps up to size 'maxgap'
+# We do each plot, instrument, and sensor separately
+L2_gapfill <- function(x, maxgap) {
+    x_split <- split(x, list(x$Site, x$Plot, x$Instrument,
+                             x$Instrument_ID, x$Sensor_ID))
+    y <- lapply(x_split, function(z) {
+        z <- z[order(z$TIMESTAMP),]
+        z$Value <- zoo::na.approx(z$Value, maxgap = maxgap, na.rm = FALSE)
+        z
+    })
+    do.call("rbind", y)
+}

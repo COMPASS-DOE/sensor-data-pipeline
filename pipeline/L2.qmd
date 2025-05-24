@@ -9,6 +9,10 @@ params:
   L2: "L2/"
   QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 min"
+  # 'maxgap' controls zoo::na_approx's gap-filling behavior
+  # It's in units of `timestamp_round` above
+  # By default we only interpolate fill <= 1 hour gaps
+  maxgap: 4
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
   # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
@@ -54,6 +58,8 @@ This script
 library(tidyr)
 library(readr)
 library(lubridate)
+library(zoo)
+library(ggplot2)
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
 L2 <- file.path(params$DATA_ROOT, params$L2)
@@ -77,6 +83,8 @@ source("L2-utils.R")
 I see `r length(files_to_process)` files to process in `r L1`.
 
 QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
+
+Round data to `r params$timestamp_round` and fill to max gap size of `r params$maxgap`.
 
 Output directory is `r L2`
 
@@ -121,11 +129,10 @@ f <- function(fn, out_dir) {
         if(sum(dat$F_mad)) {
             message("\t\t", sum(dat$F_mad), " outliers identified")
         }
-    library(ggplot2)
-    p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_mad)) + 
-        geom_point() + ggtitle(basename(fn), 
-                               subtitle = paste(qaqct$time_grouping[i], otherparams))
-    print(p)
+        p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_mad)) + 
+            geom_point(na.rm = TRUE) + ggtitle(basename(fn), 
+                                               subtitle = paste(qaqct$time_grouping[i], otherparams))
+        print(p)
     }
     
     # File-based summary
@@ -156,7 +163,7 @@ f <- function(fn, out_dir) {
     dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
     
     # This would be easier and faster to do in dplyr or data.table but
-    # I'm trying to  minimize dependencies; so... 
+    # I'm trying to minimize dependencies; so... 
     dat$Value[as.logical(dat$F_drop)] <- NA 
     
     # aggregate() chokes on NAs in grouping variables
@@ -187,6 +194,18 @@ f <- function(fn, out_dir) {
     dat_summarised <- L2_complete(dat_summarised) # function is in L2-utils
     message("\tCompleted data; started with ", rows, 
             " rows...now ", nrow(dat_summarised))
+    
+    # Gap fill for each site, plot, instrument, and sensor
+    na_vals <- is.na(dat_summarised$Value)
+    dat_summarised <- L2_gapfill(dat_summarised, params$maxgap)
+    new_na_vals <- is.na(dat_summarised$Value)
+    message("\tGap-filled data; started with ", sum(na_vals), 
+            " missing values...now ", sum(new_na_vals))
+    dat_summarised$F_GAP <- na_vals & !new_na_vals
+
+    p <- ggplot(dat_summarised, aes(TIMESTAMP, Value, color = F_GAP)) + 
+        geom_point(na.rm = TRUE) + ggtitle(basename(fn))
+    print(p)
     
     message("\tWriting...")
     newfn <- file.path(params$DATA_ROOT, params$L2, basename(fn))
