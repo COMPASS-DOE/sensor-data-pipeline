@@ -11,7 +11,7 @@ params:
   timestamp_round: "15 min"
   # 'maxgap' controls zoo::na_approx's gap-filling behavior
   # It's in units of `timestamp_round` above
-  # By default we only interpolate fill <= 1 hour gaps
+  # By default we only fill <= 1 hour gaps
   maxgap: 4
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
@@ -202,6 +202,7 @@ f <- function(fn, out_dir) {
     message("\tGap-filled data; started with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
     dat_summarised$F_GAP <- na_vals & !new_na_vals
+    smry$Filled <- sum(dat_summarised$F_GAP)
 
     p <- ggplot(dat_summarised, aes(TIMESTAMP, Value, color = F_GAP)) + 
         geom_point(na.rm = TRUE) + ggtitle(basename(fn))
