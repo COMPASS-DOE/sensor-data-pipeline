@@ -44,3 +44,22 @@ do_outlier_test <- function(x, QAQC_name, time_grouping, otherparams) {
     # Bind and return; we don't do any filtering here
     return(do.call("rbind", results))
 }
+
+# Complete the L2 data: smooth time series for all combinations of metadata
+# We do each plot separately because they may have been
+# established at different points in time
+L2_complete <- function(x) {
+    x_split <- split(x,
+                     list(x$Site, x$Plot))
+    y <- lapply(x_split, function(x) {
+        timespan <- seq.POSIXt(min(x$TIMESTAMP),
+                               max(x$TIMESTAMP),
+                               by = params$timestamp_round)
+        complete(x,
+                 TIMESTAMP = timespan,
+                 nesting(Site, Plot, Instrument, Instrument_ID, Sensor_ID, Location),
+                 fill = list(Value = NA_real_, n = 0, n_drop = 0))
+    })
+    do.call("rbind", y)
+}
+

@@ -8,7 +8,7 @@ params:
   L1: "L1/"
   L2: "L2/"
   QAQC_TABLE: "qaqc_table.csv"
-  timestamp_round: "15 minutes"
+  timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
   # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
@@ -155,11 +155,8 @@ f <- function(fn, out_dir) {
     # Round timestamps and average
     dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
     
-    # Summarise and filter data
     # This would be easier and faster to do in dplyr or data.table but
     # I'm trying to  minimize dependencies; so... 
-    
-    # TODO: this is logical but in the future we might want to have a cutoff
     dat$Value[as.logical(dat$F_drop)] <- NA 
     
     # aggregate() chokes on NAs in grouping variables
@@ -182,6 +179,14 @@ f <- function(fn, out_dir) {
                       FUN = sum, na.action = na.omit, drop = FALSE)
     dat_summarised$n <- dat2$F_keep
     dat_summarised$n_drop <- dat3$F_drop
+    
+    # Complete the data: fill in (with NA) all timestamps and all combinations
+    # of Instrument, Sensor, etc. This guarantees a smooth time series for
+    # each sensor
+    rows <- nrow(dat_summarised)
+    dat_summarised <- L2_complete(dat_summarised) # function is in L2-utils
+    message("\tCompleted data; started with ", rows, 
+            " rows...now ", nrow(dat_summarised))
     
     message("\tWriting...")
     newfn <- file.path(params$DATA_ROOT, params$L2, basename(fn))
