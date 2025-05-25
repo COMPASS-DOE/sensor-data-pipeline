@@ -9,10 +9,6 @@ params:
   L2: "L2/"
   QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 min"
-  # 'maxgap' controls zoo::na_approx's gap-filling behavior
-  # It's in units of `timestamp_round` above
-  # By default we only fill <= 1 hour gaps
-  maxgap: 4
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
   # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
@@ -74,7 +70,13 @@ files_to_process <- list.files(L1,
                                full.names = TRUE, recursive = TRUE)
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
-qaqct <- read_csv(QAQC_TABLE, col_types = "ccccc")
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
+# We use the data period (frequency) in gap filling below
+data_period <- period(params$timestamp_round)
+if(is.na(data_period)) {
+    stop("Invalid timestamp_round value: ", params$timestamp_round)
+}
 
 source("helpers.R")
 source("L2-utils.R")
@@ -112,26 +114,26 @@ f <- function(fn, out_dir) {
     i <- match(rn, qaqct$variable)
     if(is.na(i)) stop(rn, " not found in QAQC table")
     if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
-    
-    # TODO: loop through the QAQC_ columns in the table
-    
-    if(is.na(qaqct$QAQC_mad[i])) {
-        message("\tNo QAQC requested")
-        dat$F_mad <- FALSE
+
+    algo <- qaqct$outlier_detection[i]
+    if(is.na(algo)) {
+        message("\tNo outlier detection")
+        dat$F_MAD <- FALSE
     } else {
-        message("\tRunning QAQC_mad")
-        if(!is.na(qaqct$params[i])) message("\t\t", qaqct$params[i])
         otherparams <- qaqct$params[i]
+        message("\tRunning outlier algorithm ", algo, otherparams)
         dat <- do_outlier_test(dat, 
-                               "QAQC_mad", 
+                               algo, 
                                time_grouping = qaqct$time_grouping[i], 
                                otherparams = otherparams)
-        if(sum(dat$F_mad)) {
-            message("\t\t", sum(dat$F_mad), " outliers identified")
+        if(sum(dat$F_MAD)) {
+            message("\t\t", sum(dat$F_MAD), " outliers identified")
         }
-        p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_mad)) + 
-            geom_point(na.rm = TRUE) + ggtitle(basename(fn), 
-                                               subtitle = paste(qaqct$time_grouping[i], otherparams))
+        # Diagnostic plot: identifying outliers
+        p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_MAD)) + 
+            geom_point(na.rm = TRUE) + 
+            ggtitle(basename(fn), 
+                    subtitle = paste(qaqct$time_grouping[i], otherparams))
         print(p)
     }
     
@@ -161,31 +163,7 @@ f <- function(fn, out_dir) {
     
     # Round timestamps and average
     dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
-    
-    # This would be easier and faster to do in dplyr or data.table but
-    # I'm trying to minimize dependencies; so... 
-    dat$Value[as.logical(dat$F_drop)] <- NA 
-    
-    # aggregate() chokes on NAs in grouping variables
-    dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
-    
-    dat_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
-                                    Instrument_ID + Sensor_ID + Location, 
-                                data = dat, 
-                                FUN = mean, na.action = na.omit, drop = FALSE)
-    # Summarise number of used and not used values
-    dat$F_keep <- !dat$F_drop
-    dat2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
-                          Instrument_ID + Sensor_ID + Location, 
-                      data = dat, 
-                      FUN = sum, na.action = na.omit, drop = FALSE)
-    
-    dat3 <- aggregate(F_drop ~ Site + Plot + TIMESTAMP + Instrument +
-                          Instrument_ID + Sensor_ID + Location, 
-                      data = dat, 
-                      FUN = sum, na.action = na.omit, drop = FALSE)
-    dat_summarised$n <- dat2$F_keep
-    dat_summarised$n_drop <- dat3$F_drop
+    dat_summarised <- L2_aggregate(dat)
     
     # Complete the data: fill in (with NA) all timestamps and all combinations
     # of Instrument, Sensor, etc. This guarantees a smooth time series for
@@ -196,14 +174,24 @@ f <- function(fn, out_dir) {
             " rows...now ", nrow(dat_summarised))
     
     # Gap fill for each site, plot, instrument, and sensor
+        
+    # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
+    # based on the data interval and the max_gap_fill entry in the QAQC table
+    od_period <- period(qaqct$max_gap_fill[i])
+    if(is.na(od_period)) {
+        stop("Invalid max_gap_fill entry for ")
+    }
+    maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
     na_vals <- is.na(dat_summarised$Value)
-    dat_summarised <- L2_gapfill(dat_summarised, params$maxgap)
+    message("\tGap-filling data with maxgap = ", maxgap)
+    dat_summarised <- L2_gapfill(dat_summarised, maxgap = maxgap)
     new_na_vals <- is.na(dat_summarised$Value)
-    message("\tGap-filled data; started with ", sum(na_vals), 
+    message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
     dat_summarised$F_GAP <- na_vals & !new_na_vals
     smry$Filled <- sum(dat_summarised$F_GAP)
-
+    
+    # Diagnostic plot: gap filling
     p <- ggplot(dat_summarised, aes(TIMESTAMP, Value, color = F_GAP)) + 
         geom_point(na.rm = TRUE) + ggtitle(basename(fn))
     print(p)
