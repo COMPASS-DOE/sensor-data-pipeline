@@ -30,21 +30,21 @@ editor: visual
 
 This script
 
--   Reads in the L1 data files one by one
+-  Reads in the L1 data files one by one
 
--   Drops out of bounds (`F_OOB`) and out of service (`F_OOS`) rows
+-  Drops NA data rows (shouldn't be any?)
 
--   Drop NA data rows (shouldn't be any?)
+-  Identifies and drops outliers
 
--   Identifies and drops outliers
+-  Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
--   Averages to `r params$timestamp_round`, recording n_good and n_outliers
+-  Averages to `r params$timestamp_round`, logging n_good and n_drop
 
--   Fills in (NA) missing timestamps for the year
+-  Completes data, ensuring continuous time series
 
--   Computes new variables
+-  Interpolates short data gaps
 
--   Write L2 files
+-  Writes L2 files
 
 ## Initializing
 
@@ -86,7 +86,7 @@ I see `r length(files_to_process)` files to process in `r L1`.
 
 QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
-Round data to `r params$timestamp_round` and fill to max gap size of `r params$maxgap`.
+Round data to `r params$timestamp_round`.
 
 Output directory is `r L2`
 
