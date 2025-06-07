@@ -29,6 +29,12 @@ RELEASE_DATE <- "2025-07-10"
 # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 L1_DATA_TZ <- "Etc/GMT+5"
 
+# GitHub Actions settings -------------------------------------
+
+if(Sys.getenv("CI") == "true") {
+    ROOT <- "./data_TEST"
+}
+
 # Log file ----------------------------------------------------
 
 LOGS <- file.path(ROOT, "Logs/")
