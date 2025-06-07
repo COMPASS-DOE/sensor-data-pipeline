@@ -217,6 +217,10 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
     remove_items("L1/")
     # remove L1 folders
     remove_items("L1/", pat = "[A-Z]{3}_[0-9]{4}")
+    # remove L1 code examples
+    remove_items("L1/code_examples/", pat = "")
+    remove_items("L1/", pat = "code_example")
+
     remove_items("L2/")
     remove_items("Logs/")
 

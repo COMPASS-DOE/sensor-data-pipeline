@@ -15,6 +15,7 @@ params:
   # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
   # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   L1_DATA_TIMEZONE: "Etc/GMT+5"
+  CODE_EXAMPLES: "code_examples/"
   L1_VERSION: "???"
   L1_RELEASE_DATE: "???"
   write_plots: true
@@ -275,6 +276,18 @@ for(dd in data_dirs) {
     mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")
     message("\tWriting ", mdfn, "...")
     writeLines(md, file.path(L1, dd, mdfn))
+}
+```
+
+## Documentation and code
+
+```{r docs-and-code}
+
+ok <- file.copy(params$CODE_EXAMPLES, L1, recursive = TRUE)
+if(ok) {
+    message("Copied ", params$CODE_EXAMPLES, " to ", L1)
+} else {
+    warning("There was a problem copying ", params$CODE_EXAMPLES)
 }
 ```
 
