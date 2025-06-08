@@ -171,9 +171,8 @@ f <- function(fn, new_dir) {
             dat_long <- dat_long[!dupes,]
         }
         
-        # Add a unique ID column
-        # We use digest::digest() and the "md5" algorithm (first 10 characters);
-        # originally tried the "crc32" algorithm but this generated duplicate IDs
+        # Add a unique ID column with the "md5" algorithm, using 16 of 32
+        # characters; "crc32" algorithm quickly generated duplicate IDs
         # This is not *guaranteed* to be unique, but collisions are highly unlikely
         dat_long$ID <- sapply(apply(dat_long, 1, paste, collapse = ""),
                               FUN = function(x) {

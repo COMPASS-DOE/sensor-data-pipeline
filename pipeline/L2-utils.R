@@ -3,7 +3,7 @@
 # BBL May 2025
 
 
-# MAD (mean absolute deviation) outlier test, based on how many
+# MAD (median absolute deviation) outlier test, based on how many
 # multiples of the MAD a point is from the sample median
 # See https://en.wikipedia.org/wiki/Median_absolute_deviation
 # and e.g. https://doi.org/10.1016/j.jesp.2013.03.013
@@ -14,7 +14,7 @@ outliers_MAD <- function(x, threshold = 3, min_n = 100) {
 
     md <- mad(x, na.rm = TRUE)
 
-    # return vector of flags
+    # return vector of flags, where TRUE signals an outlier
     return(abs(x - median(x, na.rm = TRUE)) > md * threshold)
 }
 
