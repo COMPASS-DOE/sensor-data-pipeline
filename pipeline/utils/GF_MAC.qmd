@@ -1,0 +1,162 @@
+---
+title: "GF_MAC"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+## Gap-filling based on mean annual cycle
+
+```{r init}
+#| include: false
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+
+```
+
+Let's say we have two sensors:
+
+```{r}
+times <- seq(-pi, pi, length.out = 20)
+x1 <- tibble(ts = times, value =  sin(ts), which = "s1")
+x2 <- tibble(ts = times, value =  sin(ts) + 0.3, which = "s2")
+x <- bind_rows(x1, x2)
+
+ggplot(x, aes(ts, value, color = which)) + geom_point() + geom_line()
+```
+
+The idea of GF_MAC is to use their *mean annual cycle* as a gap-filling guide:
+
+```{r}
+x %>% 
+    group_by(ts) %>% 
+    summarise(value = mean(value)) ->
+    x_mean
+
+last_plot() + geom_line(data = x_mean, color = "grey", linetype = 2)
+```
+
+Insert a gap in the `s1` sensor:
+
+```{r}
+x$value[9:11] <- NA
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_line(data = x_mean[8:12,], color = "grey", linetype = 2)
+```
+
+The last `s1` value before the gap is `r round(x$value[8], 3)` and the corresponding MAC value is `r round(x_mean$value[8], 3)`; the values on the right side of the gap are `r round(x$value[12], 3)` and `r round(x_mean$value[12], 3)`, respectively. This gives us the scaling information we need to fill the gap using the MAC.
+
+```{r}
+# Compute MAC adjustment needed for each point
+left_adjust <- x$value[8] - x_mean$value[8]
+right_adjust <- x$value[12] - x_mean$value[12]
+adjustment <- seq(left_adjust, right_adjust, length.out = 12 - 8 + 1)
+
+x$gapfilled <- NA_real_
+x$gapfilled[8:12] <- x_mean$value[8:12] + adjustment
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2)
+```
+
+## Testing a general-purpose function for this
+
+```{r}
+fill_gap <- function(x, gap_begin, gap_end, mac) {
+    stopifnot(gap_end >= gap_begin)
+    stopifnot(gap_begin > 0 && gap_begin <= length(x))
+    stopifnot(gap_end > 0 && gap_end <= length(x))
+    stopifnot(length(x) == length(mac))
+    
+    # x and mac are numeric vectors of equal length
+    # gap_begin and gap_end are the indices of the first and last NAs of the gap
+    
+    if(gap_begin > 1) {
+        left_adjust <- x[gap_begin - 1] - mac[gap_begin - 1]
+    } else {
+        left_adjust <- 0
+    }
+    #message("left_adjust ", left_adjust)
+    if(gap_end < length(x)) {
+        right_adjust <- x[gap_end + 1] - mac[gap_end + 1]
+    } else {
+        right_adjust <- 0
+    }
+    #message("right_adjust ", right_adjust)
+    
+    # Calculate adjustments for the gap points plus the pre- and post-gap
+    # good data points that make up the calculation of left_adjust and right_adjust
+    adj <- seq(left_adjust, right_adjust, length.out = gap_end - gap_begin + 3)
+    # ...but then drop those out-of-gap adjustment values
+    adj <- adj[c(-1, -length(adj))]
+    # Return the adjusted mean annual cycle values to fill the gap
+    mac[gap_begin:gap_end] + adj
+}
+
+find_gaps <- function(x) {
+    rle_x <- rle(is.na(x))
+    # Compute endpoints of run
+    end <- cumsum(rle_x$lengths)
+    start <- c(1, lag(end)[-1] + 1)
+    data.frame(start, end)[rle_x$values,] # return only TRUE value gaps
+}
+
+fill_all_gaps <- function(x, mac) {
+    stopifnot(length(x) == length(mac))
+    
+    gaps <- find_gaps(x)
+    gapfilled <- rep(NA_real_, length(x))
+    
+    for(i in seq_len(nrow(gaps))) {
+        thisgap <- gaps$start[i]:gaps$end[i]
+        gapfilled[thisgap] <- fill_gap(x, gaps$start[i], gaps$end[i], mac)
+    }
+    return(gapfilled)
+}
+
+```
+
+### Easy gaps
+
+```{r}
+x1a <- x1
+x1a$value[9:11] <- NA
+x2a <- x2
+x2a$value[13:17] <- NA
+x <- bind_rows(x1a, x2a)
+x$mac <- c(x_mean$value, x_mean$value)
+
+x$gapfilled <- fill_all_gaps(x$value, x$mac)
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) +
+    geom_line(aes(y = mac), color = "grey", linetype = 2)
+```
+
+### Harder gaps
+
+```{r}
+x1a <- x1
+x1a$value[1:5] <- NA
+x2a <- x2
+x2a$value[18:20] <- NA
+x <- bind_rows(x1a, x2a)
+x_mean$value[18:20] <- NA
+x$mac <- c(x_mean$value, x_mean$value)
+
+x$gapfilled <- fill_all_gaps(x$value, x$mac)
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line(na.rm = TRUE) + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) +
+    geom_line(aes(y = mac), color = "grey", na.rm = TRUE, linetype = 2)
+```
