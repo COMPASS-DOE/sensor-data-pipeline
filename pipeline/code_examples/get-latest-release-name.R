@@ -1,4 +1,5 @@
 # Programmatically get the list of data releases
+# Note that git needs to be installed on your system for this to work
 # BBL May 2025
 
 tags <- system2("git",

@@ -75,7 +75,7 @@ fill_gap <- function(x, gap_begin, gap_end, mac) {
     stopifnot(gap_begin > 0 && gap_begin <= length(x))
     stopifnot(gap_end > 0 && gap_end <= length(x))
     stopifnot(length(x) == length(mac))
-    
+
     # x and mac are numeric vectors of equal length
     # gap_begin and gap_end are the indices of the first and last NAs of the gap
     
@@ -204,3 +204,82 @@ ggplot(x, aes(ts, value, color = which)) +
 ```
 
 We're not trying to reconstruct the variability of individual sensors with this method.
+
+## A real example
+
+```{r}
+
+SITE <- "CRC_UP" # change this to e.g. "CRC_W" if you want a particular plot
+VARIABLE <- "soil-temp-10cm"
+
+if(file.exists("GF_MAC_dat.RDS")) {
+    # pre-existing data file
+    dat <- readRDS("GF_MAC_dat.RDS")
+} else {
+    # This is code used to read the needed L1 data
+    # Assumes that the data are available in data/ 
+    regex <- paste0("^", SITE, ".*", VARIABLE, ".*csv$")
+    
+    files <- list.files("../data/L1/", pattern = regex, recursive = TRUE, full.names = TRUE)
+    
+    library(readr)
+    dat <- lapply(files, function(f) {
+        read_csv(f, col_types = "ccTccccdccii")
+    })
+    dat <- bind_rows(dat)
+    dat$ID <- dat$Instrument <- dat$Instrument_ID <- dat$Location <- NULL
+
+    library(lubridate)
+    dat$yday <- yday(dat$TIMESTAMP)
+    dat$hour <- hour(dat$TIMESTAMP)
+    dat$minute <- minute(dat$TIMESTAMP) 
+}
+
+dat %>% group_by(yday, hour, minute) %>% summarise(mean_value = mean(Value, na.rm = TRUE), .groups = "drop") -> mean_dat
+dat_combined <- left_join(dat, mean_dat, by = c("yday", "hour", "minute"))
+
+# Sensor data
+ggplot(dat_combined, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE))
+
+# Mean line
+mean_dat$x <- with(mean_dat, yday-1 + hour / 24 + minute / 24 / 60)
+ggplot(mean_dat, aes(x, mean_value)) + 
+    geom_line() + 
+    ggtitle(paste(SITE, VARIABLE, "MAC"))
+
+dat_combined$gapfilled <- fill_all_gaps(dat_combined$Value, dat_combined$mean_value)
+
+ggplot(dat_combined, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    geom_line(aes(y = gapfilled), alpha = 0.25, na.rm = TRUE) +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE, "gap-filled"))
+
+```
+
+We could also smooth the MAC to emphasize that it's a gap-filled value:
+
+```{r}
+suppressMessages(library(zoo))
+mean_dat$mean_value_smooth <- rollmean(mean_dat$mean_value, nrow(mean_dat) / 10, fill = "extend") 
+dat_combined2 <- left_join(dat, mean_dat, by = c("yday", "hour", "minute"))
+# The dataset needs to be sorted by sensor and then timestamp!
+dat_combined2 <- arrange(dat_combined2, Sensor_ID, TIMESTAMP)
+
+# ggplot(dat_combined2, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+#     geom_line(aes(y = mean_value_smooth), color = "gray") +
+#     geom_line() +
+#     facet_grid(Sensor_ID~.) +
+#     ggtitle(paste(SITE, VARIABLE))
+
+dat_combined2$gapfilled_smooth <- fill_all_gaps(dat_combined2$Value, dat_combined2$mean_value_smooth)
+
+ggplot(dat_combined2, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    geom_line(aes(y = gapfilled_smooth), alpha = 0.25, na.rm = TRUE) +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE, "gap-filled-smooth"))
+```

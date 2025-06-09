@@ -76,7 +76,8 @@ L2_aggregate <- function(x) {
 }
 
 
-# Complete the L2 data: smooth time series for all combinations of metadata
+# Complete the L2 data: produce a smooth (no gaps, though data may be NA)
+# time series for all combinations of metadata
 # We do each plot separately because they may have been
 # established at different points in time
 L2_complete <- function(x) {
