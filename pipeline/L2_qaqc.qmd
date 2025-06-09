@@ -12,7 +12,7 @@ params:
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
   L2_VERSION: "???"
-  write_plots: true
+  write_plots: false
   logfile: ""
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
@@ -183,13 +183,7 @@ f <- function(fn, out_dir) {
     new_na_vals <- is.na(dat_summarised$Value)
     message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
-    dat_summarised$F_GAP <- na_vals & !new_na_vals
-    smry$Filled <- sum(dat_summarised$F_GAP)
-    
-    # Diagnostic plot: gap filling
-    p <- ggplot(dat_summarised, aes(TIMESTAMP, Value, color = F_GAP)) + 
-        geom_point(na.rm = TRUE) + ggtitle(basename(fn))
-    print(p)
+    smry$Filled <- sum(na_vals & !new_na_vals)
     
     message("\tWriting...")
     write_to_folders(dat_summarised,
@@ -197,7 +191,11 @@ f <- function(fn, out_dir) {
                      "L2_qaqc",
                      site = dat_summarised$Site[1],
                      plot = dat_summarised$Plot[1],
-                     version = params$L2_VERSION) 
+                     version = params$L2_VERSION,
+                     # note: currently no L2_qaqc plots are generated
+                     # the most useful ones would be showing outliers, but those data
+                     # are gone by the time we get to this point. Hmm
+                     write_plots = params$write_plots) 
     
     return(smry)
 }

@@ -11,7 +11,7 @@ MAX_DATE <- ymd_hms("2999-12-31 11:59:00")
 
 # Data NA (not available) strings to use on writing
 NA_STRING_L1 <- ""
-NA_STRING_L2 <- "-9999"
+NA_STRING_L2 <- ""
 
 # Small helper functions to make the various steps obvious in the log
 if(!exists("LOGFILE")) LOGFILE <- ""
