@@ -11,12 +11,7 @@ params:
   timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
-  # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
-  # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
-  # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  L1_DATA_TIMEZONE: "Etc/GMT+5"
   L2_VERSION: "???"
-  L2_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""
 date: now
