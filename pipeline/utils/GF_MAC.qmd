@@ -1,0 +1,285 @@
+---
+title: "GF_MAC"
+author: "BBL"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+## Gap-filling based on mean annual cycle
+
+```{r init}
+#| include: false
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+
+```
+
+Let's say we have two sensors:
+
+```{r}
+times <- seq(-pi, pi, length.out = 20)
+x1 <- tibble(ts = times, value =  sin(ts), which = "s1")
+x2 <- tibble(ts = times, value =  sin(ts) + 0.3, which = "s2")
+x <- bind_rows(x1, x2)
+
+ggplot(x, aes(ts, value, color = which)) + geom_point() + geom_line()
+```
+
+The idea of GF_MAC is to use their *mean annual cycle* (visualized here by the gray dashed line) as a gap-filling guide:
+
+```{r}
+x %>% 
+    group_by(ts) %>% 
+    summarise(value = mean(value)) ->
+    x_mean
+
+last_plot() + geom_line(data = x_mean, color = "grey", linetype = 2)
+```
+
+Insert a gap in the `s1` sensor:
+
+```{r}
+x$value[9:11] <- NA
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_line(data = x_mean, color = "grey", linetype = 2)
+```
+
+The last `s1` value before the gap is `r round(x$value[8], 3)` and the corresponding MAC value is `r round(x_mean$value[8], 3)`; the values on the right side of the gap are `r round(x$value[12], 3)` and `r round(x_mean$value[12], 3)`, respectively. This gives us the scaling information we need to fill the gap using the MAC.
+
+```{r}
+# Compute MAC adjustment needed for each point
+left_adjust <- x$value[8] - x_mean$value[8]
+right_adjust <- x$value[12] - x_mean$value[12]
+adjustment <- seq(left_adjust, right_adjust, length.out = 12 - 8 + 1)
+
+x$gapfilled <- NA_real_
+x$gapfilled[8:12] <- x_mean$value[8:12] + adjustment
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) + 
+    geom_line(data = x_mean, color = "grey", linetype = 2)
+```
+
+## Testing a general-purpose function for this
+
+```{r}
+fill_gap <- function(x, gap_begin, gap_end, mac) {
+    stopifnot(gap_end >= gap_begin)
+    stopifnot(gap_begin > 0 && gap_begin <= length(x))
+    stopifnot(gap_end > 0 && gap_end <= length(x))
+    stopifnot(length(x) == length(mac))
+
+    # x and mac are numeric vectors of equal length
+    # gap_begin and gap_end are the indices of the first and last NAs of the gap
+    
+    if(gap_begin > 1) {
+        left_adjust <- x[gap_begin - 1] - mac[gap_begin - 1]
+    } else {
+        left_adjust <- 0
+    }
+    #message("left_adjust ", left_adjust)
+    if(gap_end < length(x)) {
+        right_adjust <- x[gap_end + 1] - mac[gap_end + 1]
+    } else {
+        right_adjust <- 0
+    }
+    #message("right_adjust ", right_adjust)
+    
+    # Calculate adjustments for the gap points plus the pre- and post-gap
+    # good data points that make up the calculation of left_adjust and right_adjust
+    adj <- seq(left_adjust, right_adjust, length.out = gap_end - gap_begin + 3)
+    # ...but then drop those out-of-gap adjustment values
+    adj <- adj[c(-1, -length(adj))]
+    # Return the adjusted mean annual cycle values to fill the gap
+    mac[gap_begin:gap_end] + adj
+}
+
+find_gaps <- function(x) {
+    rle_x <- rle(is.na(x))
+    # Compute endpoints of run
+    end <- cumsum(rle_x$lengths)
+    start <- c(1, lag(end)[-1] + 1)
+    data.frame(start, end)[rle_x$values,] # return only TRUE value gaps
+}
+
+fill_all_gaps <- function(x, mac) {
+    stopifnot(length(x) == length(mac))
+    
+    gaps <- find_gaps(x)
+    gapfilled <- rep(NA_real_, length(x))
+    
+    for(i in seq_len(nrow(gaps))) {
+        thisgap <- gaps$start[i]:gaps$end[i]
+        gapfilled[thisgap] <- fill_gap(x, gaps$start[i], gaps$end[i], mac)
+        # just to make the graphs look good, return the boundary points too
+        if(gaps$start[i] > 1)
+            gapfilled[gaps$start[i] - 1] <- x[gaps$start[i] - 1]
+        if(gaps$end[i] < length(x))
+            gapfilled[gaps$end[i] + 1] <- x[gaps$end[i] + 1]
+    }
+    return(gapfilled)
+}
+
+```
+
+#### Easy gaps
+
+```{r}
+x1a <- x1
+x1a$value[9:11] <- NA
+x2a <- x2
+x2a$value[13:17] <- NA
+x <- bind_rows(x1a, x2a)
+x$mac <- c(x_mean$value, x_mean$value)
+
+x$gapfilled <- fill_all_gaps(x$value, x$mac)
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) +
+    geom_line(aes(y = mac), color = "grey", linetype = 2)
+```
+
+#### Harder gaps
+
+```{r}
+x1a <- x1
+x1a$value[1:5] <- NA
+x1a$value[18:20] <- NA
+x2a <- x2
+x2a$value[18:20] <- NA
+x <- bind_rows(x1a, x2a)
+x_mean$value[18:20] <- NA
+x$mac <- c(x_mean$value, x_mean$value)
+
+x$gapfilled <- fill_all_gaps(x$value, x$mac)
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line(na.rm = TRUE) + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) +
+    geom_line(aes(y = mac), color = "grey", na.rm = TRUE, linetype = 2)
+```
+
+The figure above shows two cases:
+
+-   On the left, the gap filling converges back towards the MAC because there's no left-hand `s1` data point to use. (We could change this behavior and say we'll maintain a constant adjustment.)
+
+-   On the right, if there's no MAC to guide the algorithm (i.e., we've never measured *any* data at this timestamp), we can't do any gap filling.
+
+## Behavior with variability
+
+```{r}
+x1a <- x1
+x2a <- x2
+x2a$value <- x2a$value + 0.1
+x <- bind_rows(x1a, x2a)
+set.seed(123)
+x$value <- x$value + rnorm(nrow(x), sd = 0.2)
+
+x %>% 
+    group_by(ts) %>% 
+    summarise(value = mean(value)) ->
+    x_mean
+x$mac <- c(x_mean$value, x_mean$value)
+
+x$value[9:11] <- NA
+x$value[20 + 13:17] <- NA
+
+x$gapfilled <- fill_all_gaps(x$value, x$mac)
+
+ggplot(x, aes(ts, value, color = which)) + 
+    geom_point(na.rm = TRUE) + geom_line() + 
+    geom_point(aes(y = gapfilled), na.rm = TRUE, alpha = 0.5) +
+    geom_line(aes(y = gapfilled), na.rm = TRUE, linetype = 2) +
+    geom_line(aes(y = mac), color = "grey", linetype = 2)
+```
+
+We're not trying to reconstruct the variability of individual sensors with this method.
+
+## A real example
+
+```{r}
+
+SITE <- "CRC_UP" # change this to e.g. "CRC_W" if you want a particular plot
+VARIABLE <- "soil-temp-10cm"
+
+if(file.exists("GF_MAC_dat.RDS")) {
+    # pre-existing data file
+    dat <- readRDS("GF_MAC_dat.RDS")
+} else {
+    # This is code used to read the needed L1 data
+    # Assumes that the data are available in data/ 
+    regex <- paste0("^", SITE, ".*", VARIABLE, ".*csv$")
+    
+    files <- list.files("../data/L1/", pattern = regex, recursive = TRUE, full.names = TRUE)
+    
+    library(readr)
+    dat <- lapply(files, function(f) {
+        read_csv(f, col_types = "ccTccccdccii")
+    })
+    dat <- bind_rows(dat)
+    dat$ID <- dat$Instrument <- dat$Instrument_ID <- dat$Location <- NULL
+
+    library(lubridate)
+    dat$yday <- yday(dat$TIMESTAMP)
+    dat$hour <- hour(dat$TIMESTAMP)
+    dat$minute <- minute(dat$TIMESTAMP) 
+}
+
+dat %>% group_by(yday, hour, minute) %>% summarise(mean_value = mean(Value, na.rm = TRUE), .groups = "drop") -> mean_dat
+dat_combined <- left_join(dat, mean_dat, by = c("yday", "hour", "minute"))
+
+# Sensor data
+ggplot(dat_combined, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE))
+
+# Mean line
+mean_dat$x <- with(mean_dat, yday-1 + hour / 24 + minute / 24 / 60)
+ggplot(mean_dat, aes(x, mean_value)) + 
+    geom_line() + 
+    ggtitle(paste(SITE, VARIABLE, "MAC"))
+
+dat_combined$gapfilled <- fill_all_gaps(dat_combined$Value, dat_combined$mean_value)
+
+ggplot(dat_combined, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    geom_line(aes(y = gapfilled), alpha = 0.25, na.rm = TRUE) +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE, "gap-filled"))
+
+```
+
+We could also smooth the MAC to emphasize that it's a gap-filled value:
+
+```{r}
+suppressMessages(library(zoo))
+mean_dat$mean_value_smooth <- rollmean(mean_dat$mean_value, nrow(mean_dat) / 10, fill = "extend") 
+dat_combined2 <- left_join(dat, mean_dat, by = c("yday", "hour", "minute"))
+# The dataset needs to be sorted by sensor and then timestamp!
+dat_combined2 <- arrange(dat_combined2, Sensor_ID, TIMESTAMP)
+
+# ggplot(dat_combined2, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+#     geom_line(aes(y = mean_value_smooth), color = "gray") +
+#     geom_line() +
+#     facet_grid(Sensor_ID~.) +
+#     ggtitle(paste(SITE, VARIABLE))
+
+dat_combined2$gapfilled_smooth <- fill_all_gaps(dat_combined2$Value, dat_combined2$mean_value_smooth)
+
+ggplot(dat_combined2, aes(TIMESTAMP, Value, color = Sensor_ID)) +
+    geom_line() +
+    geom_line(aes(y = gapfilled_smooth), alpha = 0.25, na.rm = TRUE) +
+    facet_grid(Sensor_ID~.) +
+    ggtitle(paste(SITE, VARIABLE, "gap-filled-smooth"))
+```

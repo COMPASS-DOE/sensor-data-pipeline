@@ -1,0 +1,237 @@
+---
+title: "L2_qaqc"
+author: "COMPASS workflows team"
+title-block-banner: true
+params:
+  html_outfile: "L2.html"
+  DATA_ROOT: "data_TEST/"
+  L1: "L1/"
+  L2_QAQC: "L2_qaqc/"
+  QAQC_TABLE: "qaqc_table.csv"
+  timestamp_round: "15 min"
+  METADATA_ROOT: "metadata/"
+  L2_METADATA: "L2_metadata/"
+  L2_VERSION: "???"
+  write_plots: false
+  logfile: ""
+date: now
+date-format: "YYYY-MM-DD HH:mm:ssZ"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+This script
+
+-   Reads in the L1 data files one by one
+
+-   Drops NA data rows (shouldn't be any?)
+
+-   Identifies and drops outliers
+
+-   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
+
+-   Averages to `r params$timestamp_round`, logging n_good and n_drop
+
+-   Completes data for entire year, ensuring continuous time series
+
+-   Interpolates short data gaps
+
+-   Writes L2_qaqc files
+
+## Initializing
+
+```{r init}
+#| include: false
+
+library(tidyr)
+library(readr)
+library(lubridate)
+library(zoo)
+library(ggplot2)
+
+L1 <- file.path(params$DATA_ROOT, params$L1)
+L2 <- file.path(params$DATA_ROOT, params$L2_QAQC)
+
+files_to_process <- list.files(L1, 
+                               pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+
+# **** TEMPORARY **** TODO
+files_to_process <- list.files(L1, 
+                               pattern = "SWH_SWAMP_20241130-[0-9]{8}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+
+QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
+# We use the data period (frequency) in gap filling below
+data_period <- period(params$timestamp_round)
+if(is.na(data_period)) {
+    stop("Invalid timestamp_round value: ", params$timestamp_round)
+}
+
+source("helpers.R")
+source("L2_qaqc-utils.R")
+```
+
+I see `r length(files_to_process)` files to process in `r L1`.
+
+QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
+
+Round data to `r params$timestamp_round`.
+
+Output directory is `r L2`
+
+HTML outfile is "`r params$html_outfile`".
+
+## Processing
+
+```{r processing}
+overwrites <- 0
+errors <- 0
+dat_issues <- 0
+
+f <- function(fn, out_dir) {
+    message(Sys.time(), " Processing ", basename(fn))
+
+    dat <- read_csv(fn, col_types = "ccTccccdccii")
+    message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
+
+    # TODO: there might be more than one instrument per file (battery voltage)
+    
+    rn <- unique(dat$research_name)
+    if(length(rn) > 1) {
+        stop("Why is there more than one research name here?!?")
+    }
+    i <- match(rn, qaqct$variable)
+    if(is.na(i)) stop(rn, " not found in QAQC table")
+    if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
+
+    algo <- qaqct$outlier_detection[i]
+    if(is.na(algo)) {
+        message("\tNo outlier detection")
+        dat$F_MAD <- FALSE
+    } else {
+        otherparams <- qaqct$params[i]
+        message("\tRunning outlier algorithm ", algo, otherparams)
+        dat <- do_outlier_test(dat, 
+                               algo, 
+                               time_grouping = qaqct$time_grouping[i], 
+                               otherparams = otherparams)
+        if(sum(dat$F_MAD)) {
+            message("\t\t", sum(dat$F_MAD), " outliers identified")
+        }
+        # Diagnostic plot: identifying outliers
+        p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_MAD)) + 
+            geom_point(na.rm = TRUE) + 
+            ggtitle(basename(fn), 
+                    subtitle = paste(qaqct$time_grouping[i], otherparams))
+        print(p)
+    }
+    
+    # File-based summary
+    smry <- data.frame(File = basename(fn), 
+                       Site = dat$Site[1],
+                       Plot = dat$Plot[1],
+                       research_name = dat$research_name[1],
+                       Year = unique(year(dat$TIMESTAMP)),
+                       Rows = nrow(dat))
+    
+    # loop through all the F_ flags, count, and add to summary table,
+    flag_cols <- grep("^F_", colnames(dat))
+    dat$F_drop <- rep(0L, nrow(dat)) # signals whether to drop row or not
+    for(fname in colnames(dat)[flag_cols]) {
+        # OOB and OOS flags might be NA
+        dat[[fname]][is.na(dat[[fname]])] <- FALSE
+        
+        f_smry <- data.frame(sum(dat[[fname]], na.rm = TRUE))
+        colnames(f_smry) <- fname
+        smry <- cbind(smry, f_smry)
+        
+        dat$F_drop <- dat$F_drop + dat[[fname]]
+    }
+    smry$Total <- sum(dat$F_drop)
+    smry$Pct <- paste0(sprintf("%6.1f", smry$Total / nrow(dat) * 100), "%")
+    
+    # Round timestamps and average
+    dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
+    dat_summarised <- L2_aggregate(dat)
+    
+    # Complete the data: fill in (with NA) all timestamps and all combinations
+    # of Instrument, Sensor, etc. This guarantees a smooth time series for
+    # each sensor
+    rows <- nrow(dat_summarised)
+    dat_summarised <- L2_complete(dat_summarised) # function is in L2-utils
+    message("\tCompleted data; started with ", rows, 
+            " rows...now ", nrow(dat_summarised))
+    
+    # Gap fill for each site, plot, instrument, and sensor
+        
+    # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
+    # based on the data interval and the max_gap_fill entry in the QAQC table
+    od_period <- period(qaqct$max_gap_fill[i])
+    if(is.na(od_period)) {
+        stop("Invalid max_gap_fill entry for ")
+    }
+    maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
+    na_vals <- is.na(dat_summarised$Value)
+    message("\tGap-filling data with maxgap = ", maxgap)
+    dat_summarised <- L2_linear_gapfill(dat_summarised, maxgap = maxgap)
+    new_na_vals <- is.na(dat_summarised$Value)
+    message("\t\tStarted with ", sum(na_vals), 
+            " missing values...now ", sum(new_na_vals))
+    smry$Filled <- sum(na_vals & !new_na_vals)
+    
+    message("\tWriting...")
+    write_to_folders(dat_summarised,
+                     out_dir,
+                     "L2_qaqc",
+                     site = dat_summarised$Site[1],
+                     plot = dat_summarised$Plot[1],
+                     version = params$L2_VERSION,
+                     # note: currently no L2_qaqc plots are generated
+                     # the most useful ones would be showing outliers, but those data
+                     # are gone by the time we get to this point. Hmm
+                     write_plots = params$write_plots) 
+    
+    return(smry)
+}
+
+log_info("About to L2", logfile = params$logfile)
+tryCatch({
+    out <- lapply(files_to_process, f, out_dir = L2)
+},
+error = function(e) {
+    log_warning("L2: an error occurred!", logfile = params$logfile)
+    log_info(as.character(e), logfile = params$logfile)
+    stop(e)
+})
+```
+
+## Summary
+
+```{r summary}
+#| echo: false
+#| output: asis
+if(errors) {
+    cat("### WARNING: ", errors, " file read/write error(s)\n")
+    log_warning(paste("File read/write error(s)", params$html_outfile), 
+                logfile = params$logfile)
+}
+```
+
+```{r summary_table}
+out_df <- do.call("rbind", out)
+knitr::kable(out_df[-1]) # don't show filename
+```
+
+## Reproducibility
+
+Git commit `r GIT_COMMIT`.
+
+```{r reproducibility}
+sessionInfo()
+```

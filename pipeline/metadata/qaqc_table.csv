@@ -1,0 +1,8 @@
+variable,time_grouping,outlier_detection,params,max_gap_fill,Notes
+battery-voltage,,,,1 hour,Don't QAQC voltage
+soil-EC-10cm,1 week,MAD,threshold=2,1 hour,
+soil-EC-30cm,1 week,MAD,threshold=2,1 hour,
+soil-temp-10cm,1 week,MAD,threshold=2,1 hour,
+soil-temp-30cm,1 week,MAD,threshold=2,1 hour,
+soil-vwc-10cm,1 week,MAD,threshold=2,1 hour,
+soil-vwc-30cm,1 week,MAD,threshold=2,1 hour,

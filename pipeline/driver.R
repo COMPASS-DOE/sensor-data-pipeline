@@ -14,7 +14,7 @@ if(basename(getwd()) != "pipeline") {
 # Comment out the stop() if doing development work
 git_status <- system2("git", "status", stdout = TRUE)
 if(!any(grepl("clean", git_status))) {
-    stop("Repository is not clean! Can't proceed to a release")
+   # stop("Repository is not clean! Can't proceed to a release")
 }
 
 source("helpers.R")
@@ -146,24 +146,24 @@ message("L1 step: ", L1_time)
 # (i.e. when month folder is complete)?
 
 
-# Construct L2 data --------------------------------------------
-# L2 data are semi-wide form, organized around experimental units for
-# each timestamp. They have been matched with plot/experimental info, and ready for analysis
+# Prep work for L2 data ----------------------------------------
 
-message("Running L2.qmd")
-new_section("Starting L2")
+message("Running L2_qaqc.qmd")
+new_section("Starting L2_qaqc")
 
 outfile <- paste0("L2_", now_string(), ".html")
 outfile <- file.path(LOGS, outfile)
 
-# driver_try(
-#     quarto_render("L2.qmd",
-#               execute_params = list(DATA_ROOT = ROOT,
-#                                     html_outfile = outfile,
-#                                     logfile = LOGFILE,
-#                                     run_parallel = TRUE))
-# )
-# copy_output("L2.html", outfile)
+begin <- Sys.time()
+driver_try(
+    quarto_render("L2_qaqc.qmd",
+              execute_params = list(DATA_ROOT = ROOT,
+                                    L2_VERSION = VERSION,
+                                    html_outfile = outfile))
+)
+copy_output("L2_qaqc.html", outfile)
+L2_qaqc_time <- format(round(difftime(Sys.time(), begin), 1))
+message("L2_qaqc step: ", L2_qaqc_time)
 
 
 if(ERROR_OCCURRED) warning ("One or more errors occurred!")
@@ -174,6 +174,7 @@ message("\n-----------------")
 message("L0:\t\t", L0_time)
 message("L1_normalize:\t", L1_normalize_time)
 message("L1:\t\t", L1_time)
+message("L2_qaqc:\t", L2_qaqc_time)
 message("Overall:\t", overall_time)
 message("-----------------")
 message("All done.")

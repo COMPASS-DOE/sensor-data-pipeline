@@ -11,7 +11,7 @@ MAX_DATE <- ymd_hms("2999-12-31 11:59:00")
 
 # Data NA (not available) strings to use on writing
 NA_STRING_L1 <- ""
-NA_STRING_L2 <- "-9999"
+NA_STRING_L2 <- ""
 
 # Small helper functions to make the various steps obvious in the log
 if(!exists("LOGFILE")) LOGFILE <- ""
@@ -144,9 +144,13 @@ write_to_folders <- function(x, root_dir,
                     ggtitle(filename) +
                     theme(axis.text = element_text(size = 6),
                           strip.text = element_text(size = 8))
+            } else if(data_level == "L2_qaqc") {
+                folder <- file.path(root_dir, paste(site, y, sep = "_"))
+                filename <- paste(site, y, rn, data_level, vversion, sep = "_")
+                na_string <- NA_STRING_L2
             } else if(data_level == "L2") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste(site, time_period, table, data_level, vversion, sep = "_")
+                filename <- paste(site, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else {
                 stop("Unkown data_level ", data_level)
