@@ -1,12 +1,12 @@
 ---
-title: "L2"
+title: "L2_qaqc"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
   html_outfile: "L2.html"
   DATA_ROOT: "data_TEST/"
   L1: "L1/"
-  L2: "L2/"
+  L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
@@ -30,21 +30,21 @@ editor: visual
 
 This script
 
--  Reads in the L1 data files one by one
+-   Reads in the L1 data files one by one
 
--  Drops NA data rows (shouldn't be any?)
+-   Drops NA data rows (shouldn't be any?)
 
--  Identifies and drops outliers
+-   Identifies and drops outliers
 
--  Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
+-   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
--  Averages to `r params$timestamp_round`, logging n_good and n_drop
+-   Averages to `r params$timestamp_round`, logging n_good and n_drop
 
--  Completes data, ensuring continuous time series
+-   Completes data for entire year, ensuring continuous time series
 
--  Interpolates short data gaps
+-   Interpolates short data gaps
 
--  Writes L2 files
+-   Writes L2_qaqc files
 
 ## Initializing
 
@@ -58,7 +58,7 @@ library(zoo)
 library(ggplot2)
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
-L2 <- file.path(params$DATA_ROOT, params$L2)
+L2 <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
 files_to_process <- list.files(L1, 
                                pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
@@ -79,7 +79,7 @@ if(is.na(data_period)) {
 }
 
 source("helpers.R")
-source("L2-utils.R")
+source("L2_qaqc-utils.R")
 ```
 
 I see `r length(files_to_process)` files to process in `r L1`.
@@ -184,7 +184,7 @@ f <- function(fn, out_dir) {
     maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
     na_vals <- is.na(dat_summarised$Value)
     message("\tGap-filling data with maxgap = ", maxgap)
-    dat_summarised <- L2_gapfill(dat_summarised, maxgap = maxgap)
+    dat_summarised <- L2_linear_gapfill(dat_summarised, maxgap = maxgap)
     new_na_vals <- is.na(dat_summarised$Value)
     message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
@@ -197,9 +197,12 @@ f <- function(fn, out_dir) {
     print(p)
     
     message("\tWriting...")
-    newfn <- file.path(params$DATA_ROOT, params$L2, basename(fn))
-    newfn <- gsub("_L1_", "_L2_", newfn, fixed = TRUE)
-    write_csv(dat_summarised, newfn, na = "")
+    write_to_folders(dat_summarised,
+                     out_dir,
+                     "L2_qaqc",
+                     site = dat_summarised$Site[1],
+                     plot = dat_summarised$Plot[1],
+                     version = params$L2_VERSION) 
     
     return(smry)
 }

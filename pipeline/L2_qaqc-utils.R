@@ -56,18 +56,18 @@ L2_aggregate <- function(x) {
     x <- replace_na(x, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
 
     x_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
-                                  Instrument_ID + Sensor_ID + Location,
+                                  Instrument_ID + Sensor_ID + Location + research_name,
                               data = x,
                               FUN = mean, na.action = na.omit, drop = FALSE)
     # Summarise number of used and not used values
     x$F_keep <- !x$F_drop
     x2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
-                        Instrument_ID + Sensor_ID + Location,
+                        Instrument_ID + Sensor_ID + Location + research_name,
                     data = x,
                     FUN = sum, na.action = na.omit, drop = FALSE)
 
     x3 <- aggregate(F_drop ~ Site + Plot + TIMESTAMP + Instrument +
-                        Instrument_ID + Sensor_ID + Location,
+                        Instrument_ID + Sensor_ID + Location + research_name,
                     data = x,
                     FUN = sum, na.action = na.omit, drop = FALSE)
     x_summarised$n <- x2$F_keep
@@ -84,12 +84,14 @@ L2_complete <- function(x) {
     x_split <- split(x,
                      list(x$Site, x$Plot))
     y <- lapply(x_split, function(x) {
-        timespan <- seq.POSIXt(min(x$TIMESTAMP),
-                               max(x$TIMESTAMP),
+        begin <- paste0(year(min(x$TIMESTAMP)), "-01-01 00:00")
+        end <- paste0(year(max(x$TIMESTAMP)), "-12-31 23:45")
+        timespan <- seq.POSIXt(ymd_hm(begin),
+                               ymd_hm(end),
                                by = params$timestamp_round)
         complete(x,
                  TIMESTAMP = timespan,
-                 nesting(Site, Plot, Instrument, Instrument_ID, Sensor_ID, Location),
+                 nesting(Site, Plot, Instrument, Instrument_ID, Sensor_ID, Location, research_name),
                  fill = list(Value = NA_real_, n = 0, n_drop = 0))
     })
     do.call("rbind", y)
@@ -97,7 +99,7 @@ L2_complete <- function(x) {
 
 # Gap-fill the L2 data: linearly interpolate gaps up to size 'maxgap'
 # We do each plot, instrument, and sensor separately
-L2_gapfill <- function(x, maxgap) {
+L2_linear_gapfill <- function(x, maxgap) {
     x_split <- split(x, list(x$Site, x$Plot, x$Instrument,
                              x$Instrument_ID, x$Sensor_ID))
     y <- lapply(x_split, function(z) {
