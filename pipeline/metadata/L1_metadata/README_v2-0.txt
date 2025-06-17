@@ -62,7 +62,12 @@ change, only that your scripts using L1 data will probably still work.
 CHANGELOG
 —----------------------------------
 Version 2-0 released [DATESTAMP]
-* 
+* Covers late 2019 through June 2025 for TEMPEST and all synoptic sites
+* Data files are now annual and single-variable, rather than monthly and multi-variable
+* Back-corrected two years of corrupted AQ600 files at TEMPEST; thanks to SJW
+* Minor data fixes: CD8 sapflux sensor, wx_par_tot15 calculation, MSM Buoy time zone, sapflux sensor depth, ClimaVue VP units 
+* New code examples, documentation improvements, and more
+* Many backend improvements; see https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/244
 
 Version 1-2 released [DATESTAMP]
 * Covers late 2019 through December 2024 for TEMPEST and all synoptic sites
