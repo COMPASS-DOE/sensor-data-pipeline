@@ -1,0 +1,105 @@
+---
+title: "L2"
+author: "COMPASS workflows team"
+title-block-banner: true
+params:
+  html_outfile: "L2.html"
+  DATA_ROOT: "data_TEST/"
+  L2: "L2/"
+  L2_QAQC: "L2_qaqc/"
+  QAQC_TABLE: "qaqc_table.csv"
+  timestamp_round: "15 min"
+  METADATA_ROOT: "metadata/"
+  L2_METADATA: "L2_metadata/"
+  L2_RELEASE_DATE: "???"
+  L2_DATA_TIMEZONE: "Etc/GMT+5"
+  L2_VERSION: "???"
+  run_parallel: false
+  write_plots: false
+  logfile: ""
+date: now
+date-format: "YYYY-MM-DD HH:mm:ssZ"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+This script
+
+-   Reads in the L2_qaqc data files one by one
+
+-   Computes derived variables
+
+-   Calls gap-filling algorithms (currently only mean annual cycle)
+
+-   Writes L2 files and accompanying documentation
+
+## Initializing
+
+```{r init}
+#| include: false
+
+library(tidyr)
+library(readr)
+library(lubridate)
+library(zoo)
+library(ggplot2)
+
+
+L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
+L2 <- file.path(params$DATA_ROOT, params$L2)
+
+files_to_process <- list.files(L2_QAQC, 
+                               pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+
+QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
+source("helpers.R")
+source("L2_qaqc-utils.R")
+```
+
+I see `r length(files_to_process)` files to process in `r L2_QAQC`.
+
+QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
+
+Output directory is `r L2`
+
+HTML outfile is "`r params$html_outfile`".
+
+## Processing
+
+```{r processing}
+
+# something
+errors <- 0
+out <- head(cars)
+```
+
+## Summary
+
+```{r summary}
+#| echo: false
+#| output: asis
+if(errors) {
+    cat("### WARNING: ", errors, " file read/write error(s)\n")
+    log_warning(paste("File read/write error(s)", params$html_outfile), 
+                logfile = params$logfile)
+}
+```
+
+```{r summary_table}
+out_df <- do.call("rbind", out)
+knitr::kable(out_df[-1]) # don't show filename
+```
+
+## Reproducibility
+
+Git commit `r GIT_COMMIT`.
+
+```{r reproducibility}
+sessionInfo()
+```

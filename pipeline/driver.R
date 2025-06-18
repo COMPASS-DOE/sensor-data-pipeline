@@ -109,7 +109,7 @@ message("L1_normalize step: ", L1_normalize_time)
 
 # Construct L1 data --------------------------------------------
 # This step drops unneeded columns, sorts, and adds extensive metadata
-# File are written into folders based on site, year, and month;
+# Monthly files are written into folders based on site and year;
 # see write_to_folders() in helpers.R
 
 message("Running L1.qmd")
@@ -165,6 +165,32 @@ copy_output("L2_qaqc.html", outfile)
 L2_qaqc_time <- format(round(difftime(Sys.time(), begin), 1))
 message("L2_qaqc step: ", L2_qaqc_time)
 
+# Construct L2 data --------------------------------------------
+# This step drops unneeded columns, sorts, and adds extensive metadata
+# Annual files are written into folders based on site and year;
+# see write_to_folders() in helpers.R
+
+message("Running L2.qmd")
+new_section("Starting L2")
+
+outfile <- paste0("L2_", now_string(), ".html")
+outfile <- file.path(LOGS, outfile)
+
+begin <- Sys.time()
+driver_try(
+    quarto_render("L2.qmd",
+                  execute_params = list(DATA_ROOT = ROOT,
+                                        L2_VERSION = VERSION,
+                                        L2_RELEASE_DATE = RELEASE_DATE,
+                                        L2_DATA_TIMEZONE = L1_DATA_TZ,
+                                        html_outfile = outfile,
+                                        logfile = LOGFILE,
+                                        run_parallel = FALSE))
+)
+copy_output("L2.html", outfile)
+L2_time <- format(round(difftime(Sys.time(), begin), 1))
+message("L2 step: ", L1_time)
+
 
 if(ERROR_OCCURRED) warning ("One or more errors occurred!")
 
@@ -175,6 +201,7 @@ message("L0:\t\t", L0_time)
 message("L1_normalize:\t", L1_normalize_time)
 message("L1:\t\t", L1_time)
 message("L2_qaqc:\t", L2_qaqc_time)
+message("L2:\t\t", L2_time)
 message("Overall:\t", overall_time)
 message("-----------------")
 message("All done.")

@@ -3,7 +3,7 @@ title: "L2_qaqc"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L2.html"
+  html_outfile: "L2_qaqc.html"
   DATA_ROOT: "data_TEST/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
@@ -53,7 +53,7 @@ library(zoo)
 library(ggplot2)
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
-L2 <- file.path(params$DATA_ROOT, params$L2_QAQC)
+L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
 files_to_process <- list.files(L1, 
                                pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
@@ -83,7 +83,7 @@ QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
 Round data to `r params$timestamp_round`.
 
-Output directory is `r L2`
+Output directory is `r L2_QAQC`
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -202,7 +202,7 @@ f <- function(fn, out_dir) {
 
 log_info("About to L2", logfile = params$logfile)
 tryCatch({
-    out <- lapply(files_to_process, f, out_dir = L2)
+    out <- lapply(files_to_process, f, out_dir = L2_QAQC)
 },
 error = function(e) {
     log_warning("L2: an error occurred!", logfile = params$logfile)

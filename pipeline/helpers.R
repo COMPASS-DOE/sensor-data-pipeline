@@ -245,6 +245,7 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
     remove_items("L1/code_examples/", pat = "")
     remove_items("L1/", pat = "code_example")
 
+    remove_items("L2_qaqc/")
     remove_items("L2/")
     remove_items("Logs/")
 
