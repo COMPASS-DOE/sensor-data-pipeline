@@ -203,6 +203,7 @@ write_to_folders <- function(x, root_dir,
             }
 
             # Write basic QA/QC plot
+            # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
                 fn_p <- gsub("csv$", "pdf", fqfn)
                 ggsave(fn_p, plot = p, width = 12, height = 8, device = cairo_pdf)
