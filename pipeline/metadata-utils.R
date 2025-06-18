@@ -47,3 +47,14 @@ md_insert_siteinfo <- function(site, site_files_folder, md) {
     md <- append(md, site_md_for_insert, after = site_info_pos)
     md[-site_info_pos]
 }
+
+md_insert_miscellany <- function(md, na_string, time_zone, version) {
+    message("Inserting NA code, time zone, and version strings")
+
+    # The NA code is an in-line replacement
+    md <- gsub("[NA_STRING]", na_string, md, fixed = TRUE)
+    # The time zone is an in-line replacement
+    md <- gsub("[TIMEZONE]", time_zone, md, fixed = TRUE)
+
+    gsub("[VERSION]", version, md, fixed = TRUE)
+}

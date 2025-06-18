@@ -209,10 +209,6 @@ message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
 message("Variable metadata info has ", length(var_md_for_insert), " lines")
 
-message("Inserting data version string")
-L1_metadata_template <- gsub("[VERSION]", params$L1_VERSION,
-                             L1_metadata_template, fixed = TRUE)
-
 # Identify the main data directories in L1/{version}/, which are <site>_<year>
 data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
 site_files_folder <- file.path(params$METADATA_ROOT, 
@@ -222,11 +218,8 @@ for(dd in data_dirs) {
     dd_full <- file.path(L1, dd)
     message("Generating metadata for ", dd_full)
     
-    message("\tInserting verion")
-    md <- gsub("[VERSION]", params$L1_VERSION, L1_metadata_template, fixed = TRUE)
-    
     message("\tInserting timestamp and folder name")
-    md <- gsub("[TIMESTAMP]", date(), md, fixed = TRUE)
+    md <- gsub("[TIMESTAMP]", date(), L1_metadata_template, fixed = TRUE)
     md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
     
     # Insert info on data files into metadata
@@ -236,11 +229,13 @@ for(dd in data_dirs) {
     col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)
     md <- append(md, col_md_for_insert, after = col_info_pos)
     md <- md[-col_info_pos]
-    # The NA code is an in-line replacement
-    md <- gsub("[NA_STRING_L1]", NA_STRING_L1, md, fixed = TRUE)
-    # The time zone is an in-line replacement
-    md <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, md, fixed = TRUE)
-
+    
+    # Insert NA code, time zone, and version information
+    md <- md_insert_miscellany(md, 
+                               NA_STRING_L1, 
+                               params$L1_DATA_TIMEZONE, 
+                               params$L1_VERSION)
+    
     # Insert variable metadata
     var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)
     md <- append(md, var_md_for_insert, after = var_info_pos)
