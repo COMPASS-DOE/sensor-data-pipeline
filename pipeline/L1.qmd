@@ -67,6 +67,11 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
 
+# Get the variable metadata
+L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
+                             params$L1_METADATA, 
+                             params$METADATA_VARS_TABLE))
+
 L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
 
@@ -81,6 +86,7 @@ HTML outfile is "`r params$html_outfile`".
 ## Processing
 
 ```{r processing}
+
 f <- function(dir_name, dirs_to_process, out_dir) {
     message(Sys.time(), " Processing ", basename(dir_name))
     d <- dirs_to_process[[dir_name]]
@@ -120,6 +126,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
                          data_level = "L1",
                          site = site,
                          plot = plot,
+                         variable_metadata = L1_VAR_MD,
                          version = params$L1_VERSION,
                          write_plots = params$write_plots)
     }
@@ -195,12 +202,11 @@ L1_metadata_template <- readLines(template_file)
 
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
-# Get the variable metadata
-var_md <- read.csv(file.path(params$METADATA_ROOT, params$L1_METADATA, params$METADATA_VARS_TABLE))
-var_md_for_insert <- paste(sprintf("%-20s", c("research_name", var_md$research_name)),
-                           sprintf("%-10s", c("Units", var_md$final_units)),
-                           sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
-                           c("Description", var_md$description))
+# Insert variable metadata
+var_md_for_insert <- paste(sprintf("%-20s", c("research_name", L1_VAR_MD$research_name)),
+                           sprintf("%-10s", c("Units", L1_VAR_MD$final_units)),
+                           sprintf("%-12s", c("Bounds", paste0(L1_VAR_MD$low_bound, ", ", L1_VAR_MD$high_bound))),
+                           c("Description", L1_VAR_MD$description))
 
 message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
