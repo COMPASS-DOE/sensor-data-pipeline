@@ -8,6 +8,7 @@ params:
   L1_NORMALIZE: "L1_normalize/"
   L1: "L1/"
   METADATA_ROOT: "metadata/"
+  METADATA_SITE_FILES: "site_files/"
   L1_METADATA: "L1_metadata/"
   METADATA_VARS_TABLE: "L1_metadata_variables.csv"
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
@@ -171,7 +172,8 @@ L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
 # Write the overall README
-readme_fn <- file.path(params$METADATA_ROOT, params$L1_METADATA, 
+readme_fn <- file.path(params$METADATA_ROOT,
+                       params$L1_METADATA, 
                        paste0("README_v", params$L1_VERSION, ".txt"))
 if(!file.exists(readme_fn)) stop("Couln't find ", readme_fn)
 readme <- readLines(readme_fn)
@@ -261,7 +263,9 @@ for(dd in data_dirs) {
     # Folders are <site>_<year>
     # There MUST be an informational file named <site>.txt
     site <- strsplit(dd, "_")[[1]][1]
-    site_md_file <- file.path(params$METADATA_ROOT, params$L1_METADATA, paste0(site, ".txt"))
+    site_md_file <- file.path(params$METADATA_ROOT, 
+                              params$METADATA_SITE_FILES, 
+                              paste0(site, ".txt"))
     if(!file.exists(site_md_file)) {
         stop("Couldn't find file ", site_md_file, " in ", params$L1_METADATA, " for dd=", dd)
     }
