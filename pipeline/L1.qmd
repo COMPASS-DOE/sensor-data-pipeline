@@ -202,11 +202,8 @@ L1_metadata_template <- readLines(template_file)
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
 # Get the variable metadata
-var_md <- read.csv(file.path(params$METADATA_ROOT, params$METADATA_VARS_TABLE))
-var_md_for_insert <- paste(sprintf("%-20s", c("research_name", var_md$research_name)),
-                           sprintf("%-10s", c("Units", var_md$final_units)),
-                           sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
-                           c("Description", var_md$description))
+var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
+                                                params$METADATA_VARS_TABLE))
 
 message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
@@ -218,6 +215,8 @@ L1_metadata_template <- gsub("[VERSION]", params$L1_VERSION,
 
 # Identify the main data directories in L1/{version}/, which are <site>_<year>
 data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
+site_files_folder <- file.path(params$METADATA_ROOT, 
+                              params$METADATA_SITE_FILES)
 
 for(dd in data_dirs) {
     dd_full <- file.path(L1, dd)
@@ -249,20 +248,8 @@ for(dd in data_dirs) {
     
     # Site information
     # Folders are <site>_<year>
-    # There MUST be an informational file named <site>.txt
     site <- strsplit(dd, "_")[[1]][1]
-    site_md_file <- file.path(params$METADATA_ROOT, 
-                              params$METADATA_SITE_FILES, 
-                              paste0(site, ".txt"))
-    if(!file.exists(site_md_file)) {
-        stop("Couldn't find file ", site_md_file, " in ", params$L1_METADATA, " for dd=", dd)
-    }
-    site_md_for_insert <- readLines(site_md_file)
-
-    # Insert site information    
-    site_info_pos <- grep("[SITE_INFO]", md, fixed = TRUE)
-    md <- append(md, site_md_for_insert, after = site_info_pos)
-    md <- md[-site_info_pos]
+    md <- md_insert_siteinfo(site, site_files_folder, md)
 
     # Write the final metadata file
     mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")
