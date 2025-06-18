@@ -71,8 +71,7 @@ dirs_to_process <- scan_folders(L1_NORMALIZE)
 
 # Get the variable metadata
 L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
-                             params$L1_METADATA, 
-                             params$METADATA_VARS_TABLE))
+                                params$METADATA_VARS_TABLE))
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
