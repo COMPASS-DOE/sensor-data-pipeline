@@ -69,6 +69,11 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
 
+# Get the variable metadata
+L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
+                             params$L1_METADATA, 
+                             params$METADATA_VARS_TABLE))
+
 L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
 
@@ -83,6 +88,7 @@ HTML outfile is "`r params$html_outfile`".
 ## Processing
 
 ```{r processing}
+
 f <- function(dir_name, dirs_to_process, out_dir) {
     message(Sys.time(), " Processing ", basename(dir_name))
     d <- dirs_to_process[[dir_name]]
@@ -122,6 +128,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
                          data_level = "L1",
                          site = site,
                          plot = plot,
+                         variable_metadata = L1_VAR_MD,
                          version = params$L1_VERSION,
                          write_plots = params$write_plots)
     }

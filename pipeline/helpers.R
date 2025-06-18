@@ -76,6 +76,7 @@ write_to_folders <- function(x, root_dir,
                              data_level,
                              site, plot,
                              logger, table, # only provided for L1_normalize
+                             variable_metadata, # only provided for L1
                              version = "???",
                              quiet = FALSE, write_plots = TRUE) {
     # Sanity checks
@@ -134,6 +135,9 @@ write_to_folders <- function(x, root_dir,
                 filename <- paste(logger, table, y, rn, short_hash, sep = "_")
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
+                # Isolate this research name's metadata
+                vmd <- variable_metadata[variable_metadata$research_name == rn,]
+
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, plot, time_period, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
@@ -141,9 +145,24 @@ write_to_folders <- function(x, root_dir,
                 p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
                     geom_line(na.rm = TRUE) +
                     facet_wrap(~research_name, scales = "free") +
-                    ggtitle(filename) +
-                    theme(axis.text = element_text(size = 6),
-                          strip.text = element_text(size = 8))
+                    ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+                    theme(axis.text = element_text(size = 10),
+                          strip.text = element_text(size = 10))
+
+                # If any data are out of bounds, show those bounds
+                if(any(x$F_OOB, na.rm = TRUE)) {
+                    p <- p + geom_hline(yintercept = vmd$low_bound,
+                                        linetype = 2, color = "blue",
+                                        na.rm = TRUE) +
+                        geom_hline(yintercept = vmd$high_bound,
+                                   linetype = 2, color = "blue",
+                                   na.rm = TRUE) +
+                        ggtitle(filename,
+                                subtitle = "Dashed lines show instrument bounds")
+                } else {
+                    p <- p + ggtitle(filename)
+
+                }
             } else if(data_level == "L2_qaqc") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, y, rn, data_level, vversion, sep = "_")
@@ -186,7 +205,7 @@ write_to_folders <- function(x, root_dir,
             # Write basic QA/QC plot
             if(write_plots && write_this_plot) {
                 fn_p <- gsub("csv$", "pdf", fqfn)
-                ggsave(fn_p, plot = p, width = 12, height = 8)
+                ggsave(fn_p, plot = p, width = 12, height = 8, device = cairo_pdf)
             }
 
             lines_written[[fqfn]] <- nrow(dat)
