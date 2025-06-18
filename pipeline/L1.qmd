@@ -11,7 +11,7 @@ params:
   METADATA_SITE_FILES: "site_files/"
   RELEASE_README_FILES: "readme_files/"
   L1_METADATA: "L1_metadata/"
-  METADATA_VARS_TABLE: "L1_metadata_variables.csv"
+  METADATA_VARS_TABLE: "variables_metadata.csv"
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
   # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
   # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
@@ -202,7 +202,7 @@ L1_metadata_template <- readLines(template_file)
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
 # Get the variable metadata
-var_md <- read.csv(file.path(params$METADATA_ROOT, params$L1_METADATA, params$METADATA_VARS_TABLE))
+var_md <- read.csv(file.path(params$METADATA_ROOT, params$METADATA_VARS_TABLE))
 var_md_for_insert <- paste(sprintf("%-20s", c("research_name", var_md$research_name)),
                            sprintf("%-10s", c("Units", var_md$final_units)),
                            sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
