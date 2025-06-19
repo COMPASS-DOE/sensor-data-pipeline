@@ -15,7 +15,7 @@ params:
   L2_DATA_TIMEZONE: "Etc/GMT+5"
   L2_VERSION: "???"
   run_parallel: false
-  write_plots: false
+  write_plots: true
   logfile: ""
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
@@ -51,9 +51,13 @@ library(ggplot2)
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
 
+# Find all L1_qaqc files and build a table 
 files_to_process <- list.files(L2_QAQC, 
-                               pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               pattern = "[A-Z]{3}_[A-Z]{2+}_[0-9]{4}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
+ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
+ftp_table <- separate(ftp_table, filename, into = c("site", "plot", "year", "research_name", "level", "qaqc", "version"), sep = "_", remove = FALSE)
+site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
@@ -62,7 +66,8 @@ source("helpers.R")
 source("L2_qaqc-utils.R")
 ```
 
-I see `r length(files_to_process)` files to process in `r L2_QAQC`.
+I see `r nrow(site_rn_table)` site-plot-research_name combinations to process 
+in `r L2_QAQC`, representing `r length(files_to_process)` files.
 
 QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
@@ -70,12 +75,65 @@ Output directory is `r L2`
 
 HTML outfile is "`r params$html_outfile`".
 
-## Processing
+## MAC gap filling
 
 ```{r processing}
-
-# something
 errors <- 0
+
+for(i in seq_len(nrow(site_rn_table))) {
+    si <- site_rn_table$site[i]
+    pl <- site_rn_table$plot[i]
+    rn <- site_rn_table$research_name[i]
+    message("Processing ", si, " ", pl, " ", rn)
+    
+    these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
+    if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
+    
+    message("\tReading ", nrow(these_files), 
+            ifelse(nrow(these_files) > 1, " files", " file"))
+    file_data <- lapply(these_files$file, function(f) {
+        x <- read_csv(f, col_types = "Tcccccccdii")
+        x$month <- month(x$TIMESTAMP)
+        x$mday <- mday(x$TIMESTAMP)
+        x$hour <- hour(x$TIMESTAMP)
+        x$minute <- minute(x$TIMESTAMP)
+        x
+    })
+    
+    # Compute the mean annual cycle (MAC)
+    message("\tComputing MAC...")
+    all_data <- do.call(rbind, file_data)
+    mac <- aggregate(Value ~ month + mday + hour + minute, 
+                     data = all_data, FUN = mean, na.action = na.omit)
+    mac$mac <- mac$Value
+    mac$Value <- NULL
+    
+    # For each file's data, gap fill and write out
+    for(j in seq_len(nrow(these_files))) {
+        message("\tGap filling ", these_files$filename[j])
+        dat <- file_data[[j]]
+        dat <- merge(dat, mac, 
+                     by = c("month", "mday", "hour", "minute"), 
+                     all.x = TRUE)
+        
+        # join
+        # call gap-filling routine
+        
+        # Clean up and check that the data frame has correct columns
+        dat$month <- dat$mday <- dat$hour <- dat$minute <- NULL
+        # TODO
+        
+        write_to_folders(dat,
+                         root_dir = L2, 
+                         data_level = "L2",
+                         site = si,
+                         plot = pl,
+                         version = params$L2_VERSION,
+                         write_plots = params$write_plots) 
+    }
+    
+}
+
 out <- head(cars)
 ```
 
