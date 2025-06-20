@@ -23,5 +23,10 @@ EXO: F. Machado-Silva; E. Grammenidis
 Dataloggers: Roy Rich <RichR@si.edu>; R. Bittencourt Peixoto; E. Grammenidis
 
 Key publications:
-Machado-Silva et al. (submitted), "Groundwater level and redox dynamics
-across terrestrial aquatic interface of Lake Erie coastal ecosystems"
+Machado-Silva, F., Weintraub, M. N., Ward, N. D., Doro, K. O., Regier,
+P. J., Ehosioke, S., Thomas, S. P., Peixoto, R. B., Sandoval, L.,
+Forbrich, I., Kemner, K. M., O’Loughlin, E. J., Stetten, L., Spanbauer,
+T., Bridgeman, T. B., O’Meara, T., Rod, K. A., Patel, K., McDowell, N.
+G., Megonigal, J. P., Rich, R. L., and Bailey, V. L.: Short-term
+groundwater level fluctuations drive subsurface redox variability,
+Environ. Sci. Technol., https://doi.org/10.1021/acs.est.4c01115, 2024.
