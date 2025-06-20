@@ -47,7 +47,6 @@ library(lubridate)
 library(zoo)
 library(ggplot2)
 
-
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
 
@@ -63,7 +62,7 @@ QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
 
 source("helpers.R")
-source("L2_qaqc-utils.R")
+source("L2-utils.R")
 ```
 
 I see `r nrow(site_rn_table)` site-plot-research_name combinations to process 
@@ -105,23 +104,41 @@ for(i in seq_len(nrow(site_rn_table))) {
     all_data <- do.call(rbind, file_data)
     mac <- aggregate(Value ~ month + mday + hour + minute, 
                      data = all_data, FUN = mean, na.action = na.omit)
-    mac$mac <- mac$Value
-    mac$Value <- NULL
-    
+    colnames(mac)[colnames(mac) == "Value"] <- "mac"
+
     # For each file's data, gap fill and write out
     for(j in seq_len(nrow(these_files))) {
-        message("\tGap filling ", these_files$filename[j])
         dat <- file_data[[j]]
+        oldrows <- nrow(dat)
         dat <- merge(dat, mac, 
                      by = c("month", "mday", "hour", "minute"), 
                      all.x = TRUE)
+        stopifnot(nrow(dat) == oldrows) # sanity check
+        dat <- dat[order(dat$TIMESTAMP),]
         
-        # join
-        # call gap-filling routine
+        # TEMP TODO
+        # n <- nrow(dat)
+        # dat$Instrument_ID[(n-10):(n-5)] <- dat$Value[(n-10):(n-5)]
+        # dat$Sensor_ID[(n-10):(n-5)] <- dat$Value[(n-10):(n-5)]
+        # dat$Value[(n-10):(n-5)] <- NA
+        
+        # call gap-filling routine for each Instrument_ID and Sensor_ID
+        dat_split <- split(dat, ~ Instrument_ID + Sensor_ID)
+        dat_gf_list <- lapply(dat_split, function(x) {
+            x <- x[order(x$TIMESTAMP),]
+            x$GF_MAC <- fill_all_gaps(x$Value, x$mac)
+            x
+        })
+        dat_gf <- do.call(rbind, dat_gf_list)
+        nagf <- is.na(dat_gf$GF_MAC)
+        dat_gf$GF_MAC[nagf] <- dat_gf$Value[nagf]
+        message("\tGap filled ", 
+                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$GF_MAC)), 
+                " values in ", these_files$filename[j])
         
         # Clean up and check that the data frame has correct columns
         dat$month <- dat$mday <- dat$hour <- dat$minute <- NULL
-        # TODO
+        # TODO also remove mac column
         
         write_to_folders(dat,
                          root_dir = L2, 
