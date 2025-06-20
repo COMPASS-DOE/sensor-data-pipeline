@@ -186,13 +186,12 @@ readme_fn <- file.path(params$METADATA_ROOT,
                        params$L1_METADATA,
                        params$RELEASE_README_FILES, 
                        paste0("README_v", params$L1_VERSION, ".txt"))
-if(!file.exists(readme_fn)) stop("Couldn't find ", readme_fn)
-readme <- readLines(readme_fn)
-readme <- gsub("[VERSION]", params$L1_VERSION, readme, fixed = TRUE)
-readme <- gsub("[DATESTAMP]", params$L1_RELEASE_DATE, readme, fixed = TRUE)
-readme <- gsub("[OBSERVATIONS]", n_obs, readme, fixed = TRUE)
-readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
-readme <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, readme, fixed = TRUE)
+readme <- md_readme_substitutions(readme_fn,
+                                  params$L1_VERSION, 
+                                  params$L1_RELEASE_DATE, 
+                                  n_obs,
+                                  GIT_COMMIT,
+                                  params$L1_DATA_TIMEZONE)
 readme_outfn <- file.path(L1, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)

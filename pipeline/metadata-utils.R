@@ -58,3 +58,15 @@ md_insert_miscellany <- function(md, na_string, time_zone, version) {
 
     gsub("[VERSION]", version, md, fixed = TRUE)
 }
+
+
+md_readme_substitutions <- function(readme_fn, ver, rd, obs, commit, tz) {
+    if(!file.exists(readme_fn)) stop("Couldn't find ", readme_fn)
+    readme <- readLines(readme_fn)
+    readme <- gsub("[VERSION]", ver, readme, fixed = TRUE)
+    readme <- gsub("[DATESTAMP]", rd, readme, fixed = TRUE)
+    readme <- gsub("[OBSERVATIONS]", obs, readme, fixed = TRUE)
+    readme <- gsub("[GIT_COMMIT]", commit, readme, fixed = TRUE)
+    readme <- gsub("[TIMEZONE]", tz, readme, fixed = TRUE)
+    readme
+}
