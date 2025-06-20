@@ -9,6 +9,8 @@ four plots: upland ("UP"; located at 41.3763N, 82.5070W), transition
 41.3766N, 82.5094W). It was established in December 2021.
 
 NOTE: Meteorological data for OWC are available in the OWC-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
 
 Contacts for the Old Woman Creek site:
 Michael Weintraub <Michael.Weintraub@utoledo.edu>

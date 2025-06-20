@@ -7,6 +7,8 @@ was established in June 2022. The transect spans a coastal loblolly pine
 forest and a mesohaline marsh dominated by Spartina and Distichlis.
 
 NOTE: Meteorological data for MSM are available in the MSM-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
 
 Contacts for the Moneystump Swamp site:
 Stephanie J. Wilson <wilsonsj@si.edu>

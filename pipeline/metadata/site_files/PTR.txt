@@ -9,6 +9,8 @@ site consists of three plots: upland ("UP"; located at 41.5015N,
 established in December 2021.
 
 NOTE: Meteorological data for PTR are available in the PTR-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
 
 Contacts for the Portage River site:
 Michael Weintraub <Michael.Weintraub@utoledo.edu>
