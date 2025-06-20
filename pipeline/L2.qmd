@@ -10,6 +10,7 @@ params:
   QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
+  RELEASE_README_FILES: "readme_files/"
   L2_METADATA: "L2_metadata/"
   L2_RELEASE_DATE: "???"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
@@ -129,6 +130,9 @@ for(i in seq_len(nrow(site_rn_table))) {
         stopifnot(nrow(dat) == oldrows) # sanity check
 
         # call gap-filling routine for each Instrument_ID and Sensor_ID
+        # split doesn't work with NA values (???) so replace those...
+        dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = ""))
+        # ...then split and apply
         dat_split <- split(dat, ~ Instrument_ID + Sensor_ID)
         dat_gf_list <- lapply(dat_split, function(x) {
             x <- x[order(x$TIMESTAMP),]
@@ -136,6 +140,7 @@ for(i in seq_len(nrow(site_rn_table))) {
             x
         })
         dat_gf <- do.call(rbind, dat_gf_list)
+        rownames(dat_gf) <- NULL
         # Transfer good values into gap-fill column
         nagf <- is.na(dat_gf$GF_MAC)
         dat_gf$GF_MAC[nagf] <- dat_gf$Value[nagf]
@@ -145,10 +150,10 @@ for(i in seq_len(nrow(site_rn_table))) {
         smry$GF_values[i] <- smry$GF_values[i] + sum(!is.na(dat_gf$GF_MAC))
         
         # Clean up and check that the data frame has correct columns
-        dat$month <- dat$mday <- dat$hour <- dat$minute <- dat$minute <- NULL
+        dat_gf$month <- dat_gf$mday <- dat_gf$hour <- dat_gf$minute <- dat_gf$mac <- NULL
         # TODO 
         
-        write_to_folders(dat,
+        write_to_folders(dat_gf,
                          root_dir = L2, 
                          data_level = "L2",
                          site = si,
@@ -174,6 +179,96 @@ if(errors) {
 
 ```{r summary_table}
 knitr::kable(smry)
+```
+
+## Metadata
+
+L2 metadata template directory is `r params$L2_METADATA`.
+
+```{r metadata}
+
+source("metadata-utils.R")
+
+# Write the overall README
+readme_fn <- file.path(params$METADATA_ROOT,
+                       params$L2_METADATA,
+                       params$RELEASE_README_FILES, 
+                       paste0("README_v", params$L2_VERSION, ".txt"))
+if(!file.exists(readme_fn)) stop("Couldn't find ", readme_fn)
+readme <- readLines(readme_fn)
+readme <- gsub("[VERSION]", params$L2_VERSION, readme, fixed = TRUE)
+readme <- gsub("[DATESTAMP]", params$L2_RELEASE_DATE, readme, fixed = TRUE)
+readme <- gsub("[OBSERVATIONS]", sum(smry$Values), readme, fixed = TRUE)
+readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
+readme <- gsub("[TIMEZONE]", params$L2_DATA_TIMEZONE, readme, fixed = TRUE)
+readme_outfn <- file.path(L2, basename(readme_fn))
+message("Writing overall README ", readme_outfn, "...")
+writeLines(readme, readme_outfn)
+
+if(0) {
+    
+# Get the L1 template file
+template_file <- file.path(params$METADATA_ROOT,
+                           params$L1_METADATA, 
+                           "L1_metadata_template.txt")
+if(!file.exists(template_file)) {
+    stop("Couldn't find file ", basename(template_file), " in ", params$L1_METADATA)
+}
+L1_metadata_template <- readLines(template_file)
+
+col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
+
+# Get the variable metadata
+var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
+                                                params$METADATA_VARS_TABLE))
+
+message("Main template has ", length(L1_metadata_template), " lines")
+message("Column metadata info has ", length(col_md_for_insert), " lines")
+message("Variable metadata info has ", length(var_md_for_insert), " lines")
+
+# Identify the main data directories in L1/{version}/, which are <site>_<year>
+data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
+site_files_folder <- file.path(params$METADATA_ROOT, 
+                              params$METADATA_SITE_FILES)
+
+for(dd in data_dirs) {
+    dd_full <- file.path(L1, dd)
+    message("Generating metadata for ", dd_full)
+    
+    message("\tInserting timestamp and folder name")
+    md <- gsub("[TIMESTAMP]", date(), L1_metadata_template, fixed = TRUE)
+    md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
+    
+    # Insert info on data files into metadata
+    md <- md_insert_fileinfo(dd_full, md)
+   
+    # Insert column metadata
+    col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)
+    md <- append(md, col_md_for_insert, after = col_info_pos)
+    md <- md[-col_info_pos]
+    
+    # Insert NA code, time zone, and version information
+    md <- md_insert_miscellany(md, 
+                               NA_STRING_L1, 
+                               params$L1_DATA_TIMEZONE, 
+                               params$L1_VERSION)
+    
+    # Insert variable metadata
+    var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)
+    md <- append(md, var_md_for_insert, after = var_info_pos)
+    md <- md[-var_info_pos]
+    
+    # Site information
+    # Folders are <site>_<year>
+    site <- strsplit(dd, "_")[[1]][1]
+    md <- md_insert_siteinfo(site, site_files_folder, md)
+
+    # Write the final metadata file
+    mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")
+    message("\tWriting ", mdfn, "...")
+    writeLines(md, file.path(L1, dd, mdfn))
+}
+}
 ```
 
 ## Reproducibility
