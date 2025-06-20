@@ -44,18 +44,21 @@ This script
 library(tidyr)
 library(readr)
 library(lubridate)
-library(zoo)
 library(ggplot2)
 
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
 
-# Find all L1_qaqc files and build a table 
+# Find all L1_qaqc files and build a table of their
+# site/plot/research_name combinations
 files_to_process <- list.files(L2_QAQC, 
                                pattern = "^[A-Z]{3}_[A-Z]{2,}_[0-9]{4}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
-ftp_table <- separate(ftp_table, filename, into = c("site", "plot", "year", "research_name", "level", "qaqc", "version"), sep = "_", remove = FALSE)
+ftp_table <- separate(ftp_table, filename, 
+                      into = c("site", "plot", "year", "research_name", 
+                               "level", "qaqc", "version"), sep = "_", 
+                      remove = FALSE)
 site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
@@ -78,6 +81,10 @@ HTML outfile is "`r params$html_outfile`".
 
 ```{r processing}
 errors <- 0
+smry <- site_rn_table
+smry$Files <- 0
+smry$Years <- ""
+smry$GF_values <- smry$MAC_values <- smry$Values <- 0
 
 for(i in seq_len(nrow(site_rn_table))) {
     si <- site_rn_table$site[i]
@@ -85,8 +92,10 @@ for(i in seq_len(nrow(site_rn_table))) {
     rn <- site_rn_table$research_name[i]
     message("Processing ", si, " ", pl, " ", rn)
     
+    # Identify files for this site, plot, and research name, and read
     these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
     if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
+    smry$Files[i] <- length(these_files)
     
     message("\tReading ", nrow(these_files), 
             ifelse(nrow(these_files) > 1, " files", " file"))
@@ -99,14 +108,18 @@ for(i in seq_len(nrow(site_rn_table))) {
         x
     })
     
-    # Compute the mean annual cycle (MAC)
+    # Compute the mean annual cycle (MAC) across all sensors and files (years)
     message("\tComputing MAC...")
     all_data <- do.call(rbind, file_data)
+    smry$Values[i] <- sum(!is.na(all_data$Value))
+    yrs <- year(all_data$TIMESTAMP)
+    smry$Years <- paste(min(yrs), max(yrs), sep = "-")
     mac <- aggregate(Value ~ month + mday + hour + minute, 
                      data = all_data, FUN = mean, na.action = na.omit)
     colnames(mac)[colnames(mac) == "Value"] <- "mac"
-
-    # For each file's data, gap fill and write out
+    smry$MAC_values[i] <- sum(!is.na(mac$mac))
+    
+    # For each file's data, add mac column, gap fill, and write out
     for(j in seq_len(nrow(these_files))) {
         dat <- file_data[[j]]
         oldrows <- nrow(dat)
@@ -114,14 +127,7 @@ for(i in seq_len(nrow(site_rn_table))) {
                      by = c("month", "mday", "hour", "minute"), 
                      all.x = TRUE)
         stopifnot(nrow(dat) == oldrows) # sanity check
-        dat <- dat[order(dat$TIMESTAMP),]
-        
-        # TEMP TODO
-        # n <- nrow(dat)
-        # dat$Instrument_ID[(n-10):(n-5)] <- dat$Value[(n-10):(n-5)]
-        # dat$Sensor_ID[(n-10):(n-5)] <- dat$Value[(n-10):(n-5)]
-        # dat$Value[(n-10):(n-5)] <- NA
-        
+
         # call gap-filling routine for each Instrument_ID and Sensor_ID
         dat_split <- split(dat, ~ Instrument_ID + Sensor_ID)
         dat_gf_list <- lapply(dat_split, function(x) {
@@ -130,15 +136,17 @@ for(i in seq_len(nrow(site_rn_table))) {
             x
         })
         dat_gf <- do.call(rbind, dat_gf_list)
+        # Transfer good values into gap-fill column
         nagf <- is.na(dat_gf$GF_MAC)
         dat_gf$GF_MAC[nagf] <- dat_gf$Value[nagf]
         message("\tGap filled ", 
-                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$GF_MAC)), 
+                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$GF_MAC)),
                 " values in ", these_files$filename[j])
+        smry$GF_values[i] <- smry$GF_values[i] + sum(!is.na(dat_gf$GF_MAC))
         
         # Clean up and check that the data frame has correct columns
-        dat$month <- dat$mday <- dat$hour <- dat$minute <- NULL
-        # TODO also remove mac column
+        dat$month <- dat$mday <- dat$hour <- dat$minute <- dat$minute <- NULL
+        # TODO 
         
         write_to_folders(dat,
                          root_dir = L2, 
@@ -150,8 +158,6 @@ for(i in seq_len(nrow(site_rn_table))) {
     }
     
 }
-
-out <- head(cars)
 ```
 
 ## Summary
@@ -167,8 +173,7 @@ if(errors) {
 ```
 
 ```{r summary_table}
-out_df <- do.call("rbind", out)
-knitr::kable(out_df[-1]) # don't show filename
+knitr::kable(smry)
 ```
 
 ## Reproducibility
