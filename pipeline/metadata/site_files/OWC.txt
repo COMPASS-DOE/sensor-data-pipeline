@@ -31,3 +31,11 @@ T., Bridgeman, T. B., O’Meara, T., Rod, K. A., Patel, K., McDowell, N.
 G., Megonigal, J. P., Rich, R. L., and Bailey, V. L.: Short-term
 groundwater level fluctuations drive subsurface redox variability,
 Environ. Sci. Technol., https://doi.org/10.1021/acs.est.4c01115, 2024.
+
+Patel, K. F., Rod, K. A., Zheng, J., Regier, P., Machado-Silva, F.,
+Bond-Lamberty, B., Chen, X., Day, D. J., Doro, K. O., Kaufman, M. H.,
+Kovach, M., McDowell, N., McKever, S. A., Megonigal, J. P., Norris, C.
+G., O’Meara, T., Peixoto, R. B., Rich, R., Thornton, P., Kemner, K. M.,
+Ward, N. D., Weintraub, M. N., and Bailey, V. L.: Time to anoxia:
+Observations and predictions of oxygen drawdown following coastal flood
+events, Geoderma, 444, 116854, 2024.
