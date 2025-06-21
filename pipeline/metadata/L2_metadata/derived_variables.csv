@@ -1,0 +1,2 @@
+new_research_name,needs_research_names,Units,Description
+soil-salinity-10cm,"soil-vwc-10cm, soil-temp-10cm, soil-EC-10cm",ppt,Salinity calculated based on Fausto's method TODO

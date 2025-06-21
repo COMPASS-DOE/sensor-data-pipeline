@@ -93,3 +93,7 @@ fill_all_gaps <- function(x, mac) {
     }
     return(gapfilled)
 }
+
+`CALC_DERIVED_soil-salinity-10cm` <- function(x) {
+    message("\tHello!")
+}

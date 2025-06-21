@@ -15,6 +15,7 @@ params:
   METADATA_COLUMNS_TABLE: "L2_metadata_columns.csv"
   RELEASE_README_FILES: "readme_files/"
   L2_METADATA: "L2_metadata/"
+  DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_RELEASE_DATE: "???"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
   L2_VERSION: "???"
@@ -76,21 +77,57 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
                       comment.char = "#",
                       stringsAsFactors = FALSE)
 
+# Read the derived variables files
+derived_vars <- read_csv(file.path(params$METADATA_ROOT,
+                                   params$L2_METADATA,
+                                   params$DERIVED_VARS_TABLE))
+
 source("helpers.R")
 source("L2-utils.R")
 source("metadata-utils.R")
 ```
 
-I see `r nrow(site_rn_table)` site-plot-research_name combinations to process 
-in `r L2_QAQC`, representing `r length(files_to_process)` files.
+The derived variables table has `r nrow(derived_vars)` entries.
 
-QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
+For gap-filling, I see `r nrow(site_rn_table)` site-plot-research_name combinations to process in `r L2_QAQC`, representing `r length(files_to_process)` files.
+
+QAQC table has `r nrow(qaqct)` entries.
 
 L2 column metadata has `r nrow(column_md)` entries.
 
 Output directory is `r L2`.
 
 HTML outfile is "`r params$html_outfile`".
+
+## Derived variables
+
+```{r}
+# Process the derived variables table row by row
+for(i in seq_len(nrow(derived_vars))) {
+    dv <- derived_vars$new_research_name[i]
+    # Parse the 'needs_research_names' column and figure out which files are needed
+    needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
+    message("Calculating ", dv, " - need ", length(needs), 
+            " variables: ", derived_vars$needs_research_names[i])
+    files_needed <- ftp_table[ftp_table$research_name %in% needs,]
+    
+    # Split by site and plot and year, and then for each split...
+    files_needed_split <- split(files_needed, ~ site + plot + year)
+    for(grp in files_needed_split) {
+        message("\tLoading data for ", grp$site[1], " ", grp$plot[1], " ", grp$year[1])
+        # Read the files needed and put into a list, using research names as names
+        dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
+        names(dat_needed) <- grp$research_name
+        # Call CALC_DERIVED_X
+        do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
+        # mark as derived
+        # mark research_name
+        # write data
+    }
+    # add dv info to variables metadata table
+}
+
+```
 
 ## MAC gap filling
 
