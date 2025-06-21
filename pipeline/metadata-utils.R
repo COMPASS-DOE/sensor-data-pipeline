@@ -4,23 +4,24 @@
 
 # Get information about files in a folder and insert into metadata
 # (a character vector)
-md_insert_fileinfo <- function(folder, md) {
+md_insert_fileinfo <- function(folder, md, filename_spacing) {
     files <- list.files(path = folder, pattern = "csv$", full.names = TRUE)
     message("\tFound ", length(files), " data files")
-    file_info <- c()
+    file_info <- data.frame(File = basename(files), Rows = NA, MD5 = NA)
+
     # Build up information about files...
-    for(f in files) {
-        fdata <- readLines(f) # just for a quick line count
-        file_info <- c(file_info,
-                       basename(f),
-                       paste("Rows:", length(fdata) - 1),
-                       paste("md5:", digest::digest(f, file = TRUE)),
-                       "")
+    for(f in seq_len(length(files))) {
+        fdata <- readLines(files[f]) # just for a quick line count
+        file_info$Rows[f] <- length(fdata) - 1
+        file_info$MD5[f] <- digest::digest(files[f], file = TRUE)
     }
     # ...and insert into metadata
-    # We used the head(-1) to drop the final empty line, just to keep things pretty
-    file_info_pos <- grep("[FILE_INFO", md, fixed = TRUE)
-    md <- append(md, head(file_info, -1), after = file_info_pos)
+    file_info_txt <- paste(sprintf(paste0("%-", filename_spacing, "s"),
+                                   c("Filename", file_info$File)),
+                           sprintf("%10s", c("Rows", file_info$Rows)),
+                           sprintf("%-10s", c("MD5", file_info$MD5)))
+    file_info_pos <- grep("[FILE_INFO]", md, fixed = TRUE)
+    md <- append(md, file_info_txt, after = file_info_pos)
     md[-file_info_pos]
 }
 

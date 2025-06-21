@@ -169,7 +169,7 @@ write_to_folders <- function(x, root_dir,
                 na_string <- NA_STRING_L2
             } else if(data_level == "L2") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste(site, y, rn, data_level, vversion, sep = "_")
+                filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else {
                 stop("Unkown data_level ", data_level)
