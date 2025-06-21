@@ -4,6 +4,8 @@
 
 library(testthat)
 
+# Gap-filling functions -----------------------------------
+
 # Fill a gap in a vector x, based on the values immediately before
 # and after the gap and the mean annual cycle (mac)
 # Returns a numeric vector exactly as long as the gap
@@ -94,6 +96,64 @@ fill_all_gaps <- function(x, mac) {
     return(gapfilled)
 }
 
+# Derived variable functions -----------------------------------
+# Name of the function must start with "CALC_DERIVED" followed by
+# name of new research name (from derived variables table)
+
+# Generate full range of possible VWC values and corresponding roots
+# This code is outside a function because we only need to do it once
+VWCs <- seq(0, 1, length.out = 100)
+get_roots <- function(VWC) {
+    # Polynomial: -10.848-VWC + 1.302e-2*x - 5.105e-6*x^2 + 6.771e-10*x^3 = 0
+    coeffs <- c(-10.848 - VWC, 1.302e-2, -5.105e-6, 6.771e-10)
+    roots <- polyroot(coeffs)
+    # Return real part of real roots
+    rrt <- Re(roots[abs(Im(roots)) < 1e-8])
+    if(length(rrt)) {
+        return(rrt)
+    } else {
+        return(NA)
+    }
+}
+raws <- sapply(VWCs, get_roots)
+raws <- zoo::na.approx(raws) # fill in five missing values (when no real roots)
+
 `CALC_DERIVED_soil-salinity-10cm` <- function(x) {
-    message("\tHello!")
+    # the three data frames passed in should *normally* have the
+    # exact same dimensions and ordering, since they're linked
+    # TEROS data from the same site and plot
+    if(length(unique(sapply(dat_needed, nrow))) != 1) {
+        stop("The T,VWC,EC data frames are not the same size!")
+    }
+
+    T <- x$`soil-temp-10cm`$Value
+    VWC <- x$`soil-vwc-10cm`$Value
+    EC <- x$`soil-EC-10cm`$Value
+
+    # The following steps are from Fausto Machado-Silva
+    # See also Hilhorst 2000, A pore water conductivity sensor,
+    # Soil Science Society of America Journal 64:6 1922–1925.
+
+    # 1. Convert TEROS EC to porewater EC
+    # METER recommends that σp not be calculated in soils with
+    # VWC < 0.10 m3/m3 using this method
+    VWC[VWC < 0.1] <- NA
+
+    # Convert conductivity to porewater conductivity
+    ep <- 80.3 - 0.37 * (T - 20)
+    esb0 <- 4.1
+    # Interpolate raw values for given VWCs
+    raw <- approx(VWCs, raws, xout = VWC)$y
+
+    eb <- (2.887e-9 * raw ** 3 - 2.080e-5 * raw ** 2 + 5.276e-2 * raw - 43.39) ** 2
+    cond_porewater <- (ep * EC) / (eb - esb0)
+
+    # 2. Convert porewater EC to salinity
+    salinity <- -2.060e-1 + 5.781e-4 * cond_porewater
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`soil-EC-10cm`$Value <- salinity
+    return(x$`soil-EC-10cm`)
 }

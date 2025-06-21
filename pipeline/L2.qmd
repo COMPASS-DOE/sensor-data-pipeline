@@ -65,7 +65,6 @@ ftp_table <- separate(ftp_table, filename,
                                "level", "qaqc", "version"), sep = "_", 
                       remove = FALSE)
 ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
-site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
@@ -89,7 +88,7 @@ source("metadata-utils.R")
 
 The derived variables table has `r nrow(derived_vars)` entries.
 
-For gap-filling, I see `r nrow(site_rn_table)` site-plot-research_name combinations to process in `r L2_QAQC`, representing `r length(files_to_process)` files.
+For gap-filling, I see `r length(files_to_process)` files.
 
 QAQC table has `r nrow(qaqct)` entries.
 
@@ -119,10 +118,11 @@ for(i in seq_len(nrow(derived_vars))) {
         dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
         names(dat_needed) <- grp$research_name
         # Call CALC_DERIVED_X
-        do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
-        # mark as derived
-        # mark research_name
-        # write data
+        newdat <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
+        newdat$research_name <- dv
+        newdat$Type <- "DRV"
+        # write data to somewhere temporary? Hold in memory? Write back to L2_qaqc?
+        # then just add to ftp_table
     }
     # add dv info to variables metadata table
 }
@@ -132,7 +132,11 @@ for(i in seq_len(nrow(derived_vars))) {
 ## MAC gap filling
 
 ```{r processing}
-errors <- 0
+
+# The site-research name table holds the unique combinations of those attributes
+# We will process all files at once that match the attributes for a given row
+site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
+
 smry <- site_rn_table
 smry$Files <- 0
 smry$Dates <- ""
