@@ -1,1 +1,6 @@
 *.csv
+*/README.md
+*.txt
+*.pdf
+*.png
+code_examples

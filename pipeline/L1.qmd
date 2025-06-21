@@ -54,6 +54,7 @@ options(warn = 2)
 
 source("helpers.R")
 source("L1-utils.R")
+source("metadata-utils.R")
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -112,15 +113,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
         site <- dat$Site[1]
         plot <- dat$Plot[1]
         
-        # Check for metadata columns that are missing...
-        if(!all(column_md$Column %in% colnames(dat))) {
-            stop("Column metadata file ", params$METADATA_COLUMNS_TABLE,
-                 " has entries not in data: ", setdiff(column_md$Column, colnames(dat)))
-        }
-        # ...order and remove columns not in the metadata...
-        dat <- dat[column_md$Column]
-        # ...and sort rows
-        dat <- dat[order(dat$TIMESTAMP),]
+        dat <- check_drop_sort_columns(dat, column_md, params$METADATA_COLUMNS_TABLE)
         
         write_to_folders(dat, 
                          root_dir = out_dir, 
@@ -178,20 +171,17 @@ options(warn = oldwarn)
 L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
-
-source("metadata-utils.R")
-
 # Write the overall README
 readme_fn <- file.path(params$METADATA_ROOT,
+                       params$L1_METADATA,
                        params$RELEASE_README_FILES, 
                        paste0("README_v", params$L1_VERSION, ".txt"))
-if(!file.exists(readme_fn)) stop("Couldn't find ", readme_fn)
-readme <- readLines(readme_fn)
-readme <- gsub("[VERSION]", params$L1_VERSION, readme, fixed = TRUE)
-readme <- gsub("[DATESTAMP]", params$L1_RELEASE_DATE, readme, fixed = TRUE)
-readme <- gsub("[OBSERVATIONS]", n_obs, readme, fixed = TRUE)
-readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
-readme <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, readme, fixed = TRUE)
+readme <- md_readme_substitutions(readme_fn,
+                                  params$L1_VERSION, 
+                                  params$L1_RELEASE_DATE, 
+                                  n_obs,
+                                  GIT_COMMIT,
+                                  params$L1_DATA_TIMEZONE)
 readme_outfn <- file.path(L1, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)
@@ -215,7 +205,7 @@ message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
 message("Variable metadata info has ", length(var_md_for_insert), " lines")
 
-# Identify the main data directories in L1/{version}/, which are <site>_<year>
+# Identify the main data directories in L1, which are <site>_<year>
 data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
 site_files_folder <- file.path(params$METADATA_ROOT, 
                               params$METADATA_SITE_FILES)
@@ -229,7 +219,7 @@ for(dd in data_dirs) {
     md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
     
     # Insert info on data files into metadata
-    md <- md_insert_fileinfo(dd_full, md)
+    md <- md_insert_fileinfo(dd_full, md, filename_spacing = 55)
    
     # Insert column metadata
     col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)

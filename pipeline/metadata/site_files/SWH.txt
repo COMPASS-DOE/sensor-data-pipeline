@@ -24,7 +24,6 @@ Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice 
 TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
 AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
 ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
-EXO: S. Wilson; Drew Peresta <PerestaA@si.edu>; R. Rich; Lydia LaGorga <LaGorgaL@si.edu>
 Dataloggers: S. Wilson; E. Phillips; A. Stearns; R. Rich
 
 Key publications:

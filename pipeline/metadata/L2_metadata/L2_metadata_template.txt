@@ -1,0 +1,47 @@
+COMPASS-FME Level 2 sensor data site documentation
+Version: [VERSION]
+[FOLDER_NAME]
+[TIMESTAMP]
+
+
+General information
+—----------------------------------
+Level 2 (L2) data consist of sensor observations from the COMPASS-FME
+synoptic sites, TEMPEST, and DELUGE. Compared to the L1 data, these are
+more consistent (always 15-minute timestamps for the entire year);
+better QA/QC’d (out of bounds, out of service, and extreme outlier
+values are removed); and more complete, with a gap-filled time series
+available alongside the main observations, and additional derived
+(calculated) variables. L2 data are intended to be rapidly and easily
+usable in analyses and simulations.
+
+Site information:
+—----------------------------------
+[SITE_INFO]
+
+
+Files in this folder:
+—----------------------------------
+Files are site- and plot-specific, annual, and have a naming convention
+of {SITE}_{PLOT}_{YEAR}_{VARIABLE}_L2_{VERSION}.csv
+
+
+[FILE_INFO]
+
+
+File columns:
+—----------------------------------
+[COLUMN_INFO]
+
+
+Variable definitions:
+—----------------------------------
+[VARIABLE_INFO]
+
+Outlier and QA/QC processing:
+—---------------------------------- 
+Mean absolute deviation (MAD) is used to identify outliers after first
+grouping data by time period; this information, and the maximum-length
+gaps filled by linear interpolation is given in this table:
+
+[QAQC_INFO]

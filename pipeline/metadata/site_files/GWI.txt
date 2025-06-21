@@ -5,6 +5,8 @@ established in June 2022 and is also identified as a Chesapeake Bay
 National Research Reserve site.
 
 NOTE: Meteorological data for GWI are available in the GWI-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
 
 Contacts for the Goodwin Island site:
 Stephanie J. Wilson <wilsonsj@si.edu>
@@ -17,7 +19,6 @@ Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice 
 TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
 AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
 ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
-EXO: S. Wilson; Drew Peresta <PerestaA@si.edu>; R. Rich; Lydia LaGorga <LaGorgaL@si.edu>
 Dataloggers: S. Wilson; E. Phillips; A. Stearns; R. Rich
 
 Key publications:

@@ -70,6 +70,9 @@ ggplot(x, aes(ts, value, color = which)) +
 ## Testing a general-purpose function for this
 
 ```{r}
+# Fill a gap in a vector x, based on the values immediately before
+# and after the gap and the mean annual cycle (mac)
+# Returns a numeric vector exactly as long as the gap
 fill_gap <- function(x, gap_begin, gap_end, mac) {
     stopifnot(gap_end >= gap_begin)
     stopifnot(gap_begin > 0 && gap_begin <= length(x))
@@ -101,14 +104,17 @@ fill_gap <- function(x, gap_begin, gap_end, mac) {
     mac[gap_begin:gap_end] + adj
 }
 
+# Find the gaps (NAs) in a vector and return a data frame listing their
+# start and end positions
 find_gaps <- function(x) {
     rle_x <- rle(is.na(x))
     # Compute endpoints of run
     end <- cumsum(rle_x$lengths)
-    start <- c(1, lag(end)[-1] + 1)
+    start <- c(1, head(end, -1) + 1)
     data.frame(start, end)[rle_x$values,] # return only TRUE value gaps
 }
 
+# Fill all the gaps in a vector based on the mean annual cycle
 fill_all_gaps <- function(x, mac) {
     stopifnot(length(x) == length(mac))
     
@@ -118,7 +124,8 @@ fill_all_gaps <- function(x, mac) {
     for(i in seq_len(nrow(gaps))) {
         thisgap <- gaps$start[i]:gaps$end[i]
         gapfilled[thisgap] <- fill_gap(x, gaps$start[i], gaps$end[i], mac)
-        # just to make the graphs look good, return the boundary points too
+        # Just to make the graphs look good, return the boundary points too
+        # This code (these two ifs) should not be in production code
         if(gaps$start[i] > 1)
             gapfilled[gaps$start[i] - 1] <- x[gaps$start[i] - 1]
         if(gaps$end[i] < length(x))

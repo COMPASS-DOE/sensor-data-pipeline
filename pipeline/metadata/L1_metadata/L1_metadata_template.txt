@@ -21,7 +21,7 @@ Site information:
 
 Files in this folder:
 —----------------------------------
-Files plot-specific, annual, and have a naming convention of
+Files site- and plot-specific, annual, and have a naming convention of
 {SITE}_{PLOT}_{DATE RANGE}_{OUTPUT VARIABLE}_L1_{VERSION}.csv
 
 
