@@ -78,6 +78,7 @@ write_to_folders <- function(x, root_dir,
                              logger, table, # only provided for L1_normalize
                              variable_metadata, # only provided for L1
                              version = "???",
+                             derived_tempfile = FALSE,
                              quiet = FALSE, write_plots = TRUE) {
     # Sanity checks
     if("Plot" %in% names(x)) {
@@ -168,7 +169,13 @@ write_to_folders <- function(x, root_dir,
                 filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else if(data_level == "L2") {
-                folder <- file.path(root_dir, paste(site, y, sep = "_"))
+                if(derived_tempfile) {
+                    # The L2.qmd step has a derived variables step that needs to
+                    # save its as a results as in a temporary place
+                    folder <- file.path(root_dir, "derived-tempfiles/")
+                } else {
+                    folder <- file.path(root_dir, paste(site, y, sep = "_"))
+                }
                 filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else {
@@ -201,6 +208,10 @@ write_to_folders <- function(x, root_dir,
             if(!file.exists(fqfn)) {
                 stop("File ", fqfn, "was not written")
             }
+
+            # The L2.qmd step has a derived variables step that needs to
+            # know where its file went to
+            if(derived_tempfile) return(fqfn)
 
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels

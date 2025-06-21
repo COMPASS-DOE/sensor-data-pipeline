@@ -101,9 +101,11 @@ HTML outfile is "`r params$html_outfile`".
 ## Derived variables
 
 ```{r}
+errors <- 0
+
 # Process the derived variables table row by row
 for(i in seq_len(nrow(derived_vars))) {
-    dv <- derived_vars$new_research_name[i]
+    dv <- derived_vars$research_name[i]
     # Parse the 'needs_research_names' column and figure out which files are needed
     needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
     message("Calculating ", dv, " - need ", length(needs), 
@@ -113,16 +115,31 @@ for(i in seq_len(nrow(derived_vars))) {
     # Split by site and plot and year, and then for each split...
     files_needed_split <- split(files_needed, ~ site + plot + year)
     for(grp in files_needed_split) {
-        message("\tLoading data for ", grp$site[1], " ", grp$plot[1], " ", grp$year[1])
+        si <- grp$site[1]
+        pl <- grp$plot[1]
+        yr <- grp$year[1]
+        message("\tLoading data for ", si, " ", pl, " ", yr)
         # Read the files needed and put into a list, using research names as names
         dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
         names(dat_needed) <- grp$research_name
-        # Call CALC_DERIVED_X
+        # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
         newdat <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
+        # Set columns to show that this is derived data
         newdat$research_name <- dv
+        newdat$N_avg <- newdat$N_drop <- NA
         newdat$Type <- "DRV"
-        # write data to somewhere temporary? Hold in memory? Write back to L2_qaqc?
-        # then just add to ftp_table
+        fqfn <- write_to_folders(newdat, 
+                                 root_dir = L2, 
+                                 data_level = "L2",
+                                 site = si, 
+                                 plot = pl, 
+                                 derived_tempfile = TRUE)
+        # Add this file to the files-to-process table
+        # This is a one-by-one addition, not efficient, maybe TODO improve later
+        new_record <- tibble(file = fqfn, filename = basename(fqfn), 
+                                      site = si, plot = pl, year = yr, 
+                                      research_name = dv)
+        ftp_table <- rbind(ftp_table, new_record)
     }
     # add dv info to variables metadata table
 }
@@ -280,7 +297,8 @@ col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Descrip
 # Get the variable metadata
 var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
                                                 params$METADATA_VARS_TABLE),
-                                      only_these = qaqct$variable)
+                                      only_these = qaqct$variable,
+                                      derived_vars = derived_vars)
 
 message("Main template has ", length(L2_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
