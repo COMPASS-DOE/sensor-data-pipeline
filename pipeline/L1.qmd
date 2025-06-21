@@ -54,6 +54,7 @@ options(warn = 2)
 
 source("helpers.R")
 source("L1-utils.R")
+source("metadata-utils.R")
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -112,15 +113,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
         site <- dat$Site[1]
         plot <- dat$Plot[1]
         
-        # Check for metadata columns that are missing...
-        if(!all(column_md$Column %in% colnames(dat))) {
-            stop("Column metadata file ", params$METADATA_COLUMNS_TABLE,
-                 " has entries not in data: ", setdiff(column_md$Column, colnames(dat)))
-        }
-        # ...order and remove columns not in the metadata...
-        dat <- dat[column_md$Column]
-        # ...and sort rows
-        dat <- dat[order(dat$TIMESTAMP),]
+        dat <- check_drop_sort_columns(dat, column_md, params$METADATA_COLUMNS_TABLE)
         
         write_to_folders(dat, 
                          root_dir = out_dir, 
@@ -178,9 +171,6 @@ options(warn = oldwarn)
 L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
-
-source("metadata-utils.R")
-
 # Write the overall README
 readme_fn <- file.path(params$METADATA_ROOT,
                        params$L1_METADATA,
@@ -215,7 +205,7 @@ message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
 message("Variable metadata info has ", length(var_md_for_insert), " lines")
 
-# Identify the main data directories in L1/{version}/, which are <site>_<year>
+# Identify the main data directories in L1, which are <site>_<year>
 data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
 site_files_folder <- file.path(params$METADATA_ROOT, 
                               params$METADATA_SITE_FILES)

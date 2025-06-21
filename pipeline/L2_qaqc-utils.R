@@ -70,8 +70,8 @@ L2_aggregate <- function(x) {
                         Instrument_ID + Sensor_ID + Location + research_name,
                     data = x,
                     FUN = sum, na.action = na.omit, drop = FALSE)
-    x_summarised$n <- x2$F_keep
-    x_summarised$n_drop <- x3$F_drop
+    x_summarised$N_avg <- x2$F_keep
+    x_summarised$N_drop <- x3$F_drop
     return(x_summarised)
 }
 

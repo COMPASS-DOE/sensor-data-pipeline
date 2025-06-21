@@ -10,6 +10,9 @@ params:
   QAQC_TABLE: "qaqc_table.csv"
   timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
+  METADATA_SITE_FILES: "site_files/"
+  METADATA_VARS_TABLE: "variables_metadata.csv"
+  METADATA_COLUMNS_TABLE: "L2_metadata_columns.csv"
   RELEASE_README_FILES: "readme_files/"
   L2_METADATA: "L2_metadata/"
   L2_RELEASE_DATE: "???"
@@ -60,13 +63,23 @@ ftp_table <- separate(ftp_table, filename,
                       into = c("site", "plot", "year", "research_name", 
                                "level", "qaqc", "version"), sep = "_", 
                       remove = FALSE)
+ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
 site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
 
+# Get the column metadata file
+column_md <- read.csv(file.path(params$METADATA_ROOT,
+                                params$L2_METADATA,
+                                params$METADATA_COLUMNS_TABLE),
+                      comment.char = "#",
+                      stringsAsFactors = FALSE)
+
 source("helpers.R")
 source("L2-utils.R")
+source("metadata-utils.R")
+
 ```
 
 I see `r nrow(site_rn_table)` site-plot-research_name combinations to process 
@@ -74,7 +87,9 @@ in `r L2_QAQC`, representing `r length(files_to_process)` files.
 
 QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
-Output directory is `r L2`
+L2 column metadata has `r nrow(column_md)` entries.
+
+Output directory is `r L2`.
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -84,8 +99,11 @@ HTML outfile is "`r params$html_outfile`".
 errors <- 0
 smry <- site_rn_table
 smry$Files <- 0
-smry$Years <- ""
-smry$GF_values <- smry$MAC_values <- smry$Values <- 0
+smry$Dates <- ""
+smry$N_vals_gf <- smry$N_vals <- 0
+
+ftp_table$N_vals <- NA
+ftp_table$N_vals_gf <- NA
 
 for(i in seq_len(nrow(site_rn_table))) {
     si <- site_rn_table$site[i]
@@ -96,7 +114,7 @@ for(i in seq_len(nrow(site_rn_table))) {
     # Identify files for this site, plot, and research name, and read
     these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
     if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
-    smry$Files[i] <- length(these_files)
+    smry$Files[i] <- nrow(these_files)
     
     message("\tReading ", nrow(these_files), 
             ifelse(nrow(these_files) > 1, " files", " file"))
@@ -112,14 +130,15 @@ for(i in seq_len(nrow(site_rn_table))) {
     # Compute the mean annual cycle (MAC) across all sensors and files (years)
     message("\tComputing MAC...")
     all_data <- do.call(rbind, file_data)
-    smry$Values[i] <- sum(!is.na(all_data$Value))
+    smry$N_vals[i] <- sum(!is.na(all_data$Value))
     yrs <- year(all_data$TIMESTAMP)
-    smry$Years <- paste(min(yrs), max(yrs), sep = "-")
+    smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
+                           format(max(all_data$TIMESTAMP), format = "%Y%m"),
+                           sep = "-")
     mac <- aggregate(Value ~ month + mday + hour + minute, 
                      data = all_data, FUN = mean, na.action = na.omit)
     colnames(mac)[colnames(mac) == "Value"] <- "mac"
-    smry$MAC_values[i] <- sum(!is.na(mac$mac))
-    
+
     # For each file's data, add mac column, gap fill, and write out
     for(j in seq_len(nrow(these_files))) {
         dat <- file_data[[j]]
@@ -147,12 +166,15 @@ for(i in seq_len(nrow(site_rn_table))) {
         message("\tGap filled ", 
                 sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$GF_MAC)),
                 " values in ", these_files$filename[j])
-        smry$GF_values[i] <- smry$GF_values[i] + sum(!is.na(dat_gf$GF_MAC))
+        # Update the summary and files-to-process tables
+        f <- which(these_files$filename[j] == ftp_table$filename)
+        ftp_table$N_vals[f] <- sum(!is.na(dat_gf$Value))
+        ftp_table$N_vals_gf[f] <- sum(!is.na(dat_gf$GF_MAC))
+        smry$N_vals_gf[i] <- smry$N_vals_gf[i] + sum(!is.na(dat_gf$GF_MAC))
         
         # Clean up and check that the data frame has correct columns
-        dat_gf$month <- dat_gf$mday <- dat_gf$hour <- dat_gf$minute <- dat_gf$mac <- NULL
-        # TODO 
-        
+        dat_gf <- check_drop_sort_columns(dat_gf, column_md, params$METADATA_COLUMNS_TABLE)
+
         write_to_folders(dat_gf,
                          root_dir = L2, 
                          data_level = "L2",
@@ -197,23 +219,21 @@ readme_fn <- file.path(params$METADATA_ROOT,
 readme <- md_readme_substitutions(readme_fn,
                                   params$L2_VERSION, 
                                   params$L2_RELEASE_DATE, 
-                                  sum(smry$Values),
+                                  sum(smry$N_vals),
                                   GIT_COMMIT,
                                   params$L2_DATA_TIMEZONE)
 readme_outfn <- file.path(L2, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)
 
-if(0) {
-    
-# Get the L1 template file
+# Get the L2 template file
 template_file <- file.path(params$METADATA_ROOT,
-                           params$L1_METADATA, 
-                           "L1_metadata_template.txt")
+                           params$L2_METADATA, 
+                           "L2_metadata_template.txt")
 if(!file.exists(template_file)) {
-    stop("Couldn't find file ", basename(template_file), " in ", params$L1_METADATA)
+    stop("Can't find file ", basename(template_file), " in ", params$L2_METADATA)
 }
-L1_metadata_template <- readLines(template_file)
+L2_metadata_template <- readLines(template_file)
 
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
@@ -221,21 +241,21 @@ col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Descrip
 var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
                                                 params$METADATA_VARS_TABLE))
 
-message("Main template has ", length(L1_metadata_template), " lines")
+message("Main template has ", length(L2_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
 message("Variable metadata info has ", length(var_md_for_insert), " lines")
 
-# Identify the main data directories in L1/{version}/, which are <site>_<year>
-data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
+# Identify the main data directories in L2, which are <site>_<year>
+data_dirs <- list.files(L2, pattern = "^[a-zA-Z]+_[0-9]{4}$")
 site_files_folder <- file.path(params$METADATA_ROOT, 
-                              params$METADATA_SITE_FILES)
+                               params$METADATA_SITE_FILES)
 
 for(dd in data_dirs) {
-    dd_full <- file.path(L1, dd)
+    dd_full <- file.path(L2, dd)
     message("Generating metadata for ", dd_full)
     
     message("\tInserting timestamp and folder name")
-    md <- gsub("[TIMESTAMP]", date(), L1_metadata_template, fixed = TRUE)
+    md <- gsub("[TIMESTAMP]", date(), L2_metadata_template, fixed = TRUE)
     md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
     
     # Insert info on data files into metadata
@@ -248,9 +268,9 @@ for(dd in data_dirs) {
     
     # Insert NA code, time zone, and version information
     md <- md_insert_miscellany(md, 
-                               NA_STRING_L1, 
-                               params$L1_DATA_TIMEZONE, 
-                               params$L1_VERSION)
+                               NA_STRING_L2, 
+                               params$L2_DATA_TIMEZONE, 
+                               params$L2_VERSION)
     
     # Insert variable metadata
     var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)
@@ -263,10 +283,9 @@ for(dd in data_dirs) {
     md <- md_insert_siteinfo(site, site_files_folder, md)
 
     # Write the final metadata file
-    mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")
+    mdfn <- paste0(dd, "_L2_v", params$L2_VERSION, "_metadata.txt")
     message("\tWriting ", mdfn, "...")
-    writeLines(md, file.path(L1, dd, mdfn))
-}
+    writeLines(md, file.path(L2, dd, mdfn))
 }
 ```
 

@@ -59,7 +59,6 @@ md_insert_miscellany <- function(md, na_string, time_zone, version) {
     gsub("[VERSION]", version, md, fixed = TRUE)
 }
 
-
 md_readme_substitutions <- function(readme_fn, ver, rd, obs, commit, tz) {
     if(!file.exists(readme_fn)) stop("Couldn't find ", readme_fn)
     readme <- readLines(readme_fn)
@@ -69,4 +68,16 @@ md_readme_substitutions <- function(readme_fn, ver, rd, obs, commit, tz) {
     readme <- gsub("[GIT_COMMIT]", commit, readme, fixed = TRUE)
     readme <- gsub("[TIMEZONE]", tz, readme, fixed = TRUE)
     readme
+}
+
+check_drop_sort_columns <- function(dat, column_md, column_metadata_file) {
+    # Check for metadata columns that are missing...
+    if(!all(column_md$Column %in% colnames(dat))) {
+        stop("Column metadata file ", column_metadata_file,
+             " has entries not in data: ", setdiff(column_md$Column, colnames(dat)))
+    }
+    # ...order and remove columns not in the metadata...
+    dat <- dat[column_md$Column]
+    # ...and sort rows
+    dat[order(dat$TIMESTAMP),]
 }

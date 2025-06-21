@@ -33,7 +33,7 @@ This script
 
 -   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
--   Averages to `r params$timestamp_round`, logging n_good and n_drop
+-   Averages to `r params$timestamp_round`, logging N_avg and N_drop
 
 -   Completes data for entire year, ensuring continuous time series
 
@@ -185,6 +185,8 @@ f <- function(fn, out_dir) {
             " missing values...now ", sum(new_na_vals))
     smry$Filled <- sum(na_vals & !new_na_vals)
     
+    dat_summarised$Type <- "DLR" # mark as datalogger data
+
     message("\tWriting...")
     write_to_folders(dat_summarised,
                      out_dir,
