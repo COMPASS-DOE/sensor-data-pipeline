@@ -118,17 +118,13 @@ get_roots <- function(VWC) {
 raws <- sapply(VWCs, get_roots)
 raws <- zoo::na.approx(raws) # fill in five missing values (when no real roots)
 
-`CALC_DERIVED_soil-salinity-10cm` <- function(x) {
+compute_salinity <- function(T, VWC, EC) {
     # the three data frames passed in should *normally* have the
     # exact same dimensions and ordering, since they're linked
     # TEROS data from the same site and plot
-    if(length(unique(sapply(dat_needed, nrow))) != 1) {
+    if(length(unique(sapply(list(T, VWC, EC), length))) != 1) {
         stop("The T,VWC,EC data frames are not the same size!")
     }
-
-    T <- x$`soil-temp-10cm`$Value
-    VWC <- x$`soil-vwc-10cm`$Value
-    EC <- x$`soil-EC-10cm`$Value
 
     # The following steps are from Fausto Machado-Silva
     # See also Hilhorst 2000, A pore water conductivity sensor,
@@ -149,11 +145,31 @@ raws <- zoo::na.approx(raws) # fill in five missing values (when no real roots)
     cond_porewater <- (ep * EC) / (eb - esb0)
 
     # 2. Convert porewater EC to salinity
-    salinity <- -2.060e-1 + 5.781e-4 * cond_porewater
+    -2.060e-1 + 5.781e-4 * cond_porewater
+}
+
+`CALC_DERIVED_soil-salinity-10cm` <- function(x) {
+
+    T <- x$`soil-temp-10cm`$Value
+    VWC <- x$`soil-vwc-10cm`$Value
+    EC <- x$`soil-EC-10cm`$Value
 
     # Pick one of our input data frames, overwrite its Value column,
     # and return it. The calling code in L2.qmd will take care of changing
     # the research_name and Type columns
-    x$`soil-EC-10cm`$Value <- salinity
+    x$`soil-EC-10cm`$Value <- compute_salinity(T, VWC, EC)
     return(x$`soil-EC-10cm`)
+}
+
+`CALC_DERIVED_soil-salinity-30cm` <- function(x) {
+
+    T <- x$`soil-temp-30cm`$Value
+    VWC <- x$`soil-vwc-30cm`$Value
+    EC <- x$`soil-EC-30cm`$Value
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`soil-EC-30cm`$Value <- compute_salinity(T, VWC, EC)
+    return(x$`soil-EC-30cm`)
 }
