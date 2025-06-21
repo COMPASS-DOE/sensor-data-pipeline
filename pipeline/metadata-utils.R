@@ -6,10 +6,11 @@
 # (a character vector)
 md_insert_fileinfo <- function(folder, md, filename_spacing) {
     files <- list.files(path = folder, pattern = "csv$", full.names = TRUE)
+    if(length(files) == 0) stop("No files found in ", folder, " - this is bad")
     message("\tFound ", length(files), " data files")
-    file_info <- data.frame(File = basename(files), Rows = NA, MD5 = NA)
 
     # Build up information about files...
+    file_info <- data.frame(File = basename(files), Rows = NA, MD5 = NA)
     for(f in seq_len(length(files))) {
         fdata <- readLines(files[f]) # just for a quick line count
         file_info$Rows[f] <- length(fdata) - 1
@@ -26,8 +27,11 @@ md_insert_fileinfo <- function(folder, md, filename_spacing) {
 }
 
 # Read the variable metadata table and return a formatted extract from it
-md_variable_info <- function(variable_md_file) {
+md_variable_info <- function(variable_md_file, only_these = NULL) {
     var_md <- read.csv(variable_md_file)
+    if(!is.null(only_these)) {
+        var_md <- var_md[var_md$research_name %in% only_these,]
+    }
     paste(sprintf("%-20s", c("research_name", var_md$research_name)),
           sprintf("%-10s", c("Units", var_md$final_units)),
           sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
@@ -50,7 +54,7 @@ md_insert_siteinfo <- function(site, site_files_folder, md) {
 }
 
 md_insert_miscellany <- function(md, na_string, time_zone, version) {
-    message("Inserting NA code, time zone, and version strings")
+    message("\tInserting NA code, time zone, and version strings")
 
     # The NA code is an in-line replacement
     md <- gsub("[NA_STRING]", na_string, md, fixed = TRUE)

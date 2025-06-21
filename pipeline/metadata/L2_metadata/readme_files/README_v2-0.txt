@@ -42,7 +42,7 @@ River), SWH (Sweet Hall Marsh), and TMP (TEMPEST experiment). See
 site-specific metadata files in each folder.
 
 Data timestamps are every 15 minutes, from January 1 00:00 to December
-31 23:45. The `n` column indicates how many Level 1 values were averaged
+31 23:45. The `N_avg` column indicates how many Level 1 values were averaged
 to produce the L2 value. Short (typically <= 1 hour, although this
 varies by variable) data gaps are filled by linear interpolation. If you
 want to exclude these interpolated values, only use data where `n`
