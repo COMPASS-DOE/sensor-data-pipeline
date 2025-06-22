@@ -55,10 +55,20 @@ L2_aggregate <- function(x) {
     # aggregate() chokes on NAs in grouping variables
     x <- replace_na(x, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
 
+    no_data <-all(is.na(x$Value))
+    if(no_data) {
+        # No data to summarise, so just
+        x$Value <- 1
+    }
     x_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
-                                  Instrument_ID + Sensor_ID + Location + research_name,
-                              data = x,
-                              FUN = mean, na.action = na.omit, drop = FALSE)
+                                      Instrument_ID + Sensor_ID + Location + research_name,
+                                  data = x,
+                                  FUN = mean, na.action = na.omit, drop = FALSE)
+    if(no_data) {
+        # No data to summarise, so just
+        x_summarised$Value <- NA
+    }
+
     # Summarise number of used and not used values
     x$F_keep <- !x$F_drop
     x2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
