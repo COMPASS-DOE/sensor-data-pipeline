@@ -57,6 +57,8 @@ expect_error(fill_gap(1:2, -1, 2), regexp = "gap_begin")
 # Find the gaps (NAs) in a vector and return a data frame listing their
 # start and end positions
 find_gaps <- function(x) {
+    stopifnot(length(x) > 0)
+
     rle_x <- rle(is.na(x))
     # Compute endpoints of run
     end <- cumsum(rle_x$lengths)
@@ -74,7 +76,7 @@ expect_equivalent(find_gaps(NA), data.frame(start = 1, end = 1))
 
 expect_identical(nrow(find_gaps(c(1, 2))), 0L) # 0-row d.f. if no gaps
 expect_identical(nrow(find_gaps(c(1))), 0L) # 0-row d.f. if no gaps
-
+expect_error(find_gaps())
 
 # Fill all the gaps in a vector based on the mean annual cycle
 fill_all_gaps <- function(x, mac) {

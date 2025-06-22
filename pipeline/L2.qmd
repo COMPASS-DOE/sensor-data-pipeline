@@ -105,7 +105,7 @@ HTML outfile is "`r params$html_outfile`".
 
 ## Derived variables
 
-```{r}
+```{r derived-vars}
 errors <- 0
 
 # Process the derived variables table row by row
@@ -118,8 +118,10 @@ for(i in seq_len(nrow(derived_vars))) {
     files_needed <- ftp_table[ftp_table$research_name %in% needs,]
     
     # Split by site and plot and year, and then for each split...
-    files_needed_split <- split(files_needed, ~ site + plot + year)
+    files_needed_split <- split(files_needed, ~ site + plot + year, drop = TRUE)
     for(grp in files_needed_split) {
+        if(nrow(grp) == 0) stop("This shouldn't happen!") 
+        
         si <- grp$site[1]
         pl <- grp$plot[1]
         yr <- grp$year[1]
@@ -153,7 +155,7 @@ for(i in seq_len(nrow(derived_vars))) {
 
 ## MAC gap filling
 
-```{r processing}
+```{r mac-processing}
 
 # The site-research name table holds the unique combinations of those attributes
 # We will process all files at once that match the attributes for a given row
@@ -190,8 +192,13 @@ for(i in seq_len(nrow(site_rn_table))) {
     })
     
     # Compute the mean annual cycle (MAC) across all sensors and files (years)
-    message("\tComputing MAC...")
     all_data <- do.call(rbind, file_data)
+    if(all(is.na(all_data$Value))) {
+        message("\tNo non-NA data in this file! Moving on")
+        next
+    }
+
+    message("\tComputing MAC...")
     smry$N_vals[i] <- sum(!is.na(all_data$Value))
     yrs <- year(all_data$TIMESTAMP)
     smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
@@ -214,8 +221,11 @@ for(i in seq_len(nrow(site_rn_table))) {
         # split doesn't work with NA values (???) so replace those...
         dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = ""))
         # ...then split and apply
-        dat_split <- split(dat, ~ Instrument_ID + Sensor_ID)
+        dat_split <- split(dat, ~ Instrument_ID + Sensor_ID, drop = TRUE)
         dat_gf_list <- lapply(dat_split, function(x) {
+            if(nrow(x) == 0) {
+                stop("This isn't good; in ", paste(i, j, si, pl, rn))
+            }
             x <- x[order(x$TIMESTAMP),]
             x$Value_GF_MAC <- fill_all_gaps(x$Value, x$mac)
             x

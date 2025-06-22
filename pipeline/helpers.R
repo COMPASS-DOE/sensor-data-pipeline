@@ -187,6 +187,7 @@ write_to_folders <- function(x, root_dir,
                         geom_line(na.rm = TRUE) +
                         #facet_wrap(~research_name, scales = "free") +
                         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+                        ggtitle(filename) +
                         theme(axis.text = element_text(size = 10),
                               strip.text = element_text(size = 10))
                 }
@@ -208,7 +209,7 @@ write_to_folders <- function(x, root_dir,
             }
 
             # Write data
-            if(!quiet) message("Writing ", nrow(dat), "/", nrow(x),
+            if(!quiet) message("\tWriting ", nrow(dat), "/", nrow(x),
                                " rows of data to ",
                                basename(folder), "/", filename)
 
