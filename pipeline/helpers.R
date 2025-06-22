@@ -183,7 +183,7 @@ write_to_folders <- function(x, root_dir,
 
                     write_this_plot <- TRUE
                     p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
-                        geom_line(aes(y = GF_MAC), linetype = 2, color = "lightgrey", na.rm = TRUE) +
+                        geom_line(aes(y = Value_GF_MAC), linetype = 2, color = "lightgrey", na.rm = TRUE) +
                         geom_line(na.rm = TRUE) +
                         #facet_wrap(~research_name, scales = "free") +
                         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
