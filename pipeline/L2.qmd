@@ -121,13 +121,17 @@ for(i in seq_len(nrow(derived_vars))) {
     files_needed_split <- split(files_needed, ~ site + plot + year, drop = TRUE)
     for(grp in files_needed_split) {
         if(nrow(grp) == 0) stop("This shouldn't happen!") 
-        
+        if(nrow(grp) < length(needs)) {
+            message("\tRequires ", length(needs), " variables but only ", nrow(grp), "are available")
+            next
+        }
         si <- grp$site[1]
         pl <- grp$plot[1]
         yr <- grp$year[1]
         message("\tLoading data for ", si, " ", pl, " ", yr)
         # Read the files needed and put into a list, using research names as names
         dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
+        
         names(dat_needed) <- grp$research_name
         # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
         newdat <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
@@ -382,3 +386,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+

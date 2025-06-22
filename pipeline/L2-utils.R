@@ -95,7 +95,7 @@ fill_all_gaps <- function(x, mac) {
         if(gaps$end[i] < length(x))
             gapfilled[gaps$end[i] + 1] <- x[gaps$end[i] + 1]
     }
-    return(gapfilled)
+    return(round(gapfilled, 4))
 }
 
 # Derived variable functions -----------------------------------
