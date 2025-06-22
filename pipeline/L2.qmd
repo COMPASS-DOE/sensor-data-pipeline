@@ -50,6 +50,7 @@ library(tidyr)
 library(readr)
 library(lubridate)
 library(ggplot2)
+theme_set(theme_bw())
 
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
@@ -68,6 +69,10 @@ ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
+# Get the variables metadata
+L2_VAR_MD <- read.csv(file.path(params$METADATA_ROOT,
+                                params$METADATA_VARS_TABLE))
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -237,6 +242,7 @@ for(i in seq_len(nrow(site_rn_table))) {
                          data_level = "L2",
                          site = si,
                          plot = pl,
+                         variable_metadata = L2_VAR_MD,
                          version = params$L2_VERSION,
                          write_plots = params$write_plots) 
     }
@@ -366,3 +372,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+

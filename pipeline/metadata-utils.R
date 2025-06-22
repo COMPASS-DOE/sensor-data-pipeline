@@ -30,7 +30,8 @@ md_insert_fileinfo <- function(folder, md, filename_spacing) {
 md_variable_info <- function(variable_md_file,
                              only_these = NULL, derived_vars = NULL) {
     var_md <- read.csv(variable_md_file)
-    our_columns <- c("research_name", "final_units", "low_bound", "high_bound", "description")
+    our_columns <- c("research_name", "final_units", "low_bound",
+                     "high_bound", "description")
     var_md <- var_md[our_columns]
 
     # Two extra parameters used by L2.qmd
@@ -41,6 +42,7 @@ md_variable_info <- function(variable_md_file,
         derived_vars$low_bound <- derived_vars$high_bound <- NA
         var_md <- rbind(var_md, derived_vars[our_columns])
     }
+    # Format things into a character vector for insertion into the metadata
     paste(sprintf("%-20s", c("research_name", var_md$research_name)),
           sprintf("%-10s", c("Units", var_md$final_units)),
           sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
