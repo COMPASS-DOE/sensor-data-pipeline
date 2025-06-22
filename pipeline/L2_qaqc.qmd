@@ -101,8 +101,12 @@ research_names_initial_L2 <-
       "sonde-salinity",
       "sonde-spcond")
 include <- rep(FALSE, length(files_to_process))
+# Add an underscore so that "gw_temperature" doesn't 
+# match "gw_temperature_int" for example
+research_names_initial_L2 <- paste0(research_names_initial_L2, "_")
 for(i in seq_along(research_names_initial_L2)) {
-    include <- include | grepl(research_names_initial_L2[i], files_to_process, fixed = TRUE)
+    include <- include | 
+        grepl(research_names_initial_L2[i], files_to_process, fixed = TRUE)
 }
 message("Processing only ", sum(include), " of ", length(files_to_process), " files")
 files_to_process <- files_to_process[include]
@@ -166,7 +170,7 @@ f <- function(fn, out_dir) {
                                algo, 
                                time_grouping = qaqct$time_grouping[i], 
                                otherparams = otherparams)
-        if(sum(dat$F_MAD)) {
+        if(sum(dat$F_MAD, na.rm = TRUE)) {
             message("\t\t", sum(dat$F_MAD), " outliers identified")
         }
         # Diagnostic plot: identifying outliers
@@ -209,35 +213,35 @@ f <- function(fn, out_dir) {
     # of Instrument, Sensor, etc. This guarantees a smooth time series for
     # each sensor
     rows <- nrow(dat_summarised)
-    dat_summarised <- L2_complete(dat_summarised) # function is in L2-utils
+    dat_complete <- L2_complete(dat_summarised) # function is in L2-utils
     message("\tCompleted data; started with ", rows, 
             " rows...now ", nrow(dat_summarised))
     
-    # Gap fill for each site, plot, instrument, and sensor
+    # Interpolate across small gaps for each site, plot, instrument, and sensor
         
     # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
     # based on the data interval and the max_gap_fill entry in the QAQC table
     od_period <- period(qaqct$max_gap_fill[i])
     if(is.na(od_period)) {
-        stop("Invalid max_gap_fill entry for ")
+        stop("Invalid max_gap_fill entry for ", rn)
     }
     maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
-    na_vals <- is.na(dat_summarised$Value)
+    na_vals <- is.na(dat_complete$Value)
     message("\tGap-filling data with maxgap = ", maxgap)
-    dat_summarised <- L2_linear_gapfill(dat_summarised, maxgap = maxgap)
-    new_na_vals <- is.na(dat_summarised$Value)
+    dat_gapfilled <- L2_linear_gapfill(dat_complete, maxgap = maxgap)
+    new_na_vals <- is.na(dat_gapfilled$Value)
     message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
     smry$Filled <- sum(na_vals & !new_na_vals)
     
-    dat_summarised$Type <- "DLR" # mark as datalogger data
+    dat_gapfilled$Type <- "DLR" # mark as datalogger data
 
     message("\tWriting...")
-    write_to_folders(dat_summarised,
+    write_to_folders(dat_gapfilled,
                      out_dir,
                      "L2_qaqc",
-                     site = dat_summarised$Site[1],
-                     plot = dat_summarised$Plot[1],
+                     site = dat_gapfilled$Site[1],
+                     plot = dat_gapfilled$Plot[1],
                      version = params$L2_VERSION,
                      # note: currently no L2_qaqc plots are generated
                      # the most useful ones would be showing outliers, but those data
