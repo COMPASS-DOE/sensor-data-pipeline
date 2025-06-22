@@ -55,10 +55,10 @@ theme_set(theme_bw())
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
 
-# Find all L1_qaqc files and build a table of their
+# Find all L2_qaqc files and build a table of their
 # site/plot/research_name combinations
 files_to_process <- list.files(L2_QAQC, 
-                               pattern = "^[A-Z]{3}_[A-Z]{2,}_[0-9]{4}_.+csv$", 
+                               pattern = "^[A-Z]{3}_[A-Z]{1,}_[0-9]{4}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
 ftp_table <- separate(ftp_table, filename, 
