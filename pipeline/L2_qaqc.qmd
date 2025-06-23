@@ -234,8 +234,6 @@ f <- function(fn, out_dir) {
             " missing values...now ", sum(new_na_vals))
     smry$Filled <- sum(na_vals & !new_na_vals)
     
-    dat_gapfilled$Type <- "DLR" # mark as datalogger data
-
     message("\tWriting...")
     write_to_folders(dat_gapfilled,
                      out_dir,

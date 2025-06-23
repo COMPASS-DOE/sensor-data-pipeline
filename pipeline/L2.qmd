@@ -138,7 +138,6 @@ for(i in seq_len(nrow(derived_vars))) {
         # Set columns to show that this is derived data
         newdat$research_name <- dv
         newdat$N_avg <- newdat$N_drop <- NA
-        newdat$Type <- "DRV"
         fqfn <- write_to_folders(newdat, 
                                  root_dir = L2, 
                                  data_level = "L2",
@@ -147,9 +146,9 @@ for(i in seq_len(nrow(derived_vars))) {
                                  derived_tempfile = TRUE)
         # Add this file to the files-to-process table
         # This is a one-by-one addition, not efficient, maybe TODO improve later
-        new_record <- tibble(file = fqfn, filename = basename(fqfn), 
-                                      site = si, plot = pl, year = yr, 
-                                      research_name = dv)
+        new_record <- tibble(file = fqfn, filename = basename(fqfn),
+                             site = si, plot = pl, year = yr,
+                             research_name = dv)
         ftp_table <- rbind(ftp_table, new_record)
     }
     # add dv info to variables metadata table
@@ -386,4 +385,3 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
-

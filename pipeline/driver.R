@@ -14,7 +14,7 @@ if(basename(getwd()) != "pipeline") {
 # Comment out the stop() if doing development work
 git_status <- system2("git", "status", stdout = TRUE)
 if(!any(grepl("clean", git_status))) {
-   # stop("Repository is not clean! Can't proceed to a release")
+   stop("Repository is not clean! Can't proceed to a release")
 }
 
 source("helpers.R")
