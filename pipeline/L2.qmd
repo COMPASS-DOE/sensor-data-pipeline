@@ -292,10 +292,12 @@ readme_fn <- file.path(params$METADATA_ROOT,
                        params$L2_METADATA,
                        params$RELEASE_README_FILES, 
                        paste0("README_v", params$L2_VERSION, ".txt"))
+
+n_obs <- format(sum(smry$N_vals), big.mark = ",")
 readme <- md_readme_substitutions(readme_fn,
                                   params$L2_VERSION, 
                                   params$L2_RELEASE_DATE, 
-                                  sum(smry$N_vals),
+                                  n_obs,
                                   GIT_COMMIT,
                                   params$L2_DATA_TIMEZONE)
 readme_outfn <- file.path(L2, basename(readme_fn))

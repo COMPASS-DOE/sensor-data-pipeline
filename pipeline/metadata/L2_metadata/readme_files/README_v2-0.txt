@@ -12,7 +12,8 @@ more consistent (always 15-minute timestamps for the entire year);
 better QA/QC’d (out of bounds, out of service, and extreme outlier
 values are removed); and more complete, with a gap-filled time series
 available alongside the main observations, and additional derived
-(calculated) variables.
+(calculated) variables. L2 data are intended to be rapidly and easily
+usable in analyses and simulations.
 
 CONTACT
 —----------------------------------
@@ -23,7 +24,7 @@ HOW TO CITE THESE DATA
 —----------------------------------
 Pennington, Bittencourt Peixoto, Bond-Lamberty, Cheng, LaGorga,
 Machado-Silva, Peresta, Phillips, Regier, Rich, Sandoval, Stearns, Ward,
-Wilson, Weintraub, Megonigal, and Bailey (2024). COMPASS-FME Level 1
+Wilson, Weintraub, Megonigal, and Bailey (2024). COMPASS-FME Level 2
 Sensor Data (version [VERSION] released [DATESTAMP]), downloaded
 YYYY-MM-DD, https://compass.pnnl.gov.
 
@@ -45,7 +46,7 @@ Data timestamps are every 15 minutes, from January 1 00:00 to December
 31 23:45. The `N_avg` column indicates how many Level 1 values were averaged
 to produce the L2 value. Short (typically <= 1 hour, although this
 varies by variable) data gaps are filled by linear interpolation. If you
-want to exclude these interpolated values, only use data where `n`
+want to exclude these interpolated values, only use data where the `N_avg`
 column is >= 1.
 
 DATA VERSIONS
