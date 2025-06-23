@@ -34,7 +34,7 @@ File columns:
 [COLUMN_INFO]
 
 
-Variable definitions:
+Variable definitions: (DLR = datalogger; DRV = derived)
 —----------------------------------
 [VARIABLE_INFO]
 

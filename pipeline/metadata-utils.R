@@ -14,7 +14,7 @@ md_insert_fileinfo <- function(folder, md, filename_spacing) {
     for(f in seq_len(length(files))) {
         fdata <- readLines(files[f]) # just for a quick line count
         file_info$Rows[f] <- length(fdata) - 1
-        file_info$MD5[f] <- digest::digest(files[f], file = TRUE)
+        file_info$MD5[f] <- substr(digest::digest(files[f], file = TRUE),1, 8)
     }
     # ...and insert into metadata
     file_info_txt <- paste(sprintf(paste0("%-", filename_spacing, "s"),
