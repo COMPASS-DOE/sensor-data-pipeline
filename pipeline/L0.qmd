@@ -34,7 +34,7 @@ This script
 
 -   Reshapes from wide to long; only `Logger`, `Table`, and `TIMESTAMP` don't get reshaped
 
--   Adds a unique observation ID (using `digest::digest()` )
+-   Adds a source file ID (using `digest::digest()` )
 
 -   Writes as CSV files with raw file hash info in filename
 
@@ -99,7 +99,7 @@ f <- function(fn, new_dir) {
         note <- "Used edited version"
     }
 
-    short_hash <- substr(digest::digest(file = fn, algo = "md5"), 1, 6)
+    short_hash <- substr(digest::digest(file = fn, algo = "md5"), 1, 8)
 
     # Check whether this file is on the removal list
     if(any(grepl(basefn, removal_list))) {
@@ -171,13 +171,7 @@ f <- function(fn, new_dir) {
             dat_long <- dat_long[!dupes,]
         }
         
-        # Add a unique ID column with the "md5" algorithm, using 16 of 32
-        # characters; "crc32" algorithm quickly generated duplicate IDs
-        # This is not *guaranteed* to be unique, but collisions are highly unlikely
-        dat_long$ID <- sapply(apply(dat_long, 1, paste, collapse = ""),
-                              FUN = function(x) {
-                                  substr(digest::digest(x, algo = "md5"), 1, 16)
-                              })
+        dat_long$Source_file <- short_hash
         
         # Write the new file
         message("\tWriting ", new_fqfn)

@@ -11,5 +11,4 @@ research_name,Measurement name (character)
 Value,Observed value (numeric). The no-data value is '[NA_STRING]'
 N_avg,"Number of L1 values averaged to produce this L2 datum (integer). If zero and a value is present, interpolation was used to fill a short gap"
 N_drop,"Number of values dropped before averaging for being out of bounds, out of service, or failing QA/QC (integer)"
-GF_MAC,"Gap-filled time series based on the mean annual cycle (numeric). If no gap, will be identical to Value"
-Type,Type of data (DLR=datalogger; DRV=derived) (character)
+Value_GF_MAC,"Gap-filled time series based on the mean annual cycle (numeric). If no gap, will be identical to Value"

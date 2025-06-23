@@ -1,0 +1,3 @@
+research_name,needs_research_names,final_units,description
+soil-salinity-10cm,"soil-vwc-10cm, soil-temp-10cm, soil-EC-10cm",ppt,"Salinity calculated based on TEROS VWC, T, and EC; from Machado-Silva and Hilhorst (2000)"
+soil-salinity-30cm,"soil-vwc-30cm, soil-temp-30cm, soil-EC-30cm",ppt,"Salinity calculated based on TEROS VWC, T, and EC; from Machado-Silva and Hilhorst (2000)"

@@ -63,3 +63,4 @@ CHANGELOG
 —----------------------------------
 Version 2-0 released [DATESTAMP]
 * First release; covers late 2019 through June 2025 for TEMPEST and all synoptic sites
+* This release has only a subset of the L1 output variables
