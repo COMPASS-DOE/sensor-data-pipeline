@@ -17,8 +17,8 @@ Nick Ward <nicholas.ward@pnnl.gov>
 
 Contacts for Crane Creek data streams:
 Overall: Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
-Sapflow: Leticia Sandoval <Leticia.Sandoval@rockets.utoledo.edu>
-TEROS: Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>; Evan Grammenidis <evangelos.grammenidis@utoledo.edu>
+Sapflow: Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Evan Grammenidis <evangelos.grammenidis@utoledo.edu>
+TEROS: R. Bittencourt Peixoto; Peter Regier <peter.regier@pnnl.gov>; E. Grammenidis
 AquaTROLL: P. Regier; F. Machado-Silva; E. Grammenidis
 ClimaVUE: R. Bittencourt Peixoto; F. Machado-Silva; E. Grammenidis
 EXO: F. Machado-Silva; E. Grammenidis
