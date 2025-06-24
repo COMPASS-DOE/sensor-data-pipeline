@@ -1,0 +1,24 @@
+# From https://docs.google.com/spreadsheets/d/1O4sHvj2FO7EcWEm3WpKEZhFubGn8HCcUsz9EFXhQTXM/edit?gid=0#gid=0
+Site,transect_location,lat,long,gps_notes,well_top_to_ground_cm,ring_to_pressure_sensor_cm,bolt_to_cap_cm
+PTR,Wetland,41.501612,-83.044404,RTK-derived,84,170,10
+PTR,Transition,41.501965,-83.045602,RTK-derived,97,342,9.5
+PTR,Upland,41.50151,-83.046113,RTK-derived,89,586,9.5
+CRC,Transition,41.621985,-83.238072,RTK-derived,100.5,225.5,9.5
+CRC,Upland,41.61526,-83.22889,RTK-derived,79.5,561,9.5
+CRC,Wetland,41.621858,-83.238865,RTK-derived,140,167,9.5
+OWC,Transition,41.375926,-82.507105,RTK-derived,135,176,9.5
+OWC,Wetland,41.376155,-82.50752,RTK-derived,139,163.5,9.5
+OWC,Upland,41.375916,-82.506397,RTK-derived,112,161,9.5
+MSM,Transition,,,,82.5,150.5,9.5
+MSM,Wetland,,,,93,143,9.5
+MSM,Upland,,,,84.5,134.6,9.5
+GWI,Wetland,,,,111,141,9.5
+GWI,Transition,,,,92.7,135.5,10
+GWI,Upland,,,,88,177,9.5
+GCW,Wetland,,,,106,181,10
+GCW,Transition,,,,54,160,10
+GCW,Upland,,,,93,526,4
+SWH,Upland,,,,,145.5,8.5
+SWH,Swamp,,,,105,190,8
+SWH,Wetland,,,,97,176,8
+SWH,Transition,,,,105,180,8

@@ -121,7 +121,7 @@ raws <- sapply(VWCs, get_roots)
 raws <- zoo::na.approx(raws) # fill in five missing values (when no real roots)
 
 compute_salinity <- function(T, VWC, EC) {
-    # the three data frames passed in should *normally* have the
+    # The three data frames passed in should *normally* have the
     # exact same dimensions and ordering, since they're linked
     # TEROS data from the same site and plot
     if(length(unique(sapply(list(T, VWC, EC), length))) != 1) {
@@ -174,4 +174,38 @@ compute_salinity <- function(T, VWC, EC) {
     # the research_name and Type columns
     x$`soil-EC-30cm`$Value <- compute_salinity(T, VWC, EC)
     return(x$`soil-EC-30cm`)
+}
+
+
+# Well dimensions, for computing water level below surface
+WELL_DIMENSIONS <- read_csv("metadata/L2_metadata/well_dimensions.csv",
+                            comment = "#",
+                            col_types = "ccddcddd")
+WELL_DIMENSIONS$Plot <- c("Wetland" = "W",
+                          "Swamp" = "SWAMP",
+                          "Transition" = "TR",
+                          "Upland" = "UP")[WELL_DIMENSIONS$transect_location]
+WELL_DIMENSIONS$ground_to_sensor_cm <-
+    with(WELL_DIMENSIONS, ring_to_pressure_sensor_cm - (well_top_to_ground_cm - bolt_to_cap_cm))
+WELL_DIMENSIONS <- WELL_DIMENSIONS[c("Site", "Plot", "ground_to_sensor_cm")]
+
+`CALC_DERIVED_gw-wl-below-surface` <- function(x) {
+    # The two data frames passed in should *normally* have the
+    # exact same dimensions and ordering, since they're linked
+    # TEROS data from the same site and plot
+    gw_density <- x$`gw-density`$Value
+    gw_pressure <- x$`gw-pressure`$Value
+    temp <- merge(x$`gw-density`, WELL_DIMENSIONS, by = c("Site", "Plot"))
+    ground_to_sensor_cm <- temp$ground_to_sensor_cm
+
+    # This code follows Peter Regier's code, and Fausto's logic
+    density_gcm3_cor <- ifelse(gw_density >= 0.98 & gw_density <= 1.05, gw_density, 1)
+    pressure_mbar <- ifelse(gw_pressure == -99999, 0, gw_pressure)
+    pressurehead_m <- (pressure_mbar * 100) / (density_gcm3_cor * 1000 * 9.80665)
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`gw-density`$Value <- round(pressurehead_m - (ground_to_sensor_cm / 100), 2)
+    return(x$`gw-density`)
 }
