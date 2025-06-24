@@ -4,7 +4,7 @@ author: "COMPASS workflows team"
 title-block-banner: true
 params:
   html_outfile: "L2_qaqc.html"
-  DATA_ROOT: "data_TEST/"
+  DATA_ROOT: "data_PREFLIGHT/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
@@ -97,7 +97,9 @@ research_names_initial_L2 <-
       
       "wx-gcrew-rain15",
       
-      "sonde-odo-mgl",
+      "sonde-orp",
+      "sonde-ph",
+      "sonde-fdom",
       "sonde-pressure",
       "sonde-salinity",
       "sonde-spcond")
