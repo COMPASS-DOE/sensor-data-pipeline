@@ -178,25 +178,35 @@ compute_salinity <- function(T, VWC, EC) {
 
 
 # Well dimensions, for computing water level below surface
-WELL_DIMENSIONS <- read_csv("metadata/L2_metadata/well_dimensions.csv",
-                            comment = "#",
-                            col_types = "ccddcddd")
-WELL_DIMENSIONS$Plot <- c("Wetland" = "W",
-                          "Swamp" = "SWAMP",
-                          "Transition" = "TR",
-                          "Upland" = "UP")[WELL_DIMENSIONS$transect_location]
-WELL_DIMENSIONS$ground_to_sensor_cm <-
-    with(WELL_DIMENSIONS, ring_to_pressure_sensor_cm - (well_top_to_ground_cm - bolt_to_cap_cm))
-WELL_DIMENSIONS <- WELL_DIMENSIONS[c("Site", "Plot", "ground_to_sensor_cm")]
+WELL_DIMS <- readr::read_csv("metadata/L2_metadata/well_dimensions.csv",
+                             comment = "#",
+                             col_types = "ccccddcddddd")
+WELL_DIMS$ground_to_sensor_cm <-
+    with(WELL_DIMS, ring_to_pressure_sensor_cm -
+             (well_top_to_ground_cm - bolt_to_cap_cm))
+# TEMPEST trolls were installed differently; 2 parameters instead of 3
+tmp <- WELL_DIMS$Site == "TMP"
+WELL_DIMS$ground_to_sensor_cm[tmp] <- WELL_DIMS$Bolt_to_sensor_depth_cm[tmp] + WELL_DIMS$Bolt_to_ground_cm[tmp]
+
+WELL_DIMS <- WELL_DIMS[c("Site", "Plot", "Instrument_ID", "ground_to_sensor_cm")]
 
 `CALC_DERIVED_gw-wl-below-surface` <- function(x) {
     # The two data frames passed in should *normally* have the
     # exact same dimensions and ordering, since they're linked
-    # TEROS data from the same site and plot
+    # AquaTROLL data from the same site and plot
     gw_density <- x$`gw-density`$Value
     gw_pressure <- x$`gw-pressure`$Value
-    temp <- merge(x$`gw-density`, WELL_DIMENSIONS, by = c("Site", "Plot"))
+
+    temp <- merge(x$`gw-density`,
+                  WELL_DIMS,
+                  by = c("Site", "Plot", "Instrument_ID"),
+                  all.x = TRUE)
     ground_to_sensor_cm <- temp$ground_to_sensor_cm
+
+    if(length(ground_to_sensor_cm) > length(gw_pressure)) {
+        stop("Wrong data lengths, probably because the merge of WELL_DIMS matched multiple lines")
+    }
+#    if(all(is.na(ground_to_sensor_cm))) browser()
 
     # This follows Peter Regier's code, and Fausto M-S's logic
     density_gcm3_cor <- ifelse(gw_density >= 0.98 & gw_density <= 1.05, gw_density, 1)
