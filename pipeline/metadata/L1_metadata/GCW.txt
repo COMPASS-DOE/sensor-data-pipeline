@@ -13,6 +13,8 @@ synoptic sites. It has four variables that appear nowhere else:
 wx_vpd15, wx_svp15, wx_minws15, and wx_gcrew_rain15 in CENTIMETERS (not
 mm). See variables table below.
 
+2025-06-24: TR7 and TR8 added to data pipeline for the NSF-Radon project and are not part of the COMPASS-FME synoptic experimental design. Please contact Amr Keshta <KeshtaA@si.edu> for more information.
+
 Contacts for the GCReW Synoptic site:
 Stephanie J. Wilson <wilsonsj@si.edu>
 Pat Megonigal <megonigalp@si.edu>
