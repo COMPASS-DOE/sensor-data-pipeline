@@ -187,8 +187,8 @@ WELL_DIMS$ground_to_sensor_cm <-
 # TEMPEST trolls were installed differently; 2 parameters instead of 3
 tmp <- WELL_DIMS$Site == "TMP"
 WELL_DIMS$ground_to_sensor_cm[tmp] <- WELL_DIMS$Bolt_to_sensor_depth_cm[tmp] + WELL_DIMS$Bolt_to_ground_cm[tmp]
-W
-ELL_DIMS <- WELL_DIMS[c("Site", "Plot", "Instrument_ID", "ground_to_sensor_cm")]
+
+WELL_DIMS <- WELL_DIMS[c("Site", "Plot", "Instrument_ID", "ground_to_sensor_cm")]
 
 `CALC_DERIVED_gw-wl-below-surface` <- function(x) {
     # The two data frames passed in should *normally* have the
@@ -198,11 +198,14 @@ ELL_DIMS <- WELL_DIMS[c("Site", "Plot", "Instrument_ID", "ground_to_sensor_cm")]
     gw_pressure <- x$`gw-pressure`$Value
 
     temp <- merge(x$`gw-density`,
-                  WELL_DIMS[c("Site", "Plot", "ground_to_sensor_cm")],
-                  by = c("Site", "Plot"),
+                  WELL_DIMS,
+                  by = c("Site", "Plot", "Instrument_ID"),
                   all.x = TRUE)
     ground_to_sensor_cm <- temp$ground_to_sensor_cm
 
+    if(length(ground_to_sensor_cm) > length(gw_pressure)) {
+        stop("Wrong data lengths, probably because the merge of WELL_DIMS matched multiple lines")
+    }
 #    if(all(is.na(ground_to_sensor_cm))) browser()
 
     # This follows Peter Regier's code, and Fausto M-S's logic
