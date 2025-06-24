@@ -22,6 +22,7 @@ jobs:
           packages:
             any::quarto
             any::tidyr
+            any::dplyr
             any::readr
             any::lubridate
             any::ggplot2

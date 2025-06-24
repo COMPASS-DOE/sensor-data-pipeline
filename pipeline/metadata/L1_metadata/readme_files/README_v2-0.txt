@@ -34,7 +34,7 @@ Data are organized into {SITE}_{YEAR} folders, with comma-separated
 value (CSV) files in each folder for each plot and output variable at
 that site.
 
-The data file naming convention is 
+The data file naming convention is
 {SITE}_{PLOT}_{DATE RANGE}_{OUTPUT VARIABLE}_L1_{VERSION}.csv
 
 Sites include CRC (Crane Creek), GCW (GCReW), GWI (Goodwin
@@ -64,12 +64,14 @@ CHANGELOG
 Version 2-0 released [DATESTAMP]
 * Covers late 2019 through June 2025 for TEMPEST and all synoptic sites
 * Data files are now annual and single-variable, rather than monthly and multi-variable
+* "Source_file" (giving hash of original datalogger file) now listed in data files, replacing ID column
+* Data plots now include out-of-bounds indicators and informative axis labels
 * Back-corrected two years of corrupted AQ600 files at TEMPEST; thanks to SJW
-* Minor data fixes: CD8 sapflux sensor, wx_par_tot15 calculation, MSM Buoy time zone, sapflux sensor depth, ClimaVue VP units 
+* Minor data fixes: CD8 sapflux sensor, wx_par_tot15 calculation, MSM Buoy time zone, sapflux sensor depth, ClimaVue VP units
 * New code examples, documentation improvements, and more
 * Many backend improvements; see https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/244
 
-Version 1-2 released [DATESTAMP]
+Version 1-2 released 2025-02-14
 * Covers late 2019 through December 2024 for TEMPEST and all synoptic sites
 * All sonde (EXO) data now appear in their own "OW" (open water) plot
 * The TEMPEST (TMP) folder README files now include detailed information on flood timings, volumes, etc.

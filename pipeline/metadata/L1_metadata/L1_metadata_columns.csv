@@ -7,8 +7,8 @@ Instrument,Name of measurement instrument (character)
 Instrument_ID,Identifier of instrument within plot (character)
 Sensor_ID,"Identifier of individual sensor, tree, etc. being measured (character)"
 Location,"Spatial location; for TEMPEST, grid square (character)"
-Value,Observed value (numeric). The no-data value is '[NA_STRING_L1]'
+Value,Observed value (numeric). The no-data value is '[NA_STRING]'
 research_name,Measurement name (character)
-ID,Observation identifier (character)
+Source_file,ID (MD5 hash) of the source datalogger file this value came from
 F_OOB,Flag: out of instrumental bounds (logical; 1=TRUE)
 F_OOS,Flag: sensor listed as out of service (logical; 1=TRUE)

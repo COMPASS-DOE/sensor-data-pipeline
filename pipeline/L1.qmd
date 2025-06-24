@@ -8,8 +8,10 @@ params:
   L1_NORMALIZE: "L1_normalize/"
   L1: "L1/"
   METADATA_ROOT: "metadata/"
+  METADATA_SITE_FILES: "site_files/"
+  RELEASE_README_FILES: "readme_files/"
   L1_METADATA: "L1_metadata/"
-  METADATA_VARS_TABLE: "L1_metadata_variables.csv"
+  METADATA_VARS_TABLE: "variables_metadata.csv"
   METADATA_COLUMNS_TABLE: "L1_metadata_columns.csv"
   # We use "Etc/GMT+5" rather than e.g. "America/New_York" for
   # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
@@ -52,6 +54,7 @@ options(warn = 2)
 
 source("helpers.R")
 source("L1-utils.R")
+source("metadata-utils.R")
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -67,6 +70,10 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
 
+# Get the variable metadata
+L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
+                                params$METADATA_VARS_TABLE))
+
 L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
 
@@ -81,6 +88,7 @@ HTML outfile is "`r params$html_outfile`".
 ## Processing
 
 ```{r processing}
+
 f <- function(dir_name, dirs_to_process, out_dir) {
     message(Sys.time(), " Processing ", basename(dir_name))
     d <- dirs_to_process[[dir_name]]
@@ -105,21 +113,14 @@ f <- function(dir_name, dirs_to_process, out_dir) {
         site <- dat$Site[1]
         plot <- dat$Plot[1]
         
-        # Check for metadata columns that are missing...
-        if(!all(column_md$Column %in% colnames(dat))) {
-            stop("Column metadata file ", params$METADATA_COLUMNS_TABLE,
-                 " has entries not in data: ", setdiff(column_md$Column, colnames(dat)))
-        }
-        # ...order and remove columns not in the metadata...
-        dat <- dat[column_md$Column]
-        # ...and sort rows
-        dat <- dat[order(dat$TIMESTAMP),]
+        dat <- check_drop_sort_columns(dat, column_md, params$METADATA_COLUMNS_TABLE)
         
         write_to_folders(dat, 
                          root_dir = out_dir, 
                          data_level = "L1",
                          site = site,
                          plot = plot,
+                         variable_metadata = L1_VAR_MD,
                          version = params$L1_VERSION,
                          write_plots = params$write_plots)
     }
@@ -171,15 +172,16 @@ L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
 # Write the overall README
-readme_fn <- file.path(params$METADATA_ROOT, params$L1_METADATA, 
+readme_fn <- file.path(params$METADATA_ROOT,
+                       params$L1_METADATA,
+                       params$RELEASE_README_FILES, 
                        paste0("README_v", params$L1_VERSION, ".txt"))
-if(!file.exists(readme_fn)) stop("Couln't find ", readme_fn)
-readme <- readLines(readme_fn)
-readme <- gsub("[VERSION]", params$L1_VERSION, readme, fixed = TRUE)
-readme <- gsub("[DATESTAMP]", params$L1_RELEASE_DATE, readme, fixed = TRUE)
-readme <- gsub("[OBSERVATIONS]", n_obs, readme, fixed = TRUE)
-readme <- gsub("[GIT_COMMIT]", GIT_COMMIT, readme, fixed = TRUE)
-readme <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, readme, fixed = TRUE)
+readme <- md_readme_substitutions(readme_fn,
+                                  params$L1_VERSION, 
+                                  params$L1_RELEASE_DATE, 
+                                  n_obs,
+                                  GIT_COMMIT,
+                                  params$L1_DATA_TIMEZONE)
 readme_outfn <- file.path(L1, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)
@@ -196,62 +198,40 @@ L1_metadata_template <- readLines(template_file)
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
 # Get the variable metadata
-var_md <- read.csv(file.path(params$METADATA_ROOT, params$L1_METADATA, params$METADATA_VARS_TABLE))
-var_md_for_insert <- paste(sprintf("%-20s", c("research_name", var_md$research_name)),
-                           sprintf("%-10s", c("Units", var_md$final_units)),
-                           sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
-                           c("Description", var_md$description))
+var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
+                                                params$METADATA_VARS_TABLE))
 
 message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
 message("Variable metadata info has ", length(var_md_for_insert), " lines")
 
-message("Inserting data version string")
-L1_metadata_template <- gsub("[VERSION]", params$L1_VERSION,
-                             L1_metadata_template, fixed = TRUE)
-
-# Identify the main data directories in L1/{version}/, which are <site>_<year>
+# Identify the main data directories in L1, which are <site>_<year>
 data_dirs <- list.files(L1, pattern = "^[a-zA-Z]+_[0-9]{4}$")
+site_files_folder <- file.path(params$METADATA_ROOT, 
+                              params$METADATA_SITE_FILES)
 
 for(dd in data_dirs) {
     dd_full <- file.path(L1, dd)
     message("Generating metadata for ", dd_full)
     
-    message("\tInserting verion")
-    md <- gsub("[VERSION]", params$L1_VERSION, L1_metadata_template, fixed = TRUE)
-    
     message("\tInserting timestamp and folder name")
-    md <- gsub("[TIMESTAMP]", date(), md, fixed = TRUE)
+    md <- gsub("[TIMESTAMP]", date(), L1_metadata_template, fixed = TRUE)
     md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
     
-    # File info
-    files <- list.files(path = dd_full, pattern = "csv$", full.names = TRUE)
-    message("\tFound ", length(files), " data files")
-    file_info <- c()
-    # Build up information about files...
-    for(f in files) {
-        fdata <- readLines(f) # just for a quick line count
-        file_info <- c(file_info, 
-                       basename(f),
-                       paste("Rows:", length(fdata) - 1),
-                       paste("md5:", digest::digest(f, file = TRUE)),
-                       "")
-    }
-    # ...and insert into metadata
-    # We used the head(-1) to drop the final empty line, just to keep things pretty
-    file_info_pos <- grep("[FILE_INFO", md, fixed = TRUE)
-    md <- append(md, head(file_info, -1), after = file_info_pos)
-    md <- md[-file_info_pos]
-    
+    # Insert info on data files into metadata
+    md <- md_insert_fileinfo(dd_full, md, filename_spacing = 55)
+   
     # Insert column metadata
     col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)
     md <- append(md, col_md_for_insert, after = col_info_pos)
     md <- md[-col_info_pos]
-    # The NA code is an in-line replacement
-    md <- gsub("[NA_STRING_L1]", NA_STRING_L1, md, fixed = TRUE)
-    # The time zone is an in-line replacement
-    md <- gsub("[TIMEZONE]", params$L1_DATA_TIMEZONE, md, fixed = TRUE)
-
+    
+    # Insert NA code, time zone, and version information
+    md <- md_insert_miscellany(md, 
+                               NA_STRING_L1, 
+                               params$L1_DATA_TIMEZONE, 
+                               params$L1_VERSION)
+    
     # Insert variable metadata
     var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)
     md <- append(md, var_md_for_insert, after = var_info_pos)
@@ -259,18 +239,8 @@ for(dd in data_dirs) {
     
     # Site information
     # Folders are <site>_<year>
-    # There MUST be an informational file named <site>.txt
     site <- strsplit(dd, "_")[[1]][1]
-    site_md_file <- file.path(params$METADATA_ROOT, params$L1_METADATA, paste0(site, ".txt"))
-    if(!file.exists(site_md_file)) {
-        stop("Couldn't find file ", site_md_file, " in ", params$L1_METADATA, " for dd=", dd)
-    }
-    site_md_for_insert <- readLines(site_md_file)
-
-    # Insert site information    
-    site_info_pos <- grep("[SITE_INFO]", md, fixed = TRUE)
-    md <- append(md, site_md_for_insert, after = site_info_pos)
-    md <- md[-site_info_pos]
+    md <- md_insert_siteinfo(site, site_files_folder, md)
 
     # Write the final metadata file
     mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")

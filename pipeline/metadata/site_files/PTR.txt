@@ -9,6 +9,8 @@ site consists of three plots: upland ("UP"; located at 41.5015N,
 established in December 2021.
 
 NOTE: Meteorological data for PTR are available in the PTR-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
 
 Contacts for the Portage River site:
 Michael Weintraub <Michael.Weintraub@utoledo.edu>
@@ -16,13 +18,18 @@ Nick Ward <nicholas.ward@pnnl.gov>
 
 Contacts for Portage River data streams:
 Overall: Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
-Sapflow: Leticia Sandoval <Leticia.Sandoval@rockets.utoledo.edu>
-TEROS: Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>; Evan Grammenidis <evangelos.grammenidis@utoledo.edu>
+Sapflow: Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Evan Grammenidis <evangelos.grammenidis@utoledo.edu>
+TEROS: R. Bittencourt Peixoto; Peter Regier <peter.regier@pnnl.gov>; E. Grammenidis
 AquaTROLL: P. Regier; F. Machado-Silva; E. Grammenidis
 ClimaVUE: R. Bittencourt Peixoto; F. Machado-Silva; E. Grammenidis
 EXO: F. Machado-Silva; E. Grammenidis
 Dataloggers: Roy Rich <RichR@si.edu>; R. Bittencourt Peixoto; E. Grammenidis
 
 Key publications:
-Machado-Silva et al. (submitted), "Groundwater level and redox dynamics
-across terrestrial aquatic interface of Lake Erie coastal ecosystems"
+Machado-Silva, F., Weintraub, M. N., Ward, N. D., Doro, K. O., Regier,
+P. J., Ehosioke, S., Thomas, S. P., Peixoto, R. B., Sandoval, L.,
+Forbrich, I., Kemner, K. M., O’Loughlin, E. J., Stetten, L., Spanbauer,
+T., Bridgeman, T. B., O’Meara, T., Rod, K. A., Patel, K., McDowell, N.
+G., Megonigal, J. P., Rich, R. L., and Bailey, V. L.: Short-term
+groundwater level fluctuations drive subsurface redox variability,
+Environ. Sci. Technol., https://doi.org/10.1021/acs.est.4c01115, 2024.

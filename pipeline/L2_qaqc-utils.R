@@ -2,6 +2,7 @@
 # Utility functions, and test code, used exclusively by L2.qmd
 # BBL May 2025
 
+library(testthat)
 
 # MAD (median absolute deviation) outlier test, based on how many
 # multiples of the MAD a point is from the sample median
@@ -47,33 +48,36 @@ do_outlier_test <- function(x, algorithm, time_grouping, otherparams) {
 }
 
 # Aggregate (average) the data for each timestep, computing `n` and `n_drop`
+# I have been trying not to use dplyr, a heavyweight dependency, but all
+# the base R solutions for this step are super slow and we are short on time
+library(dplyr)
 L2_aggregate <- function(x) {
-    # This would be easier and faster to do in dplyr or data.table but
-    # I'm trying to minimize dependencies; so...
-    x$Value[as.logical(x$F_drop)] <- NA
+    x %>%
+        group_by(Site, Plot, TIMESTAMP, Instrument, Instrument_ID,
+                 Sensor_ID, Location, research_name) %>%
+        summarise(Value = mean(Value[!F_drop]),
+                  N_avg = sum(!is.na(F_drop) & !is.na(Value), na.rm = TRUE),
+                  N_drop = sum(F_drop, na.rm = TRUE),
+                  .groups = "drop") ->
+        x_out
 
-    # aggregate() chokes on NAs in grouping variables
-    x <- replace_na(x, list(Instrument_ID = "", Sensor_ID = "", Location = ""))
-
-    x_summarised <- aggregate(Value ~ Site + Plot + TIMESTAMP + Instrument +
-                                  Instrument_ID + Sensor_ID + Location + research_name,
-                              data = x,
-                              FUN = mean, na.action = na.omit, drop = FALSE)
-    # Summarise number of used and not used values
-    x$F_keep <- !x$F_drop
-    x2 <- aggregate(F_keep ~ Site + Plot + TIMESTAMP + Instrument +
-                        Instrument_ID + Sensor_ID + Location + research_name,
-                    data = x,
-                    FUN = sum, na.action = na.omit, drop = FALSE)
-
-    x3 <- aggregate(F_drop ~ Site + Plot + TIMESTAMP + Instrument +
-                        Instrument_ID + Sensor_ID + Location + research_name,
-                    data = x,
-                    FUN = sum, na.action = na.omit, drop = FALSE)
-    x_summarised$n <- x2$F_keep
-    x_summarised$n_drop <- x3$F_drop
-    return(x_summarised)
+    x_out$Value[is.nan(x_out$Value)] <- NA
+    return(x_out)
 }
+
+
+# Test the L2_aggregate function on various groups
+test <- data.frame(Site = 1, Plot = 1, TIMESTAMP = 1, Instrument = 1,
+                   Sensor_ID = 1, Location = 1, research_name = 1,
+                   Instrument_ID = c(1, 1, 2, 3, 4, 4),
+                   Value = c(1, 2, NA, NA, 3, 4),
+                   F_drop = c(FALSE, FALSE, TRUE, FALSE, FALSE, TRUE))
+test_out <- L2_aggregate(test)
+expect_equal(test_out$Instrument_ID, 1:4)
+expect_equal(test_out$Value, c(1.5,  # Average of two good values
+                               NA,   # F_drop TRUE for all good values
+                               NA,   # F_drop FALSE but Value is NA
+                               3.0)) # Two good values but F_drop TRUE for one
 
 
 # Complete the L2 data: produce a smooth (no gaps, though data may be NA)
@@ -100,8 +104,9 @@ L2_complete <- function(x) {
 # Gap-fill the L2 data: linearly interpolate gaps up to size 'maxgap'
 # We do each plot, instrument, and sensor separately
 L2_linear_gapfill <- function(x, maxgap) {
-    x_split <- split(x, list(x$Site, x$Plot, x$Instrument,
-                             x$Instrument_ID, x$Sensor_ID))
+    # split() chokes on NAs in grouping variables
+    x <- replace_na(x, list(Instrument = "", Instrument_ID = "", Sensor_ID = ""))
+    x_split <- split(x, ~Site + Plot + Instrument + Instrument_ID + Sensor_ID)
     y <- lapply(x_split, function(z) {
         z <- z[order(z$TIMESTAMP),]
         z$Value <- zoo::na.approx(z$Value, maxgap = maxgap, na.rm = FALSE)

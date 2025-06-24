@@ -1,0 +1,43 @@
+Old Woman Creek (OWC) is one of COMPASS-FME synoptic sites located
+within the Old Woman Creek lacustuary, 2.8 miles (4.5km) east of Huron,
+Ohio. This site is owned by the Ohio Department of Natural Resources
+(ODNR), managed by ODNR’s Division of Natural Areas & Preserves as Old
+Woman Creek National Estuarine Research Reserve. This site consists of
+four plots: upland ("UP"; located at 41.3763N, 82.5070W), transition
+("TR"; 41.3758N, 82.5063W), wetland transition edge ("WTE"; 41.3760N,
+82.5071W), wetland ("W"; 41.3761N, 82.5078W), and open water ("OW";
+41.3766N, 82.5094W). It was established in December 2021.
+
+NOTE: Meteorological data for OWC are available in the OWC-W files.
+NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
+in April 2023.
+
+Contacts for the Old Woman Creek site:
+Michael Weintraub <Michael.Weintraub@utoledo.edu>
+Nick Ward <nicholas.ward@pnnl.gov>
+
+Contacts for Old Woman Creek data streams:
+Overall: Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
+Sapflow: Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Evan Grammenidis <evangelos.grammenidis@utoledo.edu>
+TEROS: R. Bittencourt Peixoto; Peter Regier <peter.regier@pnnl.gov>; E. Grammenidis
+AquaTROLL: P. Regier; F. Machado-Silva; E. Grammenidis
+ClimaVUE: R. Bittencourt Peixoto; F. Machado-Silva; E. Grammenidis
+EXO: F. Machado-Silva; E. Grammenidis
+Dataloggers: Roy Rich <RichR@si.edu>; R. Bittencourt Peixoto; E. Grammenidis
+
+Key publications:
+Machado-Silva, F., Weintraub, M. N., Ward, N. D., Doro, K. O., Regier,
+P. J., Ehosioke, S., Thomas, S. P., Peixoto, R. B., Sandoval, L.,
+Forbrich, I., Kemner, K. M., O’Loughlin, E. J., Stetten, L., Spanbauer,
+T., Bridgeman, T. B., O’Meara, T., Rod, K. A., Patel, K., McDowell, N.
+G., Megonigal, J. P., Rich, R. L., and Bailey, V. L.: Short-term
+groundwater level fluctuations drive subsurface redox variability,
+Environ. Sci. Technol., https://doi.org/10.1021/acs.est.4c01115, 2024.
+
+Patel, K. F., Rod, K. A., Zheng, J., Regier, P., Machado-Silva, F.,
+Bond-Lamberty, B., Chen, X., Day, D. J., Doro, K. O., Kaufman, M. H.,
+Kovach, M., McDowell, N., McKever, S. A., Megonigal, J. P., Norris, C.
+G., O’Meara, T., Peixoto, R. B., Rich, R., Thornton, P., Kemner, K. M.,
+Ward, N. D., Weintraub, M. N., and Bailey, V. L.: Time to anoxia:
+Observations and predictions of oxygen drawdown following coastal flood
+events, Geoderma, 444, 116854, 2024.

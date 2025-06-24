@@ -1,0 +1,389 @@
+---
+title: "L2"
+author: "COMPASS workflows team"
+title-block-banner: true
+params:
+  html_outfile: "L2.html"
+  DATA_ROOT: "data_TEST/"
+  L2: "L2/"
+  L2_QAQC: "L2_qaqc/"
+  QAQC_TABLE: "qaqc_table.csv"
+  timestamp_round: "15 min"
+  METADATA_ROOT: "metadata/"
+  METADATA_SITE_FILES: "site_files/"
+  METADATA_VARS_TABLE: "variables_metadata.csv"
+  METADATA_COLUMNS_TABLE: "L2_metadata_columns.csv"
+  RELEASE_README_FILES: "readme_files/"
+  L2_METADATA: "L2_metadata/"
+  DERIVED_VARS_TABLE: "derived_variables.csv"
+  L2_RELEASE_DATE: "???"
+  L2_DATA_TIMEZONE: "Etc/GMT+5"
+  L2_VERSION: "???"
+  run_parallel: false
+  write_plots: true
+  logfile: ""
+date: now
+date-format: "YYYY-MM-DD HH:mm:ssZ"
+format: 
+  html:
+    embed-resources: true
+    code-fold: true
+editor: visual
+---
+
+This script
+
+-   Reads in the L2_qaqc data files one by one
+
+-   Computes derived variables
+
+-   Calls gap-filling algorithms (currently only mean annual cycle)
+
+-   Writes L2 files and accompanying documentation
+
+## Initializing
+
+```{r init}
+#| include: false
+
+library(tidyr)
+library(readr)
+library(lubridate)
+library(ggplot2)
+theme_set(theme_bw())
+
+L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
+L2 <- file.path(params$DATA_ROOT, params$L2)
+
+# Find all L2_qaqc files and build a table of their
+# site/plot/research_name combinations
+files_to_process <- list.files(L2_QAQC, 
+                               pattern = "^[A-Z]{3}_[A-Z]{1,}_[0-9]{4}_.+csv$", 
+                               full.names = TRUE, recursive = TRUE)
+ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
+ftp_table <- separate(ftp_table, filename, 
+                      into = c("site", "plot", "year", "research_name", 
+                               "level", "qaqc", "version"), sep = "_", 
+                      remove = FALSE)
+ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
+
+QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+
+# Get the variables metadata
+L2_VAR_MD <- read.csv(file.path(params$METADATA_ROOT,
+                                params$METADATA_VARS_TABLE))
+
+# Get the column metadata file
+column_md <- read.csv(file.path(params$METADATA_ROOT,
+                                params$L2_METADATA,
+                                params$METADATA_COLUMNS_TABLE),
+                      comment.char = "#",
+                      stringsAsFactors = FALSE)
+
+# Read the derived variables files
+derived_vars <- read_csv(file.path(params$METADATA_ROOT,
+                                   params$L2_METADATA,
+                                   params$DERIVED_VARS_TABLE))
+
+source("helpers.R")
+source("L2-utils.R")
+source("metadata-utils.R")
+```
+
+The derived variables table has `r nrow(derived_vars)` entries.
+
+For gap-filling, I see `r length(files_to_process)` files.
+
+QAQC table has `r nrow(qaqct)` entries.
+
+L2 column metadata has `r nrow(column_md)` entries.
+
+Output directory is `r L2`.
+
+HTML outfile is "`r params$html_outfile`".
+
+## Derived variables
+
+```{r derived-vars}
+errors <- 0
+
+# Process the derived variables table row by row
+for(i in seq_len(nrow(derived_vars))) {
+    dv <- derived_vars$research_name[i]
+    # Parse the 'needs_research_names' column and figure out which files are needed
+    needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
+    message("Calculating ", dv, " - need ", length(needs), 
+            " variables: ", derived_vars$needs_research_names[i])
+    files_needed <- ftp_table[ftp_table$research_name %in% needs,]
+    
+    # Split by site and plot and year, and then for each split...
+    files_needed_split <- split(files_needed, ~ site + plot + year, drop = TRUE)
+    for(grp in files_needed_split) {
+        if(nrow(grp) == 0) stop("This shouldn't happen!") 
+        if(nrow(grp) < length(needs)) {
+            message("\tRequires ", length(needs), " variables but only ", nrow(grp), "are available")
+            next
+        }
+        si <- grp$site[1]
+        pl <- grp$plot[1]
+        yr <- grp$year[1]
+        message("\tLoading data for ", si, " ", pl, " ", yr)
+        # Read the files needed and put into a list, using research names as names
+        dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
+        
+        names(dat_needed) <- grp$research_name
+        # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
+        newdat <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
+        # Set columns to show that this is derived data
+        newdat$research_name <- dv
+        newdat$N_avg <- newdat$N_drop <- NA
+        fqfn <- write_to_folders(newdat, 
+                                 root_dir = L2, 
+                                 data_level = "L2",
+                                 site = si, 
+                                 plot = pl, 
+                                 derived_tempfile = TRUE)
+        # Add this file to the files-to-process table
+        # This is a one-by-one addition, not efficient, maybe TODO improve later
+        new_record <- tibble(file = fqfn, filename = basename(fqfn),
+                             site = si, plot = pl, year = yr,
+                             research_name = dv)
+        ftp_table <- rbind(ftp_table, new_record)
+    }
+    # add dv info to variables metadata table
+}
+
+```
+
+## MAC gap filling
+
+```{r mac-processing}
+
+# The site-research name table holds the unique combinations of those attributes
+# We will process all files at once that match the attributes for a given row
+site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
+
+smry <- site_rn_table
+smry$Files <- 0
+smry$Dates <- ""
+smry$N_vals_gf <- smry$N_vals <- 0
+
+ftp_table$N_vals <- NA
+ftp_table$N_vals_gf <- NA
+
+for(i in seq_len(nrow(site_rn_table))) {
+    si <- site_rn_table$site[i]
+    pl <- site_rn_table$plot[i]
+    rn <- site_rn_table$research_name[i]
+    message("Processing ", si, " ", pl, " ", rn)
+    
+    # Identify files for this site, plot, and research name, and read
+    these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
+    if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
+    smry$Files[i] <- nrow(these_files)
+    
+    message("\tReading ", nrow(these_files), 
+            ifelse(nrow(these_files) > 1, " files", " file"))
+    file_data <- lapply(these_files$file, function(f) {
+        x <- read_csv(f, col_types = "Tcccccccdii")
+        x$month <- month(x$TIMESTAMP)
+        x$mday <- mday(x$TIMESTAMP)
+        x$hour <- hour(x$TIMESTAMP)
+        x$minute <- minute(x$TIMESTAMP)
+        x
+    })
+    
+    # Compute the mean annual cycle (MAC) across all sensors and files (years)
+    all_data <- do.call(rbind, file_data)
+    if(all(is.na(all_data$Value))) {
+        message("\tNo non-NA data in this file! Moving on")
+        next
+    }
+
+    message("\tComputing MAC...")
+    smry$N_vals[i] <- sum(!is.na(all_data$Value))
+    yrs <- year(all_data$TIMESTAMP)
+    smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
+                           format(max(all_data$TIMESTAMP), format = "%Y%m"),
+                           sep = "-")
+    mac <- aggregate(Value ~ month + mday + hour + minute, 
+                     data = all_data, FUN = mean, na.action = na.omit)
+    colnames(mac)[colnames(mac) == "Value"] <- "mac"
+
+    # For each file's data, add mac column, gap fill, and write out
+    for(j in seq_len(nrow(these_files))) {
+        dat <- file_data[[j]]
+        oldrows <- nrow(dat)
+        dat <- merge(dat, mac, 
+                     by = c("month", "mday", "hour", "minute"), 
+                     all.x = TRUE)
+        stopifnot(nrow(dat) == oldrows) # sanity check
+
+        # call gap-filling routine for each Instrument_ID and Sensor_ID
+        # split doesn't work with NA values (???) so replace those...
+        dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = ""))
+        # ...then split and apply
+        dat_split <- split(dat, ~ Instrument_ID + Sensor_ID, drop = TRUE)
+        dat_gf_list <- lapply(dat_split, function(x) {
+            if(nrow(x) == 0) {
+                stop("This isn't good; in ", paste(i, j, si, pl, rn))
+            }
+            x <- x[order(x$TIMESTAMP),]
+            x$Value_GF_MAC <- fill_all_gaps(x$Value, x$mac)
+            x
+        })
+        dat_gf <- do.call(rbind, dat_gf_list)
+        rownames(dat_gf) <- NULL
+        # Transfer good values into gap-fill column
+        nagf <- is.na(dat_gf$Value_GF_MAC)
+        dat_gf$Value_GF_MAC[nagf] <- dat_gf$Value[nagf]
+        message("\tGap filled ", 
+                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$Value_GF_MAC)),
+                " values in ", these_files$filename[j])
+        # Update the summary and files-to-process tables
+        f <- which(these_files$filename[j] == ftp_table$filename)
+        ftp_table$N_vals[f] <- sum(!is.na(dat_gf$Value))
+        ftp_table$N_vals_gf[f] <- sum(!is.na(dat_gf$Value_GF_MAC))
+        smry$N_vals_gf[i] <- smry$N_vals_gf[i] + sum(!is.na(dat_gf$Value_GF_MAC))
+        
+        # Clean up and check that the data frame has correct columns
+        dat_gf <- check_drop_sort_columns(dat_gf, column_md, params$METADATA_COLUMNS_TABLE)
+
+        write_to_folders(dat_gf,
+                         root_dir = L2, 
+                         data_level = "L2",
+                         site = si,
+                         plot = pl,
+                         variable_metadata = L2_VAR_MD,
+                         version = params$L2_VERSION,
+                         write_plots = params$write_plots) 
+    }
+    
+}
+```
+
+## Summary
+
+```{r summary}
+#| echo: false
+#| output: asis
+if(errors) {
+    cat("### WARNING: ", errors, " file read/write error(s)\n")
+    log_warning(paste("File read/write error(s)", params$html_outfile), 
+                logfile = params$logfile)
+}
+```
+
+```{r summary_table}
+knitr::kable(smry)
+```
+
+## Metadata
+
+L2 metadata template directory is `r params$L2_METADATA`.
+
+```{r metadata}
+
+source("metadata-utils.R")
+
+# Write the overall README
+readme_fn <- file.path(params$METADATA_ROOT,
+                       params$L2_METADATA,
+                       params$RELEASE_README_FILES, 
+                       paste0("README_v", params$L2_VERSION, ".txt"))
+
+n_obs <- format(sum(smry$N_vals), big.mark = ",")
+readme <- md_readme_substitutions(readme_fn,
+                                  params$L2_VERSION, 
+                                  params$L2_RELEASE_DATE, 
+                                  n_obs,
+                                  GIT_COMMIT,
+                                  params$L2_DATA_TIMEZONE)
+readme_outfn <- file.path(L2, basename(readme_fn))
+message("Writing overall README ", readme_outfn, "...")
+writeLines(readme, readme_outfn)
+
+# Get the L2 template file
+template_file <- file.path(params$METADATA_ROOT,
+                           params$L2_METADATA, 
+                           "L2_metadata_template.txt")
+if(!file.exists(template_file)) {
+    stop("Can't find file ", basename(template_file), " in ", params$L2_METADATA)
+}
+L2_metadata_template <- readLines(template_file)
+
+col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
+
+# Get the variable metadata
+var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
+                                                params$METADATA_VARS_TABLE),
+                                      only_these = qaqct$variable,
+                                      derived_vars = derived_vars)
+
+message("Main template has ", length(L2_metadata_template), " lines")
+message("Column metadata info has ", length(col_md_for_insert), " lines")
+message("Variable metadata info has ", length(var_md_for_insert), " lines")
+
+# Identify the main data directories in L2, which are <site>_<year>
+data_dirs <- list.files(L2, pattern = "^[a-zA-Z]+_[0-9]{4}$")
+site_files_folder <- file.path(params$METADATA_ROOT, 
+                               params$METADATA_SITE_FILES)
+
+for(dd in data_dirs) {
+    dd_full <- file.path(L2, dd)
+    message("Generating metadata for ", dd_full)
+    
+    message("\tInserting timestamp and folder name")
+    md <- gsub("[TIMESTAMP]", date(), L2_metadata_template, fixed = TRUE)
+    md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
+    
+    # Insert info on data files into metadata
+    md <- md_insert_fileinfo(dd_full, md, filename_spacing = 45)
+    
+    # Insert column metadata
+    col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)
+    md <- append(md, col_md_for_insert, after = col_info_pos)
+    md <- md[-col_info_pos]
+    
+    # Insert NA code, time zone, and version information
+    md <- md_insert_miscellany(md, 
+                               NA_STRING_L2, 
+                               params$L2_DATA_TIMEZONE, 
+                               params$L2_VERSION)
+    
+    # Insert variable metadata
+    var_info_pos <- grep("[VARIABLE_INFO]", md, fixed = TRUE)
+    md <- append(md, var_md_for_insert, after = var_info_pos)
+    md <- md[-var_info_pos]
+    
+    # Site information
+    # Folders are <site>_<year>
+    site <- strsplit(dd, "_")[[1]][1]
+    md <- md_insert_siteinfo(site, site_files_folder, md)
+
+    # QAQC information
+    qaqc_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
+                           sprintf("%-15s", c("Time_grouping", qaqct$time_grouping)),
+                           sprintf("%-10s", c("Algorithm", qaqct$outlier_detection)),
+                           sprintf("%-15s", c("Params", qaqct$params)),
+                           sprintf("%-15s", c("Max_gap_fill", qaqct$max_gap_fill)),
+                           sprintf("%-20s", c("Notes", qaqct$Notes)))
+    qaqc_info_pos <- grep("[QAQC_INFO]", md, fixed = TRUE)
+    md <- append(md, qaqc_for_insert, after = qaqc_info_pos)
+    md <- md[-qaqc_info_pos]
+
+    # Write the final metadata file
+    mdfn <- paste0(dd, "_L2_v", params$L2_VERSION, "_metadata.txt")
+    message("\tWriting ", mdfn, "...")
+    writeLines(md, file.path(L2, dd, mdfn))
+}
+```
+
+## Reproducibility
+
+Git commit `r GIT_COMMIT`.
+
+```{r reproducibility}
+sessionInfo()
+```

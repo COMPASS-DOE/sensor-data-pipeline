@@ -76,7 +76,9 @@ write_to_folders <- function(x, root_dir,
                              data_level,
                              site, plot,
                              logger, table, # only provided for L1_normalize
+                             variable_metadata, # only provided for L1
                              version = "???",
+                             derived_tempfile = FALSE,
                              quiet = FALSE, write_plots = TRUE) {
     # Sanity checks
     if("Plot" %in% names(x)) {
@@ -134,6 +136,9 @@ write_to_folders <- function(x, root_dir,
                 filename <- paste(logger, table, y, rn, short_hash, sep = "_")
                 na_string <- NA_STRING_L1
             } else if(data_level == "L1") {
+                # Isolate this research name's metadata
+                vmd <- variable_metadata[variable_metadata$research_name == rn,]
+
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, plot, time_period, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
@@ -141,17 +146,51 @@ write_to_folders <- function(x, root_dir,
                 p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
                     geom_line(na.rm = TRUE) +
                     facet_wrap(~research_name, scales = "free") +
-                    ggtitle(filename) +
-                    theme(axis.text = element_text(size = 6),
-                          strip.text = element_text(size = 8))
+                    ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+                    theme(axis.text = element_text(size = 10),
+                          strip.text = element_text(size = 10))
+
+                # If any data are out of bounds, show those bounds
+                if(any(x$F_OOB, na.rm = TRUE)) {
+                    p <- p + geom_hline(yintercept = vmd$low_bound,
+                                        linetype = 2, color = "blue",
+                                        na.rm = TRUE) +
+                        geom_hline(yintercept = vmd$high_bound,
+                                   linetype = 2, color = "blue",
+                                   na.rm = TRUE) +
+                        ggtitle(filename,
+                                subtitle = "Dashed lines show instrument bounds")
+                } else {
+                    p <- p + ggtitle(filename)
+
+                }
             } else if(data_level == "L2_qaqc") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste(site, y, rn, data_level, vversion, sep = "_")
+                filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
             } else if(data_level == "L2") {
-                folder <- file.path(root_dir, paste(site, y, sep = "_"))
-                filename <- paste(site, y, rn, data_level, vversion, sep = "_")
+                filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L2
+                if(derived_tempfile) {
+                    # The L2.qmd step has a derived variables step that needs to
+                    # save its as a results as in a temporary place
+                    folder <- file.path(root_dir, "derived-tempfiles/")
+                } else {
+                    # Isolate this research name's metadata
+                    vmd <- variable_metadata[variable_metadata$research_name == rn,]
+
+                    folder <- file.path(root_dir, paste(site, y, sep = "_"))
+
+                    write_this_plot <- TRUE
+                    p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
+                        geom_line(aes(y = Value_GF_MAC), linetype = 2, color = "lightgrey", na.rm = TRUE) +
+                        geom_line(na.rm = TRUE) +
+                        #facet_wrap(~research_name, scales = "free") +
+                        ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+                        ggtitle(filename) +
+                        theme(axis.text = element_text(size = 10),
+                              strip.text = element_text(size = 10))
+                }
             } else {
                 stop("Unkown data_level ", data_level)
             }
@@ -170,7 +209,7 @@ write_to_folders <- function(x, root_dir,
             }
 
             # Write data
-            if(!quiet) message("Writing ", nrow(dat), "/", nrow(x),
+            if(!quiet) message("\tWriting ", nrow(dat), "/", nrow(x),
                                " rows of data to ",
                                basename(folder), "/", filename)
 
@@ -183,10 +222,15 @@ write_to_folders <- function(x, root_dir,
                 stop("File ", fqfn, "was not written")
             }
 
+            # The L2.qmd step has a derived variables step that needs to
+            # know where its file went to
+            if(derived_tempfile) return(fqfn)
+
             # Write basic QA/QC plot
+            # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
                 fn_p <- gsub("csv$", "pdf", fqfn)
-                ggsave(fn_p, plot = p, width = 12, height = 8)
+                ggsave(fn_p, plot = p, width = 12, height = 8, device = cairo_pdf)
             }
 
             lines_written[[fqfn]] <- nrow(dat)
@@ -225,6 +269,7 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
     remove_items("L1/code_examples/", pat = "")
     remove_items("L1/", pat = "code_example")
 
+    remove_items("L2_qaqc/")
     remove_items("L2/")
     remove_items("Logs/")
 

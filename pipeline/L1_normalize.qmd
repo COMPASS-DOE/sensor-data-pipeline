@@ -14,7 +14,7 @@ params:
   L1_DATA_TIMEZONE: "Etc/GMT+5"
   METADATA_ROOT: "metadata/"
   METADATA_TIMEZONES_TABLE: "L1_metadata/L1_metadata_timezones.csv"
-  METADATA_VARS_TABLE: "L1_metadata/L1_metadata_variables.csv"
+  METADATA_VARS_TABLE: "variables_metadata.csv"
   OOS: "out-of-service/"
   logfile: ""
   run_parallel: false

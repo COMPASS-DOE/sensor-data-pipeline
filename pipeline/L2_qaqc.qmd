@@ -3,7 +3,7 @@ title: "L2_qaqc"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L2.html"
+  html_outfile: "L2_qaqc.html"
   DATA_ROOT: "data_TEST/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
@@ -33,7 +33,7 @@ This script
 
 -   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
--   Averages to `r params$timestamp_round`, logging n_good and n_drop
+-   Averages to `r params$timestamp_round`, logging N_avg and N_drop
 
 -   Completes data for entire year, ensuring continuous time series
 
@@ -53,7 +53,7 @@ library(zoo)
 library(ggplot2)
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
-L2 <- file.path(params$DATA_ROOT, params$L2_QAQC)
+L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
 files_to_process <- list.files(L1, 
                                pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
@@ -61,8 +61,58 @@ files_to_process <- list.files(L1,
 
 # **** TEMPORARY **** TODO
 files_to_process <- list.files(L1, 
-                               pattern = "SWH_SWAMP_20241130-[0-9]{8}_.+csv$", 
+                               pattern = "SWH_SWAMP_2024(1130|0829)-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
+
+# **** TEMPORARY **** TODO
+# For the initial L2 release we're just going to do a subset of the data
+research_names_initial_L2 <- 
+    c("battery-voltage",
+      
+      "sapflow-3.5cm",
+      
+      "soil-vwc-5cm",
+      "soil-temp-5cm",
+      "soil-EC-5cm",
+      "soil-vwc-10cm",
+      "soil-temp-10cm",
+      "soil-EC-10cm",
+      "soil-vwc-15cm",
+      "soil-temp-15cm",
+      "soil-EC-15cm",
+      "soil-vwc-30cm",
+      "soil-temp-30cm",
+      "soil-EC-30cm",
+      
+      "gw-salinity",
+      "gw-pressure",
+      "gw-density",
+      "gw-temperature",
+      
+      "wx-slr-fd15",
+      "wx-rain15",
+      "wx-tempavg15",
+      "wx-par-den15",
+      "wx-rh15",
+      
+      "wx-gcrew-rain15",
+      
+      "sonde-odo-mgl",
+      "sonde-pressure",
+      "sonde-salinity",
+      "sonde-spcond")
+include <- rep(FALSE, length(files_to_process))
+# Add an underscore so that "gw_temperature" doesn't 
+# match "gw_temperature_int" for example
+research_names_initial_L2 <- paste0(research_names_initial_L2, "_")
+for(i in seq_along(research_names_initial_L2)) {
+    include <- include | 
+        grepl(research_names_initial_L2[i], files_to_process, fixed = TRUE)
+}
+message("Processing only ", sum(include), " of ", length(files_to_process), " files")
+files_to_process <- files_to_process[include]
+
+# **** END TEMPORARY **** TODO
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
@@ -83,7 +133,7 @@ QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
 Round data to `r params$timestamp_round`.
 
-Output directory is `r L2`
+Output directory is `r L2_QAQC`
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -121,7 +171,7 @@ f <- function(fn, out_dir) {
                                algo, 
                                time_grouping = qaqct$time_grouping[i], 
                                otherparams = otherparams)
-        if(sum(dat$F_MAD)) {
+        if(sum(dat$F_MAD, na.rm = TRUE)) {
             message("\t\t", sum(dat$F_MAD), " outliers identified")
         }
         # Diagnostic plot: identifying outliers
@@ -164,33 +214,33 @@ f <- function(fn, out_dir) {
     # of Instrument, Sensor, etc. This guarantees a smooth time series for
     # each sensor
     rows <- nrow(dat_summarised)
-    dat_summarised <- L2_complete(dat_summarised) # function is in L2-utils
+    dat_complete <- L2_complete(dat_summarised) # function is in L2-utils
     message("\tCompleted data; started with ", rows, 
             " rows...now ", nrow(dat_summarised))
     
-    # Gap fill for each site, plot, instrument, and sensor
+    # Interpolate across small gaps for each site, plot, instrument, and sensor
         
     # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
     # based on the data interval and the max_gap_fill entry in the QAQC table
     od_period <- period(qaqct$max_gap_fill[i])
     if(is.na(od_period)) {
-        stop("Invalid max_gap_fill entry for ")
+        stop("Invalid max_gap_fill entry for ", rn)
     }
     maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
-    na_vals <- is.na(dat_summarised$Value)
+    na_vals <- is.na(dat_complete$Value)
     message("\tGap-filling data with maxgap = ", maxgap)
-    dat_summarised <- L2_linear_gapfill(dat_summarised, maxgap = maxgap)
-    new_na_vals <- is.na(dat_summarised$Value)
+    dat_gapfilled <- L2_linear_gapfill(dat_complete, maxgap = maxgap)
+    new_na_vals <- is.na(dat_gapfilled$Value)
     message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
     smry$Filled <- sum(na_vals & !new_na_vals)
     
     message("\tWriting...")
-    write_to_folders(dat_summarised,
+    write_to_folders(dat_gapfilled,
                      out_dir,
                      "L2_qaqc",
-                     site = dat_summarised$Site[1],
-                     plot = dat_summarised$Plot[1],
+                     site = dat_gapfilled$Site[1],
+                     plot = dat_gapfilled$Plot[1],
                      version = params$L2_VERSION,
                      # note: currently no L2_qaqc plots are generated
                      # the most useful ones would be showing outliers, but those data
@@ -202,7 +252,7 @@ f <- function(fn, out_dir) {
 
 log_info("About to L2", logfile = params$logfile)
 tryCatch({
-    out <- lapply(files_to_process, f, out_dir = L2)
+    out <- lapply(files_to_process, f, out_dir = L2_QAQC)
 },
 error = function(e) {
     log_warning("L2: an error occurred!", logfile = params$logfile)
