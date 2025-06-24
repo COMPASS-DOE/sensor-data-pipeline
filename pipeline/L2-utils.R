@@ -198,7 +198,7 @@ WELL_DIMENSIONS <- WELL_DIMENSIONS[c("Site", "Plot", "ground_to_sensor_cm")]
     temp <- merge(x$`gw-density`, WELL_DIMENSIONS, by = c("Site", "Plot"))
     ground_to_sensor_cm <- temp$ground_to_sensor_cm
 
-    # This code follows Peter Regier's code, and Fausto's logic
+    # This follows Peter Regier's code, and Fausto M-S's logic
     density_gcm3_cor <- ifelse(gw_density >= 0.98 & gw_density <= 1.05, gw_density, 1)
     pressure_mbar <- ifelse(gw_pressure == -99999, 0, gw_pressure)
     pressurehead_m <- (pressure_mbar * 100) / (density_gcm3_cor * 1000 * 9.80665)
@@ -206,6 +206,6 @@ WELL_DIMENSIONS <- WELL_DIMENSIONS[c("Site", "Plot", "ground_to_sensor_cm")]
     # Pick one of our input data frames, overwrite its Value column,
     # and return it. The calling code in L2.qmd will take care of changing
     # the research_name and Type columns
-    x$`gw-density`$Value <- round(pressurehead_m - (ground_to_sensor_cm / 100), 2)
+    x$`gw-density`$Value <- round(pressurehead_m - (ground_to_sensor_cm / 100), 4)
     return(x$`gw-density`)
 }
