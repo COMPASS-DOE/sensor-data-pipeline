@@ -933,12 +933,12 @@ Compass_GWI_W_411,ExoTable,Cable_v,GWI,OW,EXO,A,,,,,
 Compass_GWI_W_411,ExoTable,Wiper_Current_ma,GWI,OW,EXO,A,,,,,
 Compass_GWI_W_411,ExoTable,sn,GWI,OW,EXO,A,,,,,
 Compass_GWI_W_411,ExoTable,snn,GWI,OW,EXO,A,,,,,
-Compass_GWI_W_411,ExoTable,TSS_MgL,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
-Compass_GWI_W_411,ExoTable,ORP_mv,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
-Compass_GWI_W_411,ExoTable,TDS_mg_L,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
-Compass_GWI_W_411,ExoTable,Vertical_Position_m,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
-Compass_GWI_W_411,ExoTable,Turbidity_FNU,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
-Compass_GWI_W_411,ExoTable,Turbidity_Raw,GCW,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,TSS_MgL,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,ORP_mv,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,TDS_mg_L,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,Vertical_Position_m,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,Turbidity_FNU,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
+Compass_GWI_W_411,ExoTable,Turbidity_Raw,GWI,OW,EXO,A,,,,,Added 2024-01-24 see #233
 ,,,,,,,,,,,
 Compass_GWI_W_411,TerosTableC,RECORD,GWI,W,TEROS12,C,,,,,
 Compass_GWI_W_411,TerosTableC,PB,GWI,W,TEROS12,C,,,,,
@@ -2068,9 +2068,9 @@ PNNL_13,sapflow,Format,TMP,C,Sapflow,13,,,,,
 PNNL_13,sapflow,RECORD,TMP,C,Sapflow,13,,,,,
 PNNL_13,sapflow,Statname,TMP,C,Sapflow,13,,,,,
 PNNL_13,sapflow,BattV_Avg,TMP,C,Sapflow,13,,,,battery-voltage,
-PNNL_13,sapflow,DiffVolt_Avg({1:6}),TMP,C,Sapflow,13,"C{1,2,4,5,12,17}","{F5,F5,H4,I3,G3,F6}",,sapflow-3.5cm,
+PNNL_13,sapflow,DiffVolt_Avg({1:7}),TMP,C,Sapflow,13,"C{1,2,4,5,12,17,20}","{F5,F5,H4,I3,G3,F6,G6}",,sapflow-3.5cm,
 PNNL_13,sapflow,DiffVolt_Avg({9:11}),TMP,C,Sapflow,13,"CD{12,16,3}","{G3,E4,C5}",,sapflow-5cm,
-PNNL_13,sapflow,"DiffVolt_Avg({7,8,12,13,14})",TMP,C,Sapflow,13,,,,,
+PNNL_13,sapflow,"DiffVolt_Avg({8,12,13,14})",TMP,C,Sapflow,13,,,,,
 PNNL_13,sapflow,DiffVolt({1:14}),TMP,C,Sapflow,13,,,,,
 ,,,,,,,,,,,
 PNNL_13,Terosdata,Format,TMP,C,TEROS12,13,,,,,
