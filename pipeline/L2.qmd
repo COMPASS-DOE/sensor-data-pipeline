@@ -369,7 +369,7 @@ for(dd in data_dirs) {
     interp_for_insert <- gsub("NA", "--", interp_for_insert) # looks nicer
     interp_info_pos <- grep("[INTERP_INFO]", md, fixed = TRUE)
     md <- append(md, interp_for_insert, after = interp_info_pos)
-    md <- md[-qaqc_info_pos]
+    md <- md[-interp_info_pos]
 
     # Write the final metadata file
     mdfn <- paste0(dd, "_L2_v", params$L2_VERSION, "_metadata.txt")
