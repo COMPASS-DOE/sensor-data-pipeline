@@ -363,14 +363,12 @@ for(dd in data_dirs) {
     md <- md_insert_siteinfo(site, site_files_folder, md)
 
     # QAQC information
-    qaqc_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
-                           sprintf("%-15s", c("Time_grouping", qaqct$time_grouping)),
-                           sprintf("%-10s", c("Algorithm", qaqct$outlier_detection)),
-                           sprintf("%-15s", c("Params", qaqct$params)),
-                           sprintf("%-15s", c("Max_gap_fill", qaqct$max_gap_fill)),
+    interp_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
+                           sprintf("%-15s", c("Max_interpolation", qaqct$max_gap_fill)),
                            sprintf("%-20s", c("Notes", qaqct$Notes)))
-    qaqc_info_pos <- grep("[QAQC_INFO]", md, fixed = TRUE)
-    md <- append(md, qaqc_for_insert, after = qaqc_info_pos)
+    interp_for_insert <- gsub("NA", "--", interp_for_insert) # looks nicer
+    interp_info_pos <- grep("[INTERP_INFO]", md, fixed = TRUE)
+    md <- append(md, interp_for_insert, after = interp_info_pos)
     md <- md[-qaqc_info_pos]
 
     # Write the final metadata file

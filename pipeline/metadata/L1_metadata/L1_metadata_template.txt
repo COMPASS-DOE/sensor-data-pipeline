@@ -36,3 +36,11 @@ File columns:
 Variable definitions:
 —----------------------------------
 [VARIABLE_INFO]
+
+Outlier flagging information:
+—----------------------------------
+Mean absolute deviation (MAD) is used to identify outliers after first
+grouping data by time period. This table summarizes the time period
+and threshold settings for each variable:
+
+[OUTLIER_INFO]
