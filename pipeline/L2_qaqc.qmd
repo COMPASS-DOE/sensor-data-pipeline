@@ -4,7 +4,7 @@ author: "COMPASS workflows team"
 title-block-banner: true
 params:
   html_outfile: "L2_qaqc.html"
-  DATA_ROOT: "data_PREFLIGHT/"
+  DATA_ROOT: "data_TEST/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
@@ -118,6 +118,7 @@ files_to_process <- files_to_process[include]
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+qaqct <- qaqct[!is.na(qaqct$variable),]
 
 # We use the data period (frequency) in gap filling below
 data_period <- period(params$timestamp_round)
@@ -149,41 +150,9 @@ dat_issues <- 0
 f <- function(fn, out_dir) {
     message(Sys.time(), " Processing ", basename(fn))
 
-    dat <- read_csv(fn, col_types = "ccTccccdccii")
+    dat <- read_csv(fn, col_types = "ccTccccdcciii")
     message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
 
-    # TODO: there might be more than one instrument per file (battery voltage)
-    
-    rn <- unique(dat$research_name)
-    if(length(rn) > 1) {
-        stop("Why is there more than one research name here?!?")
-    }
-    i <- match(rn, qaqct$variable)
-    if(is.na(i)) stop(rn, " not found in QAQC table")
-    if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
-
-    algo <- qaqct$outlier_detection[i]
-    if(is.na(algo)) {
-        message("\tNo outlier detection")
-        dat$F_MAD <- FALSE
-    } else {
-        otherparams <- qaqct$params[i]
-        message("\tRunning outlier algorithm ", algo, otherparams)
-        dat <- do_outlier_test(dat, 
-                               algo, 
-                               time_grouping = qaqct$time_grouping[i], 
-                               otherparams = otherparams)
-        if(sum(dat$F_MAD, na.rm = TRUE)) {
-            message("\t\t", sum(dat$F_MAD), " outliers identified")
-        }
-        # Diagnostic plot: identifying outliers
-        p <- ggplot(dat, aes(TIMESTAMP, Value, color = F_MAD)) + 
-            geom_point(na.rm = TRUE) + 
-            ggtitle(basename(fn), 
-                    subtitle = paste(qaqct$time_grouping[i], otherparams))
-        print(p)
-    }
-    
     # File-based summary
     smry <- data.frame(File = basename(fn), 
                        Site = dat$Site[1],
@@ -196,7 +165,7 @@ f <- function(fn, out_dir) {
     flag_cols <- grep("^F_", colnames(dat))
     dat$F_drop <- rep(0L, nrow(dat)) # signals whether to drop row or not
     for(fname in colnames(dat)[flag_cols]) {
-        # OOB and OOS flags might be NA
+        # NA flags are treated as false (zero)
         dat[[fname]][is.na(dat[[fname]])] <- FALSE
         
         f_smry <- data.frame(sum(dat[[fname]], na.rm = TRUE))
@@ -224,25 +193,25 @@ f <- function(fn, out_dir) {
         
     # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
     # based on the data interval and the max_gap_fill entry in the QAQC table
-    od_period <- period(qaqct$max_gap_fill[i])
+    od_period <- period(qaqct$max_interp[i])
     if(is.na(od_period)) {
         stop("Invalid max_gap_fill entry for ", rn)
     }
     maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
     na_vals <- is.na(dat_complete$Value)
     message("\tGap-filling data with maxgap = ", maxgap)
-    dat_gapfilled <- L2_linear_gapfill(dat_complete, maxgap = maxgap)
-    new_na_vals <- is.na(dat_gapfilled$Value)
+    dat_interped <- L2_linear_interp(dat_complete, maxgap = maxgap)
+    new_na_vals <- is.na(dat_interped$Value)
     message("\t\tStarted with ", sum(na_vals), 
             " missing values...now ", sum(new_na_vals))
     smry$Filled <- sum(na_vals & !new_na_vals)
     
     message("\tWriting...")
-    write_to_folders(dat_gapfilled,
+    write_to_folders(dat_interped,
                      out_dir,
                      "L2_qaqc",
-                     site = dat_gapfilled$Site[1],
-                     plot = dat_gapfilled$Plot[1],
+                     site = dat_interped$Site[1],
+                     plot = dat_interped$Plot[1],
                      version = params$L2_VERSION,
                      # note: currently no L2_qaqc plots are generated
                      # the most useful ones would be showing outliers, but those data

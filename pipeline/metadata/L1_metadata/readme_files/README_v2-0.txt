@@ -9,11 +9,11 @@ DESCRIPTION
 This is the Level 1 (L1) data release [VERSION] for COMPASS-FME
 environmental sensors located at field sites in the Lake Erie and
 Chesapeake Bay regions. L1 data are close to raw, but are
-units-transformed and have out-of-instrument-bounds and out-of-service
-flags added. Duplicates and missing data are removed but otherwise these
-data are not filtered, and have not been subject to any additional
-algorithmic or human QA/QC. Any scientific analyses of L1 data should be
-performed with care.
+units-transformed and have flags (out of instrument bounds, out of
+service, and possible outlier) added. Duplicates and missing data are
+removed but otherwise these data are not filtered, and have not been
+subject to any additional algorithmic or human QA/QC. Any scientific
+analyses of L1 data should be performed with care.
 
 CONTACT
 —----------------------------------
@@ -65,6 +65,7 @@ Version 2-0 released [DATESTAMP]
 * Covers late 2019 through June 2025 for TEMPEST and all synoptic sites
 * Data files are now annual and single-variable, rather than monthly and multi-variable
 * "Source_file" (giving hash of original datalogger file) now listed in data files, replacing ID column
+* "F_MAD" outlier flag, based on median absolute deviation, added
 * Data plots now include out-of-bounds indicators and informative axis labels
 * Back-corrected two years of corrupted AQ600 files at TEMPEST; thanks to SJW
 * Minor data fixes: CD8 sapflux sensor, wx_par_tot15 calculation, MSM Buoy time zone, sapflux sensor depth, ClimaVue VP units

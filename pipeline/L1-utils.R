@@ -37,3 +37,46 @@ scan_folders <- function(root_dir, file_pattern = "\\.csv$", quiet = TRUE) {
 
     return(folder_list)
 }
+
+# MAD (median absolute deviation) outlier test, based on how many
+# multiples of the MAD a point is from the sample median
+# See https://en.wikipedia.org/wiki/Median_absolute_deviation
+# and e.g. https://doi.org/10.1016/j.jesp.2013.03.013
+# Returns a logical vector of same length as input, with TRUE
+# indicating that the corresponding value is an outlier
+outliers_MAD <- function(x, threshold = 3, min_n = 100) {
+    if(length(x) < min_n) return(rep(FALSE, length(x)))
+
+    md <- mad(x, na.rm = TRUE)
+
+    # return vector of flags, where TRUE signals an outlier
+    return(abs(x - median(x, na.rm = TRUE)) > md * threshold)
+}
+
+do_outlier_test <- function(x, algorithm, time_grouping, otherparams) {
+
+    # Split data
+    message("\t\tTime grouping is ", time_grouping)
+    time_groups <- lubridate::round_date(x$TIMESTAMP, time_grouping)
+    x_split <- split(x, time_groups)
+    message("\t\tData splits: ", length(x_split))
+
+    function_name <- paste0("outliers_", algorithm)
+    flag_name <- paste0("F_", algorithm)
+
+    # Construct expression (the call to QAQC_mad) to evaluate
+    if(is.na(otherparams)) {
+        expr <- paste(function_name, "(x$Value)")
+    } else {
+        expr <- paste(function_name, "(x$Value,", otherparams, ")")
+    }
+
+    # For each group, call the QAQC function
+    results <- lapply(x_split, function(x) {
+        x[[flag_name]] <- as.integer(eval(parse(text = expr)))
+        x
+    })
+
+    # Bind and return; we don't do any filtering here
+    return(do.call("rbind", results))
+}

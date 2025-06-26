@@ -9,6 +9,7 @@ params:
   L1: "L1/"
   METADATA_ROOT: "metadata/"
   METADATA_SITE_FILES: "site_files/"
+  QAQC_TABLE: "qaqc_table.csv"
   RELEASE_README_FILES: "readme_files/"
   L1_METADATA: "L1_metadata/"
   METADATA_VARS_TABLE: "variables_metadata.csv"
@@ -70,6 +71,11 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
 
+# Get the QAQC table with outlier information
+QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
+qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+qaqct <- qaqct[!is.na(qaqct$variable),]
+
 # Get the variable metadata
 L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
                                 params$METADATA_VARS_TABLE))
@@ -78,6 +84,8 @@ L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
 
 I see `r length(dirs_to_process)` directories to process in `r L1_NORMALIZE`.
+
+QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
 L1 column metadata has `r nrow(column_md)` entries.
 
@@ -103,10 +111,39 @@ f <- function(dir_name, dirs_to_process, out_dir) {
     dat <- dat_raw[!duplicated(dat_raw), ]
     message("\tRemoved ", nrow(dat_raw) - nrow(dat), " duplicate rows")
     
+    # TODO: there might be more than one instrument per file (battery voltage)
+    
+    rn <- unique(dat$research_name)
+    if(length(rn) > 1) {
+        stop("Why is there more than one research name here?!?")
+    }
+    i <- match(rn, qaqct$variable)
+    if(is.na(i)) stop(rn, " not found in QAQC table")
+    if(length(i) > 1) stop(rn, " found in more than one row of QAQC table")
+
+    algo <- qaqct$outlier_detection[i]
+    dat$F_MAD <- NA
+    n_outlier <- NA
+    if(is.na(algo)) {
+        message("\tNo outlier detection")
+    } else {
+        otherparams <- qaqct$params[i]
+        message("\tRunning outlier algorithm ", algo, otherparams)
+        dat <- do_outlier_test(dat, 
+                               algo, 
+                               time_grouping = qaqct$time_grouping[i], 
+                               otherparams = otherparams)
+        n_outlier <- sum(dat$F_MAD, na.rm = TRUE)
+        if(n_outlier > 0) {
+            message("\t\t", n_outlier, " outliers identified")
+        }
+    }
+
     # File-based summary
     smry <- data.frame(Dir = dir_name, 
                        Files = length(d), 
                        Rows = nrow(dat),
+                       Outliers = n_outlier,
                        NA_rows = sum(is.na(dat$Value)))
     
     if(nrow(dat)) {
@@ -241,6 +278,16 @@ for(dd in data_dirs) {
     # Folders are <site>_<year>
     site <- strsplit(dd, "_")[[1]][1]
     md <- md_insert_siteinfo(site, site_files_folder, md)
+
+    # QAQC information
+    qaqc_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
+                           sprintf("%-15s", c("Time_grouping", qaqct$time_grouping)),
+                           sprintf("%-15s", c("Extra_params", qaqct$params)),
+                           sprintf("%-20s", c("Notes", qaqct$Notes)))
+    qaqc_for_insert <- gsub("NA", "--", qaqc_for_insert) # looks nicer
+    qaqc_info_pos <- grep("[OUTLIER_INFO]", md, fixed = TRUE)
+    md <- append(md, qaqc_for_insert, after = qaqc_info_pos)
+    md <- md[-qaqc_info_pos]
 
     # Write the final metadata file
     mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")

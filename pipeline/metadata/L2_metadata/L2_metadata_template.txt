@@ -38,10 +38,10 @@ Variable definitions: (DLR = datalogger; DRV = derived)
 —----------------------------------
 [VARIABLE_INFO]
 
-Outlier and QA/QC processing:
-—---------------------------------- 
-Mean absolute deviation (MAD) is used to identify outliers after first
-grouping data by time period; this information, and the maximum-length
-gaps filled by linear interpolation is given in this table:
+Linear interpolation:
+—----------------------------------
+*Short* gaps in the time series are filled by linear interpolation;
+this is a separate step that the mean-annual-cycle gap-filling step.
+This table gives the maximum gaps filled by this interpolation.
 
-[QAQC_INFO]
+[INTERP_INFO]
