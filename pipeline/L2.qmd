@@ -365,7 +365,7 @@ for(dd in data_dirs) {
 
     # QAQC information
     interp_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
-                           sprintf("%-15s", c("Max_interpolation", qaqct$max_gap_fill)),
+                           sprintf("%-15s", c("Max_interpolation", qaqct$max_interp)),
                            sprintf("%-20s", c("Notes", qaqct$Notes)))
     interp_for_insert <- gsub("NA", "--", interp_for_insert) # looks nicer
     interp_info_pos <- grep("[INTERP_INFO]", md, fixed = TRUE)
