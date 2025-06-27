@@ -234,9 +234,8 @@ L1_metadata_template <- readLines(template_file)
 
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
-# Get the variable metadata
-var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
-                                                params$METADATA_VARS_TABLE))
+# Format the variable metadata
+var_md_for_insert <- md_variable_info(L1_VAR_MD, L1_or_L2 = "L1")
 
 message("Main template has ", length(L1_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")

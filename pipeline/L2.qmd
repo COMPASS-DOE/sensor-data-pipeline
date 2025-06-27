@@ -89,6 +89,8 @@ derived_vars <- read_csv(file.path(params$METADATA_ROOT,
 source("helpers.R")
 source("L2-utils.R")
 source("metadata-utils.R")
+
+vmd_combined <- combine_variable_metadata(L2_VAR_MD, derived_vars)
 ```
 
 The derived variables table has `r nrow(derived_vars)` entries.
@@ -255,7 +257,7 @@ for(i in seq_len(nrow(site_rn_table))) {
                          data_level = "L2",
                          site = si,
                          plot = pl,
-                         variable_metadata = L2_VAR_MD,
+                         variable_metadata = vmd_combined,
                          version = params$L2_VERSION,
                          write_plots = params$write_plots) 
     }
@@ -315,11 +317,10 @@ L2_metadata_template <- readLines(template_file)
 
 col_md_for_insert <- paste(sprintf("%-15s", column_md$Column), column_md$Description)
 
-# Get the variable metadata
-var_md_for_insert <- md_variable_info(file.path(params$METADATA_ROOT,
-                                                params$METADATA_VARS_TABLE),
-                                      only_these = qaqct$variable,
-                                      derived_vars = derived_vars)
+# Format the variable metadata
+var_md_for_insert <- md_variable_info(vmd_combined, 
+                                      L1_or_L2 = "L2",
+                                      only_these = qaqct$variable)
 
 message("Main template has ", length(L2_metadata_template), " lines")
 message("Column metadata info has ", length(col_md_for_insert), " lines")
@@ -385,3 +386,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+
