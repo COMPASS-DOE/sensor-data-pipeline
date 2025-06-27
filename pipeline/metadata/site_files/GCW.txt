@@ -17,6 +17,11 @@ mm). See variables table below.
 and are not part of the COMPASS-FME synoptic experimental design. Please
 contact Amr Keshta <KeshtaA@si.edu> for more information.
 
+NOTE: The GCW UP (i.e., TEMPEST) AquaTROLLs were non-vented from 2022 to
+September 2024, resulting in too-high `gw-pressure` values. These need
+to be corrected for atmospheric pressure before use. This will be fixed
+in a future data release.
+
 Contacts for the GCReW Synoptic site:
 Stephanie J. Wilson <wilsonsj@si.edu>
 Pat Megonigal <megonigalp@si.edu>
