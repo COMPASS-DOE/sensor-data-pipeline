@@ -150,6 +150,13 @@ write_to_folders <- function(x, root_dir,
                     theme(axis.text = element_text(size = 10),
                           strip.text = element_text(size = 10))
 
+                # If graph covers more than couple months, axis
+                # labels should be "Jan 2024", "Feb 2024", etc.
+                if(max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
+                    p <- p + scale_x_datetime(date_breaks = "1 month",
+                                              date_labels =  "%b %Y")
+                }
+
                 # If any data are out of bounds, show those bounds
                 if(any(x$F_OOB, na.rm = TRUE)) {
                     p <- p + geom_hline(yintercept = vmd$low_bound,
@@ -190,7 +197,14 @@ write_to_folders <- function(x, root_dir,
                         ggtitle(filename) +
                         theme(axis.text = element_text(size = 10),
                               strip.text = element_text(size = 10))
-                }
+
+                    # If graph covers more than couple months, axis
+                    # labels should be "Jan 2024", "Feb 2024", etc.
+                    if(max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
+                        p <- p + scale_x_datetime(date_breaks = "1 month",
+                                                  date_labels =  "%b %Y")
+                    }
+                } # else derived_tempfile
             } else {
                 stop("Unkown data_level ", data_level)
             }
