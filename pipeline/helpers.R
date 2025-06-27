@@ -57,6 +57,70 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
     dat
 }
 
+# Helper function for a helper function: make the L1 plot
+# for write_to_folders()
+make_L1_plot <- function(x, vmd, filename) {
+    # Color points if out of bounds, service, or potential outlier
+    x$bad <- as.integer(as.logical(x$F_OOB) | as.logical(x$F_OOS)) # out
+    x$bad[as.logical(x$F_MAD)] <- 2
+    x$bad <- factor(x$bad, levels = 0:2)
+    p <- ggplot(x, aes(TIMESTAMP, Value, color = bad,
+                       group = paste(Instrument_ID, Sensor_ID))) +
+        geom_line(na.rm = TRUE) +
+        scale_color_manual(values = c("black", "red", "orange"), breaks = 0:2) +
+        facet_wrap(~research_name, scales = "free") +
+        ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+        theme(axis.text = element_text(size = 10),
+              strip.text = element_text(size = 10),
+              plot.subtitle = element_text(size = 8),
+              legend.position = "none") +
+        ggtitle(filename,
+                subtitle = "Orange = possible outlier; red = out of bounds or service; dashed lines are instrument bounds")
+
+    # If graph covers more than couple months, axis
+    # labels should be "Jan 2024", "Feb 2024", etc.
+    if(max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
+        p <- p + scale_x_datetime(date_breaks = "1 month",
+                                  date_labels =  "%b %Y")
+    }
+
+    # If any data are out of bounds, use variable metadata to show bounds
+    if(any(as.logical(x$F_OOB), na.rm = TRUE)) {
+        p <- p + geom_hline(yintercept = vmd$low_bound,
+                            linetype = 2, color = "blue",
+                            na.rm = TRUE) +
+            geom_hline(yintercept = vmd$high_bound,
+                       linetype = 2, color = "blue",
+                       na.rm = TRUE) +
+            ggtitle(filename)
+    }
+    return(p)
+}
+
+make_L2_plot <- function(x, vmd, filename) {
+    x$gf <- is.na(x$Value) & !is.na(x$Value_GF_MAC)
+    p <- ggplot(x, aes(TIMESTAMP, Value_GF_MAC, color = gf,
+                       group = paste(Instrument_ID, Sensor_ID))) +
+        geom_line(na.rm = TRUE) +
+        scale_color_manual(values = c("black", "orange")) +
+        #facet_wrap(~research_name, scales = "free") +
+        ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
+        ggtitle(filename,
+                subtitle = "Orange = available gap-filled data based on mean annual cycle") +
+        theme(axis.text = element_text(size = 10),
+              strip.text = element_text(size = 10),
+              plot.subtitle = element_text(size = 8),
+              legend.position = "none")
+
+    # If graph covers more than couple months, axis
+    # labels should be "Jan 2024", "Feb 2024", etc.
+    if(max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
+        p <- p + scale_x_datetime(date_breaks = "1 month",
+                                  date_labels =  "%b %Y")
+    }
+    return(p)
+}
+
 # File data into sub-folders based on what level data it is:
 # L1_normalize outputs
 #   Folders are site_plot_year_month
@@ -143,27 +207,7 @@ write_to_folders <- function(x, root_dir,
                 filename <- paste(site, plot, time_period, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
                 write_this_plot <- TRUE
-                p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
-                    geom_line(na.rm = TRUE) +
-                    facet_wrap(~research_name, scales = "free") +
-                    ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
-                    theme(axis.text = element_text(size = 10),
-                          strip.text = element_text(size = 10))
-
-                # If any data are out of bounds, show those bounds
-                if(any(x$F_OOB, na.rm = TRUE)) {
-                    p <- p + geom_hline(yintercept = vmd$low_bound,
-                                        linetype = 2, color = "blue",
-                                        na.rm = TRUE) +
-                        geom_hline(yintercept = vmd$high_bound,
-                                   linetype = 2, color = "blue",
-                                   na.rm = TRUE) +
-                        ggtitle(filename,
-                                subtitle = "Dashed lines show instrument bounds")
-                } else {
-                    p <- p + ggtitle(filename)
-
-                }
+                p <- make_L1_plot(x, vmd, filename)
             } else if(data_level == "L2_qaqc") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
@@ -173,24 +217,16 @@ write_to_folders <- function(x, root_dir,
                 na_string <- NA_STRING_L2
                 if(derived_tempfile) {
                     # The L2.qmd step has a derived variables step that needs to
-                    # save its as a results as in a temporary place
+                    # save its results in a temporary place
                     folder <- file.path(root_dir, "derived-tempfiles/")
                 } else {
-                    # Isolate this research name's metadata
-                    vmd <- variable_metadata[variable_metadata$research_name == rn,]
-
                     folder <- file.path(root_dir, paste(site, y, sep = "_"))
 
                     write_this_plot <- TRUE
-                    p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
-                        geom_line(aes(y = Value_GF_MAC), linetype = 2, color = "lightgrey", na.rm = TRUE) +
-                        geom_line(na.rm = TRUE) +
-                        #facet_wrap(~research_name, scales = "free") +
-                        ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
-                        ggtitle(filename) +
-                        theme(axis.text = element_text(size = 10),
-                              strip.text = element_text(size = 10))
-                }
+                    # Isolate this research name's metadata
+                    vmd <- variable_metadata[variable_metadata$research_name == rn,]
+                    p <- make_L2_plot(x, vmd, filename)
+                } # else derived_tempfile
             } else {
                 stop("Unkown data_level ", data_level)
             }

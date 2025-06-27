@@ -26,30 +26,41 @@ md_insert_fileinfo <- function(folder, md, filename_spacing) {
     md[-file_info_pos]
 }
 
-# Read the variable metadata table and return a formatted extract from it
-md_variable_info <- function(variable_md_file,
-                             only_these = NULL, derived_vars = NULL) {
-    var_md <- read.csv(variable_md_file)
+# Combine datalogger and derived metadata into a single table
+# We need this for plotting
+combine_variable_metadata <- function(var_md, derived_vars) {
     var_md$Type <- "DLR"
     our_columns <- c("research_name", "Type", "final_units",
-                     "low_bound", "high_bound", "description")
+                    "low_bound", "high_bound", "description")
     var_md <- var_md[our_columns]
+    derived_vars$low_bound <- derived_vars$high_bound <- NA
+    derived_vars$Type <- "DRV"
+    rbind(var_md, derived_vars[our_columns])
+}
 
-    # Two extra parameters used by L2.qmd
+# Format the variable metadata for insertion into documentation
+md_variable_info <- function(var_md,
+                             L1_or_L2,
+                             only_these = NULL) {
+
+    # Kludge: L2 requests only certain variables, but we ALSO want derived ones
     if(!is.null(only_these)) {
-        var_md <- var_md[var_md$research_name %in% only_these,]
+        var_md <- var_md[var_md$research_name %in% only_these |
+                             var_md$Type == "DRV",]
     }
-    if(!is.null(derived_vars)) {
-        derived_vars$low_bound <- derived_vars$high_bound <- NA
-        derived_vars$Type <- "DRV"
-        var_md <- rbind(var_md, derived_vars[our_columns])
-    }
+
     # Format things into a character vector for insertion into the metadata
-    paste(sprintf("%-20s", c("research_name", var_md$research_name)),
-          sprintf("%-5s", c("Type", var_md$Type)),
-          sprintf("%-10s", c("Units", var_md$final_units)),
-          sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
-          c("Description", var_md$description))
+    if(L1_or_L2 == "L1") {
+        paste(sprintf("%-20s", c("research_name", var_md$research_name)),
+              sprintf("%-10s", c("Units", var_md$final_units)),
+              sprintf("%-12s", c("Bounds", paste0(var_md$low_bound, ", ", var_md$high_bound))),
+              c("Description", var_md$description))
+    } else if(L1_or_L2 == "L2") {
+        paste(sprintf("%-20s", c("research_name", var_md$research_name)),
+              sprintf("%-5s", c("Type", var_md$Type)),
+              sprintf("%-10s", c("Units", var_md$final_units)),
+              c("Description", var_md$description))
+    } else stop("Unkown L1_or_L2")
 }
 
 # Insert site information into metadata
