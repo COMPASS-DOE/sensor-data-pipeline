@@ -14,12 +14,12 @@ algorithmic or human QA/QC. Any analyses making use of L1 data
 should be performed with care.
 
 
-Site information:
+Site information
 —----------------------------------
 [SITE_INFO]
 
 
-Files in this folder:
+Files in this folder
 —----------------------------------
 Files site- and plot-specific, annual, and have a naming convention of
 {SITE}_{PLOT}_{DATE RANGE}_{OUTPUT VARIABLE}_L1_{VERSION}.csv
@@ -28,16 +28,16 @@ Files site- and plot-specific, annual, and have a naming convention of
 [FILE_INFO]
 
 
-File columns:
+File columns
 —----------------------------------
 [COLUMN_INFO]
 
 
-Variable definitions:
+Variable definitions
 —----------------------------------
 [VARIABLE_INFO]
 
-Outlier flagging information:
+Outlier flagging information
 —----------------------------------
 Mean absolute deviation (MAD) is used to identify outliers after first
 grouping data by time period. This table summarizes the time period

@@ -15,12 +15,12 @@ available alongside the main observations, and additional derived
 (calculated) variables. L2 data are intended to be rapidly and easily
 usable in analyses and simulations.
 
-Site information:
+Site information
 —----------------------------------
 [SITE_INFO]
 
 
-Files in this folder:
+Files in this folder
 —----------------------------------
 Files are site- and plot-specific, annual, and have a naming convention
 of {SITE}_{PLOT}_{YEAR}_{VARIABLE}_L2_{VERSION}.csv
@@ -29,7 +29,7 @@ of {SITE}_{PLOT}_{YEAR}_{VARIABLE}_L2_{VERSION}.csv
 [FILE_INFO]
 
 
-File columns:
+File columns
 —----------------------------------
 [COLUMN_INFO]
 
@@ -38,7 +38,24 @@ Variable definitions: (DLR = datalogger; DRV = derived)
 —----------------------------------
 [VARIABLE_INFO]
 
-Linear interpolation:
+Derived variables 
+—---------------------------------- 
+Level 2 data include _derived_ variables ("DRV" above) that are not
+directly measured but calculated from other variables, and perhaps
+external data.
+
+`soil-salinity-Xcm`: Soil water salinity at X cm below the surface. This
+is calculated from TEROS variables VWC, T, and EC, following Hilhorst
+(2000).
+
+`gw-wl-below-surface`: Groundwater level measured in meters relative to
+the ground surface, where negative values indicate water levels below
+the ground surface and positive values indicate water levels above the
+ground surface. This is calculated based on pressure and water density
+measurements made by AquaTroll sensors, as well as well dimensions
+measured during sensor deployment.
+
+Linear interpolation
 —----------------------------------
 *Short* gaps in the time series are filled by linear interpolation;
 this is a separate step that the mean-annual-cycle gap-filling step.

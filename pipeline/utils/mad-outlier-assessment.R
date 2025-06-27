@@ -2,11 +2,11 @@
 # so that we can assess the MAD outlier identification approach
 # BBL May 2025
 
-source("pipeline/L2-utils.R")
+source(here::here("pipeline/L1-utils.R"))
 
 # This is run on the v1-2 version of L1 data
 
-L1 <- "/Users/d3x290/Library/CloudStorage/Dropbox/Documents/Work/Current/COMPASS/Data team/v1-2 release/v1-2"
+L1 <- "~/Dropbox/Documents/Work/Current/COMPASS/Data team/v1-2 release/v1-2"
 OUTPUT <- "~/Desktop/mad_testing/"
 
 library(ggplot2)
@@ -32,6 +32,12 @@ ggplot(test, aes(x, y)) + geom_point(size = 0.75) +
     coord_fixed()
 # ---------
 
+#SITE_YEAR <- "CRC_2024"
+#SITE_YEAR <- "OWC_2024"
+#SITE_YEAR <- "PTR_2024"
+#SITE_YEAR <- "MSM_2024"
+#SITE_YEAR <- "GWI_2024"
+#SITE_YEAR <- "SWH_2024"
 SITE_YEAR <- "TMP_2024"
 
 files <- list.files(file.path(L1, SITE_YEAR), pattern = "csv$", full.names = TRUE)
@@ -62,28 +68,35 @@ for(x in dat_list) {
         unit <- c("1 day", "1 week", "1 month")[u]
         unitname <- c("a-1 day", "b-1 week", "c-1 month")[u] # for orderly faceting
 
-        for(thr in c(3, 5)) {
+        for(thr in c(3, 5, 7)) {
             x %>%
                 group_by(round_date(TIMESTAMP, unit)) %>%
-                mutate(F_mad = QAQC_mad(Value, threshold = thr),
+                mutate(F_mad = outliers_MAD(Value, threshold = thr),
+                       F_OOB = F_OOB,
                        threshold = paste("threshold", thr),
                        unit = paste(unitname, "grouping")) ->
                 results[[paste(unit, thr)]]
         } # for thr
     } # for u
 
-    results <- bind_rows(results)
+    # For better visualization, we drop out-of-bounds values
+    # AFTER including them in the outlier test (since that's what
+    # happens in the pipeline)
+    results <- bind_rows(results) %>% filter(!F_OOB)
+
     if(!nrow(results)) next
 
-    outfn <- paste("MADtesting", SITE_YEAR, pl, rn, sep = "_")
+    outfn <- paste("MADtesting", rn, SITE_YEAR, pl, sep = "_")
+
     p <- ggplot(results, aes(TIMESTAMP, Value, color = F_mad)) +
         geom_point(size = I(0.25), na.rm = TRUE) +
+        scale_color_manual(values = c("black", "red")) +
         facet_grid(threshold ~ unit) +
         ggtitle(outfn)
 
     path <- file.path(OUTPUT, rn)
     if(!dir.exists(path)) dir.create(path)
-    ggsave(file.path(path, paste0(outfn, ".png")), height = 8, width = 10, plot = p)
+    ggsave(file.path(path, paste0(outfn, ".png")), height = 12, width = 10, plot = p)
 } # for x
 
 message("All done!")
