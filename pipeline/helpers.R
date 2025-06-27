@@ -98,14 +98,19 @@ make_L1_plot <- function(x, vmd, filename) {
 }
 
 make_L2_plot <- function(x, vmd, filename) {
-    p <- ggplot(x, aes(TIMESTAMP, Value, group = paste(Instrument_ID, Sensor_ID))) +
-        geom_line(aes(y = Value_GF_MAC), linetype = 2, color = "lightgrey", na.rm = TRUE) +
+    x$gf <- is.na(x$Value) & !is.na(x$Value_GF_MAC)
+    p <- ggplot(x, aes(TIMESTAMP, Value_GF_MAC, color = gf,
+                       group = paste(Instrument_ID, Sensor_ID))) +
         geom_line(na.rm = TRUE) +
+        scale_color_manual(values = c("black", "orange")) +
         #facet_wrap(~research_name, scales = "free") +
         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
-        ggtitle(filename) +
+        ggtitle(filename,
+                subtitle = "Orange = available gap-filled data based on mean annual cycle") +
         theme(axis.text = element_text(size = 10),
-              strip.text = element_text(size = 10))
+              strip.text = element_text(size = 10),
+              plot.subtitle = element_text(size = 8),
+              legend.position = "none")
 
     # If graph covers more than couple months, axis
     # labels should be "Jan 2024", "Feb 2024", etc.
