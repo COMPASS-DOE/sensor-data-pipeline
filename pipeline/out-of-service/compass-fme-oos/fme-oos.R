@@ -42,7 +42,7 @@ prep_troll_oos_table <- function(troll) {
 
     # Return a data frame with the needed columns: the oos begin and end,
     # as well as the additional columns to match
-    troll[c("Site", "Table", "Plot", "Instrument_ID", "oos_begin", "oos_end")]
+    troll[c("Site", "Plot", "Instrument_ID", "oos_begin", "oos_end")]
 }
 
 # Restructure the EXO calibration/deployment log

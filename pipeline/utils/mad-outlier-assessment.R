@@ -7,6 +7,7 @@ source(here::here("pipeline/L1-utils.R"))
 # This is run on the v1-2 version of L1 data
 
 L1 <- "~/Dropbox/Documents/Work/Current/COMPASS/Data team/v1-2 release/v1-2"
+L1 <- "./data_PREFLIGHT/L1/"
 OUTPUT <- "~/Desktop/mad_testing/"
 
 library(ggplot2)
@@ -38,65 +39,66 @@ ggplot(test, aes(x, y)) + geom_point(size = 0.75) +
 #SITE_YEAR <- "MSM_2024"
 #SITE_YEAR <- "GWI_2024"
 #SITE_YEAR <- "SWH_2024"
-SITE_YEAR <- "TMP_2024"
+#SITE_YEAR <- "TMP_2024"
 
-files <- list.files(file.path(L1, SITE_YEAR), pattern = "csv$", full.names = TRUE)
-
+siteyears <- c("CRC_2024", "OWC_2024", "PTR_2024",
+               "MSM_2024", "GWI_2024", "SWH_2024", "TMP_2024")
 library(dplyr)
 library(readr)
 library(lubridate)
-dat <- lapply(files, read_csv, col_types = "ccTccccdccii") %>%
-    bind_rows() %>%
-    select(-ID, -Location)
+library(tidyr)
 
-message("Splitting...")
-# Split once. This is much more efficient that filtering
-# group by group!
-dat %>%
-    group_by(Plot, research_name) %>%
-    group_split() ->
-    dat_list
+for(SITE_YEAR in siteyears) {
+    message(SITE_YEAR)
+    files <- list.files(file.path(L1, SITE_YEAR), pattern = "csv$", full.names = TRUE)
 
-for(x in dat_list) {
+    for(f in files) {
 
-    pl <- x$Plot[1]
-    rn <- x$research_name[1]
-    results <- list()
+        x <- read_csv(f, col_types = "ccTccccdccii") %>%
+            filter(!is.na(Value)) %>%
+            select(-Source_file, -Location, -F_MAD)
 
-    message(paste(SITE_YEAR, pl, rn))
-    for(u in 1:3) {
-        unit <- c("1 day", "1 week", "1 month")[u]
-        unitname <- c("a-1 day", "b-1 week", "c-1 month")[u] # for orderly faceting
+        pl <- x$Plot[1]
+        rn <- x$research_name[1]
+        results <- list()
 
-        for(thr in c(3, 5, 7)) {
-            x %>%
-                group_by(round_date(TIMESTAMP, unit)) %>%
-                mutate(F_mad = outliers_MAD(Value, threshold = thr),
-                       F_OOB = F_OOB,
-                       threshold = paste("threshold", thr),
-                       unit = paste(unitname, "grouping")) ->
-                results[[paste(unit, thr)]]
-        } # for thr
-    } # for u
+        message("\t", paste(SITE_YEAR, pl, rn))
+        for(u in 1:3) {
+            unit <- c("1 day", "1 week", "1 month")[u]
+            unitname <- c("a-1 day", "b-1 week", "c-1 month")[u] # for orderly faceting
 
-    # For better visualization, we drop out-of-bounds values
-    # AFTER including them in the outlier test (since that's what
-    # happens in the pipeline)
-    results <- bind_rows(results) %>% filter(!F_OOB)
+            for(thr in c(4, 6, 8)) {
+                x %>%
+                    group_by(round_date(TIMESTAMP, unit)) %>%
+                    mutate(F_MAD = outliers_MAD(Value, threshold = thr),
+                           F_OOB = F_OOB,
+                           threshold = paste("threshold", thr),
+                           unit = paste(unitname, "grouping")) ->
+                    results[[paste(unit, thr)]]
+            } # for thr
+        } # for u
 
-    if(!nrow(results)) next
+        # For better visualization, we drop out-of-bounds values
+        # AFTER including them in the outlier test (since that's what
+        # happens in the pipeline)
+        results <- bind_rows(results) %>%
+            replace_na(list(F_MAD = 0, F_OOB = 0)) %>%
+            filter(F_OOB == 0)
 
-    outfn <- paste("MADtesting", rn, SITE_YEAR, pl, sep = "_")
+        if(!nrow(results)) next
 
-    p <- ggplot(results, aes(TIMESTAMP, Value, color = F_mad)) +
-        geom_point(size = I(0.25), na.rm = TRUE) +
-        scale_color_manual(values = c("black", "red")) +
-        facet_grid(threshold ~ unit) +
-        ggtitle(outfn)
+        outfn <- paste("MADtesting", rn, SITE_YEAR, pl, sep = "_")
 
-    path <- file.path(OUTPUT, rn)
-    if(!dir.exists(path)) dir.create(path)
-    ggsave(file.path(path, paste0(outfn, ".png")), height = 12, width = 10, plot = p)
-} # for x
+        p <- ggplot(results, aes(TIMESTAMP, Value, color = F_MAD)) +
+            geom_point(size = I(0.25), na.rm = TRUE) +
+            scale_color_manual(values = c("black", "red")) +
+            facet_grid(threshold ~ unit) +
+            ggtitle(outfn)
+
+        path <- file.path(OUTPUT, rn)
+        if(!dir.exists(path)) dir.create(path)
+        ggsave(file.path(path, paste0(outfn, ".png")), height = 12, width = 10, plot = p)
+    } # for x
+}
 
 message("All done!")

@@ -13,7 +13,10 @@ better QA/QC’d (out of bounds, out of service, and extreme outlier
 values are removed); and more complete, with a gap-filled time series
 available alongside the main observations, and additional derived
 (calculated) variables. L2 data are intended to be rapidly and easily
-usable in analyses and simulations.
+usable in analyses and simulations. However, algorithmic outlier
+identification always carries the risk of removing valid data, and Level
+1 data may be more suitable for analyses that focus on variability or
+extreme events.
 
 CONTACT
 —----------------------------------

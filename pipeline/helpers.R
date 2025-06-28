@@ -63,6 +63,7 @@ make_L1_plot <- function(x, vmd, filename) {
     # Color points if out of bounds, service, or potential outlier
     x$bad <- as.integer(as.logical(x$F_OOB) | as.logical(x$F_OOS)) # out
     x$bad[as.logical(x$F_MAD)] <- 2
+    x$bad[is.na(x$bad)] <- 0
     x$bad <- factor(x$bad, levels = 0:2)
     p <- ggplot(x, aes(TIMESTAMP, Value, color = bad,
                        group = paste(Instrument_ID, Sensor_ID))) +
