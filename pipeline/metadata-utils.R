@@ -4,23 +4,38 @@
 
 # Get information about files in a folder and insert into metadata
 # (a character vector)
-md_insert_fileinfo <- function(folder, md, filename_spacing) {
+md_insert_fileinfo <- function(folder, md, level) {
+    if(level == "L1") {
+        filename_spacing <- 55
+    } else if(level == "L2") {
+        filename_spacing <- 45
+    } else stop("Unknown level ", level)
+
     files <- list.files(path = folder, pattern = "csv$", full.names = TRUE)
     if(length(files) == 0) stop("No files found in ", folder, " - this is bad")
     message("\tFound ", length(files), " data files")
 
     # Build up information about files...
-    file_info <- data.frame(File = basename(files), Rows = NA, MD5 = NA)
+    file_info <- data.frame(File = basename(files), Values = NA, Dropped = NA, MD5 = NA)
     for(f in seq_len(length(files))) {
-        fdata <- readLines(files[f]) # just for a quick line count
-        file_info$Rows[f] <- length(fdata) - 1
+        fdata <- read_csv(files[f])
+        file_info$Values[f] <- sum(!is.na(fdata$Value))
+        if(level == "L2") {
+            file_info$Dropped[f] <- sum(fdata$N_drop, na.rm = TRUE)
+        }
         file_info$MD5[f] <- substr(digest::digest(files[f], file = TRUE),1, 8)
     }
-    # ...and insert into metadata
+    # ...and insert into metadata; format differ slightly by level
     file_info_txt <- paste(sprintf(paste0("%-", filename_spacing, "s"),
                                    c("Filename", file_info$File)),
-                           sprintf("%10s", c("Rows", file_info$Rows)),
+                           sprintf("%10s", c("Values", file_info$Values)))
+    if(level == "L2") {
+        file_info_txt <- paste(file_info_txt,
+                               sprintf("%10s", c("Dropped", file_info$Dropped)))
+    }
+    file_info_txt <- paste(file_info_txt,
                            sprintf("%-10s", c("MD5", file_info$MD5)))
+
     file_info_pos <- grep("[FILE_INFO]", md, fixed = TRUE)
     md <- append(md, file_info_txt, after = file_info_pos)
     md[-file_info_pos]

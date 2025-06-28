@@ -255,7 +255,7 @@ for(dd in data_dirs) {
     md <- gsub("[FOLDER_NAME]", dd, md, fixed = TRUE)
     
     # Insert info on data files into metadata
-    md <- md_insert_fileinfo(dd_full, md, filename_spacing = 55)
+    md <- md_insert_fileinfo(dd_full, md, level = "L1")
    
     # Insert column metadata
     col_info_pos <- grep("[COLUMN_INFO]", md, fixed = TRUE)
