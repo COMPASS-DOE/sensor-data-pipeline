@@ -43,27 +43,20 @@ ggplot(test, aes(x, y)) + geom_point(size = 0.75) +
 
 siteyears <- c("CRC_2024", "OWC_2024", "PTR_2024",
                "MSM_2024", "GWI_2024", "SWH_2024", "TMP_2024")
+library(dplyr)
+library(readr)
+library(lubridate)
+library(tidyr)
 
 for(SITE_YEAR in siteyears) {
     message(SITE_YEAR)
     files <- list.files(file.path(L1, SITE_YEAR), pattern = "csv$", full.names = TRUE)
 
-    library(dplyr)
-    library(readr)
-    library(lubridate)
-    dat <- lapply(files, read_csv, col_types = "ccTccccdccii") %>%
-        bind_rows() %>%
-        select(-ID, -Location)
+    for(f in files) {
 
-    message("\tSplitting...")
-    # Split once. This is much more efficient that filtering
-    # group by group!
-    dat %>%
-        group_by(Plot, research_name) %>%
-        group_split() ->
-        dat_list
-
-    for(x in dat_list) {
+        x <- read_csv(f, col_types = "ccTccccdccii") %>%
+            filter(!is.na(Value)) %>%
+            select(-Source_file, -Location, -F_MAD)
 
         pl <- x$Plot[1]
         rn <- x$research_name[1]
@@ -77,7 +70,7 @@ for(SITE_YEAR in siteyears) {
             for(thr in c(4, 6, 8)) {
                 x %>%
                     group_by(round_date(TIMESTAMP, unit)) %>%
-                    mutate(F_mad = outliers_MAD(Value, threshold = thr),
+                    mutate(F_MAD = outliers_MAD(Value, threshold = thr),
                            F_OOB = F_OOB,
                            threshold = paste("threshold", thr),
                            unit = paste(unitname, "grouping")) ->
@@ -88,13 +81,15 @@ for(SITE_YEAR in siteyears) {
         # For better visualization, we drop out-of-bounds values
         # AFTER including them in the outlier test (since that's what
         # happens in the pipeline)
-        results <- bind_rows(results) %>% filter(!F_OOB)
+        results <- bind_rows(results) %>%
+            replace_na(list(F_MAD = 0, F_OOB = 0)) %>%
+            filter(F_OOB == 0)
 
         if(!nrow(results)) next
 
         outfn <- paste("MADtesting", rn, SITE_YEAR, pl, sep = "_")
 
-        p <- ggplot(results, aes(TIMESTAMP, Value, color = F_mad)) +
+        p <- ggplot(results, aes(TIMESTAMP, Value, color = F_MAD)) +
             geom_point(size = I(0.25), na.rm = TRUE) +
             scale_color_manual(values = c("black", "red")) +
             facet_grid(threshold ~ unit) +
