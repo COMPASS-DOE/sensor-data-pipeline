@@ -177,7 +177,7 @@ if(params$run_parallel) {
     apply_func = mclapply
     # L1 is memory-intensive, especially for the TEMPEST files, and 
     # it's possible to run out of system memory, so limit cores used
-    options(mc.cores = min(6, detectCores()))
+    options(mc.cores = min(4, detectCores()))
     message("Using parallel::mclapply with ", getOption("mc.cores"), " cores")
 } else {
     apply_func = lapply
