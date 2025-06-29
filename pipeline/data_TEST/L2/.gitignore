@@ -1,7 +1,4 @@
 *.csv
-*/README.md
-*.txt
 *.pdf
+*.txt
 *.png
-code_examples
-derived_tempfiles

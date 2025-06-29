@@ -88,10 +88,10 @@ make_L1_plot <- function(x, vmd, filename) {
     # If any data are out of bounds, use variable metadata to show bounds
     if(any(as.logical(x$F_OOB), na.rm = TRUE)) {
         p <- p + geom_hline(yintercept = vmd$low_bound,
-                            linetype = 2, color = "blue",
+                            linetype = 2,
                             na.rm = TRUE) +
             geom_hline(yintercept = vmd$high_bound,
-                       linetype = 2, color = "blue",
+                       linetype = 2,
                        na.rm = TRUE) +
             ggtitle(filename)
     }
@@ -103,11 +103,11 @@ make_L2_plot <- function(x, vmd, filename) {
     p <- ggplot(x, aes(TIMESTAMP, Value_GF_MAC, color = gf,
                        group = paste(Instrument_ID, Sensor_ID))) +
         geom_line(na.rm = TRUE) +
-        scale_color_manual(values = c("black", "orange")) +
+        scale_color_manual(values = c("black", "blue")) +
         #facet_wrap(~research_name, scales = "free") +
         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
         ggtitle(filename,
-                subtitle = "Orange = available gap-filled data based on mean annual cycle") +
+                subtitle = "Blue = available gap-filled data based on mean annual cycle") +
         theme(axis.text = element_text(size = 10),
               strip.text = element_text(size = 10),
               plot.subtitle = element_text(size = 8),
@@ -266,7 +266,7 @@ write_to_folders <- function(x, root_dir,
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
-                fn_p <- gsub("csv$", "pdf", fqfn)
+                fn_p <- gsub("csv$", "png", fqfn)
                 ggsave(fn_p, plot = p, width = 12, height = 8, device = cairo_pdf)
             }
 

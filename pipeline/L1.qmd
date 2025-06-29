@@ -279,6 +279,7 @@ for(dd in data_dirs) {
     md <- md_insert_siteinfo(site, site_files_folder, md)
 
     # QAQC information
+    qaqct <- qaqct[!is.na(qaqct$outlier_detection),]
     qaqc_for_insert <- paste(sprintf("%-20s", c("Variable", qaqct$variable)),
                            sprintf("%-15s", c("Time_grouping", qaqct$time_grouping)),
                            sprintf("%-15s", c("Extra_params", qaqct$params)),
