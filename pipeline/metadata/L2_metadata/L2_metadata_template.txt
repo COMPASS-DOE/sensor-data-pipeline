@@ -38,6 +38,7 @@ Variable definitions: (DLR = datalogger; DRV = derived)
 —----------------------------------
 [VARIABLE_INFO]
 
+
 Derived variables 
 —---------------------------------- 
 Level 2 data include _derived_ variables ("DRV" above) that are not
@@ -46,7 +47,7 @@ external data.
 
 `soil-salinity-Xcm`: Soil water salinity at X cm below the surface. This
 is calculated from TEROS variables VWC, T, and EC, following Hilhorst
-(2000).
+(2000; 10.2136/sssaj2000.6461922x).
 
 `gw-wl-below-surface`: Groundwater level measured in meters relative to
 the ground surface, where negative values indicate water levels below
@@ -54,6 +55,7 @@ the ground surface and positive values indicate water levels above the
 ground surface. This is calculated based on pressure and water density
 measurements made by AquaTroll sensors, as well as well dimensions
 measured during sensor deployment.
+
 
 Linear interpolation
 —----------------------------------

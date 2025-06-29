@@ -18,7 +18,7 @@ md_insert_fileinfo <- function(folder, md, level) {
     # Build up information about files...
     file_info <- data.frame(File = basename(files), Values = NA, Dropped = NA, MD5 = NA)
     for(f in seq_len(length(files))) {
-        fdata <- read_csv(files[f])
+        fdata <- read_csv(files[f], show_col_types = FALSE)
         file_info$Values[f] <- sum(!is.na(fdata$Value))
         if(level == "L2") {
             file_info$Dropped[f] <- sum(fdata$N_drop, na.rm = TRUE)

@@ -37,6 +37,7 @@ Variable definitions
 —----------------------------------
 [VARIABLE_INFO]
 
+
 Outlier flagging information
 —----------------------------------
 Mean absolute deviation (MAD) is used to identify outliers after first

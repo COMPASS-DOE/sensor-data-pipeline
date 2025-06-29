@@ -4,7 +4,7 @@ author: "COMPASS workflows team"
 title-block-banner: true
 params:
   html_outfile: "L2_qaqc.html"
-  DATA_ROOT: "data_TEST/"
+  DATA_ROOT: "data_PREFLIGHT/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
@@ -28,8 +28,6 @@ This script
 -   Reads in the L1 data files one by one
 
 -   Drops NA data rows (shouldn't be any?)
-
--   Identifies and drops outliers
 
 -   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
@@ -56,7 +54,7 @@ L1 <- file.path(params$DATA_ROOT, params$L1)
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
 files_to_process <- list.files(L1, 
-                               pattern = "[A-Z]{3}_[A-Z]{1,2}_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               pattern = "[A-Z]{3}_[A-Z]+_[0-9]{8}-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 
 # **** TEMPORARY **** TODO
@@ -212,11 +210,7 @@ f <- function(fn, out_dir) {
                      "L2_qaqc",
                      site = dat_interped$Site[1],
                      plot = dat_interped$Plot[1],
-                     version = params$L2_VERSION,
-                     # note: currently no L2_qaqc plots are generated
-                     # the most useful ones would be showing outliers, but those data
-                     # are gone by the time we get to this point. Hmm
-                     write_plots = params$write_plots) 
+                     write_plots = FALSE) 
     
     return(smry)
 }

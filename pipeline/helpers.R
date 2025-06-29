@@ -399,3 +399,25 @@ test_valid_entries <- function() {
     stopifnot(ret == c(TRUE, FALSE))
 }
 test_valid_entries()
+
+# A simple mechanism to allow multiple timers that accumulate time
+# For diagnosing slow parts of L1, etc.
+timer_tracker <- c()
+timer_starts <- c()
+
+start_timer <- function(timer) {
+    if(timer %in% names(timer_starts)) stop("Timer ", timer, " is already running")
+    timer_starts[timer] <<- as.double(Sys.time())
+}
+
+stop_timer <- function(timer) {
+    if(!timer %in% names(timer_starts)) stop("Timer ", timer, " is not running")
+
+    tm <- as.double(Sys.time()) - timer_starts[timer]
+    timer_starts <<- timer_starts[-which(names(timer_starts) == timer)]
+    if(!timer %in% names(timer_tracker)) {
+        timer_tracker[timer] <<- tm
+    } else {
+        timer_tracker[timer] <<- timer_tracker[timer] + tm
+    }
+}

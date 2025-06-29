@@ -23,7 +23,7 @@ params:
   L1_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""
-  run_parallel: false
+  run_parallel: true
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 
@@ -56,6 +56,7 @@ options(warn = 2)
 source("helpers.R")
 source("L1-utils.R")
 source("metadata-utils.R")
+start_timer("everything")
 
 # Get the column metadata file
 column_md <- read.csv(file.path(params$METADATA_ROOT,
@@ -64,12 +65,9 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
                       comment.char = "#",
                       stringsAsFactors = FALSE)
 
-# Open the fLag database (in the data, not metadata, folder)
-#source("flag-database.R")
-#fdb_open(params$DATA_ROOT, init = TRUE)
-
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
+dirs_to_process <- dirs_to_process[grep("CRC_UP", names(dirs_to_process))] # TESTING ONLY
 
 # Get the QAQC table with outlier information
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
@@ -79,6 +77,7 @@ qaqct <- qaqct[!is.na(qaqct$variable),]
 # Get the variable metadata
 L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT, 
                                 params$METADATA_VARS_TABLE))
+L1_VAR_MD <- L1_VAR_MD[L1_VAR_MD$research_name != "",]
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
 ```
@@ -103,16 +102,21 @@ f <- function(dir_name, dirs_to_process, out_dir) {
     message("\tIt has ", length(d), " files")
     
     # Read all files in a folder
-    dat_raw <- read_csv_group(d, col_types = "cccccTdccccccccdii")
+    start_timer("reading-data")
+    dat_raw <- read_csv_group(d, quiet = TRUE, col_types = "cccccTdccccccccdii")
+    stop_timer("reading-data")
     
     message("\tTotal data: ", nrow(dat_raw), " rows, ", ncol(dat_raw), " columns")
     
     # Remove duplicate rows (e.g. from multiple datalogger downloads)
     dat <- dat_raw[!duplicated(dat_raw), ]
-    message("\tRemoved ", nrow(dat_raw) - nrow(dat), " duplicate rows")
+    if(nrow(dat_raw) - nrow(dat) > 0) {
+        message("\tRemoved ", nrow(dat_raw) - nrow(dat), " duplicate rows")
+    }
     
     # TODO: there might be more than one instrument per file (battery voltage)
     
+    start_timer("outliers")
     rn <- unique(dat$research_name)
     if(length(rn) > 1) {
         stop("Why is there more than one research name here?!?")
@@ -138,7 +142,8 @@ f <- function(dir_name, dirs_to_process, out_dir) {
             message("\t\t", n_outlier, " outliers identified")
         }
     }
-
+    stop_timer("outliers")
+    
     # File-based summary
     smry <- data.frame(Dir = dir_name, 
                        Files = length(d), 
@@ -152,6 +157,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
         
         dat <- check_drop_sort_columns(dat, column_md, params$METADATA_COLUMNS_TABLE)
         
+        start_timer("writing-data")
         write_to_folders(dat, 
                          root_dir = out_dir, 
                          data_level = "L1",
@@ -160,8 +166,8 @@ f <- function(dir_name, dirs_to_process, out_dir) {
                          variable_metadata = L1_VAR_MD,
                          version = params$L1_VERSION,
                          write_plots = params$write_plots)
+       stop_timer("writing-data")
     }
-    rm(dat)
     return(smry)
 }
 
@@ -187,6 +193,7 @@ out <- apply_func(names(dirs_to_process),
 if(params$run_parallel && "try-error" %in% sapply(out, class)) {
     stop("Error! Rerun non-parallel to diagnose")
 }
+start_timer("proc-cleanup")
 out_df <- do.call("rbind", out)
 
 if(!is.numeric(out_df$Rows)) {
@@ -198,6 +205,7 @@ if(!is.numeric(out_df$Rows)) {
 
 n_obs <- format(sum(out_df$Rows), big.mark = ",")
 n_na <- format(sum(out_df$NA_rows), big.mark = ",")
+stop_timer("proc-cleanup")
 
 # Restore old warning setting
 options(warn = oldwarn)
@@ -209,6 +217,7 @@ L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
 # Write the overall README
+start_timer("metadata")
 readme_fn <- file.path(params$METADATA_ROOT,
                        params$L1_METADATA,
                        params$RELEASE_README_FILES, 
@@ -294,18 +303,20 @@ for(dd in data_dirs) {
     message("\tWriting ", mdfn, "...")
     writeLines(md, file.path(L1, dd, mdfn))
 }
+stop_timer("metadata")
 ```
 
 ## Documentation and code
 
 ```{r docs-and-code}
-
+start_timer("docs-code")
 ok <- file.copy(params$CODE_EXAMPLES, L1, recursive = TRUE)
 if(ok) {
     message("Copied ", params$CODE_EXAMPLES, " to ", L1)
 } else {
     warning("There was a problem copying ", params$CODE_EXAMPLES)
 }
+stop_timer("docs-code")
 ```
 
 ## Output summary
@@ -322,6 +333,9 @@ Total NA rows written: `r n_na`
 
 ```{r cleanup}
 #fdb_cleanup() # Close flags database
+stop_timer("everything")
+
+print(timer_tracker)
 ```
 
 ## Reproducibility
