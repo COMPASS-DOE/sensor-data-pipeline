@@ -67,7 +67,7 @@ column_md <- read.csv(file.path(params$METADATA_ROOT,
 
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
-dirs_to_process <- dirs_to_process[grep("CRC_UP", names(dirs_to_process))] # TESTING ONLY
+#dirs_to_process <- dirs_to_process[grep("CRC_UP", names(dirs_to_process))] # TESTING ONLY
 
 # Get the QAQC table with outlier information
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
