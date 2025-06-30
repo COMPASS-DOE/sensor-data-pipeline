@@ -280,7 +280,7 @@ write_to_folders <- function(x, root_dir,
             # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
                 plot_filename <- file.path(folder, paste0(filename, ".png"))
-                ggsave(data_filename, plot = p, width = 12, height = 8, device = cairo_pdf)
+                ggsave(plot_filename, plot = p, width = 12, height = 8, device = cairo_pdf)
             }
 
             lines_written[[data_filename]] <- nrow(dat)
