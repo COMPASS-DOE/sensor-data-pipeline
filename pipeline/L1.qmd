@@ -23,7 +23,7 @@ params:
   L1_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""
-  run_parallel: true
+  run_parallel: false
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 
