@@ -3,10 +3,10 @@ Datalogger,BattV,battery-voltage,V,V,x * 1,11,13,Battery voltage of the data log
 Datalogger,SolarV,solar-voltage,V,V,x * 1,0,30,Solar/line voltage of the data logger
 Sapflow,DiffVolt_Avg,sapflow-3.5cm,mV,mV,x * 1,0,1,Raw sap flow at 3.5 cm depth
 Sapflow,DiffVolt_Avg,sapflow-5cm,mV,mV,x * 1,0,1,Raw sap flow at 5 cm depth
-RedoxTable,Redox,redox-10cm,mV,mV,x * 1,-1000,1000,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox-20cm,mV,mV,x * 1,-1000,1000,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-1000,1000,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
-RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-1000,1000,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-10cm,mV,mV,x * 1,-2500,2500,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-20cm,mV,mV,x * 1,-2500,2500,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-2500,2500,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-2500,2500,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 TerosTable,VWC,soil-vwc-5cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 5 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-5cm,degC,degC,x * 1,-40,60,Soil temperature at 5 cm
 TerosTable,EC,soil-EC-5cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 5 cm
