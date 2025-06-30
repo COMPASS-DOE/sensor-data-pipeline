@@ -21,7 +21,7 @@ md_insert_fileinfo <- function(folder, md, level) {
         if(grepl("parquet$", files[f])) {
             fdata <- arrow::read_parquet(files[f])
         } else if(grepl("csv$", files[f])) {
-            fdata <- readr::read_csv(files[f], how_col_types = FALSE)
+            fdata <- readr::read_csv(files[f], show_col_types = FALSE)
         } else {
             stop("Don't know how to read ", files[f])
         }
