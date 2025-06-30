@@ -98,6 +98,8 @@ HTML outfile is "`r params$html_outfile`".
 
 f <- function(dir_name, dirs_to_process, out_dir) {
     message(Sys.time(), " Processing ", basename(dir_name))
+    # cat(as.character(Sys.time()), " Doing ", basename(dir_name), "\n", 
+    #     file = "~/Desktop/log.txt", append = T)
     d <- dirs_to_process[[dir_name]]
     message("\tIt has ", length(d), " files")
     

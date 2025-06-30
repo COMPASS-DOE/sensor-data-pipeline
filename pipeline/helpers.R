@@ -2,6 +2,7 @@
 
 library(lubridate)
 library(readr)
+#library(arrow)
 
 # Constants used in this file and elsewhere in the system
 GIT_COMMIT <- substr(system("git rev-parse HEAD", intern = TRUE), 1, 7)
@@ -12,6 +13,12 @@ MAX_DATE <- ymd_hms("2999-12-31 11:59:00")
 # Data NA (not available) strings to use on writing
 NA_STRING_L1 <- ""
 NA_STRING_L2 <- ""
+
+# Types of files written by each step
+FILE_TYPES <- c("L1_normalize"  = ".csv",
+                "L1"            = ".csv",
+                "L2_qaqc"       = ".parquet",
+                "L2"            = ".parquet")
 
 # Small helper functions to make the various steps obvious in the log
 if(!exists("LOGFILE")) LOGFILE <- ""
@@ -231,7 +238,8 @@ write_to_folders <- function(x, root_dir,
             } else {
                 stop("Unkown data_level ", data_level)
             }
-            filename <- paste0(filename, ".csv")
+            frmt <- FILE_TYPES[data_level]
+            data_filename <- paste0(filename, frmt)
 
             # Create folder, if needed
             if(!dir.exists(folder)) {
@@ -239,22 +247,27 @@ write_to_folders <- function(x, root_dir,
                 dir.create(folder, showWarnings = FALSE)
             }
 
-            # Convert timestamp to character to ensure that observations
-            # at midnight have seconds written correctly
-            if(is.POSIXct(dat$TIMESTAMP)) {
-                dat$TIMESTAMP <- format(dat$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
-            }
-
             # Write data
             if(!quiet) message("\tWriting ", nrow(dat), "/", nrow(x),
                                " rows of data to ",
-                               basename(folder), "/", filename)
+                               basename(folder), "/", data_filename)
 
-            fqfn <- file.path(folder, filename)
+            fqfn <- file.path(folder, data_filename)
             if(file.exists(fqfn)) message("\tNOTE: overwriting existing file")
-            # We were using readr::write_csv for this but it was
-            # randomly crashing on GA (Error in `vroom write()`: ! bad value)
-            write.csv(dat, fqfn, row.names = FALSE, na = na_string)
+            if(frmt == ".csv") {
+                # Convert timestamp to character to ensure that observations
+                # at midnight have seconds written correctly
+                if(is.POSIXct(dat$TIMESTAMP)) {
+                    dat$TIMESTAMP <- format(dat$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
+                }
+                # We were using readr::write_csv for this but it was
+                # randomly crashing on GA (Error in `vroom write()`: ! bad value)
+                write.csv(dat, fqfn, row.names = FALSE, na = na_string)
+            } else if(frmt == ".parquet") {
+                arrow::write_parquet(dat, fqfn)
+            } else {
+                stop("Unknown format ", frmt)
+            }
             if(!file.exists(fqfn)) {
                 stop("File ", fqfn, "was not written")
             }
@@ -266,11 +279,11 @@ write_to_folders <- function(x, root_dir,
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
-                fn_p <- gsub("csv$", "png", fqfn)
-                ggsave(fn_p, plot = p, width = 12, height = 8, device = cairo_pdf)
+                data_filename <- paste0(filename, ".png")
+                ggsave(data_filename, plot = p, width = 12, height = 8, device = cairo_pdf)
             }
 
-            lines_written[[fqfn]] <- nrow(dat)
+            lines_written[[data_filename]] <- nrow(dat)
         } # for m
     } # for y
     invisible(lines_written)
