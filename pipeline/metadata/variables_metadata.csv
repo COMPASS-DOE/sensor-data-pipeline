@@ -19,23 +19,23 @@ TerosTable,EC,soil-EC-15cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductiv
 TerosTable,VWC,soil-vwc-30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
 TerosTable,EC,soil-EC-30cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
-WaterLevel,Barometric_Pressure600,gw-bar-pressure,,,x * 1,,,
+WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,
 WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
 WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,
 WaterLevel,Actual_Conductivity600,gw-act-cond,μS/cm,μS/cm,x * 1,,,
 WaterLevel,Specific_Conductivity600,gw-spec-cond,uS/cm,uS/cm,x * 1,0,350000,Groundwater specific conductivity
 WaterLevel,Salinity600,gw-salinity,PSU,PSU,x * 1,0,350,Groundwater salinity
-WaterLevel,TDS600,gw-tds,,,x * 1,,,
+WaterLevel,TDS600,gw-tds,ppt,ppt,x * 1,,,
 WaterLevel,Water_Density600,gw-density,g/cm3,g/cm3,x * 1,0.98,1.05,Groundwater density
-WaterLevel,Resistivity600,gw-resistivity,,,x * 1,,,
+WaterLevel,Resistivity600,gw-resistivity,ohm-cm,ohm-cm,x * 1,,,
 WaterLevel,pH600,gw-ph,unitless,unitless,x * 1,0,14,Groundwater pH
 WaterLevel,pH_mV600,gw-ph-mv,mV,mV,x * 1,,,
 WaterLevel,pH_ORP600,gw-ph-orp,mV,mV,x * 1,-1400,1400,Groundwater oxidation-reduction potential
 WaterLevel,RDO_concen600,gw-rdo-conc,mg/L,mg/L,x * 1,0,20,Groundwater dissolved oxygen concentration
 WaterLevel,RDO_perc_sat600,gw-perc-sat,%,%,x * 1,0,100,
-WaterLevel,RDO_part_Pressure600,gw-part-pressure,,,x * 1,,,
+WaterLevel,RDO_part_Pressure600,gw-part-pressure,Torr,Torr,x * 1,,,
 WaterLevel,Pressure600,gw-pressure,psi,mbar,x * 68.948,-10,910,Vented pressure corrected for barometric pressure
-WaterLevel,Depth600,gw-depth,,,x * 1,,,
+WaterLevel,Depth600,gw-depth,cm,cm,x * 1,,,
 WaterLevel,Voltage_Ext600A,gw-voltage-ext,V,V,x * 1,,,External battery voltage coming into the Aquatroll
 WaterLevel,Battery_Int600A,gw-battery,%,%,x * 1,0,100,Internal battery percentage
 ClimaVue50_15min,SlrFD_W_Avg,wx-slr-fd15,W/m2,MJ/m2,x * 1,,,Average solar flux over 15 minute period
@@ -105,12 +105,12 @@ GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the G
 GCREW_MET_15min,SVP,wx-svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,WS_ms_RM_Min,wx-minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,960,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
-ExoTable,Conductivity,sonde-conductivity,,,x * 1,,,
+ExoTable,Conductivity,sonde-conductivity,uS/cm,uS/cm,x * 1,,,
 ExoTable,FDOM_QSU,sonde-fdom,QSU,QSU,x * 1,0,300,"Fluorescent dissolved organic matter concentration, Quinine Sulfate Units"
 ExoTable,FDOM_RFU,sonde-fdom-rfu,RFU,RFU,x * 1,0,100,"Fluorescent dissolved organic matter concentration, Relative Fluorescent Units"
-ExoTable,NLF_conductivity,sonde-nlf-cond,,,x * 1,,,
+ExoTable,NLF_conductivity,sonde-nlf-cond,uS/cm,uS/cm,x * 1,,,
 ExoTable,ODO_sat,sonde-odo-sat,%,%,x * 1,0,200,"Dissolved oxygen concentration, percent air saturation"
-ExoTable,ODO_local,sonde-odo-local,,,x * 1,,,
+ExoTable,ODO_local,sonde-odo-local,% saturation,% saturation,x * 1,,,
 ExoTable,ODO_MgL,sonde-odo-mgl,mg/L,mg/L,x * 1,0,50,"Dissolved oxygen concentration, milligrams per liter"
 ExoTable,Pressure_psia,sonde-pressure,psia,psia,x * 1,,,Water pressure
 ExoTable,Salinity_PPT,sonde-salinity,ppt,ppt,x * 1,,,Water salinity
