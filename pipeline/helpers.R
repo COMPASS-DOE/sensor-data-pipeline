@@ -295,7 +295,7 @@ write_to_folders <- function(x, root_dir,
 reset <- function(root = here::here("pipeline/data_TEST")) {
     message("root is ", root)
 
-    remove_items <- function(dir, pat = "(txt|pdf|csv|html)$") {
+    remove_items <- function(dir, pat = "(txt|pdf|png|csv|html)$") {
         items <- list.files(file.path(root, dir), include.dirs = TRUE,
                             recursive = TRUE,
                             pattern = pat, full.names = TRUE)
