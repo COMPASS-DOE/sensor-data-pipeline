@@ -51,6 +51,7 @@ library(readr)
 library(lubridate)
 library(ggplot2)
 theme_set(theme_bw())
+library(arrow)
 
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
@@ -58,7 +59,7 @@ L2 <- file.path(params$DATA_ROOT, params$L2)
 # Find all L2_qaqc files and build a table of their
 # site/plot/research_name combinations
 files_to_process <- list.files(L2_QAQC, 
-                               pattern = "^[A-Z]{3}_[A-Z]{1,}_[0-9]{4}_.+csv$", 
+                               pattern = "^[A-Z]{3}_[A-Z]{1,}_[0-9]{4}_.+(csv|parquet)$", 
                                full.names = TRUE, recursive = TRUE)
 ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
 ftp_table <- separate(ftp_table, filename, 
@@ -132,7 +133,15 @@ for(i in seq_len(nrow(derived_vars))) {
         yr <- grp$year[1]
         message("\tLoading data for ", si, " ", pl, " ", yr)
         # Read the files needed and put into a list, using research names as names
-        dat_needed <- lapply(grp$file, read_csv, col_types = "Tcccccccdii")
+        dat_needed <- lapply(grp$file, function(f) {
+            if(grepl("parquet$", f)) {
+                read_parquet(f)
+            } else if(grepl("csv$", f)) {
+                read_csv(f, col_types = "Tcccccccdii")
+            } else {
+                stop("Don't know how to read this format")
+            }
+        })
         
         names(dat_needed) <- grp$research_name
         # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
@@ -188,7 +197,14 @@ for(i in seq_len(nrow(site_rn_table))) {
     message("\tReading ", nrow(these_files), 
             ifelse(nrow(these_files) > 1, " files", " file"))
     file_data <- lapply(these_files$file, function(f) {
-        x <- read_csv(f, col_types = "Tcccccccdii")
+        if(grepl("parquet$", f)) {
+            x <- read_parquet(f)
+        } else if(grepl("csv$", f)) {
+            x <- read_csv(f, col_types = "Tcccccccdii")
+        } else {
+            stop("Don't know how to read this format")
+        }
+        
         x$month <- month(x$TIMESTAMP)
         x$mday <- mday(x$TIMESTAMP)
         x$hour <- hour(x$TIMESTAMP)

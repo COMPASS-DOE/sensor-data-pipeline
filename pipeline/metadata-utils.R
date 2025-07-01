@@ -8,17 +8,24 @@ md_insert_fileinfo <- function(folder, md, level) {
     if(level == "L1") {
         filename_spacing <- 55
     } else if(level == "L2") {
-        filename_spacing <- 45
+        filename_spacing <- 50
     } else stop("Unknown level ", level)
 
-    files <- list.files(path = folder, pattern = "csv$", full.names = TRUE)
+    files <- list.files(path = folder, pattern = "(csv|parquet)$", full.names = TRUE)
     if(length(files) == 0) stop("No files found in ", folder, " - this is bad")
     message("\tFound ", length(files), " data files")
 
     # Build up information about files...
     file_info <- data.frame(File = basename(files), Values = NA, Dropped = NA, MD5 = NA)
-    for(f in seq_len(length(files))) {
-        fdata <- read_csv(files[f], show_col_types = FALSE)
+    for(f in seq_along(files)) {
+        if(grepl("parquet$", files[f])) {
+            fdata <- arrow::read_parquet(files[f])
+        } else if(grepl("csv$", files[f])) {
+            fdata <- readr::read_csv(files[f], show_col_types = FALSE)
+        } else {
+            stop("Don't know how to read ", files[f])
+        }
+
         file_info$Values[f] <- sum(!is.na(fdata$Value))
         if(level == "L2") {
             file_info$Dropped[f] <- sum(fdata$N_drop, na.rm = TRUE)

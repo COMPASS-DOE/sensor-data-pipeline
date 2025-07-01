@@ -1,5 +1,5 @@
 COMPASS-FME Level 2 sensor data
-Version: [VERSION]
+Version: [VERSION] (BETA)
 Date: [DATESTAMP]
 Observations: [OBSERVATIONS]
 Git commit: [GIT_COMMIT]
@@ -18,6 +18,9 @@ identification always carries the risk of removing valid data, and Level
 1 data may be more suitable for analyses that focus on variability or
 extreme events.
 
+NOTE: this is a BETA version of the Level 2 data, with only a subset of
+the L1 variables. Please expect changes in the first full release.
+
 CONTACT
 —----------------------------------
 Project: https://compass.pnnl.gov
@@ -33,12 +36,12 @@ YYYY-MM-DD, https://compass.pnnl.gov.
 
 DATA STRUCTURE
 —----------------------------------
-Data are organized into {SITE}_{YEAR} folders, with comma-separated
-value (CSV) files in each folder for each plot and output variable at
-that site.
+Data are organized into {SITE}_{YEAR} folders, with Parquet (a high
+performance, space efficient format; see https://parquet.apache.org)
+files in each folder for each plot and output variable at that site.
 
 The data file naming convention is
-{SITE}_{PLOT}_{YEAR}_{OUTPUT VARIABLE}_L2_{VERSION}.csv
+{SITE}_{PLOT}_{YEAR}_{OUTPUT VARIABLE}_L2_{VERSION}.parquet
 
 Sites include CRC (Crane Creek), GCW (GCReW), GWI (Goodwin
 Island), MSM (Moneystump Marsh), OWC (Old Woman Creek), PTR (Portage

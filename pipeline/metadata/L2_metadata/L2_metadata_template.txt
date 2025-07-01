@@ -23,8 +23,12 @@ Site information
 Files in this folder
 —----------------------------------
 Files are site- and plot-specific, annual, and have a naming convention
-of {SITE}_{PLOT}_{YEAR}_{VARIABLE}_L2_{VERSION}.csv
+of {SITE}_{PLOT}_{YEAR}_{VARIABLE}_L2_{VERSION}.parquet
 
+Parquet is a high performance, space efficient format for tabular data.
+These files can be read using R's `arrow` package
+(https://arrow.apache.org/docs/r/), with similar tools available in
+other languages.
 
 [FILE_INFO]
 
@@ -47,7 +51,8 @@ external data.
 
 `soil-salinity-Xcm`: Soil water salinity at X cm below the surface. This
 is calculated from TEROS variables VWC, T, and EC, following Hilhorst
-(2000; 10.2136/sssaj2000.6461922x).
+(2000; 10.2136/sssaj2000.6461922x) and METER Group protocols that
+convert TEROS EC to pore water EC and then salinity.
 
 `gw-wl-below-surface`: Groundwater level measured in meters relative to
 the ground surface, where negative values indicate water levels below

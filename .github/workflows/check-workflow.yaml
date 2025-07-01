@@ -23,6 +23,7 @@ jobs:
             any::quarto
             any::tidyr
             any::dplyr
+            any::arrow
             any::readr
             any::lubridate
             any::ggplot2

@@ -4,7 +4,7 @@ author: "COMPASS workflows team"
 title-block-banner: true
 params:
   html_outfile: "L2_qaqc.html"
-  DATA_ROOT: "data_PREFLIGHT/"
+  DATA_ROOT: "data_TEST/"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
