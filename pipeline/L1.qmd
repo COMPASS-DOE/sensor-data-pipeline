@@ -20,6 +20,7 @@ params:
   L1_DATA_TIMEZONE: "Etc/GMT+5"
   CODE_EXAMPLES: "code_examples/"
   L1_VERSION: "???"
+  CODE_EXAMPLES: "L1_code_examples/"
   L1_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""

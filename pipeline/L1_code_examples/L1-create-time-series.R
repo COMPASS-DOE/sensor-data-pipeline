@@ -12,7 +12,7 @@ VARIABLE <- "soil-temp-10cm"
 
 # Construct a "regular expression" to find the files we want: in this case,
 # CSV files starting with the site code above
-regex <- paste0("^", SITE, ".*", VARIABLE, ".*csv$")
+regex <- paste0("^", SITE, ".*", VARIABLE, "_L1_v2.*csv$")
 
 # Get the names of the files we need. Note this assumes that your
 # working directory is the main directory of the L1 data
@@ -24,7 +24,7 @@ files <- list.files("./", pattern = regex, recursive = TRUE, full.names = TRUE)
 library(readr)
 dat <- lapply(files, function(f) {
     message("Reading ", basename(f))
-    read_csv(f, col_types = "ccTccccdccii")
+    read_csv(f, col_types = "ccTccccdcclll")
 })
 dat <- do.call("rbind", dat)
 
@@ -35,5 +35,11 @@ p <- ggplot(dat, aes(TIMESTAMP, Value, color = Sensor_ID)) +
     facet_grid(Plot~.) +
     ggtitle(paste(SITE, VARIABLE, paste0("(n=", nrow(dat), ")")))
 print(p)
+
+# Plot the data but color by F_MAD, which is an outlier flag (see documentation)
+p_mad <- ggplot(dat, aes(TIMESTAMP, Value, color = F_MAD, group = Sensor_ID)) +
+    geom_line() +
+    facet_grid(Plot~.)
+print(p_mad)
 
 # All done!
