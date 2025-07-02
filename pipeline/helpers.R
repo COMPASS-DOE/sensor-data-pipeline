@@ -69,7 +69,7 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 make_L1_plot <- function(x, vmd, filename) {
     # Above a certain number of rows, our plot sizes get very large
     # with no visual benefit (can't see that many points)
-    very_large_cutoff <- 150000
+    very_large_cutoff <- 100000
     if(nrow(x) > very_large_cutoff) {
         pct <- round(very_large_cutoff / nrow(x) * 100, 0)
         x <- x[sample(nrow(x), very_large_cutoff),]
