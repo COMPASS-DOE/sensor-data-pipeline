@@ -194,6 +194,9 @@ for(i in seq_len(nrow(site_rn_table))) {
     rn <- site_rn_table$research_name[i]
     message("Processing ", si, " ", pl, " ", rn)
     
+    cat(as.character(Sys.time()), " L2 doing mac ", si, pl, rn, "\n",
+        file = "log.txt", append = TRUE)
+
     # Identify files for this site, plot, and research name, and read
     these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
     if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
