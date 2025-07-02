@@ -67,6 +67,15 @@ read_csv_group <- function(files, col_types = NULL, quiet = FALSE, ...) {
 # Helper function for a helper function: make the L1 plot
 # for write_to_folders()
 make_L1_plot <- function(x, vmd, filename) {
+    # Above a certain number of rows, our plot sizes get very large
+    # with no visual benefit (can't see that many points)
+    very_large_cutoff <- 100000
+    if(nrow(x) > very_large_cutoff) {
+        pct <- round(very_large_cutoff / nrow(x) * 100, 0)
+        x <- x[sample(nrow(x), very_large_cutoff),]
+        filename <- paste0(filename, " (subsampled ", pct, "%)")
+    }
+
     # Color points if out of bounds, service, or potential outlier
     x$bad <- as.integer(as.logical(x$F_OOB) | as.logical(x$F_OOS)) # out
     x$bad[as.logical(x$F_MAD)] <- 2
@@ -106,12 +115,23 @@ make_L1_plot <- function(x, vmd, filename) {
 }
 
 make_L2_plot <- function(x, vmd, filename) {
-    x$gf <- is.na(x$Value) & !is.na(x$Value_GF_MAC)
+    # Above a certain number of rows, our plot sizes get very large
+    # with no visual benefit (can't see that many points)
+    very_large_cutoff <- 150000
+    if(nrow(x) > very_large_cutoff) {
+        pct <- round(very_large_cutoff / nrow(x) * 100, 0)
+        x <- x[sample(nrow(x), very_large_cutoff),]
+        filename <- paste0(filename, " (subsampled ", pct, "%)")
+    }
+
+    x$gf <- is.na(x$Value) & !is.na(x$Value_GF_MAC) # flag for gap-fill or not
     p <- ggplot(x, aes(TIMESTAMP, Value_GF_MAC, color = gf,
+                       alpha = gf,
                        group = paste(Instrument_ID, Sensor_ID))) +
         geom_line(na.rm = TRUE) +
         scale_color_manual(values = c("black", "blue")) +
-        #facet_wrap(~research_name, scales = "free") +
+        # make gap-fill lines partially transparent, so as not to obscure data
+        scale_alpha_manual(values = c(1.0, 0.6)) +
         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
         ggtitle(filename,
                 subtitle = "Blue = available gap-filled data based on mean annual cycle") +
@@ -279,8 +299,8 @@ write_to_folders <- function(x, root_dir,
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels
             if(write_plots && write_this_plot) {
-                plot_filename <- file.path(folder, paste0(filename, ".png"))
-                ggsave(plot_filename, plot = p, width = 12, height = 8, device = cairo_pdf)
+                plot_filename <- file.path(folder, paste0(filename, ".pdf"))
+                ggsave(plot_filename, plot = p, width = 10, height = 7, device = cairo_pdf)
             }
 
             lines_written[[data_filename]] <- nrow(dat)
