@@ -92,6 +92,8 @@ source("L2-utils.R")
 source("metadata-utils.R")
 
 vmd_combined <- combine_variable_metadata(L2_VAR_MD, derived_vars)
+
+unlink("log.txt") # quick local progress log
 ```
 
 The derived variables table has `r nrow(derived_vars)` entries.
@@ -114,6 +116,9 @@ errors <- 0
 # Process the derived variables table row by row
 for(i in seq_len(nrow(derived_vars))) {
     dv <- derived_vars$research_name[i]
+    cat(as.character(Sys.time()), " L2 doing derived ", dv, "\n",
+        file = "log.txt", append = TRUE)
+
     # Parse the 'needs_research_names' column and figure out which files are needed
     needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
     message("Calculating ", dv, " - need ", length(needs), 
@@ -189,6 +194,9 @@ for(i in seq_len(nrow(site_rn_table))) {
     rn <- site_rn_table$research_name[i]
     message("Processing ", si, " ", pl, " ", rn)
     
+    cat(as.character(Sys.time()), " L2 doing mac ", si, pl, rn, "\n",
+        file = "log.txt", append = TRUE)
+
     # Identify files for this site, plot, and research name, and read
     these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
     if(nrow(these_files) == 0) stop("No files! This shouldn't happen")

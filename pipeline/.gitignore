@@ -3,3 +3,5 @@
 
 # The flag database
 **/*.sqlite
+
+log.txt

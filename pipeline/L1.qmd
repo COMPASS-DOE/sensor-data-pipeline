@@ -80,6 +80,8 @@ L1_VAR_MD <- read.csv(file.path(params$METADATA_ROOT,
 L1_VAR_MD <- L1_VAR_MD[L1_VAR_MD$research_name != "",]
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
+
+unlink("log.txt") # quick local progress log
 ```
 
 I see `r length(dirs_to_process)` directories to process in `r L1_NORMALIZE`.
@@ -98,8 +100,8 @@ HTML outfile is "`r params$html_outfile`".
 
 f <- function(dir_name, dirs_to_process, out_dir) {
     message(Sys.time(), " Processing ", basename(dir_name))
-    # cat(as.character(Sys.time()), " Doing ", basename(dir_name), "\n", 
-    #     file = "~/Desktop/log.txt", append = T)
+    cat(as.character(Sys.time()), " L1 doing ", basename(dir_name), "\n",
+        file = "log.txt", append = TRUE)
     d <- dirs_to_process[[dir_name]]
     message("\tIt has ", length(d), " files")
     
