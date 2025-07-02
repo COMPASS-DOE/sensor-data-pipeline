@@ -18,8 +18,8 @@ params:
   # L1_DATA_TIMEZONE because outputs should always be in STANDARD time
   # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   L1_DATA_TIMEZONE: "Etc/GMT+5"
-  CODE_EXAMPLES: "code_examples/"
   L1_VERSION: "???"
+  CODE_EXAMPLES: "code_examples_L1/"
   L1_RELEASE_DATE: "???"
   write_plots: true
   logfile: ""

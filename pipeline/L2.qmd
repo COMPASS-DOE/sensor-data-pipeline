@@ -18,7 +18,8 @@ params:
   DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_RELEASE_DATE: "???"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
-  L2_VERSION: "???"
+  L2_VERSION: "2-0"
+  CODE_EXAMPLES: "code_examples_L2/"
   run_parallel: false
   write_plots: true
   logfile: ""
@@ -193,7 +194,6 @@ for(i in seq_len(nrow(site_rn_table))) {
     pl <- site_rn_table$plot[i]
     rn <- site_rn_table$research_name[i]
     message("Processing ", si, " ", pl, " ", rn)
-    
     cat(as.character(Sys.time()), " L2 doing mac ", si, pl, rn, "\n",
         file = "log.txt", append = TRUE)
 
@@ -400,6 +400,17 @@ for(dd in data_dirs) {
     mdfn <- paste0(dd, "_L2_v", params$L2_VERSION, "_metadata.txt")
     message("\tWriting ", mdfn, "...")
     writeLines(md, file.path(L2, dd, mdfn))
+}
+```
+
+## Documentation and code
+
+```{r docs-and-code}
+ok <- file.copy(params$CODE_EXAMPLES, L2, recursive = TRUE)
+if(ok) {
+    message("Copied ", params$CODE_EXAMPLES, " to ", L2)
+} else {
+    warning("There was a problem copying ", params$CODE_EXAMPLES)
 }
 ```
 

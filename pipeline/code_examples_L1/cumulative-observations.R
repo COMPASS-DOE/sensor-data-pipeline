@@ -1,29 +1,31 @@
 # Calculate and plot cumulative observations over time
-# BBL May 2025
+# This script assumes that the working directory is the "L1/" folder
+# of the COMPASS-FME L1 (Level 1) environmental sensor data
+# BBL and SCP June 2025
 
-# Find and count lines for all files in the L1 folder
-fls <- list.files("~/Documents/v1-1/", pattern = "*.csv$",
-                  full.names = TRUE, recursive = TRUE)
+# Find and count lines for all v2 files in the L1 folder
+files <- list.files(pattern = "_L1_v2.*csv$",
+                    full.names = TRUE, recursive = TRUE)
 
-library(tibble)
-results <- tibble(file = basename(fls), rows = NA_real_)
+library(dplyr)
+library(lubridate)
+library(readr)
 
-for(i in seq_along(fls)) {
-    message(basename(fls[i]))
-    results$rows[i] <- length(readLines(fls[i])) - 1
+results <- list()
+for(f in files) {
+    message(basename(f))
+    read_csv(f, col_types = "ccTc---dc----") %>%
+        mutate(Year = year(TIMESTAMP),
+               Quarter = quarter(TIMESTAMP),
+               Month = month(TIMESTAMP)) %>%
+        group_by(Site, Plot, Instrument, research_name, Year, Quarter, Month) %>%
+        summarise(n = n(), .groups = "drop") ->
+        results[[f]]
 }
 
-# An example of how to parse the filenames into useful information:
-# site, plot, time range, data level, and version number
-library(tidyr)
-library(lubridate)
-results <- separate(results, file, sep = "_",
-                    into = c("Site", "Plot", "Timerange","Level","version"))
-results <- separate(results, Timerange, sep = "-", into = c("Begin", "End"))
-results$Date <- as.Date(results$Begin, format = "%Y%m%d")
-results$Year <- year(results$Date)
-results$Month <- month(results$Date)
-results$Quarter <- quarter(results$Date)
+results %>%
+    bind_rows() ->
+    results
 
 # Make some graphs
 library(ggplot2)
@@ -34,16 +36,14 @@ library(dplyr)
 library(gganimate)
 
 results %>%
-    group_by(Site, Year, Quarter) %>%
-    summarise(rows = sum(rows)) %>%
-    mutate(YearMonth = ymd(paste(Year, Quarter * 3, "01"))) %>%
-    ggplot(aes(YearMonth, Site, fill = rows / 3)) + geom_tile() +
+    mutate(YearQuarter = Year + (Quarter - 1) * 0.25) %>%
+    ggplot(aes(YearQuarter, Site, fill = n / 3)) + geom_tile() +
     xlab("Time") +
-    scale_fill_gradient("Monthly\nobservations", trans = scales::log_trans(base = 10),
-                        labels = unit_format(unit = "M", scale = 1e-6)) ->
+    scale_fill_gradient("Monthly\nobservations",
+                        trans = scales::log_trans(base = 10)) ->
     p
 print(p)
-ggsave("~/Desktop/heatmap.png", height = 6, width = 10)
+#ggsave("~/Desktop/heatmap.png", height = 6, width = 10)
 
 # Compute cumulative observations by site and date
 results %>%
@@ -55,7 +55,6 @@ results %>%
     mutate(cum_n = cumsum(n)) ->
     smry
 
-smry
 p2 <- ggplot(smry, aes(x = Date, y = cum_n, fill = Site)) +
     geom_line(alpha = 0.8 , linewidth = 0.5, colour = "white") +
     xlab("Year") + ylab("COMPASS-FME environmental sensor observations") +
@@ -86,8 +85,6 @@ ggplot(smry, aes(x = factor(Year), y = n, fill = Site)) +
     xlab("Year") + ylab("COMPASS-FME environmental sensor observations") +
     transition_states(Year) +
     shadow_mark() -> gif
-
-
 
 animate(gif, fps = 10, duration = 10,
         width = 1000, height = 800, renderer = gifski_renderer(loop = FALSE))
