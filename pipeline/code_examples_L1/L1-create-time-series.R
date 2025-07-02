@@ -1,6 +1,6 @@
 # Create a time series of a single variable at a site
 # This script assumes that the working directory is the "L1/" folder
-# of the COMPASS-FME L1 (Level 1) environmental sensor data
+# of the COMPASS-FME Level 1 environmental sensor data
 # NOTE: this script is for working with the "v2" version of the data
 # BBL June 2025
 

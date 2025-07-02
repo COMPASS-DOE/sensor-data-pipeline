@@ -18,8 +18,8 @@ params:
   DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_RELEASE_DATE: "???"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
-  L2_VERSION: "???"
-  CODE_EXAMPLES: "L2_code_examples/"
+  L2_VERSION: "2-0"
+  CODE_EXAMPLES: "code_examples_L2/"
   run_parallel: false
   write_plots: true
   logfile: ""
@@ -194,7 +194,6 @@ for(i in seq_len(nrow(site_rn_table))) {
     pl <- site_rn_table$plot[i]
     rn <- site_rn_table$research_name[i]
     message("Processing ", si, " ", pl, " ", rn)
-    
     cat(as.character(Sys.time()), " L2 doing mac ", si, pl, rn, "\n",
         file = "log.txt", append = TRUE)
 
