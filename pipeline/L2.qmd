@@ -92,6 +92,8 @@ source("L2-utils.R")
 source("metadata-utils.R")
 
 vmd_combined <- combine_variable_metadata(L2_VAR_MD, derived_vars)
+
+unlink("log.txt") # quick local progress log
 ```
 
 The derived variables table has `r nrow(derived_vars)` entries.
@@ -114,6 +116,9 @@ errors <- 0
 # Process the derived variables table row by row
 for(i in seq_len(nrow(derived_vars))) {
     dv <- derived_vars$research_name[i]
+    cat(as.character(Sys.time()), " L2 doing derived ", dv, "\n",
+        file = "log.txt", append = TRUE)
+
     # Parse the 'needs_research_names' column and figure out which files are needed
     needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
     message("Calculating ", dv, " - need ", length(needs), 
