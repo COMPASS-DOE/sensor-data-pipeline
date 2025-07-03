@@ -147,6 +147,7 @@ message("L1 step: ", L1_time)
 
 
 # Prep work for L2 data ----------------------------------------
+# This is an intermediate step, not exposed to data users
 
 message("Running L2_qaqc.qmd")
 new_section("Starting L2_qaqc")
