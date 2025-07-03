@@ -28,10 +28,10 @@ NOTES:
 * "F-pump_on" and "F-pump_off" are the times (EST) water flow started and stopped into the freshwater plot
 * "S-vol" and "F-vol" are the total volumes (gallons) of water delivered to each plot
 
-NOTE: The TEMPEST AquaTROLLs were non-vented from 2022 to September
-2024, resulting in too-high `gw-pressure` values. These need to be
-corrected for atmospheric pressure before use. This will be fixed in a
-future data release.
+NOTE: The TEMPEST AquaTROLL600s were non-vented from 2022 to September
+2024, resulting in too-high (>1000 mbar) `gw-pressure` values. These
+have been back-corrected (see PR#357), but the 2020-2021 files remain
+uncorrected.
 
 Contact for the TEMPEST site: 
 J. Patrick Megonigal megonialp@si.edu
