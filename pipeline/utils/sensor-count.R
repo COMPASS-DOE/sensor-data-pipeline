@@ -12,3 +12,10 @@ dt %>%
 message("Loggers = ", length(unique(dt$Logger)))
 message("Variable types = ", length(unique(dt$research_name)))
 message("Sensors = ", nrow(dt))
+
+dt %>%
+    group_by(Site == "TMP") %>%
+    summarise(Loggers = n_distinct(Logger),
+              Sensors = n()) %>%
+    print()
+
