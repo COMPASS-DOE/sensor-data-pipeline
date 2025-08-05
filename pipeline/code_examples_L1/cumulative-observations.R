@@ -43,28 +43,31 @@ results %>%
                         trans = scales::log_trans(base = 10)) ->
     p
 print(p)
-#ggsave("~/Desktop/heatmap.png", height = 6, width = 10)
+ggsave("~/Desktop/heatmap.png", height = 6, width = 10)
 
 # Compute cumulative observations by site and date
 results %>%
-    complete(Site, Date, fill = list(rows = 0)) %>%
-    group_by(Site, year(Date)) %>%
-    summarise(n = sum(rows, na.rm = TRUE), .groups = "drop") %>%
-    rename(Year = `year(Date)`) %>%
+    complete(Site, Year, Quarter, fill = list(n = 0)) %>%
+    group_by(Site, Year) %>%
+    summarise(n = sum(n, na.rm = TRUE), .groups = "drop") %>%
     group_by(Site) %>%
     mutate(cum_n = cumsum(n)) ->
     smry
 
-p2 <- ggplot(smry, aes(x = Date, y = cum_n, fill = Site)) +
-    geom_line(alpha = 0.8 , linewidth = 0.5, colour = "white") +
+p2 <- ggplot(smry, aes(x = Year, y = cum_n, fill = Site)) +
+    geom_area(alpha = 0.8 , linewidth = 0.5, colour = "white") +
     xlab("Year") + ylab("COMPASS-FME environmental sensor observations") +
     scale_fill_viridis(discrete = TRUE) +
     theme(axis.title = element_text(size = 14)) +
-    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6)) +
-    transition_reveal(Date) + view_follow(fixed_y = TRUE)
-animate(p2)
+    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
 print(p2)
 ggsave("~/Desktop/sensors.png", height = 6, width = 8)
+
+print(p2 +
+    transition_reveal(Date) + view_follow(fixed_y = TRUE))
+animate(p2)
+print(p2)
+ggsave("~/Desktop/sensors_animated.png", height = 6, width = 8)
 
 site_colors <- c(
     "CRC" = "#29363b",
