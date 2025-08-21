@@ -1,7 +1,13 @@
+# R files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# OS files
 .DS_Store
-*.dcf
+
+# Project files
 data-workflows.Rproj
+*.dcf
+pipeline/flmd.csv
