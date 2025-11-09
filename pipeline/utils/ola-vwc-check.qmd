@@ -1,0 +1,115 @@
+---
+title: "ola-vwc-check"
+format: html
+editor: visual
+---
+
+## Setup
+
+Load 2023 and 2024 TMP Fresh plot VWC data:
+
+```{r hidden-setup}
+#| include: false
+
+library(readr)
+library(dplyr)
+library(lubridate)
+
+L1_DATA <- "/Users/d3x290/Code/data-workflows/pipeline/data/L1"
+
+```
+
+```{r setup}
+#| cache: true
+
+library(readr)
+library(dplyr)
+library(lubridate)
+
+files2023 <- list.files(file.path(L1_DATA, "TMP_2023/"),
+                        pattern = "soil-vwc.*2-0.csv$",
+                        full.names = TRUE)
+files2024 <- list.files(file.path(L1_DATA, "TMP_2024/"), 
+                        pattern = "soil-vwc.*2-0.csv$",
+                        full.names = TRUE)
+
+dat_list <- lapply(c(files2023, files2024), function(f) {
+    # read files and keep only June Fresh data
+    read_csv(f, col_types = "ccTccccdcclll") %>%
+        filter(month(TIMESTAMP) == 6, Plot == "F")
+})
+dat <- bind_rows(dat_list)
+
+# Add a few columns to make the data easier to work with 
+dat$name <- paste(dat$Sensor_ID, dat$Location)
+dat$yday <- yday(dat$TIMESTAMP)
+dat$year <- as.factor(year(dat$TIMESTAMP))
+dat$hour <- hour(dat$TIMESTAMP)
+```
+
+## Plot the raw data for June 2023 and 2024
+
+```{r raw-plot}
+#| fig-height: 8
+#| fig-width: 10
+
+library(ggplot2)
+p <- ggplot(dat, aes(yday + hour/24, Value, color = year)) +
+    facet_wrap(~name) +
+    coord_cartesian(ylim = c(0, 1)) +
+    geom_line(na.rm = TRUE)
+print(p)
+
+```
+
+## Compute average hourly data
+
+The sampling interval might be different between years, so compute the average hourly values.
+
+```{r hourly}
+#| fig-height: 8
+#| fig-width: 10
+
+dat %>%
+    group_by(Plot, Location, research_name, year, yday, hour, name) %>%
+    summarise(Value = mean(Value, na.rm = TRUE), .groups = "drop") ->
+    dat_hourly
+
+last_plot() %+% dat_hourly
+```
+
+## Focus on "TEROS C3 (FW)"
+
+Olawale's document spotlights "TEROS C3 (FW) at 5cm," among others, so take a close look:
+
+```{r teros-c3}
+dat_hourly %>%
+    filter(Location == "C3", Plot == "F", research_name == "soil-vwc-5cm" ) ->
+    dat_hourly_FreshC3_5cm
+print(unique(dat_hourly_FreshC3_5cm$name))
+
+ggplot(dat_hourly_FreshC3_5cm, aes(yday + hour/24, Value, color = year)) +
+    geom_point() + 
+    facet_wrap(~name)
+```
+
+Note that there are three different sensors in Fresh C3, so it's not enough to say "TEROS C3" as an identifier.
+
+## Numerical summary of observations by sensor
+
+Compute the number of June hourly data points by sensor:
+
+```{r}
+library(tidyr)
+dat_hourly %>%
+    group_by(Plot, year, name) %>%
+    summarise(n = n(), .groups = "drop") %>%
+    pivot_wider(names_from = "year", values_from = "n") %>%
+    mutate(change_pct = (`2024` - `2023`) / `2023` * 100) %>%
+    arrange(desc(change_pct)) %>% 
+    knitr::kable()
+```
+
+(720 is 30 days in June times 24 hours per day.)
+
+In summary, I don't see any data gap.
