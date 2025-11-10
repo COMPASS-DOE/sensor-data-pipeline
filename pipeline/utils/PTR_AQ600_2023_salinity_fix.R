@@ -9,10 +9,9 @@
 # and how, and in case useful as a model in future work
 
 library(readr)
-
-# These times are when the wx_par_tot15 problem was fixed,
-# via visual inspection of the L1 data
 library(lubridate)
+
+# Fix data within this timestamp range
 fix_ts_range <- ymd_hms(c("2023-08-01 00:00:00",
                           "2023-12-05 23:59:59"),
                         tz = "UTC")
