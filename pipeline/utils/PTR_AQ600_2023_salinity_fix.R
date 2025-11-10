@@ -14,7 +14,7 @@ library(readr)
 # via visual inspection of the L1 data
 library(lubridate)
 fix_ts_range <- ymd_hms(c("2023-08-01 00:00:00",
-                          "2023-12-04 23:59:59"),
+                          "2023-12-05 23:59:59"),
                         tz = "UTC")
 # We use UTC above because that's what readr::read_csv assumes
 
