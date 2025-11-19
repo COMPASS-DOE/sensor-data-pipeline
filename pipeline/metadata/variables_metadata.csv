@@ -105,10 +105,10 @@ GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the G
 GCREW_MET_15min,SVP,wx-svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,WS_ms_RM_Min,wx-minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,960,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
-ExoTable,Conductivity,sonde-conductivity,µS/cm,µS/cm,x * 1,,,
+ExoTable,Conductivity,sonde-conductivity,mS/cm,mS/cm,x * 1,,,
 ExoTable,FDOM_QSU,sonde-fdom,QSU,QSU,x * 1,0,300,"Fluorescent dissolved organic matter concentration, Quinine Sulfate Units"
 ExoTable,FDOM_RFU,sonde-fdom-rfu,RFU,RFU,x * 1,0,100,"Fluorescent dissolved organic matter concentration, Relative Fluorescent Units"
-ExoTable,NLF_conductivity,sonde-nlf-cond,µS/cm,µS/cm,x * 1,,,
+ExoTable,NLF_conductivity,sonde-nlf-cond,mS/cm,mS/cm,x * 1,,,
 ExoTable,ODO_sat,sonde-odo-sat,%,%,x * 1,0,200,"Dissolved oxygen concentration, percent air saturation"
 ExoTable,ODO_local,sonde-odo-local,% saturation,% saturation,x * 1,,,
 ExoTable,ODO_MgL,sonde-odo-mgl,mg/L,mg/L,x * 1,0,50,"Dissolved oxygen concentration, milligrams per liter"
