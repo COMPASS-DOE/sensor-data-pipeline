@@ -8,6 +8,7 @@ files <- list.files(pattern = "_L1_v2.*csv$",
                     full.names = TRUE, recursive = TRUE)
 
 library(dplyr)
+library(tidyr)
 library(lubridate)
 library(readr)
 
