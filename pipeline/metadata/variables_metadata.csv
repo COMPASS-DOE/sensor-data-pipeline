@@ -43,7 +43,7 @@ WaterLevel,Voltage_Ext600A,gw-voltage-ext,V,V,x * 1,,,External battery voltage c
 WaterLevel,Battery_Int600A,gw-battery,%,%,x * 1,0,100,Internal battery percentage
 ClimaVue50_15min,SlrFD_W_Avg,wx-slr-fd15,W/m2,MJ/m2,x * 1,,,Average solar flux over 15 minute period
 ClimaVue50_15min,SlrTF_MJ_Tot,wx-slr-tf15,MJ/m2,W/m2,x * 1,,,Total solar flux in over minute period
-ClimaVue50_15min,Rain_mm_Tot,wx-rain15,mm,mm,x * 1,,,Total rain over 15 minute period
+ClimaVue50_15min,Rain_mm_Tot,wx-rain15,mm,mm,x * 1,0,100,Total rain over 15 minute period
 ClimaVue50_15min,WS_ms_S_WVT,wx-windspeed15,m/s,m/s,x * 1,,,Wind speed
 ClimaVue50_15min,WindDir_D1_WVT,wx-winddir15,degrees,degrees,x * 1,0,359,Wind direction
 ClimaVue50_15min,WindDir_SD1_WVT,wx-winddir-sd115,degrees,degrees,x * 1,0,359,Standard deviation of wind direction part of CS windvector function
@@ -68,12 +68,12 @@ ClimaVue50_15min,TiltWE_deg_Avg,wx-tilt-we15,degrees,degrees,x * 1,,,Average deg
 ClimaVue50_15min,Strikes_Tot,wx-strikes15,count,count,x * 1,0,65535,Total lightning strikes over 15 minute period
 ClimaVue50_15min,Dist_km_Min,wx-dist-min15,km,km,x * 1,,,Minimum lightning strike distance in 15 minute time period
 ClimaVue50_15min,Dist_km_TMn,wx-dist-tmn15,,,x * 1,,,Time of minimum lightning stike distance in 15 minute time period
-ClimaVue50_15min,PAR_Den_C_Avg,wx-par-den15,µmol/m2/s,µmol/m2/s,x * 1,,,Average photosynthetically active radiation (PAR) flux density over 15 minute period; site specific correction factor applied
-ClimaVue50_15min,PAR_Tot_C_Tot,wx-par-tot15,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 15 minute period
+ClimaVue50_15min,PAR_Den_C_Avg,wx-par-den15,µmol/m2/s,µmol/m2/s,x * 1,0,1750,Average photosynthetically active radiation (PAR) flux density over 15 minute period; site specific correction factor applied
+ClimaVue50_15min,PAR_Tot_C_Tot,wx-par-tot15,mmol/m2,mmol/m2,x * 1,0,1575,Sum of total photosynthetically active radiation (PAR) flux density over 15 minute period
 ClimaVue50_15min,CVMeta,,,,,,,"Current configuration of ClimaVue sensors (serial number, etc). Format is a13CAMPBELLCLIM50xxxxxx-yyyyyyyyy, where a is the SDI-12 address, xxxxxx is the model, and yyyyyyyyy is the serial number."
 ClimaVue50_24hr,Rain_mm_Tot,wx-rain24,mm,mm,x * 1,0,9600,Sum of rain accumulation over 24 hr period
 ClimaVue50_24hr,SlrFD_W_Avg,wx-slr-fd24,W/m2,W/m2,x * 1,0,1750,Mean solar flux density over 24 hr period
-ClimaVue50_24hr,SlrTF_MJ_Tot,wx-slr-tf24,MJ/m2,MJ/m2,x * 1,0,,Sum of solar flux density over 24 hr period
+ClimaVue50_24hr,SlrTF_MJ_Tot,wx-slr-tf24,MJ/m2,MJ/m2,x * 1,,,Sum of solar flux density over 24 hr period
 ClimaVue50_24hr,WS_ms_WVc(1),,m/s,m/s,x * 1,0,30,Mean horizontal wind speed over 24 hr period
 ClimaVue50_24hr,WS_ms_WVc(2),,degrees,degrees,x * 1,0,359,Unit vector mean wind direction over 24 hr period
 ClimaVue50_24hr,WS_ms_S_WVT,wx-winderrors24,,,x * 1,0,,Sum of wind error code over 24 hr period (wind data is invalid if error >0)
@@ -107,7 +107,7 @@ GCREW_MET_15min,VP,wx-vp15,kPa,kPa,x * 1,,,"Vapor pressure, = RH*SVP/100; from t
 GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,SVP,wx-svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,WS_ms_RM_Min,wx-minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
-GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,960,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
+GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,10,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
 ExoTable,Conductivity,sonde-conductivity,mS/cm,mS/cm,x * 1,0,200,Water conductivity
 ExoTable,FDOM_QSU,sonde-fdom,QSU,QSU,x * 1,0,300,"Fluorescent dissolved organic matter concentration, Quinine Sulfate Units"
 ExoTable,FDOM_RFU,sonde-fdom-rfu,RFU,RFU,x * 1,0,100,"Fluorescent dissolved organic matter concentration, Relative Fluorescent Units"
