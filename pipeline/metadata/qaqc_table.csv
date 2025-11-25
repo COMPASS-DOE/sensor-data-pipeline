@@ -15,6 +15,9 @@ soil-EC-15cm,,,,2 hours,Too variable; no QAQC
 soil-vwc-30cm,1 month,MAD,threshold=8,2 hours,Come back to this
 soil-temp-30cm,1 week,MAD,threshold=8,3 hours,
 soil-EC-30cm,,,,3 hours,Too variable; no QAQC
+soil-vwc-40cm,,,,3 hours,
+soil-temp-40cm,,,,3 hours,
+soil-EC-40cm,,,,3 hours,
 ,,,,,
 gw-salinity,,,,1 hour,Too variable; no QAQC
 gw-pressure,,,,1 hour,Too variable; no QAQC
