@@ -19,6 +19,9 @@ TerosTable,EC,soil-EC-15cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductiv
 TerosTable,VWC,soil-vwc-30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
 TerosTable,EC,soil-EC-30cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
+TerosTable,VWC,soil-vwc-40cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 40 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-40cm,degC,degC,x * 1,-40,60,Soil temperature at 40 cm
+TerosTable,EC,soil-EC-40cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 40 cm
 WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,
 WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
 WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,
