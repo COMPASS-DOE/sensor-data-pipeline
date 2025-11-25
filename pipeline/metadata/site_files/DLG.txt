@@ -1,0 +1,15 @@
+DLG is DELUGE, ... TODO SEE #386
+
+
+Contact for the DELUGE site: 
+TODO SEE #386
+
+Contacts for TEMPEST data streams: 
+Overall: TODO SEE #386
+Sapflow: TODO SEE #386
+TEROS: TODO SEE #386
+AquaTROLL: TODO SEE #386
+Dataloggers: TODO SEE #386
+
+Key publications:
+TODO SEE #386
