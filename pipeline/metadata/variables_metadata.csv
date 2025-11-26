@@ -9,36 +9,36 @@ RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-2500,2500,"Redox at 35 cm depth; each s
 RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-2500,2500,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 TerosTable,VWC,soil-vwc-5cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 5 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-5cm,degC,degC,x * 1,-40,60,Soil temperature at 5 cm
-TerosTable,EC,soil-EC-5cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 5 cm
+TerosTable,EC,soil-EC-5cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 5 cm
 TerosTable,VWC,soil-vwc-10cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 10 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-10cm,degC,degC,x * 1,-40,60,Soil temperature at 10 cm
-TerosTable,EC,soil-EC-10cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 10 cm
+TerosTable,EC,soil-EC-10cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 10 cm
 TerosTable,VWC,soil-vwc-15cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 15 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-15cm,degC,degC,x * 1,-40,60,Soil temperature at 15 cm
-TerosTable,EC,soil-EC-15cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 15 cm
+TerosTable,EC,soil-EC-15cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 15 cm
 TerosTable,VWC,soil-vwc-30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
-TerosTable,EC,soil-EC-30cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
+TerosTable,EC,soil-EC-30cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
 TerosTable,VWC,soil-vwc-40cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 40 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-40cm,degC,degC,x * 1,-40,60,Soil temperature at 40 cm
-TerosTable,EC,soil-EC-40cm,µS/cm,µS/cm,x * 1,0,20000,Soil electrical conductivity at 40 cm
-WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,
+TerosTable,EC,soil-EC-40cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 40 cm
+WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,Barometric pressure
 WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
-WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,
-WaterLevel,Actual_Conductivity600,gw-act-cond,μS/cm,μS/cm,x * 1,,,
-WaterLevel,Specific_Conductivity600,gw-spec-cond,uS/cm,uS/cm,x * 1,0,350000,Groundwater specific conductivity
+WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,Internal temperature
+WaterLevel,Actual_Conductivity600,gw-act-cond,μS/cm,μS/cm,x * 1,0,350000,Groundwater conductivity
+WaterLevel,Specific_Conductivity600,gw-spec-cond,uS/cm,μS/cm,x * 1,0,350000,Groundwater specific conductivity (normalized to 25C reference temperature)
 WaterLevel,Salinity600,gw-salinity,PSU,PSU,x * 1,0,350,Groundwater salinity
 WaterLevel,TDS600,gw-tds,ppt,ppt,x * 1,,,Groundwater total dissolved solids
 WaterLevel,Water_Density600,gw-density,g/cm3,g/cm3,x * 1,0.98,1.05,Groundwater density
-WaterLevel,Resistivity600,gw-resistivity,ohm-cm,ohm-cm,x * 1,,,
+WaterLevel,Resistivity600,gw-resistivity,ohm-cm,ohm-cm,x * 1,,,Groundwater resistivity (reciprocal of conductivity)
 WaterLevel,pH600,gw-ph,unitless,unitless,x * 1,0,14,Groundwater pH
-WaterLevel,pH_mV600,gw-ph-mv,mV,mV,x * 1,,,
+WaterLevel,pH_mV600,gw-ph-mv,mV,mV,x * 1,,,Groundwater pH (in mV)
 WaterLevel,pH_ORP600,gw-ph-orp,mV,mV,x * 1,-1400,1400,Groundwater oxidation-reduction potential
 WaterLevel,RDO_concen600,gw-rdo-conc,mg/L,mg/L,x * 1,0,20,Groundwater dissolved oxygen concentration
-WaterLevel,RDO_perc_sat600,gw-perc-sat,%,%,x * 1,0,100,
-WaterLevel,RDO_part_Pressure600,gw-part-pressure,Torr,Torr,x * 1,,,
+WaterLevel,RDO_perc_sat600,gw-perc-sat,%,%,x * 1,0,100,Groundwater dissolved oxygen concentration (100% saturation)
+WaterLevel,RDO_part_Pressure600,gw-part-pressure,Torr,Torr,x * 1,,,Groundwater dissolved oxygen partial pressure
 WaterLevel,Pressure600,gw-pressure,psi,mbar,x * 68.948,-10,910,Vented pressure corrected for barometric pressure
-WaterLevel,Depth600,gw-depth,cm,cm,x * 1,,,
+WaterLevel,Depth600,gw-depth,cm,cm,x * 1,,,Calculated groundwater depth
 WaterLevel,Voltage_Ext600A,gw-voltage-ext,V,V,x * 1,,,External battery voltage coming into the Aquatroll
 WaterLevel,Battery_Int600A,gw-battery,%,%,x * 1,0,100,Internal battery percentage
 ClimaVue50_15min,SlrFD_W_Avg,wx-slr-fd15,W/m2,MJ/m2,x * 1,,,Average solar flux over 15 minute period
