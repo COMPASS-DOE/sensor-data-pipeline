@@ -29,9 +29,8 @@ NOTES:
 * "S-vol" and "F-vol" are the total volumes (gallons) of water delivered to each plot
 
 NOTE: The TEMPEST AquaTROLL600s were non-vented from 2022 to September
-2024, resulting in too-high (>1000 mbar) `gw-pressure` values. These
-have been back-corrected (see PR#357), but the 2020-2021 files remain
-uncorrected.
+2024, resulting in too-high (>900 mbar) `gw-pressure` values. These
+have been back-corrected using ERA5 surface pressure data (see PR#xxx).
 
 Contact for the TEMPEST site: 
 J. Patrick Megonigal megonialp@si.edu
