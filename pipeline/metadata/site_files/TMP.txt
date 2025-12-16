@@ -29,9 +29,8 @@ NOTES:
 * "S-vol" and "F-vol" are the total volumes (gallons) of water delivered to each plot
 
 NOTE: The TEMPEST AquaTROLL600s were non-vented from 2022 to September
-2024, resulting in too-high (>1000 mbar) `gw-pressure` values. These
-have been back-corrected (see PR#357), but the 2020-2021 files remain
-uncorrected.
+2024, resulting in too-high (>900 mbar) `gw-pressure` values. These
+have been back-corrected using ERA5 surface pressure data (see PR#397).
 
 Contact for the TEMPEST site: 
 J. Patrick Megonigal megonialp@si.edu
@@ -47,3 +46,7 @@ Key publications:
 Hopple et al.: Attaining freshwater and estuarine-water soil saturation in an 
 ecosystem-scale coastal flooding experiment, Environ. Monit. Assess., 195, 425, 2023.
 http://dx.doi.org/10.1007/s10661-022-10807-0
+
+Regier et al.: Short-term experimental flooding impacts soil
+biogeochemistry but not aboveground vegetation in a coastal forest,
+Proceedings of the National Academy of Sciences, 122, e2511756122, 2025.
