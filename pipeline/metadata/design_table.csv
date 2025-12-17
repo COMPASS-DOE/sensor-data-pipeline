@@ -1722,6 +1722,77 @@ Compass_OWC_W_321,WaterLevel600C,Voltage,OWC,W,AquaTROLL600,C,,,,gw-voltage,
 Compass_OWC_W_321,WaterLevel600C,Voltage_Ext600C,OWC,W,AquaTROLL600,C,,,,gw-voltage-ext,
 Compass_OWC_W_321,WaterLevel600C,Battery_Int600C,OWC,W,AquaTROLL600,C,,,,gw-battery,
 ,,,,,,,,,,,
+Compass_SWH_SWAMP_423,CheckTable,Format,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,RECORD,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,BattV,SWH,SWAMP,Datalogger,423_new,,,,battery-voltage,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,SolarV,SWH,SWAMP,Datalogger,423_new,,,,solar-voltage,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,Batt_CHECK,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,Solar_CHECK,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,Flag({1:14}),SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,Statname,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,CheckTable,PB,SWH,SWAMP,Datalogger,423_new,,,,,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_SWAMP_423,SapflowA,RECORD,SWH,SWAMP,Sapflow,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,PB,SWH,SWAMP,Sapflow,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,Format,SWH,SWAMP,Sapflow,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,Statname,SWH,SWAMP,Sapflow,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,BattV_Avg,SWH,SWAMP,Sapflow,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,DiffVoltA_Avg({1:8}),SWH,SWAMP,Sapflow,A_new,0{1:8},,,sapflow-3.5cm,New table November 2025
+Compass_SWH_SWAMP_423,SapflowA,DiffVoltA_Avg({9:12}),SWH,SWAMP,Sapflow,A_new,"0{1,2,3,8}D",,,sapflow-5cm,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_SWAMP_423,TerosTableA,RECORD,SWH,SWAMP,TEROS12,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,PB,SWH,SWAMP,TEROS12,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,Format,SWH,SWAMP,TEROS12,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,Statname,SWH,SWAMP,TEROS12,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,BattV_Avg,SWH,SWAMP,TEROS12,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({1:4},1)",SWH,SWAMP,TEROS12,A_new,{1:4},,,soil-vwc-10cm,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({5:6},1)",SWH,SWAMP,TEROS12,A_new,{5:6},,,soil-vwc-30cm,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({1:4},2)",SWH,SWAMP,TEROS12,A_new,{1:4},,,soil-temp-10cm,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({5:6},2)",SWH,SWAMP,TEROS12,A_new,{5:6},,,soil-temp-30cm,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({1:4},3)",SWH,SWAMP,TEROS12,A_new,{1:4},,,soil-EC-10cm,New table November 2025
+Compass_SWH_SWAMP_423,TerosTableA,"TerosA({5:6},3)",SWH,SWAMP,TEROS12,A_new,{5:6},,,soil-EC-30cm,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_SWAMP_423,WaterLevel600A,RECORD,SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,PB,SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Format,SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Statname,SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,BattV_Avg,SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Barometric_Pressure600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-bar-pressure,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Temperature600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-temperature,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Aquatroll_DevA(1),SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Aquatroll_IDA(1),SWH,SWAMP,AquaTROLL600,A_new,,,,,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Actual_Conductivity600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-act-cond,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Specific_Conductivity600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-spec-cond,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Salinity600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-salinity,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,TDS600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-tds,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Water_Density600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-density,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Resistivity600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-resistivity,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,pH600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-ph,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,pH_mV600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-ph-mv,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,pH_ORP600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-ph-orp,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,RDO_concen600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-rdo-conc,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,RDO_perc_sat600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-perc-sat,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,RDO_part_Pressure600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-part-pressure,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Pressure600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-pressure,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Depth600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-depth,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Voltage,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-voltage,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Voltage_Ext600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-voltage-ext,New table November 2025
+Compass_SWH_SWAMP_423,WaterLevel600A,Battery_Int600A,SWH,SWAMP,AquaTROLL600,A_new,,,,gw-battery,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_SWAMP_423,Redox5,Format,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox5,RECORD,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox5,Statname,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox5,BattV,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox5,RedoxRa({1:12}),SWH,SWAMP,Redox,,{1:12}a,,,redox-5cm,
+Compass_SWH_SWAMP_423,Redox5,RedoxRb({1:12}),SWH,SWAMP,Redox,,{1:12}b,,,redox-5cm,
+,,,,,,,,,,,
+Compass_SWH_SWAMP_423,Redox15,Format,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox15,RECORD,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox15,Statname,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox15,BattV,SWH,SWAMP,Redox,,,,,,
+Compass_SWH_SWAMP_423,Redox15,RedoxRa({1:12}),SWH,SWAMP,Redox,,{1:12}a,,,redox-15cm,
+Compass_SWH_SWAMP_423,Redox15,RedoxRb({1:12}),SWH,SWAMP,Redox,,{1:12}b,,,redox-15cm,
+,,,,,,,,,,,
 Compass_SWH_TR_422,CheckTable,Format,SWH,TR,Datalogger,422,,,,,
 Compass_SWH_TR_422,CheckTable,RECORD,SWH,TR,Datalogger,422,,,,,
 Compass_SWH_TR_422,CheckTable,BattV,SWH,TR,Datalogger,422,,,,battery-voltage,
