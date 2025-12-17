@@ -1734,17 +1734,17 @@ Compass_SWH_TR_422,WaterLevel600B,Voltage,SWH,TR,AquaTROLL600,B,,,,gw-voltage,
 Compass_SWH_TR_422,WaterLevel600B,Voltage_Ext600B,SWH,TR,AquaTROLL600,B,,,,gw-voltage-ext,
 Compass_SWH_TR_422,WaterLevel600B,Battery_Int600B,SWH,TR,AquaTROLL600,B,,,,gw-battery,
 ,,,,,,,,,,,
-Compass_SWH_UP_423,TerosTableB,Format,SWH,UP,TEROS12,B,,,,,
-Compass_SWH_UP_423,TerosTableB,RECORD,SWH,UP,TEROS12,B,,,,,
-Compass_SWH_UP_423,TerosTableB,PB,SWH,UP,TEROS12,B,,,,,
-Compass_SWH_UP_423,TerosTableB,Statname,SWH,UP,TEROS12,B,,,,,
-Compass_SWH_UP_423,TerosTableB,BattV_Avg,SWH,UP,TEROS12,B,,,,,
-Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},1)",SWH,UP,TEROS12,B,{1:4},,,soil-vwc-10cm,
-Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},1)",SWH,UP,TEROS12,B,{5:6},,,soil-vwc-30cm,
-Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},2)",SWH,UP,TEROS12,B,{1:4},,,soil-temp-10cm,
-Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},2)",SWH,UP,TEROS12,B,{5:6},,,soil-temp-30cm,
-Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},3)",SWH,UP,TEROS12,B,{1:4},,,soil-EC-10cm,
-Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},3)",SWH,UP,TEROS12,B,{5:6},,,soil-EC-30cm,
+Compass_SWH_UP_423,TerosTableB,Format,SWH,UP,TEROS12,B,,,2025-11-04,,
+Compass_SWH_UP_423,TerosTableB,RECORD,SWH,UP,TEROS12,B,,,2025-11-04,,
+Compass_SWH_UP_423,TerosTableB,PB,SWH,UP,TEROS12,B,,,2025-11-04,,
+Compass_SWH_UP_423,TerosTableB,Statname,SWH,UP,TEROS12,B,,,2025-11-04,,
+Compass_SWH_UP_423,TerosTableB,BattV_Avg,SWH,UP,TEROS12,B,,,2025-11-04,,
+Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},1)",SWH,UP,TEROS12,B,{1:4},,2025-11-04,soil-vwc-10cm,
+Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},1)",SWH,UP,TEROS12,B,{5:6},,2025-11-04,soil-vwc-30cm,
+Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},2)",SWH,UP,TEROS12,B,{1:4},,2025-11-04,soil-temp-10cm,
+Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},2)",SWH,UP,TEROS12,B,{5:6},,2025-11-04,soil-temp-30cm,
+Compass_SWH_UP_423,TerosTableB,"TerosB({1:4},3)",SWH,UP,TEROS12,B,{1:4},,2025-11-04,soil-EC-10cm,
+Compass_SWH_UP_423,TerosTableB,"TerosB({5:6},3)",SWH,UP,TEROS12,B,{5:6},,2025-11-04,soil-EC-30cm,
 ,,,,,,,,,,,
 Compass_SWH_UP_423,CheckTable,Format,SWH,SWAMP,Datalogger,423,,,,,
 Compass_SWH_UP_423,CheckTable,RECORD,SWH,SWAMP,Datalogger,423,,,,,
@@ -1827,6 +1827,69 @@ Compass_SWH_UP_423,WaterLevel600B,Depth600B,SWH,UP,AquaTROLL600,B,,,,gw-depth,
 Compass_SWH_UP_423,WaterLevel600B,Voltage,SWH,UP,AquaTROLL600,B,,,,gw-voltage,
 Compass_SWH_UP_423,WaterLevel600B,Voltage_Ext600B,SWH,UP,AquaTROLL600,B,,,,gw-voltage-ext,
 Compass_SWH_UP_423,WaterLevel600B,Battery_Int600B,SWH,UP,AquaTROLL600,B,,,,gw-battery,
+,,,,,,,,,,,
+Compass_SWH_UP_424,CheckTable,Format,SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,RECORD,SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,BattV,SWH,UP,Datalogger,424,,,,battery-voltage,New table November 2025
+Compass_SWH_UP_424,CheckTable,SolarV,SWH,UP,Datalogger,424,,,,solar-voltage,New table November 2025
+Compass_SWH_UP_424,CheckTable,Batt_CHECK,SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,Solar_CHECK,SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,Flag({1:14}),SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,Statname,SWH,UP,Datalogger,424,,,,,New table November 2025
+Compass_SWH_UP_424,CheckTable,PB,SWH,UP,Datalogger,424,,,,,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_UP_424,TerosTableB,Format,SWH,UP,TEROS12,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,TerosTableB,RECORD,SWH,UP,TEROS12,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,TerosTableB,PB,SWH,UP,TEROS12,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,TerosTableB,Statname,SWH,UP,TEROS12,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,TerosTableB,BattV_Avg,SWH,UP,TEROS12,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({1:4},1)",SWH,UP,TEROS12,B_new,{1:4},,,soil-vwc-10cm,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({5:6},1)",SWH,UP,TEROS12,B_new,{5:6},,,soil-vwc-30cm,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({1:4},2)",SWH,UP,TEROS12,B_new,{1:4},,,soil-temp-10cm,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({5:6},2)",SWH,UP,TEROS12,B_new,{5:6},,,soil-temp-30cm,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({1:4},3)",SWH,UP,TEROS12,B_new,{1:4},,,soil-EC-10cm,New table November 2025
+Compass_SWH_UP_424,TerosTableB,"TerosB({5:6},3)",SWH,UP,TEROS12,B_new,{5:6},,,soil-EC-30cm,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_UP_424,WaterLevel600B,RECORD,SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,PB,SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Format,SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Statname,SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,BattV_Avg,SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Barometric_Pressure600B,SWH,UP,AquaTROLL600,B_new,,,,gw-bar-pressure,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Temperature600B,SWH,UP,AquaTROLL600,B_new,,,,gw-temperature,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Aquatroll_IDB(1),SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Aquatroll_DevB(1),SWH,UP,AquaTROLL600,B_new,,,,,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Actual_Conductivity600B,SWH,UP,AquaTROLL600,B_new,,,,gw-act-cond,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Specific_Conductivity600B,SWH,UP,AquaTROLL600,B_new,,,,gw-spec-cond,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Salinity600B,SWH,UP,AquaTROLL600,B_new,,,,gw-salinity,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,TDS600B,SWH,UP,AquaTROLL600,B_new,,,,gw-tds,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Water_Density600B,SWH,UP,AquaTROLL600,B_new,,,,gw-density,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Resistivity600B,SWH,UP,AquaTROLL600,B_new,,,,gw-resistivity,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,pH600B,SWH,UP,AquaTROLL600,B_new,,,,gw-ph,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,pH_mV600B,SWH,UP,AquaTROLL600,B_new,,,,gw-ph-mv,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,pH_ORP600B,SWH,UP,AquaTROLL600,B_new,,,,gw-ph-orp,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,RDO_concen600B,SWH,UP,AquaTROLL600,B_new,,,,gw-rdo-conc,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,RDO_perc_sat600B,SWH,UP,AquaTROLL600,B_new,,,,gw-perc-sat,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,RDO_part_Pressure600B,SWH,UP,AquaTROLL600,B_new,,,,gw-part-pressure,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Pressure600B,SWH,UP,AquaTROLL600,B_new,,,,gw-pressure,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Depth600B,SWH,UP,AquaTROLL600,B_new,,,,gw-depth,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Voltage,SWH,UP,AquaTROLL600,B_new,,,,gw-voltage,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Voltage_Ext600B,SWH,UP,AquaTROLL600,B_new,,,,gw-voltage-ext,New table November 2025
+Compass_SWH_UP_424,WaterLevel600B,Battery_Int600B,SWH,UP,AquaTROLL600,B_new,,,,gw-battery,New table November 2025
+,,,,,,,,,,,
+Compass_SWH_UP_424,Redox5,Format,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox5,RECORD,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox5,Statname,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox5,BattV,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox5,RedoxRa({1:12}),SWH,UP,Redox,,{1:12}a,,,redox-5cm,
+Compass_SWH_UP_424,Redox5,RedoxRb({1:12}),SWH,UP,Redox,,{1:12}b,,,redox-5cm,
+,,,,,,,,,,,
+Compass_SWH_UP_424,Redox15,Format,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox15,RECORD,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox15,Statname,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox15,BattV,SWH,UP,Redox,,,,,,
+Compass_SWH_UP_424,Redox15,RedoxRa({1:12}),SWH,UP,Redox,,{1:12}a,,,redox-15cm,
+Compass_SWH_UP_424,Redox15,RedoxRb({1:12}),SWH,UP,Redox,,{1:12}b,,,redox-15cm,
 ,,,,,,,,,,,
 Compass_SWH_W_421,CheckTable,Format,SWH,W,Datalogger,421,,,,,
 Compass_SWH_W_421,CheckTable,RECORD,SWH,W,Datalogger,421,,,,,
