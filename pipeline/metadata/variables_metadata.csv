@@ -132,3 +132,11 @@ ExoTable,TDS_mg_L,sonde-tds,mg/L,mg/L,x * 1,,,Total dissolved solids concentrati
 ExoTable,Vertical_Position_m,sonde-vpos,m,m,x * 1,,,
 ExoTable,Turbidity_FNU,sonde-turbidity,FNU,FNU,x * 1,0,4000,"Turbidity, indirect measurement of the suspended solid concentration in water"
 ExoTable,Turbidity_Raw,sonde-turb-raw,,,x * 1,,,
+ExoTable_Xtra,Chlorophyll_ugL,sonde-chlorophyl,µg/L,µg/L,x * 1,,,Chlorophyll concentration
+ExoTable_Xtra,Chlorophyll_RFU,sonde-chl-rfu,RFU,RFU,x * 1,,,Chlorophyll (relative fluorescence units)
+ExoTable_Xtra,Chlorophyll_Raw,sonde-chl-raw,unitless,unitless,x * 1,,,Chlorophyll (raw value)
+ExoTable_Xtra,Chlorophyll_cellsmL,sonde-chl-cells,cells/mL,cells/mL,x * 1,,,Chlorophyll cell count
+ExoTable_Xtra,Rhodamine_ugL,sonde-rhodamine,µg/L,µg/L,x * 1,,,Rhodamine concentration
+ExoTable_Xtra,TAL_PC_cellsmL,sonde-tal,cells/mL,cells/mL,x * 1,,,Total algae concentration
+ExoTable_Xtra,BGA_PC_ugL,sonde-bga-pc,µg/L,µg/L,x * 1,,,Blue-green algae concentration
+ExoTable_Xtra,BGA_PC_Raw,sonde-bga-pc-raw,unitless,unitless,x * 1,,,Blue-green algae (raw value)
