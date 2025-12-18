@@ -300,11 +300,11 @@ f <- function(fn, out_dir, design_table) {
 # We can optionally process in parallel
 if(params$run_parallel) {
     library(parallel)
-    apply_func = mclapply
+    apply_func <- mclapply
     options(mc.cores = max(detectCores() - 2, 1))
     message("Using parallel::mclapply with ", getOption("mc.cores"), " cores")
 } else {
-    apply_func = lapply
+    apply_func <- lapply
 }
 
 log_info("About to L1_normalize", logfile = params$logfile)
