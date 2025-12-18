@@ -1,0 +1,8 @@
+"TOA5","Compass_SWH_SWAMP_423","CR1000X","39601","CR1000X.8.4.0","CPU:COMPASS_v4-052425.CR1X","47668","SapflowA"
+"TIMESTAMP","RECORD","PB","Statname","BattV_Avg","DiffVoltA_Avg(1)","DiffVoltA_Avg(2)","DiffVoltA_Avg(3)","DiffVoltA_Avg(4)","DiffVoltA_Avg(5)","DiffVoltA_Avg(6)","DiffVoltA_Avg(7)","DiffVoltA_Avg(8)","DiffVoltA_Avg(9)","DiffVoltA_Avg(10)","DiffVoltA_Avg(11)","DiffVoltA_Avg(12)"
+"TS","RN","","","Volts","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV"
+"","","Smp","Smp","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg","Avg"
+"2025-12-01 00:00:00",2440,423,"COMPASS_SWH_SWAMP",11.87,0.45,0.436,0.421,0.363,0.392,0.31,0.415,0.409,0.303,0.335,0.298,0.377
+"2025-12-01 00:15:00",2441,423,"COMPASS_SWH_SWAMP",11.87,0.449,0.435,0.421,0.363,0.392,0.31,0.414,0.409,0.303,0.335,0.298,0.377
+"2025-12-01 00:30:00",2442,423,"COMPASS_SWH_SWAMP",11.87,0.449,0.435,0.421,0.363,0.392,0.31,0.414,0.409,0.303,0.335,0.298,0.377
+"2025-12-01 00:45:00",2443,423,"COMPASS_SWH_SWAMP",11.87,0.449,0.435,0.421,0.363,0.392,0.31,0.415,0.409,0.303,0.335,0.297,0.377

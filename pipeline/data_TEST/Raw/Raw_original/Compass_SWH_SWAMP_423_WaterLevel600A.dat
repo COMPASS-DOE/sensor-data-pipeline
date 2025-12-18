@@ -1,0 +1,8 @@
+"TOA5","Compass_SWH_SWAMP_423","CR1000X","39601","CR1000X.8.4.0","CPU:COMPASS_v4-052425.CR1X","47668","WaterLevel600A"
+"TIMESTAMP","RECORD","PB","Statname","Aquatroll_IDA(1)","Aquatroll_DevA(1)","Barometric_Pressure600A","Temperature600A","Actual_Conductivity600A","Specific_Conductivity600A","Salinity600A","TDS600A","Water_Density600A","Resistivity600A","pH600A","pH_mV600A","pH_ORP600A","RDO_concen600A","RDO_perc_sat600A","RDO_part_Pressure600A","Pressure600A","Depth600A","Voltage_Ext600A","Battery_Int600A"
+"TS","RN","","","","","mmHg","C","uS/cm","uS/cm","PSU","ppt","g/cm3","ohm-cm","pH","mV","ORP- mV","mg/L","%Sat","Torr","PSI","cm","V","%"
+"","","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp"
+"2025-12-01 00:00:00",2440,423,"COMPASS_SWH_SWAMP","713IN-SITU AT600V245 951927","7+0+12+127",769.34,13.85,436.86,555.1,0.27,0.36,0.999,2289.1,6.1,25.3,-394,0,0,-0.67,1.209,104.04,11.164,97
+"2025-12-01 00:15:00",2441,423,"COMPASS_SWH_SWAMP","713IN-SITU AT600V245 951927","7+0+12+127",769.6,13.85,436.26,554.34,0.27,0.36,0.999,2292.2,6.1,25.4,-392.8,0,0,-0.67,1.21,104.11,11.164,97
+"2025-12-01 00:30:00",2442,423,"COMPASS_SWH_SWAMP","713IN-SITU AT600V245 951927","7+0+12+127",769.7,13.85,436.36,554.49,0.27,0.36,0.999,2291.7,6.1,25.3,-393.1,0,0,-0.67,1.211,104.13,11.146,97
+"2025-12-01 00:45:00",2443,423,"COMPASS_SWH_SWAMP","713IN-SITU AT600V245 951927","7+0+12+127",769.88,13.85,436.39,554.53,0.27,0.36,0.999,2291.5,6.1,25.3,-393.2,0,0,-0.66,1.207,103.86,11.146,97

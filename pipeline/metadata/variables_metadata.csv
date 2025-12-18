@@ -3,7 +3,9 @@ Datalogger,BattV,battery-voltage,V,V,x * 1,11,13,Battery voltage of the data log
 Datalogger,SolarV,solar-voltage,V,V,x * 1,0,30,Solar/line voltage of the data logger
 Sapflow,DiffVolt_Avg,sapflow-3.5cm,mV,mV,x * 1,0,1,Raw sap flow at 3.5 cm depth
 Sapflow,DiffVolt_Avg,sapflow-5cm,mV,mV,x * 1,0,1,Raw sap flow at 5 cm depth
+RedoxTable,Redox,redox-5cm,mV,mV,x * 1,-2500,2500,"Redox at 5 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-10cm,mV,mV,x * 1,-2500,2500,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-15cm,mV,mV,x * 1,-2500,2500,"Redox at 15 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-20cm,mV,mV,x * 1,-2500,2500,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-2500,2500,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-2500,2500,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
@@ -132,3 +134,11 @@ ExoTable,TDS_mg_L,sonde-tds,mg/L,mg/L,x * 1,,,Total dissolved solids concentrati
 ExoTable,Vertical_Position_m,sonde-vpos,m,m,x * 1,,,
 ExoTable,Turbidity_FNU,sonde-turbidity,FNU,FNU,x * 1,0,4000,"Turbidity, indirect measurement of the suspended solid concentration in water"
 ExoTable,Turbidity_Raw,sonde-turb-raw,,,x * 1,,,
+ExoTable_Xtra,Chlorophyll_ugL,sonde-chlorophyl,µg/L,µg/L,x * 1,,,Chlorophyll concentration
+ExoTable_Xtra,Chlorophyll_RFU,sonde-chl-rfu,RFU,RFU,x * 1,,,Chlorophyll (relative fluorescence units)
+ExoTable_Xtra,Chlorophyll_Raw,sonde-chl-raw,unitless,unitless,x * 1,,,Chlorophyll (raw value)
+ExoTable_Xtra,Chlorophyll_cellsmL,sonde-chl-cells,cells/mL,cells/mL,x * 1,,,Chlorophyll cell count
+ExoTable_Xtra,Rhodamine_ugL,sonde-rhodamine,µg/L,µg/L,x * 1,,,Rhodamine concentration
+ExoTable_Xtra,TAL_PC_cellsmL,sonde-tal,cells/mL,cells/mL,x * 1,,,Total algae concentration
+ExoTable_Xtra,BGA_PC_ugL,sonde-bga-pc,µg/L,µg/L,x * 1,,,Blue-green algae concentration
+ExoTable_Xtra,BGA_PC_Raw,sonde-bga-pc-raw,unitless,unitless,x * 1,,,Blue-green algae (raw value)

@@ -56,7 +56,9 @@ gw-spec-cond,1 day,,threshold=8,1 hour,
 gw-tds,,,,1 hour,Files?
 gw-temperature-int,1 month,,threshold=8,1 hour,
 gw-voltage-ext,1 month,,threshold=8,1 hour,
+redox-5cm,1 week,,threshold=8,1 hour,
 redox-10cm,1 week,,threshold=8,1 hour,
+redox-15cm,1 week,,threshold=8,1 hour,
 redox-20cm,1 week,,threshold=8,1 hour,
 redox-35cm,1 week,,threshold=8,1 hour,
 redox-55cm,1 week,,threshold=8,1 hour,
@@ -79,6 +81,14 @@ sonde-turbidity,1 day,,threshold=8,1 hour,
 sonde-vpos,1 day,,threshold=8,1 hour,
 sonde-wipercur,1 month,,threshold=8,1 hour,
 sonde-wiperpos,,,,1 hour,Too variable; no QAQC
+sonde-chlorophyl,,,,,
+sonde-chl-rfu,,,,,
+sonde-chl-raw,,,,,
+sonde-chl-cells,,,,,
+sonde-rhodamine,,,,,
+sonde-tal,,,,,
+sonde-bga-pc,,,,,
+sonde-bga-pc-raw,,,,,
 wx-barpress15,,,,1 hour,Files?
 wx-bpmax15,,,,1 hour,Files?
 wx-bpmax24,,,,1 hour,Files?

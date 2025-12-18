@@ -1,0 +1,8 @@
+"TOA5","Compass_GWI_UP_413","CR1000X","28732","CR1000X.8.4.0","CPU:COMPASS_v4-052425.CR1X","24960","Redox15"
+"TIMESTAMP","RECORD","Statname","BattV","RedoxRa(1)","RedoxRa(2)","RedoxRa(3)","RedoxRa(4)","RedoxRa(5)","RedoxRa(6)","RedoxRa(7)","RedoxRa(8)","RedoxRa(9)","RedoxRa(10)","RedoxRa(11)","RedoxRa(12)","RedoxRb(1)","RedoxRb(2)","RedoxRb(3)","RedoxRb(4)","RedoxRb(5)","RedoxRb(6)","RedoxRb(7)","RedoxRb(8)","RedoxRb(9)","RedoxRb(10)","RedoxRb(11)","RedoxRb(12)"
+"TS","RN","","Volts","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV","mV"
+"","","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp","Smp"
+"2025-12-01 00:00:00",2356,"NAN",11.95,4559.668,4555.76,4551.798,4549.768,4559.861,4550.47,4551.007,4553.312,4550.771,4559.552,4554.98,4549.943,"NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN"
+"2025-12-01 00:15:00",2357,"NAN",11.95,4552.81,4556.586,4552.669,4559.576,4557.129,4559.1,4556.877,4559.553,4554.481,4550.096,4558.655,4557.998,"NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN"
+"2025-12-01 00:30:00",2358,"NAN",11.95,4558.649,4558.492,4559.891,4559.842,4551.556,4552.406,4558.288,4559.743,4555.508,4554.64,4557.74,4559.399,"NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN"
+"2025-12-01 00:45:00",2359,"NAN",11.95,4557.185,4558.961,4555.198,4549.886,4558.412,4558.94,4558.848,4550.105,4558.009,4553.951,4558.213,4555.621,"NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN","NAN"
