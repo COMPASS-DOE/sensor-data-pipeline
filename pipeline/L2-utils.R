@@ -147,7 +147,11 @@ compute_salinity <- function(T, VWC, EC) {
     cond_porewater <- (ep * EC) / (eb - esb0)
 
     # 2. Convert porewater EC to salinity
-    -2.060e-1 + 5.781e-4 * cond_porewater
+    sal <- -2.060e-1 + 5.781e-4 * cond_porewater
+
+    # 3. We impose a filter of 0-350, same as the AquaTROLL limits
+    sal[sal < 0 | sal > 350] <- NA_real_
+    return(sal)
 }
 
 `CALC_DERIVED_soil-salinity-10cm` <- function(x) {
