@@ -183,7 +183,7 @@ f <- function(fn, out_dir) {
     # of Instrument, Sensor, etc. This guarantees a smooth time series for
     # each sensor
     rows <- nrow(dat_summarised)
-    dat_complete <- L2_complete(dat_summarised) # function is in L2-utils
+    dat_complete <- L2_complete(dat_summarised) # function is in L2_qaqc-utils
     message("\tCompleted data; started with ", rows, 
             " rows...now ", nrow(dat_summarised))
     
