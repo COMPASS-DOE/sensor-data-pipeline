@@ -54,7 +54,7 @@ L2_complete <- function(x) {
         complete(x,
                  TIMESTAMP = timespan,
                  nesting(Site, Plot, Instrument, Instrument_ID, Sensor_ID, Location, research_name),
-                 fill = list(Value = NA_real_, n = 0, n_drop = 0))
+                 fill = list(Value = NA_real_, N_avg = 0, N_drop = 0))
     })
     do.call("rbind", y)
 }
