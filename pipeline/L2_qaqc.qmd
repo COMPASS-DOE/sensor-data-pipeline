@@ -92,13 +92,14 @@ f <- function(fn, out_dir) {
     message(Sys.time(), " Processing ", basename(fn))
 
     dat <- read_csv(fn, col_types = "ccTccccdcciii")
-    message("\tTotal data: ", nrow(dat), " rows, ", ncol(dat), " columns")
-
+    rn <- dat$research_name[1]
+    message("\t", rn, " total data: ", nrow(dat), " rows, ", ncol(dat), " columns")
+    
     # File-based summary
     smry <- data.frame(File = basename(fn), 
                        Site = dat$Site[1],
                        Plot = dat$Plot[1],
-                       research_name = dat$research_name[1],
+                       research_name = rn,
                        Year = unique(year(dat$TIMESTAMP)),
                        Rows = nrow(dat))
     
@@ -134,6 +135,7 @@ f <- function(fn, out_dir) {
         
     # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
     # based on the data interval and the max_gap_fill entry in the QAQC table
+    i <- which(qaqct$variable == rn)
     od_period <- period(qaqct$max_interp[i])
     if(is.na(od_period)) {
         stop("Invalid max_gap_fill entry for ", rn)
