@@ -131,7 +131,8 @@ for(i in seq_len(nrow(derived_vars))) {
     for(grp in files_needed_split) {
         if(nrow(grp) == 0) stop("This shouldn't happen!") 
         if(nrow(grp) < length(needs)) {
-            message("\tRequires ", length(needs), " variables but only ", nrow(grp), "are available")
+            message("\tRequires ", length(needs), " variables but only ",
+                    nrow(grp), "are available")
             next
         }
         
@@ -161,7 +162,7 @@ for(i in seq_len(nrow(derived_vars))) {
         newdat_list <- list()
         for(ins in instruments) {
             dat_needed_ins <- lapply(dat_needed, function(x) x[x$Instrument == ins,])
-            # If any of the instruments is missing needed data, it's not an error; just move on
+            # If any of the instruments is missing needed data, not an error; just move on
             if(any(sapply(dat_needed_ins, nrow) == 0)) {
                 message("\tInstrument ", ins, " is missing data; moving on")
                 next
@@ -220,8 +221,6 @@ for(i in seq_len(nrow(site_rn_table))) {
     if(nrow(these_files) == 0) stop("No files! This shouldn't happen")
     smry$Files[i] <- nrow(these_files)
     
-    message("\tReading ", nrow(these_files), 
-            ifelse(nrow(these_files) > 1, " files", " file"))
     file_data <- lapply(these_files$file, function(f) {
         if(grepl("parquet$", f)) {
             x <- read_parquet(f)
