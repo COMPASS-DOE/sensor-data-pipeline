@@ -57,63 +57,6 @@ files_to_process <- list.files(L1,
                                pattern = "[A-Z]{3}_[A-Z]+_[0-9]{8}-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 
-# **** TEMPORARY **** TODO
-files_to_process <- list.files(L1, 
-                               pattern = "SWH_SWAMP_2024(1130|0829)-[0-9]{8}_.+csv$", 
-                               full.names = TRUE, recursive = TRUE)
-
-# **** TEMPORARY **** TODO
-# For the initial L2 release we're just going to do a subset of the data
-research_names_initial_L2 <- 
-    c("battery-voltage",
-      
-      "sapflow-3.5cm",
-      
-      "soil-vwc-5cm",
-      "soil-temp-5cm",
-      "soil-EC-5cm",
-      "soil-vwc-10cm",
-      "soil-temp-10cm",
-      "soil-EC-10cm",
-      "soil-vwc-15cm",
-      "soil-temp-15cm",
-      "soil-EC-15cm",
-      "soil-vwc-30cm",
-      "soil-temp-30cm",
-      "soil-EC-30cm",
-      
-      "gw-salinity",
-      "gw-pressure",
-      "gw-density",
-      "gw-temperature",
-      
-      "wx-slr-fd15",
-      "wx-rain15",
-      "wx-tempavg15",
-      "wx-par-den15",
-      "wx-rh15",
-      
-      "wx-gcrew-rain15",
-      
-      "sonde-orp",
-      "sonde-ph",
-      "sonde-fdom",
-      "sonde-pressure",
-      "sonde-salinity",
-      "sonde-spcond")
-include <- rep(FALSE, length(files_to_process))
-# Add an underscore so that "gw_temperature" doesn't 
-# match "gw_temperature_int" for example
-research_names_initial_L2 <- paste0(research_names_initial_L2, "_")
-for(i in seq_along(research_names_initial_L2)) {
-    include <- include | 
-        grepl(research_names_initial_L2[i], files_to_process, fixed = TRUE)
-}
-message("Processing only ", sum(include), " of ", length(files_to_process), " files")
-files_to_process <- files_to_process[include]
-
-# **** END TEMPORARY **** TODO
-
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
 qaqct <- qaqct[!is.na(qaqct$variable),]
