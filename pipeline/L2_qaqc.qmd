@@ -54,7 +54,7 @@ L1 <- file.path(params$DATA_ROOT, params$L1)
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
 files_to_process <- list.files(L1, 
-                               pattern = "[A-Z]{3}_[A-Z]+_[0-9]{8}-[0-9]{8}_.+csv$", 
+                               pattern = "[A-Z]{3}_[A-Z]+[1-3]*_[0-9]{8}-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
