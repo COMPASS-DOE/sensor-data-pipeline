@@ -154,6 +154,19 @@ compute_salinity <- function(T, VWC, EC) {
     return(sal)
 }
 
+`CALC_DERIVED_soil-salinity-5cm` <- function(x) {
+
+    T <- x$`soil-temp-5cm`$Value
+    VWC <- x$`soil-vwc-5cm`$Value
+    EC <- x$`soil-EC-5cm`$Value
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`soil-EC-5cm`$Value <- compute_salinity(T, VWC, EC)
+    return(x$`soil-EC-5cm`)
+}
+
 `CALC_DERIVED_soil-salinity-10cm` <- function(x) {
 
     T <- x$`soil-temp-10cm`$Value
@@ -165,6 +178,19 @@ compute_salinity <- function(T, VWC, EC) {
     # the research_name and Type columns
     x$`soil-EC-10cm`$Value <- compute_salinity(T, VWC, EC)
     return(x$`soil-EC-10cm`)
+}
+
+`CALC_DERIVED_soil-salinity-15cm` <- function(x) {
+
+    T <- x$`soil-temp-15cm`$Value
+    VWC <- x$`soil-vwc-15cm`$Value
+    EC <- x$`soil-EC-15cm`$Value
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`soil-EC-15cm`$Value <- compute_salinity(T, VWC, EC)
+    return(x$`soil-EC-15cm`)
 }
 
 `CALC_DERIVED_soil-salinity-30cm` <- function(x) {
@@ -180,11 +206,24 @@ compute_salinity <- function(T, VWC, EC) {
     return(x$`soil-EC-30cm`)
 }
 
+`CALC_DERIVED_soil-salinity-40cm` <- function(x) {
+
+    T <- x$`soil-temp-40cm`$Value
+    VWC <- x$`soil-vwc-40cm`$Value
+    EC <- x$`soil-EC-40cm`$Value
+
+    # Pick one of our input data frames, overwrite its Value column,
+    # and return it. The calling code in L2.qmd will take care of changing
+    # the research_name and Type columns
+    x$`soil-EC-40cm`$Value <- compute_salinity(T, VWC, EC)
+    return(x$`soil-EC-40cm`)
+}
+
 
 # Well dimensions, for computing water level below surface
 WELL_DIMS <- readr::read_csv("metadata/L2_metadata/well_dimensions.csv",
                              comment = "#",
-                             col_types = "ccccddcddddd")
+                             col_types = "cccccddcddddd")
 WELL_DIMS$ground_to_sensor_cm <-
     with(WELL_DIMS, ring_to_pressure_sensor_cm -
              (well_top_to_ground_cm - bolt_to_cap_cm))
