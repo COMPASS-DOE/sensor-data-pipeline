@@ -18,7 +18,7 @@ params:
   DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_RELEASE_DATE: "???"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
-  L2_VERSION: "2-0"
+  L2_VERSION: "???"
   CODE_EXAMPLES: "code_examples_L2/"
   run_parallel: false
   write_plots: true
@@ -60,7 +60,7 @@ L2 <- file.path(params$DATA_ROOT, params$L2)
 # Find all L2_qaqc files and build a table of their
 # site/plot/research_name combinations
 files_to_process <- list.files(L2_QAQC, 
-                               pattern = "^[A-Z]{3}_[A-Z]{1,}_[0-9]{4}_.+(csv|parquet)$", 
+                               pattern = "^[A-Z]{3}_[A-Z]{1,}[1-3]*_[0-9]{4}_.+(csv|parquet)$", 
                                full.names = TRUE, recursive = TRUE)
 ftp_table <- tibble(file = files_to_process, filename = basename(files_to_process))
 ftp_table <- separate(ftp_table, filename, 
@@ -134,6 +134,7 @@ for(i in seq_len(nrow(derived_vars))) {
             message("\tRequires ", length(needs), " variables but only ", nrow(grp), "are available")
             next
         }
+        
         si <- grp$site[1]
         pl <- grp$plot[1]
         yr <- grp$year[1]
@@ -150,8 +151,25 @@ for(i in seq_len(nrow(derived_vars))) {
         })
         
         names(dat_needed) <- grp$research_name
-        # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
-        newdat <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed))
+
+        # We now have all the research-name data needed to compute derived variable "dv" for
+        # this site and plot and year. BUT it's possible that the relevant instruments didn't
+        # all measure the same thing. (This occurs at DLG, where we have TEROS12s measuring
+        # three variables but TEROS21s measuring only two. Argh.)
+        # So, calculate the derived variable instrument by instrument
+        instruments <- unique(unlist(sapply(dat_needed, function(x) x$Instrument)))
+        newdat_list <- list()
+        for(ins in instruments) {
+            dat_needed_ins <- lapply(dat_needed, function(x) x[x$Instrument == ins,])
+            # If any of the instruments is missing needed data, it's not an error; just move on
+            if(any(sapply(dat_needed_ins, nrow) == 0)) {
+                message("\tInstrument ", ins, " is missing data; moving on")
+                next
+            }
+            # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
+            newdat_list[[ins]] <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed_ins))
+        }
+        newdat <- do.call(rbind, newdat_list)
         # Set columns to show that this is derived data
         newdat$research_name <- dv
         newdat$N_avg <- newdat$N_drop <- NA
