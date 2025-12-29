@@ -81,14 +81,14 @@ sonde-turbidity,1 day,,threshold=8,1 hour,
 sonde-vpos,1 day,,threshold=8,1 hour,
 sonde-wipercur,1 month,,threshold=8,1 hour,
 sonde-wiperpos,,,,1 hour,Too variable; no QAQC
-sonde-chlorophyl,,,,,
-sonde-chl-rfu,,,,,
-sonde-chl-raw,,,,,
-sonde-chl-cells,,,,,
-sonde-rhodamine,,,,,
-sonde-tal,,,,,
-sonde-bga-pc,,,,,
-sonde-bga-pc-raw,,,,,
+sonde-chlorophyl,,,,1 hour,
+sonde-chl-rfu,,,,1 hour,
+sonde-chl-raw,,,,1 hour,
+sonde-chl-cells,,,,1 hour,
+sonde-rhodamine,,,,1 hour,
+sonde-tal,,,,1 hour,
+sonde-bga-pc,,,,1 hour,
+sonde-bga-pc-raw,,,,1 hour,
 wx-barpress15,,,,1 hour,Files?
 wx-bpmax15,,,,1 hour,Files?
 wx-bpmax24,,,,1 hour,Files?
