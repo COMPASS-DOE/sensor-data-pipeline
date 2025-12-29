@@ -7,8 +7,8 @@ Git commit: [GIT_COMMIT]
 DESCRIPTION
 —----------------------------------
 This is the Level 1 (L1) data release [VERSION] for COMPASS-FME
-environmental sensors located at field sites in the Lake Erie and
-Chesapeake Bay regions. L1 data are close to raw, but are
+environmental sensors located at field sites in the Lake Erie (LE) and
+Chesapeake Bay (CB) regions. L1 data are close to raw, but are
 units-transformed and have flags (out of instrument bounds, out of
 service, and possible outlier) added. Duplicates and missing data are
 removed but otherwise these data are not filtered, and have not been
@@ -66,7 +66,7 @@ Version 2-1 release [DATESTAMP]
 * TEMPEST AquaTROLL600 pressure is now corrected for atmospheric pressure; see site files 
 * The `sonde-depth` variable has been removed, as it was unreliable and misleading
 * New soil redox data streams at all CB sites
-* Plot elevation information is now available is the site metadata files
+* Plot elevation information is now available in the site metadata files
 
 Version 2-0 released 2025-07-07
 * Covers late 2019 through June 2025 for TEMPEST and all synoptic sites
