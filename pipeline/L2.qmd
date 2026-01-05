@@ -94,6 +94,10 @@ source("metadata-utils.R")
 
 vmd_combined <- combine_variable_metadata(L2_VAR_MD, derived_vars)
 
+# Don't write plot for test data; partial workaround for
+# https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/415
+WRITE_PLOTS <- !grepl("TEST", params$DATA_ROOT)
+
 unlink("log.txt") # quick local progress log
 ```
 
@@ -105,7 +109,7 @@ QAQC table has `r nrow(qaqct)` entries.
 
 L2 column metadata has `r nrow(column_md)` entries.
 
-Output directory is `r L2`.
+Output directory is `r L2` (WRITE_PLOTS is `r WRITE_PLOTS`).
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -300,7 +304,7 @@ for(i in seq_len(nrow(site_rn_table))) {
                          plot = pl,
                          variable_metadata = vmd_combined,
                          version = params$L2_VERSION,
-                         write_plots = params$write_plots) 
+                         write_plots = WRITE_PLOTS) 
     }
     
 }

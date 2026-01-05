@@ -190,7 +190,7 @@ driver_try(
 )
 copy_output("L2.html", outfile)
 L2_time <- format(round(difftime(Sys.time(), begin), 1))
-message("L2 step: ", L1_time)
+message("L2 step: ", L2_time)
 
 
 if(ERROR_OCCURRED) warning ("One or more errors occurred!")
