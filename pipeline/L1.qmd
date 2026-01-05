@@ -81,6 +81,10 @@ L1_VAR_MD <- L1_VAR_MD[L1_VAR_MD$research_name != "",]
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
 
+# Don't write plot for test data; partial workaround for
+# https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/415
+WRITE_PLOTS <- !grepl("TEST", params$DATA_ROOT)
+
 unlink("log.txt") # quick local progress log
 ```
 
@@ -90,7 +94,7 @@ QAQC table `r QAQC_TABLE` and has `r nrow(qaqct)` entries.
 
 L1 column metadata has `r nrow(column_md)` entries.
 
-Output directory is `r L1`.
+Output directory is `r L1` (WRITE_PLOTS is `r WRITE_PLOTS`).
 
 HTML outfile is "`r params$html_outfile`".
 
@@ -169,7 +173,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
                          plot = plot,
                          variable_metadata = L1_VAR_MD,
                          version = params$L1_VERSION,
-                         write_plots = params$write_plots)
+                         write_plots = WRITE_PLOTS)
        stop_timer("writing-data")
     }
     return(smry)
