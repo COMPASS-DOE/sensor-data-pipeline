@@ -47,6 +47,7 @@ This script
 ```{r init}
 #| include: false
 
+library(dplyr)
 library(tidyr)
 library(readr)
 library(lubridate)
@@ -174,7 +175,7 @@ for(i in seq_len(nrow(derived_vars))) {
             # Call CALC_DERIVED_{dv} (the calculation functions are in L2-utils.R)
             newdat_list[[ins]] <- do.call(paste0("CALC_DERIVED_", dv), list(dat_needed_ins))
         }
-        newdat <- do.call(rbind, newdat_list)
+        newdat <- bind_rows(newdat_list)
         # Set columns to show that this is derived data
         newdat$research_name <- dv
         newdat$N_avg <- newdat$N_drop <- NA
@@ -189,7 +190,7 @@ for(i in seq_len(nrow(derived_vars))) {
         new_record <- tibble(file = fqfn, filename = basename(fqfn),
                              site = si, plot = pl, year = yr,
                              research_name = dv)
-        ftp_table <- rbind(ftp_table, new_record)
+        ftp_table <- bind_rows(ftp_table, new_record)
     }
     # add dv info to variables metadata table
 }
@@ -242,7 +243,7 @@ for(i in seq_len(nrow(site_rn_table))) {
     })
     
     # Compute the mean annual cycle (MAC) across all sensors and files (years)
-    all_data <- do.call(rbind, file_data)
+    all_data <- bind_rows(file_data)
     if(all(is.na(all_data$Value))) {
         message("\tNo non-NA data in this file! Moving on")
         next
@@ -254,17 +255,16 @@ for(i in seq_len(nrow(site_rn_table))) {
     smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
                            format(max(all_data$TIMESTAMP), format = "%Y%m"),
                            sep = "-")
-    mac <- aggregate(Value ~ month + mday + hour + minute, 
-                     data = all_data, FUN = mean, na.action = na.omit)
-    colnames(mac)[colnames(mac) == "Value"] <- "mac"
+    all_data %>% group_by(month, mday, hour, minute) %>% 
+        summarise(mac = mean(Value, na.rm = TRUE), .groups = "drop") %>% 
+        filter(!is.nan(mac)) ->
+        mac
 
     # For each file's data, add mac column, gap fill, and write out
     for(j in seq_len(nrow(these_files))) {
         dat <- file_data[[j]]
         oldrows <- nrow(dat)
-        dat <- merge(dat, mac, 
-                     by = c("month", "mday", "hour", "minute"), 
-                     all.x = TRUE)
+        dat <- left_join(dat, mac, by = c("month", "mday", "hour", "minute"))
         stopifnot(nrow(dat) == oldrows) # sanity check
 
         # call gap-filling routine for each Instrument_ID and Sensor_ID
@@ -280,7 +280,7 @@ for(i in seq_len(nrow(site_rn_table))) {
             x$Value_GF_MAC <- fill_all_gaps(x$Value, x$mac)
             x
         })
-        dat_gf <- do.call(rbind, dat_gf_list)
+        dat_gf <- bind_rows(dat_gf_list)
         rownames(dat_gf) <- NULL
         # Transfer good values into gap-fill column
         nagf <- is.na(dat_gf$Value_GF_MAC)
