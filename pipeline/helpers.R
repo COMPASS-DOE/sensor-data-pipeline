@@ -359,6 +359,11 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
 # has occurred, some data rows will get repeated with the different possible
 # design links.
 #
+# The reason this isn't trivial (i.e., why we can't just filter out any
+# entries with a timestamp greater than the valid_through value) is that
+# *before* we hit the valid_through time point, there are two 'ok' entries
+# and we want to take the one with the minimum valid_through. Ugh!
+#
 # This function uses the object (i.e. group identifier; typically, Logger+
 # Table+Loggernet_variable), timestamp, and valid_through timestamps to identify
 # which rows to keep (correct design_link assignment) and which to drop.
