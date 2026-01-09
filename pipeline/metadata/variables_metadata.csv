@@ -65,6 +65,8 @@ ClimaVue50_15min,BP_mbar_Min,wx-bpmin15,mbar,mbar,x * 1,50000,110000,Minimum bar
 ClimaVue50_15min,BP_mbar_TMn,wx-bptmn15,,,x * 1,,,Time of minimum barometric pressure in 15 minute period
 ClimaVue50_15min,RH,wx-rh15,perc,perc,x * 1,0,100,Relative humidity
 ClimaVue50_15min,RHT_C_Avg,wx-rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
+ClimaVue50_15min,VPD_Max,wx-vpdmax15,kPa,kPa,x * 1,,,Maximum vapor pressure deficit in 15 minutes period
+ClimaVue50_15min,VPD_Min,wx-vpdmin15,kPa,kPa,x * 1,,,Minimum vapor pressure deficit in 15 minutes period
 ClimaVue50_15min,TiltNS_deg_Avg,wx-tilt-ns15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the N/S direction over 15 minute period
 ClimaVue50_15min,TiltWE_deg_Avg,wx-tilt-we15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the E/W direction over 15 minute period
 ClimaVue50_15min,Strikes_Tot,wx-strikes15,count,count,x * 1,0,65535,Total lightning strikes over 15 minute period
@@ -87,6 +89,7 @@ ClimaVue50_24hr,AirT_C_TMx,wx-temptmx24,,,x * 1,,,Time of maximum air temperatur
 ClimaVue50_24hr,AirT_C_Min,wx-tempmin24,degC,degC,x * 1,-50,60,Minimum air temperature over 24 hr period
 ClimaVue50_24hr,AirT_C_TMn,wx-temptmn24,,,x * 1,,,Time of minimum air temperature over 24 hr period
 ClimaVue50_24hr,VP_mbar_Avg,wx-vappress24,mbar,mbar,x * 1,0,470,Mean vapor pressure over 24 hr period
+ClimaVue50_24hr,BP,wx-barpress24,mbar,mbar,x * 1,50000,110000,Barometric pressure
 ClimaVue50_24hr,BP_mbar_Max,wx-bpmax24,mbar,mbar,x * 1,50000,110000,Maximum barometric pressure over 24 hr period
 ClimaVue50_24hr,BP_mbar_TMx,wx-bptmx24,,,x * 1,,,Time of maximum barometric pressure over 24 hr period
 ClimaVue50_24hr,BP_mbar_Min,wx-bpmin24,mbar,mbar,x * 1,50000,110000,Minimum barometric pressure over 24 hr period
@@ -96,6 +99,9 @@ ClimaVue50_24hr,RH_Min,wx-rht24,perc,perc,x * 1,0,100,Minimum relative humidity 
 ClimaVue50_24hr,RHT_C_Max,wx-rhtmax24,degC,degC,x * 1,-50,60,Maximum temperature of humidity sensor over 24 hr period
 ClimaVue50_24hr,RHT_C_Min,wx-rhtmin24,degC,degC,x * 1,-50,60,Minimum temperature of humidity sensor over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_Max,wx-tilt-ns24,degrees,degrees,x * 1,-90,90,Maximum degree of sensor tilt in the N/S direction over 24 hr period
+ClimaVue50_24hr,VPD_Avg,wx-vpd24,kPa,kPa,x * 1,,,Average vapor pressure deficit in 24 hr period
+ClimaVue50_24hr,VPD_Max,wx-vpdmax24,kPa,kPa,x * 1,,,Maximum vapor pressure deficit in 24 hr period
+ClimaVue50_24hr,VPD_Min,wx-vpdmin24,kPa,kPa,x * 1,,,Minimum vapor pressure deficit in 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMx,,,,x * 1,,,Time of maximum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_Min,,degrees,degrees,x * 1,-90,90,Minimum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMn,,,,x * 1,,,Time of minimum degree of sensor tilt in the N/S direction over 24 hr period
@@ -106,7 +112,7 @@ ClimaVue50_24hr,PAR_Den_C_Avg,wx-par-den24,µmol/m2/s,µmol/m2/s,x * 1,0,2000,Av
 ClimaVue50_24hr,PAR_Tot_C_Tot,wx-par-tot24,mmol/m2,mmol/m2,x * 1,,,Sum of total photosynthetically active radiation (PAR) flux density over 24 hr period
 ClimaVue50_24hr,CVMeta,,,,,,,"Current configuration of ClimaVue sensors (serial number, etc). Format is a13CAMPBELLCLIM50xxxxxx-yyyyyyyyy, where a is the SDI-12 address, xxxxxx is the model, and yyyyyyyyy is the serial number."
 GCREW_MET_15min,VP,wx-vp15,kPa,kPa,x * 1,,,"Vapor pressure, = RH*SVP/100; from the GCREW met station and only appears at GCW-W"
-GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficiti; from the GCREW met station and only appears at GCW-W
+GCREW_MET_15min,VPD,wx-vpd15,kPa,kPa,x * 1,,,Vapor pressure deficit
 GCREW_MET_15min,SVP,wx-svp15,kPa,kPa,x * 1,,,Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,WS_ms_RM_Min,wx-minws15,m/s,m/s,x * 1,0,30,Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
 GCREW_MET_15min,Rain_cm_Tot,wx-gcrew-rain15,cm,cm,x * 1,0,10,Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W

@@ -135,7 +135,6 @@ errors <- 0
 out <- list()
 
 out_dir <- L1_NORMALIZE
-design_table <- dt_ex
 
 for(i in seq_along(files_to_process)) {
     
@@ -165,7 +164,7 @@ for(i in seq_along(files_to_process)) {
 
     # Join with design table
     old_rows <- nrow(dat)
-    dat <- merge(dat, design_table,
+    dat <- merge(dat, dt_ex,
                  by = c("Logger", "Table", "loggernet_variable"),
                  sort = FALSE)
     # This is a left join, and normally should not have changed the number of rows
@@ -203,7 +202,7 @@ for(i in seq_along(files_to_process)) {
     if(!nrow(dat)) {
         message("\tNo research_names left; nothing to process")
         smry$Note <- "No research_names left; nothing to process"
-        return(smry)
+        next
     }
     
     # ------------- Unit conversion
