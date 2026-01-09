@@ -229,7 +229,7 @@ for(i in seq_along(files_to_process)) {
     # ------------- Out-of-bounds flags
     
     message("\tAdding OOB flags")
-    dat <- left_join(dat, bt, by = c("research_name", "units"))
+    dat <- merge(dat, bt, by = c("research_name", "units"))
     dat$F_OOB <- as.integer(with(dat, Value < low_bound | Value > high_bound))
     smry$`OOB%` <- round(sum(dat$F_OOB) / nrow(dat) * 100, 1)
     dat$low_bound <- dat$high_bound <- NULL
