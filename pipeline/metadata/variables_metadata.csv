@@ -67,6 +67,8 @@ ClimaVue50_15min,RH,wx-rh15,perc,perc,x * 1,0,100,Relative humidity
 ClimaVue50_15min,RHT_C_Avg,wx-rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
 ClimaVue50_15min,VPD_Max,wx-vpdmax15,kPa,kPa,x * 1,,,Maximum vapor pressure deficit in 15 minutes period
 ClimaVue50_15min,VPD_Min,wx-vpdmin15,kPa,kPa,x * 1,,,Minimum vapor pressure deficit in 15 minutes period
+ClimaVue50_15min,VPD_TMx,wx-vpdtmx15,,,x * 1,,,Time of maximum vapor pressure deficit in 15 minutes period
+ClimaVue50_15min,VPD_TMn,wx-vpdtmn15,,,x * 1,,,Time of minimum vapor pressure deficit in 15 minutes period
 ClimaVue50_15min,TiltNS_deg_Avg,wx-tilt-ns15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the N/S direction over 15 minute period
 ClimaVue50_15min,TiltWE_deg_Avg,wx-tilt-we15,degrees,degrees,x * 1,,,Average degree of sensor tilt in the E/W direction over 15 minute period
 ClimaVue50_15min,Strikes_Tot,wx-strikes15,count,count,x * 1,0,65535,Total lightning strikes over 15 minute period
@@ -102,6 +104,8 @@ ClimaVue50_24hr,TiltNS_deg_Max,wx-tilt-ns24,degrees,degrees,x * 1,-90,90,Maximum
 ClimaVue50_24hr,VPD_Avg,wx-vpd24,kPa,kPa,x * 1,,,Average vapor pressure deficit in 24 hr period
 ClimaVue50_24hr,VPD_Max,wx-vpdmax24,kPa,kPa,x * 1,,,Maximum vapor pressure deficit in 24 hr period
 ClimaVue50_24hr,VPD_Min,wx-vpdmin24,kPa,kPa,x * 1,,,Minimum vapor pressure deficit in 24 hr period
+ClimaVue50_24hr,VPD_TMx,wx-vpdtmx24,,,x * 1,,,Time of maximum vapor pressure deficit in 24 hr period
+ClimaVue50_24hr,VPD_TMn,wx-vpdtmn24,,,x * 1,,,Time of minimum vapor pressure deficit in 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMx,,,,x * 1,,,Time of maximum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_Min,,degrees,degrees,x * 1,-90,90,Minimum degree of sensor tilt in the N/S direction over 24 hr period
 ClimaVue50_24hr,TiltNS_deg_TMn,,,,x * 1,,,Time of minimum degree of sensor tilt in the N/S direction over 24 hr period
