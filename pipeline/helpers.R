@@ -34,6 +34,7 @@ new_section <- function(name, logfile = LOGFILE, root = ROOT) {
     log_info(name)
 }
 
+can_convert_to_numeric <- function(x) grepl("^[+-]?([0-9]*(\\.([0-9]+))?)$", x)
 
 # Copy quarto html output and log result
 copy_output <- function(from, to, overwrite = TRUE) {
@@ -298,7 +299,8 @@ write_to_folders <- function(x, root_dir,
 
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels
-            if(write_plots && write_this_plot) {
+            has_numeric_data <- any(can_convert_to_numeric(dat$Value))
+            if(has_numeric_data && write_plots && write_this_plot) {
                 plot_filename <- file.path(folder, paste0(filename, ".pdf"))
                 ggsave(plot_filename, plot = p, width = 10, height = 7, device = cairo_pdf)
             }

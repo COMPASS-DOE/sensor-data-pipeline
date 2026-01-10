@@ -164,9 +164,8 @@ for(i in seq_along(files_to_process)) {
 
     # Join with design table
     old_rows <- nrow(dat)
-    dat <- merge(dat, dt_ex,
-                 by = c("Logger", "Table", "loggernet_variable"),
-                 sort = FALSE)
+    dat <- left_join(dat, dt_ex,
+                 by = c("Logger", "Table", "loggernet_variable"))
     # This is a left join, and normally should not have changed the number of rows
     # The exception would be if a sensor has been reassigned; in that case it will have
     # >1 entry in the design table, with the "valid_through" column controlling when the
@@ -217,20 +216,31 @@ for(i in seq_along(files_to_process)) {
                 paste(missing_units, collapse = "\n\t\t"))
     }
     
-    message("\tDoing unit conversion")
-    # At this point everything in the value column should be numeric
-    dat$value <- as.numeric(dat$value)
-    dat <- unit_conversion(dat, ut)
-    nd <- names(dat)
-    names(dat)[nd == "value"] <- "value_raw"
-    names(dat)[nd == "value_conv"] <- "Value"
+    nums <- can_convert_to_numeric(dat$value)
+    message("\tDoing unit conversion (for ", sum(nums), "/", nrow(dat), " numeric)")
+    # The value column may have both numeric and character entries
+    # (e.g., time of max temperature); identify and run unit conversion
+    # and out-of-bounds checking on the former.
+    value_nums <- as.numeric(dat$value[nums])
+    uc_out <- unit_conversion(value_nums, dat$research_name[nums], ut)
+
+    # Rename value to value_raw; copy to Value; overwrite numeric
+    # entries with converted values and add corresponding units column
+    names(dat)[names(dat) == "value"] <- "value_raw"
+    dat$Value <- dat$value_raw
+    dat$Value[nums] <- as.character(uc_out$value_conv)
+    dat$units <- ""
+    dat$units[nums] <- uc_out$units
 
     # ------------- Out-of-bounds flags
     
     message("\tAdding OOB flags")
-    dat <- merge(dat, bt, by = c("research_name", "units"))
-    dat$F_OOB <- as.integer(with(dat, Value < low_bound | Value > high_bound))
-    smry$`OOB%` <- round(sum(dat$F_OOB) / nrow(dat) * 100, 1)
+    dat <- left_join(dat, bt, by = c("research_name", "units"))
+    dat$F_OOB <- NA_integer_
+    vals <- as.numeric(dat$Value[nums])
+    dat$F_OOB[nums] <- as.integer(
+        vals < dat$low_bound[nums] | vals > dat$high_bound[nums])
+    smry$`OOB%` <- round(sum(dat$F_OOB[nums]) / length(nums) * 100, 1)
     dat$low_bound <- dat$high_bound <- NULL
 
     # ------------- Out-of-service flags
@@ -279,7 +289,7 @@ for(i in seq_along(files_to_process)) {
     # reassigned in June 2025 to DELUGE.
     # Since this is only an issue for L1_normalize, we handle it here and
     # keep write_to_folders() blissfully ignorant
-    dat_split <- split(dat, paste(dat$Site, dat$Plot))
+    dat_split <- split(dat, paste(dat$Site, dat$Plot, dat$Logger, dat$Table))
     for(ds in dat_split) {
         write_to_folders(ds,
                          root_dir = out_dir,

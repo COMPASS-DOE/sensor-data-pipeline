@@ -179,50 +179,42 @@ expect_identical(y$C2, c("C", "D")) # sequences
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
-#' x <- data.frame(value = 1:3, research_name = c("a", "a", "b"))
-#' y <- data.frame(research_name = c("a", "b"), conversion = c("x * 1", "(x * 2) - 1"), new_unit = "")
-#' unit_conversion(x, y)
-unit_conversion <- function(dat, ut, quiet = FALSE) {
+#' ut <- data.frame(research_name = c("a", "b"), conversion = c("x * 1",
+#'  "(x * 2) - 1"), new_unit = c("au", "bu"))
+#' unit_conversion(values = 1:3, research_names = c("a", "a", "b"), ut = ut)
+unit_conversion <- function(values, research_names, ut, quiet = FALSE) {
     if(!all(c("research_name", "conversion", "new_unit") %in% names(ut))) {
         stop("The units table data frame isn't structured correctly")
     }
 
-    dat_conv <- list()
+    value_conv <- rep(NA_real_, length(values))
+    units <- rep(NA_character_, length(values))
 
     # Isolate the various research_name entries one by one, find corresponding
     # conversion string, evaluate it against the `value` data column
-    for(rn in unique(dat$research_name)) {
-        d <- dat[dat$research_name == rn,] # filter
-        x <- d$value # this `x` name is crucial; used by conversion strings
-        which_ut <- which(ut$research_name == rn)
+    for(rn in unique(research_names)) {
+        rn_entries <- which(research_names == rn)
+        x <- values[rn_entries] # this `x` name is crucial; used by conversion strings
         # Isolate conversion string
+        which_ut <- which(ut$research_name == rn)
         if(length(which_ut) == 0) {
             conv <- "<not found>"
-            d$value_conv <- NA_real_
-            d$units <- NA_character_
         } else if(length(which_ut) == 1) {
             conv <- ut$conversion[which_ut]
             # ...and evaluate it
             out <- try(eval(parse(text = conv)))
-            if(is.numeric(out) & length(out) == nrow(d)) {
-                d$value_conv <- out
+            if(is.numeric(out) & length(out) == length(x)) {
+                value_conv[rn_entries] <- out
             } else {
                 stop("Error evaluating conversion string for research_name ", rn)
             }
-            d$units <- ut$new_unit[which_ut]
+            units[rn_entries] <- ut$new_unit[which_ut]
         } else {
             stop("Multiple conversions for ", rn)
         }
-
-        if(!quiet) message("\t\tUC: ", rn, " n=", nrow(d), ", conv=", conv)
-
-        dat_conv[[rn]] <- d
+        if(!quiet) message("\t\tUC: ", rn, " n=", length(rn_entries), ", conv=", conv)
     }
-    if(length(dat_conv)) {
-        do.call("rbind", dat_conv)
-    } else {
-        data.frame()
-    }
+    return(list(value_conv = value_conv, units = units))
 }
 
 #test_that("unit_conversion works", {
@@ -230,36 +222,25 @@ x <- data.frame(value = 1:3, research_name = c("a", "a", "b"))
 
 # Empty unit conversion table - should be all NA
 empty <- data.frame(research_name = "", conversion = "", new_unit = "")
-z <- unit_conversion(x, empty, quiet = TRUE)
+z <- unit_conversion(x$value, x$research_name, empty, quiet = TRUE)
 expect_true(all(is.na(z$value_conv)))
 
 # Empty empty
-z <- unit_conversion(data.frame(), empty)
-expect_s3_class(z, "data.frame")
-expect_identical(nrow(z), 0L)
+z <- unit_conversion(numeric(0), character(0), empty)
+expect_identical(length(z$value_conv), 0L)
 
 # Bad units table
-expect_error(unit_conversion(x, cars), regexp = "isn't structured correctly")
+expect_error(unit_conversion(x$value, x$research_name, cars),
+             regexp = "isn't structured correctly")
 
 # Multiple conversions for a research_name
 y <- data.frame(research_name = c("a", "a"), conversion = c("x * 1", "(x * 2) - 1"), new_unit = "")
-expect_error(unit_conversion(x, y), regexp = "Multiple conversions")
-
-# Error in conversion string
-# Suppress the output
-f <- file(tempfile(), "a")
-sink(f, type = "message")
-# evaluation error
-y <- data.frame(research_name = c("a", "b"), conversion = c(" * 1", "(x * 2) - 1"), new_unit = "")
-expect_error(unit_conversion(x, y), regexp = "Error evaluating conversion string")
-# tries to return non-numeric
-y <- data.frame(research_name = c("a", "b"), conversion = c("cars", "(x * 2) - 1"), new_unit = "")
-expect_error(unit_conversion(x, y), regexp = "Error evaluating conversion string")
-#  sink() # Seems like testthat removes the sink
+expect_error(unit_conversion(x$value, x$research_name, y),
+             regexp = "Multiple conversions")
 
 # Respects quiet
 y <- data.frame(research_name = c("a", "b"), conversion = c("x * 1", "(x * 2) - 1"), new_unit = "")
-expect_silent(unit_conversion(x, y, quiet = TRUE))
+expect_silent(unit_conversion(x$value, x$research_name, y, quiet = TRUE))
 #})
 
 

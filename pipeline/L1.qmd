@@ -110,7 +110,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
     
     # Read all files in a folder
     start_timer("reading-data")
-    dat_raw <- read_csv_group(d, quiet = TRUE, col_types = "cccccTdccccccccdii")
+    dat_raw <- read_csv_group(d, quiet = TRUE, col_types = "ccTcccccccccccccii")
     stop_timer("reading-data")
     
     message("\tTotal data: ", nrow(dat_raw), " rows, ", ncol(dat_raw), " columns")
