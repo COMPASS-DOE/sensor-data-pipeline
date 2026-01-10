@@ -139,7 +139,7 @@ f <- function(dir_name, dirs_to_process, out_dir) {
         message("\tNo outlier detection")
     } else {
         otherparams <- qaqct$params[i]
-        message("\tRunning outlier algorithm ", algo, otherparams)
+        message("\tRunning outlier algorithm ", algo, ", ", otherparams)
         dat <- do_outlier_test(dat, 
                                algo, 
                                time_grouping = qaqct$time_grouping[i], 

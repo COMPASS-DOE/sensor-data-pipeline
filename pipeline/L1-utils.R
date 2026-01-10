@@ -65,10 +65,12 @@ do_outlier_test <- function(x, algorithm, time_grouping, otherparams) {
     flag_name <- paste0("F_", algorithm)
 
     # Construct expression (the call to QAQC_mad) to evaluate
+    # The Value column is character but, since we're here, guaranteed
+    # to be convertible to numeric
     if(is.na(otherparams)) {
-        expr <- paste(function_name, "(x$Value)")
+        expr <- paste(function_name, "(as.numeric(x$Value))")
     } else {
-        expr <- paste(function_name, "(x$Value,", otherparams, ")")
+        expr <- paste(function_name, "(as.numeric(x$Value),", otherparams, ")")
     }
 
     # For each group, call the QAQC function
