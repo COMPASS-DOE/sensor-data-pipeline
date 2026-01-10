@@ -1,11 +1,11 @@
 Sweet Hall Marsh (SWH) is one of the COMPASS-FME synoptic sites located
 in the tidal fresh Pamunkey River, one of the two tributaries of the
 York River in Virginia, USA. This site consists of four plots: upland
-("UP"; located at 37.5708N, 76.8954W), swamp ("SWAMP"; located at
-37.57069N, 76.8957W), transition ("TR"; 37.56883N, 76.8964W), and
-wetland ("W"; 37.56659N, 76.8970W). It was established in June 2023.
-This site is also identified as a Chesapeake Bay National Research
-Reserve site.
+("UP"; located at 37.5708N, 76.8954W, elevation 0.98m asl), swamp
+("SWAMP"; located at 37.57069N, 76.8957W, 0.72m), transition ("TR";
+37.56883N, 76.8964W, 0.45m), and wetland ("W"; 37.56659N, 76.8970W,
+0.18m). It was established in June 2023. This site is also identified as
+a Chesapeake Bay National Research Reserve site.
 
 NOTE: Meteorological data for SWH are available in the SWH-W files.
 NOTE: The "02D" sapflow sensor in the SWAMP plot was accidentally

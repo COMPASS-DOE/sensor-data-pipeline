@@ -1,8 +1,8 @@
 Goodwin Island (GWI) is one of COMPASS-FME synoptic sites, and has three
-plots: upland ("UP"; located at 37.2192N, 76.4087W), transition ("TR";
-37.2194N, 76.4092W), and wetland ("W"; 37.2189N, 76.4101W). The site was
-established in June 2022 and is also identified as a Chesapeake Bay
-National Research Reserve site.
+plots: upland ("UP"; located at 37.2192N, 76.4087W, elevation 0.99m
+asl), transition ("TR"; 37.2194N, 76.4092W, 0.58m), and wetland ("W";
+37.2189N, 76.4101W, 0.48m). The site was established in June 2022 and is
+also identified as a Chesapeake Bay National Research Reserve site.
 
 NOTE: Meteorological data for GWI are available in the GWI-W files.
 NOTE: The ClimaVue logging frequency changed from 1 hour to 15 minutes
