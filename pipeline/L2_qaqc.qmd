@@ -91,7 +91,7 @@ dat_issues <- 0
 f <- function(fn, out_dir) {
     message(Sys.time(), " Processing ", basename(fn))
 
-    dat <- read_csv(fn, col_types = "ccTccccdcciii")
+    dat <- read_csv(fn, col_types = "ccTccccccciii")
     rn <- dat$research_name[1]
     message("\t", rn, " total data: ", nrow(dat), " rows, ", ncol(dat), " columns")
     
@@ -129,25 +129,31 @@ f <- function(fn, out_dir) {
     rows <- nrow(dat_summarised)
     dat_complete <- L2_complete(dat_summarised) # function is in L2_qaqc-utils
     message("\tCompleted data; started with ", rows, 
-            " rows...now ", nrow(dat_summarised))
+            " rows...now ", nrow(dat_complete))
     
     # Interpolate across small gaps for each site, plot, instrument, and sensor
         
     # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
     # based on the data interval and the max_gap_fill entry in the QAQC table
-    i <- which(qaqct$variable == rn)
-    od_period <- period(qaqct$max_interp[i])
-    if(is.na(od_period)) {
-        stop("Invalid max_gap_fill entry for ", rn)
+    if(is.numeric(dat_complete$Value)) {
+        i <- which(qaqct$variable == rn)
+        od_period <- period(qaqct$max_interp[i])
+        if(is.na(od_period)) {
+            stop("Invalid max_gap_fill entry for ", rn)
+        }
+        maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
+        na_vals <- is.na(dat_complete$Value)
+        message("\tGap-filling data with maxgap = ", maxgap)
+        dat_interped <- L2_linear_interp(dat_complete, maxgap = maxgap)
+        new_na_vals <- is.na(dat_interped$Value)
+        message("\t\tStarted with ", sum(na_vals), 
+                " missing values...now ", sum(new_na_vals))
+        smry$Filled <- sum(na_vals & !new_na_vals)
+    } else {
+        message("\tNo gap-filling; Value is not numeric")
+        dat_interped <- dat_complete
+        smry$Filled <- 0L
     }
-    maxgap <- od_period / data_period # e.g., 1 hour / 15 min = 4
-    na_vals <- is.na(dat_complete$Value)
-    message("\tGap-filling data with maxgap = ", maxgap)
-    dat_interped <- L2_linear_interp(dat_complete, maxgap = maxgap)
-    new_na_vals <- is.na(dat_interped$Value)
-    message("\t\tStarted with ", sum(na_vals), 
-            " missing values...now ", sum(new_na_vals))
-    smry$Filled <- sum(na_vals & !new_na_vals)
     
     message("\tWriting...")
     write_to_folders(dat_interped,

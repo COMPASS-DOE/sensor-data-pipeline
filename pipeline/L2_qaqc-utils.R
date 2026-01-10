@@ -10,16 +10,29 @@ library(testthat)
 # the base R solutions for this step are super slow and we are short on time
 library(dplyr)
 L2_aggregate <- function(x) {
-    x %>%
-        group_by(Site, Plot, TIMESTAMP, Instrument, Instrument_ID,
-                 Sensor_ID, Location, research_name) %>%
-        summarise(Value = mean(Value[!F_drop]),
-                  N_avg = sum(!is.na(F_drop) & !is.na(Value), na.rm = TRUE),
-                  N_drop = sum(F_drop, na.rm = TRUE),
-                  .groups = "drop") ->
-        x_out
+    x <- x %>% group_by(Site, Plot, TIMESTAMP, Instrument, Instrument_ID,
+                  Sensor_ID, Location, research_name)
+    if(all(can_convert_to_numeric(x$Value))) {
+        # numeric Value column
+        x$Value <- as.numeric(x$Value)
+        x %>%
+            summarise(Value = mean(Value[!F_drop]),
+                      N_avg = sum(!is.na(F_drop) & !is.na(Value), na.rm = TRUE),
+                      N_drop = sum(F_drop, na.rm = TRUE),
+                      .groups = "drop") ->
+            x_out
+        x_out$Value[is.nan(x_out$Value)] <- NA
+    } else {
+        # character Value column
+        x %>%
+            summarise(Value = if_else(length(unique(Value)) == 1,
+                                      Value[1], NA_character_),
+                      N_avg = sum(!is.na(F_drop) & !is.na(Value), na.rm = TRUE),
+                      N_drop = sum(F_drop, na.rm = TRUE),
+                      .groups = "drop") ->
+            x_out
+    }
 
-    x_out$Value[is.nan(x_out$Value)] <- NA
     return(x_out)
 }
 
@@ -54,7 +67,7 @@ L2_complete <- function(x) {
         complete(x,
                  TIMESTAMP = timespan,
                  nesting(Site, Plot, Instrument, Instrument_ID, Sensor_ID, Location, research_name),
-                 fill = list(Value = NA_real_, N_avg = 0, N_drop = 0))
+                 fill = list(Value = NA, N_avg = 0, N_drop = 0))
     })
     do.call("rbind", y)
 }

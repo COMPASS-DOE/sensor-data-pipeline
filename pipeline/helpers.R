@@ -34,7 +34,9 @@ new_section <- function(name, logfile = LOGFILE, root = ROOT) {
     log_info(name)
 }
 
-can_convert_to_numeric <- function(x) grepl("^[+-]?([0-9]*(\\.([0-9]+))?)$", x)
+can_convert_to_numeric <- function(x) {
+    grepl("^[+-]?([0-9]*(\\.([0-9]+))?)$", x) | is.na(x) # NAs count as numeric
+}
 
 # Copy quarto html output and log result
 copy_output <- function(from, to, overwrite = TRUE) {

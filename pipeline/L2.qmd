@@ -73,7 +73,7 @@ ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
 
-# Get the variables metadata
+# Get the variables' metadata
 L2_VAR_MD <- read.csv(file.path(params$METADATA_ROOT,
                                 params$METADATA_VARS_TABLE))
 
@@ -244,8 +244,8 @@ for(i in seq_len(nrow(site_rn_table))) {
     
     # Compute the mean annual cycle (MAC) across all sensors and files (years)
     all_data <- bind_rows(file_data)
-    if(all(is.na(all_data$Value))) {
-        message("\tNo non-NA data in this file! Moving on")
+    if(all(is.na(all_data$Value)) | !is.numeric(all_data$Value)) {
+        message("\tNo non-NA numeric data in this file! Moving on")
         next
     }
 
