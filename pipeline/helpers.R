@@ -304,6 +304,9 @@ write_to_folders <- function(x, root_dir,
             has_numeric_data <- any(can_convert_to_numeric(dat$Value))
             if(has_numeric_data && write_plots && write_this_plot) {
                 plot_filename <- file.path(folder, paste0(filename, ".pdf"))
+                if(!quiet) message("\tWriting plot to ",
+                                   basename(folder), "/", plot_filename)
+
                 ggsave(plot_filename, plot = p, width = 10, height = 7, device = cairo_pdf)
             }
 
