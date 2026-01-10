@@ -277,22 +277,22 @@ for(i in seq_len(nrow(site_rn_table))) {
                 stop("This isn't good; in ", paste(i, j, si, pl, rn))
             }
             x <- x[order(x$TIMESTAMP),]
-            x$Value_GF_MAC <- fill_all_gaps(x$Value, x$mac)
+            x$Value_MAC <- fill_all_gaps(x$Value, x$mac)
             x
         })
         dat_gf <- bind_rows(dat_gf_list)
         rownames(dat_gf) <- NULL
         # Transfer good values into gap-fill column
-        nagf <- is.na(dat_gf$Value_GF_MAC)
-        dat_gf$Value_GF_MAC[nagf] <- dat_gf$Value[nagf]
+        nagf <- is.na(dat_gf$Value_MAC)
+        dat_gf$Value_MAC[nagf] <- dat_gf$Value[nagf]
         message("\tGap filled ", 
-                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$Value_GF_MAC)),
+                sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$Value_MAC)),
                 " values in ", these_files$filename[j])
         # Update the summary and files-to-process tables
         f <- which(these_files$filename[j] == ftp_table$filename)
         ftp_table$N_vals[f] <- sum(!is.na(dat_gf$Value))
-        ftp_table$N_vals_gf[f] <- sum(!is.na(dat_gf$Value_GF_MAC))
-        smry$N_vals_gf[i] <- smry$N_vals_gf[i] + sum(!is.na(dat_gf$Value_GF_MAC))
+        ftp_table$N_vals_gf[f] <- sum(!is.na(dat_gf$Value_MAC))
+        smry$N_vals_gf[i] <- smry$N_vals_gf[i] + sum(!is.na(dat_gf$Value_MAC))
         
         # Clean up and check that the data frame has correct columns
         dat_gf <- check_drop_sort_columns(dat_gf, column_md, params$METADATA_COLUMNS_TABLE)
