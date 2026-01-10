@@ -24,6 +24,8 @@ files <- list.files("./", pattern = regex, recursive = TRUE, full.names = TRUE)
 library(readr)
 dat <- lapply(files, function(f) {
     message("Reading ", basename(f))
+    # NOTE this assumes you're reading a numeric variable, not a
+    # time-of-min/max like wx-tempmax15, wx-bptmn24, etc.
     read_csv(f, col_types = "ccTccccdcclll")
 })
 dat <- do.call("rbind", dat)
