@@ -11,8 +11,6 @@ params:
   timestamp_round: "15 min"
   METADATA_ROOT: "metadata/"
   L2_METADATA: "L2_metadata/"
-  L2_VERSION: "???"
-  write_plots: false
   logfile: ""
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
@@ -166,7 +164,7 @@ f <- function(fn, out_dir) {
     return(smry)
 }
 
-log_info("About to L2", logfile = params$logfile)
+log_info("About to L2_qaqc", logfile = params$logfile)
 tryCatch({
     out <- lapply(files_to_process, f, out_dir = L2_QAQC)
 },
