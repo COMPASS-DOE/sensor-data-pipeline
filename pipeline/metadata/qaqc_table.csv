@@ -137,7 +137,17 @@ wx-vappress15,1 month,,threshold=8,1 hour,
 wx-vappress24,1 month,,threshold=8,1 hour,
 wx-vp15,,,,1 hour,Files?
 wx-vpd15,,,,1 hour,Files?
+wx-vpdmax15,,,,1 hour,
+wx-vpdmin15,,,,1 hour,
+wx-vpdtmx15,,,,1 hour,
+wx-vpdtmn15,,,,1 hour,
+wx-vpd24,,,,1 hour,
+wx-vpdmax24,,,,1 hour,
+wx-vpdmin24,,,,1 hour,
+wx-vpdtmx24,,,,1 hour,
+wx-vpdtmn24,,,,1 hour,
 wx-winddir-sd115,,,,1 hour,Too variable; no QAQC
 wx-winddir15,,,,1 hour,Too variable; no QAQC
 wx-winderrors24,,,,1 hour,Files?
 wx-windspeed15,,,,1 hour,Too variable; no QAQC
+wx-barpress24,,,,1 hour,

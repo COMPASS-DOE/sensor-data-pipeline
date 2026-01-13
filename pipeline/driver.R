@@ -159,7 +159,6 @@ begin <- Sys.time()
 driver_try(
     quarto_render("L2_qaqc.qmd",
               execute_params = list(DATA_ROOT = ROOT,
-                                    L2_VERSION = VERSION,
                                     html_outfile = outfile))
 )
 copy_output("L2_qaqc.html", outfile)

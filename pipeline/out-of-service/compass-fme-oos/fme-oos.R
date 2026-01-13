@@ -89,3 +89,5 @@ exo <- read_csv("out-of-service/compass-fme-oos/exo_log.csv",
                 col_types = "cdDDDDcc")
 oos_exo <- prep_exo_oos_table(exo)
 # This tibble should be written as "ExoTable.csv"
+
+message("All done. See comments about writing oos_troll and oos_exo")

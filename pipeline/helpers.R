@@ -34,6 +34,15 @@ new_section <- function(name, logfile = LOGFILE, root = ROOT) {
     log_info(name)
 }
 
+# Identify which elements of a vector can be converted to numeric
+# I tried using a regex, but it's very complicated and prone to edge case failure
+# So just do the conversion and test what resulted in NA
+can_convert_to_numeric <- function(x) {
+    suppressWarnings(
+        y <- as.numeric(x)
+    )
+    return(is.na(x) | !is.na(y))
+}
 
 # Copy quarto html output and log result
 copy_output <- function(from, to, overwrite = TRUE) {
@@ -215,6 +224,8 @@ write_to_folders <- function(x, root_dir,
                      paste(site, logger, table, y))
             }
 
+            is_numeric_data <- all(can_convert_to_numeric(dat$Value))
+
             # Construct folder and file names based on data_level
             time_period <- paste(format(min(dat$TIMESTAMP), format = "%Y%m%d"),
                                  format(max(dat$TIMESTAMP), format = "%Y%m%d"),
@@ -234,8 +245,11 @@ write_to_folders <- function(x, root_dir,
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, plot, time_period, rn, data_level, vversion, sep = "_")
                 na_string <- NA_STRING_L1
-                write_this_plot <- TRUE
-                p <- make_L1_plot(x, vmd, filename)
+                if(is_numeric_data){
+                    write_this_plot <- TRUE
+                    dat$Value <- as.numeric(dat$Value)
+                    p <- make_L1_plot(dat, vmd, filename)
+                }
             } else if(data_level == "L2_qaqc") {
                 folder <- file.path(root_dir, paste(site, y, sep = "_"))
                 filename <- paste(site, plot, y, rn, data_level, vversion, sep = "_")
@@ -250,10 +264,13 @@ write_to_folders <- function(x, root_dir,
                 } else {
                     folder <- file.path(root_dir, paste(site, y, sep = "_"))
 
-                    write_this_plot <- TRUE
-                    # Isolate this research name's metadata
-                    vmd <- variable_metadata[variable_metadata$research_name == rn,]
-                    p <- make_L2_plot(x, vmd, filename)
+                    if(is_numeric_data){
+
+                        write_this_plot <- TRUE
+                        # Isolate this research name's metadata
+                        vmd <- variable_metadata[variable_metadata$research_name == rn,]
+                        p <- make_L2_plot(x, vmd, filename)
+                    }
                 } # else derived_tempfile
             } else {
                 stop("Unkown data_level ", data_level)
@@ -298,8 +315,11 @@ write_to_folders <- function(x, root_dir,
 
             # Write basic QA/QC plot
             # We use cairo_pdf to better handle Unicode chars in axis labels
-            if(write_plots && write_this_plot) {
+            if(is_numeric_data && write_plots && write_this_plot) {
                 plot_filename <- file.path(folder, paste0(filename, ".pdf"))
+                if(!quiet) message("\tWriting plot to ",
+                                   basename(folder), "/", plot_filename)
+
                 ggsave(plot_filename, plot = p, width = 10, height = 7, device = cairo_pdf)
             }
 
@@ -358,6 +378,11 @@ reset <- function(root = here::here("pipeline/data_TEST")) {
 # So, when the design_link table is merged with a data table, if a reassignment
 # has occurred, some data rows will get repeated with the different possible
 # design links.
+#
+# The reason this isn't trivial (i.e., why we can't just filter out any
+# entries with a timestamp greater than the valid_through value) is that
+# *before* we hit the valid_through time point, there are two 'ok' entries
+# and we want to take the one with the minimum valid_through. Ugh!
 #
 # This function uses the object (i.e. group identifier; typically, Logger+
 # Table+Loggernet_variable), timestamp, and valid_through timestamps to identify

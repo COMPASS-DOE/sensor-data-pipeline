@@ -197,3 +197,14 @@ PNNL_32_WaterLevel600_20240830000120.dat
 PNNL_32_WaterLevel600_20240916070142.dat
 PNNL_32_WaterLevel600_20241001005906.dat
 PNNL_32_WaterLevel600_20241101005908.dat
+
+2026-01-06 These files edited after Roy and Steph W's datalogger changes
+
+Compass_MSM_W_401_Redox5_20251231235905.dat
+Compass_MSM_W_401_Redox15_20251231235905.dat
+COMPASS_GCW_TR_432_Redox5_20251231235903.dat
+COMPASS_GCW_TR_432_Redox15_20251231235903.dat
+
+2026-01-11 This DLG file had extraneous 2019 data; removed
+
+DLG-F2_305_Teros12Table_20250701005904.dat
