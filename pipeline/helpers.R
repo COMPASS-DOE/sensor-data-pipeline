@@ -34,8 +34,14 @@ new_section <- function(name, logfile = LOGFILE, root = ROOT) {
     log_info(name)
 }
 
+# Identify which elements of a vector can be converted to numeric
+# I tried using a regex, but it's very complicated and prone to edge case failure
+# So just do the conversion and test what resulted in NA
 can_convert_to_numeric <- function(x) {
-    grepl("^[+-]?([0-9]*(\\.([0-9]+))?)$", x) | is.na(x) # NAs count as numeric
+    suppressWarnings(
+        y <- as.numeric(x)
+    )
+    return(is.na(x) | !is.na(y))
 }
 
 # Copy quarto html output and log result
