@@ -71,7 +71,7 @@ ftp_table <- separate(ftp_table, filename,
 ftp_table$level <- ftp_table$qaqc <- ftp_table$version <- NULL
 
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
-qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
+qaqct <- read_csv(QAQC_TABLE, col_types = "ccccclc")
 
 # Get the variables' metadata
 L2_VAR_MD <- read.csv(file.path(params$METADATA_ROOT,
@@ -124,7 +124,7 @@ for(i in seq_len(nrow(derived_vars))) {
     dv <- derived_vars$research_name[i]
     cat(as.character(Sys.time()), " L2 doing derived ", dv, "\n",
         file = "log.txt", append = TRUE)
-
+    
     # Parse the 'needs_research_names' column and figure out which files are needed
     needs <- trimws(strsplit(derived_vars$needs_research_names[i], ",")[[1]])
     message("Calculating ", dv, " - need ", length(needs), 
@@ -157,7 +157,7 @@ for(i in seq_len(nrow(derived_vars))) {
         })
         
         names(dat_needed) <- grp$research_name
-
+        
         # We now have all the research-name data needed to compute derived variable "dv" for
         # this site and plot and year. BUT it's possible that the relevant instruments didn't
         # all measure the same thing. (This occurs at DLG, where we have TEROS12s measuring
@@ -197,7 +197,7 @@ for(i in seq_len(nrow(derived_vars))) {
 
 ```
 
-## MAC gap filling
+## MAC processing
 
 ```{r mac-processing}
 
@@ -217,9 +217,8 @@ for(i in seq_len(nrow(site_rn_table))) {
     si <- site_rn_table$site[i]
     pl <- site_rn_table$plot[i]
     rn <- site_rn_table$research_name[i]
-    message("Processing ", si, " ", pl, " ", rn)
-    cat(as.character(Sys.time()), " L2 doing mac ", si, pl, rn, "\n",
-        file = "log.txt", append = TRUE)
+    do_mac <- qaqct$do_MAC[match(rn, qaqct$variable)]
+    message("Processing ", si, " ", pl, " ", rn, " do_mac=", do_mac)
 
     # Identify files for this site, plot, and research name, and read
     these_files <- subset(ftp_table, site == si & plot == pl & research_name == rn)
@@ -249,23 +248,26 @@ for(i in seq_len(nrow(site_rn_table))) {
         next
     }
 
-    message("\tComputing MAC...")
-    smry$N_vals[i] <- sum(!is.na(all_data$Value))
-    yrs <- year(all_data$TIMESTAMP)
-    smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
-                           format(max(all_data$TIMESTAMP), format = "%Y%m"),
-                           sep = "-")
-    all_data %>% group_by(month, mday, hour, minute) %>% 
-        summarise(mac = mean(Value, na.rm = TRUE), .groups = "drop") %>% 
-        filter(!is.nan(mac)) ->
-        mac
-
+    if(do_mac) {
+        message("\tComputing MAC...")
+        smry$N_vals[i] <- sum(!is.na(all_data$Value))
+        yrs <- year(all_data$TIMESTAMP)
+        smry$Dates[i] <- paste(format(min(all_data$TIMESTAMP), format = "%Y%m"),
+                               format(max(all_data$TIMESTAMP), format = "%Y%m"),
+                               sep = "-")
+        all_data %>% group_by(month, mday, hour, minute) %>% 
+            summarise(mac = mean(Value, na.rm = TRUE), .groups = "drop") %>% 
+            filter(!is.nan(mac)) ->
+            mac
+    }
+    
     # For each file's data, add mac column, gap fill, and write out
     for(j in seq_len(nrow(these_files))) {
         dat <- file_data[[j]]
-        oldrows <- nrow(dat)
-        dat <- left_join(dat, mac, by = c("month", "mday", "hour", "minute"))
-        stopifnot(nrow(dat) == oldrows) # sanity check
+        if(do_mac) {
+          oldrows <- nrow(dat)
+          dat <- left_join(dat, mac, by = c("month", "mday", "hour", "minute"))
+          stopifnot(nrow(dat) == oldrows) # sanity check
 
         # call gap-filling routine for each Instrument_ID and Sensor_ID
         # split doesn't work with NA values (???) so replace those...
@@ -293,6 +295,11 @@ for(i in seq_len(nrow(site_rn_table))) {
         ftp_table$N_vals[f] <- sum(!is.na(dat_gf$Value))
         ftp_table$N_vals_gf[f] <- sum(!is.na(dat_gf$Value_MAC))
         smry$N_vals_gf[i] <- smry$N_vals_gf[i] + sum(!is.na(dat_gf$Value_MAC))
+        } else {
+            dat_gf <- dat
+            dat_gf$Value_MAC <- NA
+            smry$N_vals_gf[i] <- 0
+        }
         
         # Clean up and check that the data frame has correct columns
         dat_gf <- check_drop_sort_columns(dat_gf, column_md, params$METADATA_COLUMNS_TABLE)

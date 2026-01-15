@@ -1,153 +1,153 @@
-variable,time_grouping,outlier_detection,params,max_interp,Notes
-battery-voltage,,,,1 hour,No QAQC
-,,,,,
-sapflow-3.5cm,1 week,MAD,threshold=8,1 hour,
-,,,,,
-soil-vwc-5cm,1 month,MAD,threshold=8,1 hour,
-soil-temp-5cm,1 week,MAD,threshold=8,1 hour,
-soil-EC-5cm,,,,1 hour,Too variable; no QAQC
-soil-vwc-10cm,1 month,MAD,threshold=8,2 hours,Come back to this
-soil-temp-10cm,1 week,MAD,threshold=8,2 hours,
-soil-EC-10cm,,,,2 hours,Too variable; no QAQC
-soil-vwc-15cm,1 month,MAD,threshold=8,2 hours,
-soil-temp-15cm,1 week,MAD,threshold=8,2 hours,
-soil-EC-15cm,,,,2 hours,Too variable; no QAQC
-soil-vwc-30cm,1 month,MAD,threshold=8,2 hours,Come back to this
-soil-temp-30cm,1 week,MAD,threshold=8,3 hours,
-soil-EC-30cm,,,,3 hours,Too variable; no QAQC
-soil-vwc-40cm,,,,3 hours,
-soil-temp-40cm,,,,3 hours,
-soil-EC-40cm,,,,3 hours,
-,,,,,
-gw-salinity,,,,1 hour,Too variable; no QAQC
-gw-pressure,,,,1 hour,Too variable; no QAQC
-gw-density,,,,1 hour,Too variable; no QAQC
-gw-temperature,1 month,MAD,threshold=8,1 hour,
-,,,,,
-wx-slr-fd15,,,,1 hour,Too variable; no QAQC
-wx-rain15,,,,1 hour,Too variable; no QAQC
-wx-tempavg15,1 month,MAD,threshold=8,1 hour,
-wx-par-den15,,,,1 hour,Too variable; no QAQC
-wx-rh15,1 month,MAD,threshold=8,1 hour,
-,,,,,
-wx-gcrew-rain15,,,,1 hour,Files?
-,,,,,
-sonde-odo-mgl,1 month,MAD,threshold=8,1 hour,
-sonde-fdom,1 month,MAD,threshold=8,1 hour,
-sonde-ph,1 week,MAD,threshold=8,1 hour,
-sonde-orp,1 week,MAD,threshold=8,1 hour,
-sonde-pressure,,,,1 hour,
-sonde-salinity,1 month,MAD,threshold=8,1 hour,
-sonde-spcond,1 month,MAD,threshold=8,1 hour,
-,,,,,
-,,,,,
-gw-act-cond,1 month,,threshold=8,1 hour,
-gw-bar-pressure,,,,1 hour,Files?
-gw-battery,,,,1 hour,No QAQC
-gw-depth,,,,1 hour,Files?
-gw-part-pressure,,,,1 hour,Files?
-gw-perc-sat,,,,1 hour,Files?
-gw-ph,1 day,,threshold=8,1 hour,
-gw-ph-mv,1 day,,threshold=8,1 hour,
-gw-ph-orp,1 day,,threshold=8,1 hour,
-gw-rdo-conc,1 day,,threshold=8,1 hour,
-gw-resistivity,,,,1 hour,Files?
-gw-spec-cond,1 day,,threshold=8,1 hour,
-gw-tds,,,,1 hour,Files?
-gw-temperature-int,1 month,,threshold=8,1 hour,
-gw-voltage-ext,1 month,,threshold=8,1 hour,
-redox-5cm,1 week,,threshold=8,1 hour,
-redox-10cm,1 week,,threshold=8,1 hour,
-redox-15cm,1 week,,threshold=8,1 hour,
-redox-20cm,1 week,,threshold=8,1 hour,
-redox-35cm,1 week,,threshold=8,1 hour,
-redox-55cm,1 week,,threshold=8,1 hour,
-sapflow-5cm,1 week,,threshold=8,1 hour,
-solar-voltage,,,,1 hour,No QAQC
-sonde-battery,,,,1 hour,Files?
-sonde-cable,1 month,,threshold=8,1 hour,
-sonde-conductivity,,,,1 hour,Files?
-sonde-depth,1 day,,threshold=8,1 hour,
-sonde-fdom-rfu,1 month,,threshold=8,1 hour,
-sonde-nlf-cond,,,,1 hour,Files?
-sonde-odo-local,,,,1 hour,Files?
-sonde-odo-sat,1 month,,threshold=8,1 hour,
-sonde-ph-mv,1 month,,threshold=8,1 hour,
-sonde-tds,1 month,,threshold=8,1 hour,
-sonde-temp,1 day,,threshold=6,1 hour,
-sonde-tss,1 month,,threshold=8,1 hour,
-sonde-turb-raw,,,,1 hour,Files?
-sonde-turbidity,1 day,,threshold=8,1 hour,
-sonde-vpos,1 day,,threshold=8,1 hour,
-sonde-wipercur,1 month,,threshold=8,1 hour,
-sonde-wiperpos,,,,1 hour,Too variable; no QAQC
-sonde-chlorophyl,,,,1 hour,
-sonde-chl-rfu,,,,1 hour,
-sonde-chl-raw,,,,1 hour,
-sonde-chl-cells,,,,1 hour,
-sonde-rhodamine,,,,1 hour,
-sonde-tal,,,,1 hour,
-sonde-bga-pc,,,,1 hour,
-sonde-bga-pc-raw,,,,1 hour,
-wx-barpress15,,,,1 hour,Files?
-wx-bpmax15,,,,1 hour,Files?
-wx-bpmax24,,,,1 hour,Files?
-wx-bpmin15,,,,1 hour,Files?
-wx-bpmin24,,,,1 hour,Files?
-wx-bptmn15,,,,1 hour,Files?
-wx-bptmn24,,,,1 hour,Files?
-wx-bptmx15,,,,1 hour,Files?
-wx-bptmx24,,,,1 hour,Files?
-wx-dist-min15,1 month,,threshold=8,1 hour,
-wx-dist-tmn15,,,,1 hour,No QAQC
-wx-invalid-wind15,,,,1 hour,No QAQC
-wx-maxws-tmx15,,,,1 hour,Files?
-wx-maxws-tmx24,,,,1 hour,Files?
-wx-maxws15,,,,1 hour,Too variable; no QAQC
-wx-maxws24,,,,1 hour,Too variable; no QAQC
-wx-minws15,,,,1 hour,Files?
-wx-par-den24,1 month,,threshold=8,1 hour,
-wx-par-tot15,,,,1 hour,Too variable; no QAQC
-wx-par-tot24,1 month,,threshold=8,1 hour,
-wx-rain24,,,,1 hour,Too variable; no QAQC
-wx-rh24,,,,1 hour,Too variable; no QAQC
-wx-rht15,1 month,,threshold=8,1 hour,
-wx-rht24,,,,1 hour,Too variable; no QAQC
-wx-rhtmax24,1 month,,threshold=8,1 hour,
-wx-rhtmin24,1 month,,threshold=8,1 hour,
-wx-slr-fd24,1 month,,threshold=8,1 hour,
-wx-slr-tf15,,,,1 hour,Too variable; no QAQC
-wx-slr-tf24,1 month,,threshold=8,1 hour,
-wx-strikes15,,,,1 hour,Too variable; no QAQC
-wx-svp15,,,,1 hour,Files?
-wx-tempavg24,1 month,,threshold=8,1 hour,
-wx-tempmax15,1 month,,threshold=8,1 hour,
-wx-tempmax24,1 month,,threshold=8,1 hour,
-wx-tempmin15,1 month,,threshold=8,1 hour,
-wx-tempmin24,1 month,,threshold=8,1 hour,
-wx-temptmn15,1 month,,threshold=8,1 hour,
-wx-temptmn24,1 month,,threshold=8,1 hour,
-wx-temptmx15,1 month,,threshold=8,1 hour,
-wx-temptmx24,1 month,,threshold=8,1 hour,
-wx-tilt-ns15,1 day,,threshold=8,1 hour,
-wx-tilt-ns24,1 month,,threshold=8,1 hour,
-wx-tilt-we15,1 day,,threshold=8,1 hour,
-wx-tilt-we24,1 month,,threshold=8,1 hour,
-wx-vappress15,1 month,,threshold=8,1 hour,
-wx-vappress24,1 month,,threshold=8,1 hour,
-wx-vp15,,,,1 hour,Files?
-wx-vpd15,,,,1 hour,Files?
-wx-vpdmax15,,,,1 hour,
-wx-vpdmin15,,,,1 hour,
-wx-vpdtmx15,,,,1 hour,
-wx-vpdtmn15,,,,1 hour,
-wx-vpd24,,,,1 hour,
-wx-vpdmax24,,,,1 hour,
-wx-vpdmin24,,,,1 hour,
-wx-vpdtmx24,,,,1 hour,
-wx-vpdtmn24,,,,1 hour,
-wx-winddir-sd115,,,,1 hour,Too variable; no QAQC
-wx-winddir15,,,,1 hour,Too variable; no QAQC
-wx-winderrors24,,,,1 hour,Files?
-wx-windspeed15,,,,1 hour,Too variable; no QAQC
-wx-barpress24,,,,1 hour,
+variable,time_grouping,outlier_detection,params,max_interp,do_MAC,Notes
+battery-voltage,,,,1 hour,FALSE,No QAQC
+,,,,,,
+sapflow-3.5cm,1 week,MAD,threshold=8,1 hour,TRUE,
+,,,,,,
+soil-vwc-5cm,1 month,MAD,threshold=8,1 hour,TRUE,
+soil-temp-5cm,1 week,MAD,threshold=8,1 hour,TRUE,
+soil-EC-5cm,,,,1 hour,TRUE,Too variable; no QAQC
+soil-vwc-10cm,1 month,MAD,threshold=8,2 hours,TRUE,Come back to this
+soil-temp-10cm,1 week,MAD,threshold=8,2 hours,TRUE,
+soil-EC-10cm,,,,2 hours,TRUE,Too variable; no QAQC
+soil-vwc-15cm,1 month,MAD,threshold=8,2 hours,TRUE,
+soil-temp-15cm,1 week,MAD,threshold=8,2 hours,TRUE,
+soil-EC-15cm,,,,2 hours,TRUE,Too variable; no QAQC
+soil-vwc-30cm,1 month,MAD,threshold=8,2 hours,TRUE,Come back to this
+soil-temp-30cm,1 week,MAD,threshold=8,3 hours,TRUE,
+soil-EC-30cm,,,,3 hours,TRUE,Too variable; no QAQC
+soil-vwc-40cm,,,,3 hours,TRUE,
+soil-temp-40cm,,,,3 hours,TRUE,
+soil-EC-40cm,,,,3 hours,TRUE,
+,,,,,,
+gw-salinity,,,,1 hour,TRUE,Too variable; no QAQC
+gw-pressure,,,,1 hour,TRUE,Too variable; no QAQC
+gw-density,,,,1 hour,TRUE,Too variable; no QAQC
+gw-temperature,1 month,MAD,threshold=8,1 hour,TRUE,
+,,,,,,
+wx-slr-fd15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-rain15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-tempavg15,1 month,MAD,threshold=8,1 hour,TRUE,
+wx-par-den15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-rh15,1 month,MAD,threshold=8,1 hour,TRUE,
+,,,,,,
+wx-gcrew-rain15,,,,1 hour,TRUE,Files?
+,,,,,,
+sonde-odo-mgl,1 month,MAD,threshold=8,1 hour,TRUE,
+sonde-fdom,1 month,MAD,threshold=8,1 hour,TRUE,
+sonde-ph,1 week,MAD,threshold=8,1 hour,TRUE,
+sonde-orp,1 week,MAD,threshold=8,1 hour,TRUE,
+sonde-pressure,,,,1 hour,TRUE,
+sonde-salinity,1 month,MAD,threshold=8,1 hour,TRUE,
+sonde-spcond,1 month,MAD,threshold=8,1 hour,TRUE,
+,,,,,,
+,,,,,,
+gw-act-cond,1 month,,threshold=8,1 hour,TRUE,
+gw-bar-pressure,,,,1 hour,TRUE,Files?
+gw-battery,,,,1 hour,FALSE,No QAQC
+gw-depth,,,,1 hour,TRUE,Files?
+gw-part-pressure,,,,1 hour,TRUE,Files?
+gw-perc-sat,,,,1 hour,TRUE,Files?
+gw-ph,1 day,,threshold=8,1 hour,TRUE,
+gw-ph-mv,1 day,,threshold=8,1 hour,TRUE,
+gw-ph-orp,1 day,,threshold=8,1 hour,TRUE,
+gw-rdo-conc,1 day,,threshold=8,1 hour,TRUE,
+gw-resistivity,,,,1 hour,TRUE,Files?
+gw-spec-cond,1 day,,threshold=8,1 hour,TRUE,
+gw-tds,,,,1 hour,TRUE,Files?
+gw-temperature-int,1 month,,threshold=8,1 hour,TRUE,
+gw-voltage-ext,1 month,,threshold=8,1 hour,FALSE,
+redox-5cm,1 week,,threshold=8,1 hour,TRUE,
+redox-10cm,1 week,,threshold=8,1 hour,TRUE,
+redox-15cm,1 week,,threshold=8,1 hour,TRUE,
+redox-20cm,1 week,,threshold=8,1 hour,TRUE,
+redox-35cm,1 week,,threshold=8,1 hour,TRUE,
+redox-55cm,1 week,,threshold=8,1 hour,TRUE,
+sapflow-5cm,1 week,,threshold=8,1 hour,TRUE,
+solar-voltage,,,,1 hour,FALSE,No QAQC
+sonde-battery,,,,1 hour,FALSE,Files?
+sonde-cable,1 month,,threshold=8,1 hour,FALSE,
+sonde-conductivity,,,,1 hour,TRUE,Files?
+sonde-depth,1 day,,threshold=8,1 hour,TRUE,
+sonde-fdom-rfu,1 month,,threshold=8,1 hour,TRUE,
+sonde-nlf-cond,,,,1 hour,TRUE,Files?
+sonde-odo-local,,,,1 hour,TRUE,Files?
+sonde-odo-sat,1 month,,threshold=8,1 hour,TRUE,
+sonde-ph-mv,1 month,,threshold=8,1 hour,TRUE,
+sonde-tds,1 month,,threshold=8,1 hour,TRUE,
+sonde-temp,1 day,,threshold=6,1 hour,TRUE,
+sonde-tss,1 month,,threshold=8,1 hour,TRUE,
+sonde-turb-raw,,,,1 hour,TRUE,Files?
+sonde-turbidity,1 day,,threshold=8,1 hour,TRUE,
+sonde-vpos,1 day,,threshold=8,1 hour,TRUE,
+sonde-wipercur,1 month,,threshold=8,1 hour,TRUE,
+sonde-wiperpos,,,,1 hour,TRUE,Too variable; no QAQC
+sonde-chlorophyl,,,,1 hour,TRUE,
+sonde-chl-rfu,,,,1 hour,TRUE,
+sonde-chl-raw,,,,1 hour,TRUE,
+sonde-chl-cells,,,,1 hour,TRUE,
+sonde-rhodamine,,,,1 hour,TRUE,
+sonde-tal,,,,1 hour,TRUE,
+sonde-bga-pc,,,,1 hour,TRUE,
+sonde-bga-pc-raw,,,,1 hour,TRUE,
+wx-barpress15,,,,1 hour,TRUE,Files?
+wx-bpmax15,,,,1 hour,TRUE,Files?
+wx-bpmax24,,,,1 hour,TRUE,Files?
+wx-bpmin15,,,,1 hour,TRUE,Files?
+wx-bpmin24,,,,1 hour,TRUE,Files?
+wx-bptmn15,,,,1 hour,TRUE,Files?
+wx-bptmn24,,,,1 hour,TRUE,Files?
+wx-bptmx15,,,,1 hour,TRUE,Files?
+wx-bptmx24,,,,1 hour,TRUE,Files?
+wx-dist-min15,1 month,,threshold=8,1 hour,TRUE,
+wx-dist-tmn15,,,,1 hour,TRUE,No QAQC
+wx-invalid-wind15,,,,1 hour,TRUE,No QAQC
+wx-maxws-tmx15,,,,1 hour,TRUE,Files?
+wx-maxws-tmx24,,,,1 hour,TRUE,Files?
+wx-maxws15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-maxws24,,,,1 hour,TRUE,Too variable; no QAQC
+wx-minws15,,,,1 hour,TRUE,Files?
+wx-par-den24,1 month,,threshold=8,1 hour,TRUE,
+wx-par-tot15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-par-tot24,1 month,,threshold=8,1 hour,TRUE,
+wx-rain24,,,,1 hour,TRUE,Too variable; no QAQC
+wx-rh24,,,,1 hour,TRUE,Too variable; no QAQC
+wx-rht15,1 month,,threshold=8,1 hour,TRUE,
+wx-rht24,,,,1 hour,TRUE,Too variable; no QAQC
+wx-rhtmax24,1 month,,threshold=8,1 hour,TRUE,
+wx-rhtmin24,1 month,,threshold=8,1 hour,TRUE,
+wx-slr-fd24,1 month,,threshold=8,1 hour,TRUE,
+wx-slr-tf15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-slr-tf24,1 month,,threshold=8,1 hour,TRUE,
+wx-strikes15,,,,1 hour,FALSE,Too variable; no QAQC
+wx-svp15,,,,1 hour,FALSE,Files?
+wx-tempavg24,1 month,,threshold=8,1 hour,TRUE,
+wx-tempmax15,1 month,,threshold=8,1 hour,TRUE,
+wx-tempmax24,1 month,,threshold=8,1 hour,TRUE,
+wx-tempmin15,1 month,,threshold=8,1 hour,TRUE,
+wx-tempmin24,1 month,,threshold=8,1 hour,TRUE,
+wx-temptmn15,1 month,,threshold=8,1 hour,TRUE,
+wx-temptmn24,1 month,,threshold=8,1 hour,TRUE,
+wx-temptmx15,1 month,,threshold=8,1 hour,TRUE,
+wx-temptmx24,1 month,,threshold=8,1 hour,TRUE,
+wx-tilt-ns15,1 day,,threshold=8,1 hour,FALSE,
+wx-tilt-ns24,1 month,,threshold=8,1 hour,FALSE,
+wx-tilt-we15,1 day,,threshold=8,1 hour,FALSE,
+wx-tilt-we24,1 month,,threshold=8,1 hour,FALSE,
+wx-vappress15,1 month,,threshold=8,1 hour,TRUE,
+wx-vappress24,1 month,,threshold=8,1 hour,TRUE,
+wx-vp15,,,,1 hour,TRUE,Files?
+wx-vpd15,,,,1 hour,TRUE,Files?
+wx-vpdmax15,,,,1 hour,TRUE,
+wx-vpdmin15,,,,1 hour,TRUE,
+wx-vpdtmx15,,,,1 hour,TRUE,
+wx-vpdtmn15,,,,1 hour,TRUE,
+wx-vpd24,,,,1 hour,TRUE,
+wx-vpdmax24,,,,1 hour,TRUE,
+wx-vpdmin24,,,,1 hour,TRUE,
+wx-vpdtmx24,,,,1 hour,TRUE,
+wx-vpdtmn24,,,,1 hour,TRUE,
+wx-winddir-sd115,,,,1 hour,TRUE,Too variable; no QAQC
+wx-winddir15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-winderrors24,,,,1 hour,FALSE,Files?
+wx-windspeed15,,,,1 hour,TRUE,Too variable; no QAQC
+wx-barpress24,,,,1 hour,TRUE,
