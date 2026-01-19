@@ -52,7 +52,7 @@ varies by variable) data gaps are filled by linear interpolation. If you
 want to exclude these interpolated values, only use data where the `N_avg`
 column is >= 1.
 
-For gaps larger than 1 hour, a mean annual cycle (MAC) algorithm is used, which computes a mean at each timepoint for a given plot, sensor, and depth combination.
+For larger gaps, a mean annual cycle (MAC) algorithm is used to complete the time series (`Value_MAC` column), which computes a mean at each timepoint for a given plot, sensor, and depth combination.
 
 DATA VERSIONS
 —----------------------------------
