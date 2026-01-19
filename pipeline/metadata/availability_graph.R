@@ -1,10 +1,11 @@
 
 library(tidyverse)
+library(viridis)
 
-fls <- list.files("~/Documents/ESS-DIVE Releases/Sensor Data Releases/v1-2", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
+fls <- list.files("~/Documents/Level1/v2-1", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
 
 # filter out TMP
-fls[grepl("CRC", fls)] -> fls
+fls[grepl("TMP", fls)] -> fls
 
 results <- list()
 
@@ -21,6 +22,7 @@ for(f in fls) {
 }
 
 bind_rows(results) %>%
+    filter(Site == "TMP") %>%
     # each file is a site and plot; sum by site
     group_by(Site, Instrument, ts_str) %>%
     summarise(n = sum(n), t = sum(t),
@@ -28,14 +30,14 @@ bind_rows(results) %>%
               TIMESTAMP = mean(TIMESTAMP),
               .groups = "drop") %>%
     # not sure why this next line is here
-    filter(Site != "GCW", !is.na(Instrument)) %>%
+    #filter(Site == "GCW", !is.na(Instrument)) %>%
     mutate(data_present = if_else(n > 0, "Yes", "No")) %>%
     # create the factor month-year
     arrange(TIMESTAMP) %>%
     mutate(ts_fct = factor(ts_str, levels = unique(ts_str))) %>%
     # ...and plot
     ggplot(aes(x = ts_fct, y = Instrument, fill = perc)) +
-    geom_raster(hjust = 0, vjust = 0) +
+    geom_raster(hjust = 0, vjust = 0, alpha = 0.8) +
     facet_wrap(~Site, ncol = 1, strip.position = "left") +
     theme_minimal() +
     scale_y_discrete(position = "right") +
@@ -43,11 +45,14 @@ bind_rows(results) %>%
           axis.text.y = element_text(vjust = 1.25),
           axis.ticks.y=element_blank(),
           panel.grid.minor.y = element_blank(),
-          panel.grid = element_line(color="darkgrey"),
-          panel.border = element_rect(color = "darkgrey", fill = NA, size = 1)) +
+          panel.grid = element_line(color="black"),
+          panel.border = element_rect(color = "darkgrey", fill = NA, size = 1),
+          #panel.background = element_rect(fill = "black")
+          ) +
     labs(x = "", y = "", fill = "In Bounds (%)") +
-    scale_fill_viridis(option = "magma", begin = 1, end = 0) +
-    theme(axis.title = element_text(size = 20),
+    scale_fill_continuous_tableau(
+        palette =  "Blue-Green Sequential") +
+        theme(axis.title = element_text(size = 20),
           plot.title = element_text(size=20),
           axis.text.y = element_text(size = 16),
           axis.text.x = element_text(size = 16),
@@ -56,4 +61,4 @@ bind_rows(results) %>%
           legend.text = element_text(size=16),
           legend.title = element_text(size=18))
 
-ggsave("~/Documents/synoptic_avail.png", height = 12, width = 15)
+ggsave("~/Documents/L1_v2-1_synoptic_avail_DLG.png", height = 8, width = 25)
