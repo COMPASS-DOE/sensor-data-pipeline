@@ -50,3 +50,4 @@ http://dx.doi.org/10.1007/s10661-022-10807-0
 Regier et al.: Short-term experimental flooding impacts soil
 biogeochemistry but not aboveground vegetation in a coastal forest,
 Proceedings of the National Academy of Sciences, 122, e2511756122, 2025.
+https://doi.org/10.1073/pnas.2511756122
