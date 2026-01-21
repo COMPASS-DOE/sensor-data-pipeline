@@ -134,9 +134,10 @@ make_L2_plot <- function(x, vmd, filename) {
     }
 
     x$gf <- is.na(x$Value) & !is.na(x$Value_MAC) # flag for gap-fill or not
-    p <- ggplot(x, aes(TIMESTAMP, Value_MAC, color = gf,
-                       alpha = gf,
-                       group = paste(Instrument_ID, Sensor_ID))) +
+    p <- ggplot(x[!is.na(x$Value_MAC),],
+                aes(TIMESTAMP, Value_MAC, color = gf,
+                    alpha = gf,
+                    group = paste(Instrument_ID, Sensor_ID))) +
         geom_line(na.rm = TRUE) +
         scale_color_manual(values = c("black", "blue")) +
         # make gap-fill lines partially transparent, so as not to obscure data
