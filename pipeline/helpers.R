@@ -143,7 +143,7 @@ make_L2_plot <- function(x, vmd, filename) {
         scale_alpha_manual(values = c(1.0, 0.6)) +
         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
         ggtitle(filename,
-                subtitle = "Blue = available gap-filled data based on mean annual cycle") +
+                subtitle = "Blue = available inferred data based on mean annual cycle") +
         theme(axis.text = element_text(size = 10),
               strip.text = element_text(size = 10),
               plot.subtitle = element_text(size = 8),
