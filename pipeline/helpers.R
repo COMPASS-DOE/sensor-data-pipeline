@@ -124,6 +124,15 @@ make_L1_plot <- function(x, vmd, filename) {
 }
 
 make_L2_plot <- function(x, vmd, filename) {
+    # There's some weird bug where geom_line() isn't working correctly
+    # (isn't displaying anything at all) with 24-hour weather station
+    # variables. Temporary hack: if this is one of those variables,
+    # get rid of the NA rows
+    # See https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/434
+    if(any(grepl("avg24", x$research_name))) {
+        x <- x[!is.na(x$Value_MAC),]
+    }
+
     # Above a certain number of rows, our plot sizes get very large
     # with no visual benefit (can't see that many points)
     very_large_cutoff <- 150000
@@ -143,7 +152,7 @@ make_L2_plot <- function(x, vmd, filename) {
         scale_alpha_manual(values = c(1.0, 0.6)) +
         ylab(paste0(vmd$research_name, " (", vmd$final_units, ")")) +
         ggtitle(filename,
-                subtitle = "Blue = available inferred data based on mean annual cycle") +
+                subtitle = "Blue = inferred data based on mean annual cycle") +
         theme(axis.text = element_text(size = 10),
               strip.text = element_text(size = 10),
               plot.subtitle = element_text(size = 8),
