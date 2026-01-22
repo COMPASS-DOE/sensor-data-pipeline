@@ -70,6 +70,7 @@ CHANGELOG
 Version 2-1 release [DATESTAMP]
 * The Level 2 data format has been tweaked; in particular see documentation about `Value_MAC`
 * DELUGE (DLG) data are here! Well, the TEROS measurements anyway
+* `gw-pressure` has been split into two variables: vented and unvented. See metadata
 * We now output times of various weather station minima and maxima; as a result, 'Value' may be non-numeric 
 * TEMPEST AquaTROLL600 pressure is now corrected for atmospheric pressure; see site files 
 * The `sonde-depth` variable has been removed, as it was unreliable and misleading
