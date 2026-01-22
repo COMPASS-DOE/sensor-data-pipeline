@@ -39,7 +39,8 @@ WaterLevel,pH_ORP600,gw-ph-orp,mV,mV,x * 1,-1400,1400,Groundwater oxidation-redu
 WaterLevel,RDO_concen600,gw-rdo-conc,mg/L,mg/L,x * 1,0,20,Groundwater dissolved oxygen concentration
 WaterLevel,RDO_perc_sat600,gw-perc-sat,%,%,x * 1,0,100,Groundwater dissolved oxygen concentration (100% saturation)
 WaterLevel,RDO_part_Pressure600,gw-part-pressure,Torr,Torr,x * 1,,,Groundwater dissolved oxygen partial pressure
-WaterLevel,Pressure600,gw-pressure,psi,mbar,x * 68.948,-10,910,Vented pressure corrected for barometric pressure
+WaterLevel,Pressure200,gw-pressure-unvented,psi,mbar,x * 68.948,990,1500,"Unvented pressure, not corrected for barometric pressure"
+WaterLevel,Pressure600,gw-pressure-vented,psi,mbar,x * 68.948,-10,500,"Vented pressure, corrected for barometric pressure"
 WaterLevel,Depth600,gw-depth,cm,cm,x * 1,,,Calculated groundwater depth
 WaterLevel,Voltage_Ext600A,gw-voltage-ext,V,V,x * 1,,,External battery voltage coming into the Aquatroll
 WaterLevel,Battery_Int600A,gw-battery,%,%,x * 1,0,100,Internal battery percentage
