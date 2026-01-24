@@ -4,4 +4,4 @@ soil-salinity-10cm,"soil-vwc-10cm, soil-temp-10cm, soil-EC-10cm",ppt,"Salinity c
 soil-salinity-15cm,"soil-vwc-15cm, soil-temp-15cm, soil-EC-15cm",ppt,"Salinity calculated based on TEROS VWC, T, and EC; from Machado-Silva and Hilhorst (2000)"
 soil-salinity-30cm,"soil-vwc-30cm, soil-temp-30cm, soil-EC-30cm",ppt,"Salinity calculated based on TEROS VWC, T, and EC; from Machado-Silva and Hilhorst (2000)"
 soil-salinity-40cm,"soil-vwc-40cm, soil-temp-40cm, soil-EC-40cm",ppt,"Salinity calculated based on TEROS VWC, T, and EC; from Machado-Silva and Hilhorst (2000)"
-gw-wl-below-surface,"gw-density, gw-pressure",m,"Water level, where negative values are below the ground surface; see below"
+gw-wl-below-surface,"gw-density, gw-pressure-vented",m,"Water level, where negative values are below the ground surface; see below"

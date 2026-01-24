@@ -219,7 +219,7 @@ for(i in seq_len(nrow(site_rn_table))) {
     pl <- site_rn_table$plot[i]
     rn <- site_rn_table$research_name[i]
     do_mac <- qaqct$do_MAC[match(rn, qaqct$variable)]
-    stopifnot(!is.na(do_mac))
+    if(is.na(do_mac)) stop("do_MAC is NA for ", rn)
     message("Processing ", si, " ", pl, " ", rn, " do_mac=", do_mac)
 
     # Identify files for this site, plot, and research name, and read
