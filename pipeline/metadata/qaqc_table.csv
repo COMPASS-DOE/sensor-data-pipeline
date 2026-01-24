@@ -20,7 +20,8 @@ soil-temp-40cm,,,,3 hours,TRUE,
 soil-EC-40cm,,,,3 hours,TRUE,
 ,,,,,,
 gw-salinity,,,,1 hour,TRUE,Too variable; no QAQC
-gw-pressure,,,,1 hour,TRUE,Too variable; no QAQC
+gw-pressure-vented,,,,1 hour,TRUE,Too variable; no QAQC
+gw-pressure-unvented,,,,1 hour,TRUE,Too variable; no QAQC
 gw-density,,,,1 hour,TRUE,Too variable; no QAQC
 gw-temperature,1 month,MAD,threshold=8,1 hour,TRUE,
 ,,,,,,

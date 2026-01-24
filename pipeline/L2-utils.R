@@ -238,7 +238,7 @@ WELL_DIMS <- WELL_DIMS[c("Site", "Plot", "Instrument_ID", "ground_to_sensor_cm")
     # exact same dimensions and ordering, since they're linked
     # AquaTROLL data from the same site and plot
     gw_density <- x$`gw-density`$Value
-    gw_pressure <- x$`gw-pressure`$Value
+    gw_pressure <- x$`gw-pressure-vented`$Value
 
     temp <- merge(x$`gw-density`,
                   WELL_DIMS,
