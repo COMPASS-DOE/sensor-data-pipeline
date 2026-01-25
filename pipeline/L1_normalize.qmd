@@ -151,7 +151,7 @@ for(i in seq_along(files_to_process)) {
     dat <- read_csv(fn, 
                     # don't want timestamp parsed to a datetime at this point
                     col_types = list(TIMESTAMP = col_character()),
-                    na = c("NA", "NAN", "NaN", ""))
+                    na = c("NA", "NAN", "NaN", "", "-99999"))
 
     # ------------- Design table
     
