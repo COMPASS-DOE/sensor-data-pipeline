@@ -17,7 +17,6 @@ params:
   METADATA_VARS_TABLE: "variables_metadata.csv"
   OOS: "out-of-service/"
   logfile: ""
-  run_parallel: false
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 
@@ -259,7 +258,7 @@ for(i in seq_along(files_to_process)) {
             # instead of breaking out
             dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
             if(sum(dat$F_OOS)) message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
-            oos_data_used[tbl] <- TRUE # won't work when parallelized
+            oos_data_used[tbl] <- TRUE 
             break
         }
     }
@@ -323,7 +322,7 @@ for(i in seq_along(files_to_process)) {
 
 # Check whether all out-of-service tables were checked
 # If not, this probably indicates a naming mistake
-if(!params$run_parallel && !all(oos_data_used)) {
+if(!all(oos_data_used)) {
     warning("Out-of-service tables never used: ",
          paste(names(oos_data_used)[!oos_data_used], collapse = ","))
 }
