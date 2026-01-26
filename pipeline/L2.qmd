@@ -289,6 +289,21 @@ for(i in seq_len(nrow(site_rn_table))) {
         # Transfer good values into gap-fill column
         nagf <- is.na(dat_gf$Value_MAC)
         dat_gf$Value_MAC[nagf] <- dat_gf$Value[nagf]
+        
+        # MAC values are not allowed to drift outside of
+        # the limits defined in variables_metadata.csv
+        rni <- which(rn == vmd_combined$research_name)
+        if(length(rni) == 1) {
+            lb <- vmd_combined$low_bound[rni]
+            if(!is.na(lb)) {
+                dat_gf$Value_MAC[dat_gf$Value_MAC < lb] <- lb
+            }
+            hb <- vmd_combined$high_bound[rni]
+            if(!is.na(hb)) {
+                dat_gf$Value_MAC[dat_gf$Value_MAC > hb] <- hb
+            }
+        }
+        
         message("\tGap filled ", 
                 sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$Value_MAC)),
                 " values in ", these_files$filename[j])
