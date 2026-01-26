@@ -293,13 +293,13 @@ for(i in seq_len(nrow(site_rn_table))) {
         # MAC values are not allowed to drift outside of
         # the limits defined in variables_metadata.csv
         rni <- which(rn == vmd_combined$research_name)
-        if(length(rni) == 1) {
+        if(length(rni) == 1) { # i.e., if research name exists in table
             lb <- vmd_combined$low_bound[rni]
-            if(!is.na(lb)) {
+            if(!is.na(lb)) { # if a low bound is defined, truncate to it
                 dat_gf$Value_MAC[dat_gf$Value_MAC < lb] <- lb
             }
             hb <- vmd_combined$high_bound[rni]
-            if(!is.na(hb)) {
+            if(!is.na(hb)) { # if a high bound is defined, truncate to it
                 dat_gf$Value_MAC[dat_gf$Value_MAC > hb] <- hb
             }
         }
