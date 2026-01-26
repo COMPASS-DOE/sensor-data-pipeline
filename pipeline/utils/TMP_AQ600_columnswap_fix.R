@@ -12,7 +12,7 @@
 library(readr)
 
 # This map file tells us how to move data between columns in bad files
-fixmap <- read_csv("pipeline/utils/TMP_AQ600_bad_column_mapping.csv", col_types = "ccc")
+fixmap <- read_csv("utils/TMP_AQ600_bad_column_mapping.csv", col_types = "ccc")
 
 # Helper function to swap data between columns
 swapcols <- function(x, fixrows, fixmap) {
@@ -45,10 +45,10 @@ swapcols(test, c(TRUE, FALSE), fixmap)
 file_prefix <- "PNNL_[0-9]{2}_WaterLevel600"
 
 # Where to put the edited files
-EDITED <- "pipeline/data/Raw/Raw_edited/"
+EDITED <- "data/Raw/Raw_edited/"
 
 # Files to fix are assumed to be in the repo's data/Raw folder
-files <- list.files("pipeline/data/Raw/Raw_original/",
+files <- list.files("data/Raw/Raw_original/",
                     pattern = file_prefix, full.names = TRUE)
 
 fixed_data <- list()
@@ -99,7 +99,16 @@ for(f in files) {
     # Write to a modified version of the original file
     bn <- basename(f)
     message("Writing ", bn)
-    write_lines(x_out, file.path(EDITED, bn))
+
+    out_fn <- file.path(EDITED, bn)
+    if(file.exists(out_fn)) {
+        warning("This file already exists in ", EDITED, "!")
+    }
+    write_lines(x_out, out_fn)
+    # Confirm that our final file can be read cleanly
+    # read_datalogger_file() is in L0_utils.R
+    tryCatch(read_datalogger_file(out_fn),
+             warning = function(e) { stop("Generated a read warning")})
 } # for
 
 message("All done with fixes")
