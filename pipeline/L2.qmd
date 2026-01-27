@@ -263,7 +263,7 @@ for(i in seq_len(nrow(site_rn_table))) {
             mac
     }
     
-    # For each file's data, add mac column, gap fill, and write out
+    # For each file's data, compute mac column and write out
     for(j in seq_len(nrow(these_files))) {
         dat <- file_data[[j]]
         if(do_mac) {

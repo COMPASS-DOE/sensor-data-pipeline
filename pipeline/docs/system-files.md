@@ -23,7 +23,8 @@ File | Description
 `L0.qmd` | Quarto file for generating L0 data from raw data
 `L1_normalize.qmd` | Quarto file for running the 'normalize' L1 step: unit conversion, design table matching, etc. This is the most complicated step in the pipeline
 `L1.qmd` | Quarto file for generating L1 data. This is a memory-intensive step
-`L2.qmd` | Quarto file for generating L2 data; not used currently
+`L2_qaqc.qmd` | Quarto file for running the 'qaqc` L2 step: drop flagged data, round timestamps and compute means, complete data
+`L2.qmd` | Quarto file for generating L2 data; calculated derived variables, mean annual cycle time series, and writes metadata
 `metadata/` | Metadata folder; see below
 `out-of-service.R` | description
 
@@ -40,7 +41,9 @@ File | Description
 `L2/` | Folder of L2 data written by the `L2.qmd` processing step; not used currently
 `Logs/` | Folder of all log files
 `Raw/` | Folder of Raw data, copied (occasionally with edits) from the SERC Dropbox
+`Raw_edited/` | Folder of edited raw files that are substituted in for originals during processing
 `Raw_done/` | Folder of completely processed raw data; not used currently
+`Raw_original/` | Folder of raw data from SERC Dropbox
 
 ## ./pipeline/data_PREFLIGHT
 
@@ -73,9 +76,9 @@ File | Description
 ---- | -------------
 `design_table.csv` | The design table that links datalogger data with experimental subjects, measurement names, and instruments. In many ways, this is the crucial center of the entire L0-to-L1 process
 `L1_metadata/` | Folder of L1-specific metadata; see below
-`L2_output_templates/` | Folder of L2 template files; not used currently
-`newvars_table.csv` | Table describing how to compute new variables in the L2 step; not used currently
+`L2_metadata/` | Folder of L1-specific metadata; see below
 `out-of-service` | Folder of data files used in the out-of-service step, part of L1_normalize; see below
+`variables_metadata.csv` | CSV file with information about bounds, units, and descriptions for each variable
 
 ## ./pipeline/metadata/L1_metadata
 
@@ -84,9 +87,10 @@ Files used by the `L1_normalize.qmd` and `L1.qmd` steps.
 File | Description
 ---- | -------------
 `CRC.txt` | Site description file for the CRC site, giving location, ecological context, contacts, and key publications; used in the `L1.qmd` metadata-generation step
+`DLG.txt` | Site description file for the DLG site
 `GCW.txt` | Site description file for the GCW site
 `GWI.txt` | Site description file for the GWI site
-`L1_metadata_columns.csv` | This specifies the names and ordering of the L1 data columns. Upon being generated, L1 files are checked against this list and the process will error if there's a discrepancy
+`L1_metadata_columns.csv` | Specifies the names and ordering of the L1 data columns. Upon being generated, L1 files are checked against this list and the process will error if there's a discrepancy
 `L1_metadata_template.txt` | Template for the various metadata files in each site-year folder. Information placeholders in square brackets are replaced in the L1 metadata-generation step
 `L1_metadata_timezones.csv` | Time zone that the dataloggers are set to at each site; used by `L1_normalize.qmd`
 `L1_metadata_variables.csv` | Along with the design table, this is a key 'information center' for the system. Also known as the 'bounds and units table', it specifies unit conversions, expected bands, variable metadata, etc. Every output variable must have an entry here, or the L1_normalize step will error
@@ -99,6 +103,18 @@ File | Description
 `README_v1-1.txt` | Overall README file for the v1-1 release
 `SWH.txt` | Site description file for the SWH site
 `TMP.txt` | Site description file for the TMP site
+
+## ./pipeline/metadata/L2_metadata
+
+Files used by the `L2_qaqc.qmd` and `L2.qmd` steps.
+
+File | Description
+---- | -------------
+`derived_variables.csv` | CSV file list derived variables to compute in L2 and their dependencies
+`L2_metadata_columns.csv` | Specifies the names and ordering of the L1 data columns. Upon being generated, L2 files are checked against this list and the process will error if there's a discrepancy
+`L2_metadata_template.txt` | Template for the various metadata files in each site-year folder. Information placeholders in square brackets are replaced in the L2 metadata-generation step
+`readme_files` | Folder of version README files; identical in functionality to the L1 READMEs
+`well_dimensions.csv` | A somewhat confusing CSV of well dimensions; used for calculating groundwater depth
 
 ## ./pipeline/metadata/out-of-service
 

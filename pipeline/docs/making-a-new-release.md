@@ -104,8 +104,8 @@ use find's `-print` option to make sure you know what you're deleting!)
 COMPASS HPC. For example:
 
 ```
-# this example is for for L1 v1-2; use similar calls this for Raw, L0, and Logs
-rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --exclude=".*" L1/ <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Level1/v1-2/
+# this example is for for L1 v2-1; use similar calls this for Raw, L0, and Logs
+rsync -av --chown=:compass-fme-data --perms --chmod=g+rx --delete --exclude=".*" L1/ <user>@compass.pnl.gov:/compass/datasets/fme_data_release/sensor_data/Level1/v2-1/
 
 # Important note: we use the -chown option to ensure that the correct
 # group is associated with the uploaded files, but by default MacOS
