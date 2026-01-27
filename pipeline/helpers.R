@@ -153,7 +153,8 @@ make_L2_plot <- function(x, vmd, filename) {
 
     # If graph covers more than couple months, axis
     # labels should be "Jan 2024", "Feb 2024", etc.
-    if(max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
+    if(any(!is.na(x$TIMESTAMP)) &&
+           max(x$TIMESTAMP) - min(x$TIMESTAMP) > period("2 months")) {
         p <- p + scale_x_datetime(date_breaks = "1 month",
                                   date_labels =  "%b %Y")
     }
