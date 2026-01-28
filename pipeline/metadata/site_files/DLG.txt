@@ -2,7 +2,7 @@ The DELUGE (DLG) experiment is an ecosystem-scale flooding experiment
 within the Crane Creek lacustuary region of southwestern Lake Erie, 9.25
 miles (14.9 km) northwest of Oak Harbor, Ohio. This site is owned by the
 USFWS and managed as a part of the Ottawa National WIldlife Refuge
-complex. The ploits are located at 41.6153N, 83.2297W and were
+complex. The plots are located at 41.6153N, 83.2297W and were
 established in 2025.
 
 NOTE: Meteorological data for DLG are available in the CRC-W files.
