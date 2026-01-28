@@ -61,13 +61,13 @@ change, only that your scripts using L1 data will probably still work.
 
 CHANGELOG
 —----------------------------------
-Version 2-1 release [DATESTAMP]
+Version 2-1 released [DATESTAMP]
 * DELUGE (DLG) data are here! Well, the TEROS measurements anyway
 * AquaTROLL `gw-pressure` has been split into two variables: vented and unvented. See metadata
 * We now output times of various weather station minima and maxima; as a result, 'Value' may be non-numeric 
 * The `sonde-depth` variable has been removed, as it was unreliable and misleading
 * New soil redox data streams at all CB sites
-* Plot elevation information is now available in the site metadata files
+* Plot elevation information is now available in the CB site metadata files
 
 Version 2-0 released 2025-07-07
 * Covers late 2019 through June 2025 for TEMPEST and all synoptic sites
