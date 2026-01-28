@@ -17,8 +17,10 @@ params:
   L2_METADATA: "L2_metadata/"
   DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_RELEASE_DATE: "???"
+  # L2_RELEASE_DATE is YYYY-MM-DD
   L2_DATA_TIMEZONE: "Etc/GMT+5"
   L2_VERSION: "???"
+  # L2_VERSION should not have "v" in it; e.g. "2-1"
   CODE_EXAMPLES: "code_examples_L2/"
   run_parallel: false
   write_plots: true

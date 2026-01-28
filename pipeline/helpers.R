@@ -124,11 +124,15 @@ make_L1_plot <- function(x, vmd, filename) {
 }
 
 make_L2_plot <- function(x, vmd, filename) {
-    # Remove NAs; see #434
+    # Some variables might not have been MAC'd. Because of the way
+    # we're plotting, using the Value_MAC column with a flag for
+    # color, make sure all Value data are in Value_MAC
+    x$Value_MAC[!is.na(x$Value)] <- x$Value[!is.na(x$Value)]
+    # Now remove NAs; see #434
     x <- x[!is.na(x$Value_MAC),]
     # Above a certain number of rows, our plot sizes get very large
     # with no visual benefit (can't see that many points)
-    very_large_cutoff <- 150000
+    very_large_cutoff <- 100000
     if(nrow(x) > very_large_cutoff) {
         pct <- round(very_large_cutoff / nrow(x) * 100, 0)
         x <- x[sample(nrow(x), very_large_cutoff),]
