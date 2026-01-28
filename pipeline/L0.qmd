@@ -3,16 +3,18 @@ title: "Workflow: L0"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L0.html"
+  # ----- Parameters that change
   DATA_ROOT: "data_TEST/"
+  SKIP_IF_EXISTS: true
+  run_parallel: false
+  # ----- Parameters that don't normally change
+  html_outfile: "L0.html"
   RAW: "Raw/"
   RAW_REMOVED: "removed_raw_files.txt"
   RAW_ORIGINAL: "Raw_original"
   RAW_EDITED: "Raw_edited"
   L0: "L0/"
-  SKIP_IF_EXISTS: true
   logfile: ""
-  run_parallel: false
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 

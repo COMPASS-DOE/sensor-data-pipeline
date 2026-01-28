@@ -3,8 +3,15 @@ title: "L2"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L2.html"
+  # ----- Parameters that change
   DATA_ROOT: "data_TEST/"
+  # L2_VERSION example: "2-1". Do not include "v"
+  L2_VERSION: "???"
+  # L2_RELEASE_DATE is YYYY-MM-DD
+  L2_RELEASE_DATE: "???"
+  run_parallel: false
+  # ----- Parameters that don't normally change
+  html_outfile: "L2.html"
   L2: "L2/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
@@ -17,12 +24,7 @@ params:
   L2_METADATA: "L2_metadata/"
   DERIVED_VARS_TABLE: "derived_variables.csv"
   L2_DATA_TIMEZONE: "Etc/GMT+5"
-  # L2_VERSION example: "2-1". Do not include "v"
-  L2_VERSION: "???"
-  # L2_RELEASE_DATE is YYYY-MM-DD
-  L2_RELEASE_DATE: "???"
   CODE_EXAMPLES: "code_examples_L2/"
-  run_parallel: false
   write_plots: true
   logfile: ""
 date: now

@@ -3,8 +3,11 @@ title: "L1_normalize"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L1_normalize.html"
+  # ----- Parameters that change
   DATA_ROOT: "data_TEST/"
+  run_parallel: false
+  # ----- Parameters that don't normally change
+  html_outfile: "L1_normalize.html"
   L0: "L0/"
   L1_NORMALIZE: "L1_normalize/"
   DESIGN_TABLE: "design_table.csv"
@@ -17,7 +20,6 @@ params:
   METADATA_VARS_TABLE: "variables_metadata.csv"
   OOS: "out-of-service/"
   logfile: ""
-  run_parallel: false
 date: now
 date-format: "YYYY-MM-DD HH:mm:ssZ"
 format: 

@@ -3,8 +3,10 @@ title: "L2_qaqc"
 author: "COMPASS workflows team"
 title-block-banner: true
 params:
-  html_outfile: "L2_qaqc.html"
+  # ----- Parameters that change
   DATA_ROOT: "data_TEST/"
+  # ----- Parameters that don't normally change
+  html_outfile: "L2_qaqc.html"
   L1: "L1/"
   L2_QAQC: "L2_qaqc/"
   QAQC_TABLE: "qaqc_table.csv"
