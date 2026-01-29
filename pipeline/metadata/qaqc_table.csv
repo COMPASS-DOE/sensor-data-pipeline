@@ -153,9 +153,9 @@ wx-winderrors24,,,,1 hour,FALSE,Files?
 wx-windspeed15,,,,1 hour,TRUE,Too variable; no QAQC
 wx-barpress24,,,,1 hour,TRUE,
 ,,,,,,
-soil-salinity-5cm,,,,,TRUE,Derived variable
-soil-salinity-10cm,,,,,TRUE,Derived variable
-soil-salinity-15cm,,,,,TRUE,Derived variable
-soil-salinity-30cm,,,,,TRUE,Derived variable
-soil-salinity-40cm,,,,,TRUE,Derived variable
+soil-salinity-5cm,,,,,FALSE,Derived variable
+soil-salinity-10cm,,,,,FALSE,Derived variable
+soil-salinity-15cm,,,,,FALSE,Derived variable
+soil-salinity-30cm,,,,,FALSE,Derived variable
+soil-salinity-40cm,,,,,FALSE,Derived variable
 gw-wl-below-surface,,,,,TRUE,Derived variable
