@@ -1,6 +1,7 @@
 
 library(tidyverse)
 library(viridis)
+library(ggthemes)
 
 fls <- list.files("~/Documents/Level1/v2-1", pattern = "*.csv$", full.names = TRUE, recursive = TRUE)
 
@@ -14,6 +15,7 @@ for(f in fls) {
 
     results[[f]] <- readr::read_csv(f, col_types = "ccTccccdccii") %>%
         mutate(ts_str = format(TIMESTAMP, "%b-%Y")) %>%
+        filter(!is.na(F_OOB)) %>%
         group_by(Site, Instrument, ts_str) %>%
             summarise(n = sum(F_OOB != 1 & F_OOS != 1, na.rm = TRUE), t = n(),
                       # retain the timestamp for correct sorting later
@@ -59,6 +61,7 @@ bind_rows(results) %>%
           strip.text = element_text(size = 18),
           legend.position="bottom",
           legend.text = element_text(size=16),
-          legend.title = element_text(size=18))
+          legend.title = element_text(size=18)) +
+    coord_equal()
 
 ggsave("~/Documents/L1_v2-1_synoptic_avail_DLG.png", height = 8, width = 25)
