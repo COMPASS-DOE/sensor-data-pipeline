@@ -8,7 +8,7 @@
 
 COMPASS-FME processing pipeline for environmental sensor data.
 
-Latest data release is `v2-0`, 07 July 2025.
+Latest data release is `v2-1`, 30 January 2026.
 
 <details>
 <summary>
