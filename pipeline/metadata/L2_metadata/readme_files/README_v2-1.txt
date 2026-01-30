@@ -1,5 +1,5 @@
 COMPASS-FME Level 2 sensor data
-Version: [VERSION] (BETA)
+Version: [VERSION]
 Date: [DATESTAMP]
 Observations: [OBSERVATIONS]
 Git commit: [GIT_COMMIT]
