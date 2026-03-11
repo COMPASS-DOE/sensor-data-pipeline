@@ -4,7 +4,7 @@
 # BBL and SCP June 2025
 
 # Find and count lines for all v2 files in the L1 folder
-files <- list.files(pattern = "_L1_v2.*csv$",
+files <- list.files(pattern = "_L1_v2-1.*csv$",
                     full.names = TRUE, recursive = TRUE)
 
 library(dplyr)

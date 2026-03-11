@@ -25,7 +25,7 @@ message("Found ", nrow(results), " files to process")
 
 # Isolate the data files - pattern of xxx_xx_nnnnnnnn-nnnnnnnn_*.csv
 message("Processing data files...")
-data_files <- grep("^[A-Za-z]+_[A-Za-z]+_[0-9]{8}-[0-9]{8}.+\\.csv$", results$File_Name)
+data_files <- grep("^[A-Za-z]+_[A-Za-z0-9]+_[0-9]{8}-[0-9]{8}.+\\.csv$", results$File_Name)
 df <- results[data_files,]
 
 find_start_end_dates <- function(x) {
@@ -46,7 +46,7 @@ df$Missing_Value_Codes <- "'NA'"
 
 # Isolate the plot files
 message("Processing plot files...")
-plot_files <- grep("^[A-Za-z]+_[A-Za-z]+_[0-9]{8}-[0-9]{8}.+\\.pdf$", results$File_Name)
+plot_files <- grep("^[A-Za-z]+_[A-Za-z0-9]+_[0-9]{8}-[0-9]{8}.+\\.pdf$", results$File_Name)
 pf <- results[plot_files,]
 pf <- find_start_end_dates(pf)
 pf$File_Description <- paste("Plots of",
@@ -64,14 +64,14 @@ mdf$File_Description <- paste("Metadata for all data files in", mdf$File_Path, "
 message("Processing special files...")
 special_files_info <-
     tribble(~File_Name,                                        ~File_Description,
-            "README_v2-0.txt",                                 "Overall documentation file for the v1-2 release",
+            "README_v2-1.txt",                                 "Overall documentation file for the v1-2 release",
             "README.md",                                       "Minimal README about the folder",
             "L1-create-time-series.R",                            "Sample R code to create a time series from data",
             "cumulative-observations.R",                       "Sample R code to plot cumulative observations",
             "download-from-google-drive.R",                       "Sample R code to download data from the project's Google Drive",
             "get-latest-release-name.R",                       "Sample R code to get the latest L1 release number (version number)",
             "dd.csv",                                          "Data dictionary of all column names present in the datasets",
-            "v2-0 L1 Sensor Package Quick Start.pdf", "Quick start guide with overview descriptions of data package")
+            "v2-1 L1 Sensor Data Package QStart.pdf", "Quick start guide with overview descriptions of data package")
 special_files <- which(results$File_Name %in% special_files_info$File_Name)
 sf <- results[special_files,]
 sf <- left_join(sf, special_files_info, by = "File_Name")
