@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-07 00:00:00",2.7,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",2.7,0,0
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-06 00:00:00",2.6,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",2.6,0,0
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-05 00:00:00",2.4,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",2.4,0,0
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-08 00:00:00",3.5,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",3.5,0,0
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-10 00:00:00",5.5,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",5.5,0,0
+"wx-tilt-we24","degrees","Compass_MSM_W_401","ClimaVue50_24hr","TiltWE_deg_Max","2023-09-09 00:00:00",4.5,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-we24",4.5,0,0

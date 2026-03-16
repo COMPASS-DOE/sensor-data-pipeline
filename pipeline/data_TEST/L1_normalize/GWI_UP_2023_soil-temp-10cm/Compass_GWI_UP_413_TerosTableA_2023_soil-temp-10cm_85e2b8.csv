@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 01:00:00",12.9,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.9,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 00:00:00",12.9,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.9,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 00:15:00",12.9,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.9,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 00:30:00",12.9,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.9,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 01:15:00",12.8,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(1,2)","2023-01-08 00:45:00",12.9,"02551aa4","GWI","UP","TEROS12","A","1",,"GWI-UP-TEROS12-A-1-soil-temp-10cm",12.9,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 01:00:00",13.1,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.1,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 00:30:00",13.2,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.2,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 01:15:00",13.1,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.1,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 00:00:00",13.2,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.2,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 00:15:00",13.2,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.2,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(2,2)","2023-01-08 00:45:00",13.2,"02551aa4","GWI","UP","TEROS12","A","2",,"GWI-UP-TEROS12-A-2-soil-temp-10cm",13.2,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 00:30:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 00:45:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 01:15:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 00:00:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 01:00:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(3,2)","2023-01-08 00:15:00",13.3,"02551aa4","GWI","UP","TEROS12","A","3",,"GWI-UP-TEROS12-A-3-soil-temp-10cm",13.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 00:45:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 01:00:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 00:30:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 00:15:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 00:00:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0
+"soil-temp-10cm","degC","Compass_GWI_UP_413","TerosTableA","TerosA(4,2)","2023-01-08 01:15:00",12.8,"02551aa4","GWI","UP","TEROS12","A","4",,"GWI-UP-TEROS12-A-4-soil-temp-10cm",12.8,0,0

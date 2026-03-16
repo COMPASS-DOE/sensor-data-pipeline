@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 00:45:00",45,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",45,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 01:15:00",43,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",43,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 00:00:00",46,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",46,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 00:30:00",44,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",44,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 00:15:00",46,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",46,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(14,3)","2023-11-04 01:00:00",47,"cd7d07ad","TMP","F","TEROS12","23","T118","C6","TMP-F-TEROS12-23-T118-soil-EC-5cm",47,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 00:00:00",63,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",63,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 00:45:00",64,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",64,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 01:00:00",65,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",65,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 00:30:00",63,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",63,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 00:15:00",64,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",64,0,0
+"soil-EC-5cm","µS/cm","PNNL_23","Terosdata","Teros(17,3)","2023-11-04 01:15:00",64,"cd7d07ad","TMP","F","TEROS12","23","T043","H6","TMP-F-TEROS12-23-T043-soil-EC-5cm",64,0,0

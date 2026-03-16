@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-11 00:00:00",1.022335,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",1.022335,,0
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-12 00:00:00",0.95564,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",0.95564,,0
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-09 00:00:00",1.007075,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",1.007075,,0
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-07 00:00:00",0.8411049,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",0.8411049,,0
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-10 00:00:00",0.6967549,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",0.6967549,,0
+"wx-slr-tf24","MJ/m2","Compass_GWI_W_411","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-02-08 00:00:00",1.04364,"12daf824","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-slr-tf24",1.04364,,0

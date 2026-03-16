@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"TMP","S","2023-11-04 00:00:00","AquaTROLL600","685410",,,13.525,"gw-temperature-int","7b3bda2b",0,0,
+"TMP","S","2023-11-04 00:15:00","AquaTROLL600","685410",,,13.57,"gw-temperature-int","7b3bda2b",0,0,
+"TMP","S","2023-11-04 00:30:00","AquaTROLL600","685410",,,13.561,"gw-temperature-int","7b3bda2b",0,0,
+"TMP","S","2023-11-04 00:45:00","AquaTROLL600","685410",,,13.534,"gw-temperature-int","7b3bda2b",0,0,
+"TMP","S","2023-11-04 01:00:00","AquaTROLL600","685410",,,13.561,"gw-temperature-int","7b3bda2b",0,0,
+"TMP","S","2023-11-04 01:15:00","AquaTROLL600","685410",,,13.543,"gw-temperature-int","7b3bda2b",0,0,

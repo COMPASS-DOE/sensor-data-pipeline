@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 01:15:00",2607.63,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.315899677,0,0
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 01:30:00",2607.51,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.315853129,0,0
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 00:30:00",2607.55,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.315868645,0,0
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 00:15:00",2607.28,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.315763912,0,0
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 01:00:00",2607.98,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.316035442,0,0
+"soil-vwc-30cm","m3/m3","PNNL_11","Terosdata","Teros(16,1)","2023-11-04 00:45:00",2608.69,"46e52e79","GCW","UP","TEROS12","11","T101","C3","TMP-C-TEROS12-11-T101-soil-vwc-30cm",0.316310851,0,0

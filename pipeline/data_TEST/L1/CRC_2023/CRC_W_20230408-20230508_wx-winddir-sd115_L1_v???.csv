@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","W","2023-04-08 00:00:00","ClimaVUE50","A",,,4.383,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-04-08 00:15:00","ClimaVUE50","A",,,8.7,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-04-08 00:30:00","ClimaVUE50","A",,,6.989,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-04-08 00:45:00","ClimaVUE50","A",,,6.09,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-04-08 01:00:00","ClimaVUE50","A",,,9.96,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-04-08 01:15:00","ClimaVUE50","A",,,7.862,"wx-winddir-sd115","9bea3c3a",0,0,
+"CRC","W","2023-05-08 00:00:00","ClimaVUE50","A",,,8.18,"wx-winddir-sd115","70c64b5e",0,0,
+"CRC","W","2023-05-08 00:15:00","ClimaVUE50","A",,,3.858,"wx-winddir-sd115","70c64b5e",0,0,
+"CRC","W","2023-05-08 00:30:00","ClimaVUE50","A",,,5.891,"wx-winddir-sd115","70c64b5e",0,0,
+"CRC","W","2023-05-08 00:45:00","ClimaVUE50","A",,,7.63,"wx-winddir-sd115","70c64b5e",0,0,
+"CRC","W","2023-05-08 01:00:00","ClimaVUE50","A",,,6.09,"wx-winddir-sd115","70c64b5e",0,0,
+"CRC","W","2023-05-08 01:15:00","ClimaVUE50","A",,,5.356,"wx-winddir-sd115","70c64b5e",0,0,

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 00:30:00",1019.4,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1019.4,,0
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 00:45:00",1019.3,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1019.3,,0
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 01:15:00",1019.4,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1019.4,,0
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 00:00:00",1020,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1020,,0
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 01:00:00",1019.6,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1019.6,,0
+"gw-resistivity","ohm-cm","Compass_CRC_W_301","WaterLevel600C","Resistivity600C","2023-05-08 00:15:00",1019.6,"f8098de1","CRC","W","AquaTROLL600","C",,,"CRC-W-AquaTROLL600-C-NA-gw-resistivity",1019.6,,0

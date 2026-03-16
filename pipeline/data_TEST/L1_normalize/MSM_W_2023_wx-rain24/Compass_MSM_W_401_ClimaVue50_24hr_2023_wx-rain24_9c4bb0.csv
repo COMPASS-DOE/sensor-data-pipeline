@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-10 00:00:00",0.119,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0.119,0,0
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-07 00:00:00",0.085,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0.085,0,0
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-09 00:00:00",0,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0,0,0
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-05 00:00:00",0.204,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0.204,0,0
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-06 00:00:00",0.272,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0.272,0,0
+"wx-rain24","mm","Compass_MSM_W_401","ClimaVue50_24hr","Rain_mm_Tot","2023-10-08 00:00:00",0.493,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rain24",0.493,0,0

@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","OW","2023-04-21 08:30:00","EXO","A",,,-34.06,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-04-21 08:45:00","EXO","A",,,-34.06,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-04-21 09:00:00","EXO","A",,,-34.15,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-04-21 09:15:00","EXO","A",,,-33.95,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-04-21 09:30:00","EXO","A",,,-35.08,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-04-21 09:45:00","EXO","A",,,-35.71,"sonde-ph-mv","ae176c4d",,0,
+"CRC","OW","2023-05-08 00:00:00","EXO","A",,,-26.56,"sonde-ph-mv","1030fe73",,0,
+"CRC","OW","2023-05-08 00:15:00","EXO","A",,,-32.46,"sonde-ph-mv","1030fe73",,0,
+"CRC","OW","2023-05-08 00:30:00","EXO","A",,,-32.37,"sonde-ph-mv","1030fe73",,0,
+"CRC","OW","2023-05-08 00:45:00","EXO","A",,,-32.07,"sonde-ph-mv","1030fe73",,0,
+"CRC","OW","2023-05-08 01:00:00","EXO","A",,,-32.57,"sonde-ph-mv","1030fe73",,0,
+"CRC","OW","2023-05-08 01:15:00","EXO","A",,,-31.71,"sonde-ph-mv","1030fe73",,0,

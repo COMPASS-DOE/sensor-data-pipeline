@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-08 00:00:00",60.2,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",60.2,0,0
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-13 00:00:00",54,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",54,0,0
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-12 00:00:00",42.8,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",42.8,0,0
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-09 00:00:00",86.1,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",86.1,0,0
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-11 00:00:00",48.2,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",48.2,0,0
+"wx-rht24","perc","Compass_OWC_W_321","ClimaVue50_24hr","RH_Min","2023-05-10 00:00:00",49.4,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-rht24",49.4,0,0

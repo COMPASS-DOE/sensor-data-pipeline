@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"OWC","W","2023-04-08 00:00:00","ClimaVUE50","A",,,1012.9,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-04-08 00:15:00","ClimaVUE50","A",,,1013,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-04-08 00:30:00","ClimaVUE50","A",,,1013,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-04-08 00:45:00","ClimaVUE50","A",,,1013,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-04-08 01:00:00","ClimaVUE50","A",,,1013,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-04-08 01:15:00","ClimaVUE50","A",,,1013.1,"wx-bpmax15","c02f76ab",1,0,
+"OWC","W","2023-05-08 00:00:00","ClimaVUE50","A",,,993,"wx-bpmax15","04eff4d2",1,0,
+"OWC","W","2023-05-08 00:15:00","ClimaVUE50","A",,,993,"wx-bpmax15","04eff4d2",1,0,
+"OWC","W","2023-05-08 00:30:00","ClimaVUE50","A",,,993.6,"wx-bpmax15","04eff4d2",1,0,
+"OWC","W","2023-05-08 00:45:00","ClimaVUE50","A",,,994.2,"wx-bpmax15","04eff4d2",1,0,
+"OWC","W","2023-05-08 01:00:00","ClimaVUE50","A",,,994.3,"wx-bpmax15","04eff4d2",1,0,
+"OWC","W","2023-05-08 01:15:00","ClimaVUE50","A",,,994.1,"wx-bpmax15","04eff4d2",1,0,

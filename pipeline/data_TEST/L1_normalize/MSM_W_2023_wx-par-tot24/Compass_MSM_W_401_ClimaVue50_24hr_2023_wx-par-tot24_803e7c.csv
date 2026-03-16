@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-07 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-06 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-08 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-05 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-09 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0
+"wx-par-tot24","mmol/m2","Compass_MSM_W_401","ClimaVue50_24hr","PAR_Tot_C_Tot","2023-09-10 00:00:00",7999,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-par-tot24",7999,,0

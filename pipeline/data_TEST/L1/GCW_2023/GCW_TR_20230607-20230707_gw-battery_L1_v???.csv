@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GCW","TR","2023-06-07 00:00:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-06-07 00:15:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-06-07 00:30:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-06-07 00:45:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-06-07 01:00:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-06-07 01:15:00","AquaTROLL600","B",,,84,"gw-battery","7656c197",0,0,
+"GCW","TR","2023-07-07 00:00:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,
+"GCW","TR","2023-07-07 00:15:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,
+"GCW","TR","2023-07-07 00:30:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,
+"GCW","TR","2023-07-07 00:45:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,
+"GCW","TR","2023-07-07 01:00:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,
+"GCW","TR","2023-07-07 01:15:00","AquaTROLL600","B",,,83,"gw-battery","09357236",0,0,

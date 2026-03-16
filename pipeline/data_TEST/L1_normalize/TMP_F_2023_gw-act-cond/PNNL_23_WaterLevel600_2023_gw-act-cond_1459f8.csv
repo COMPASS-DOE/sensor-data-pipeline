@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 01:00:00",78.93,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.93,,0
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 00:00:00",78.96,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.96,,0
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 00:15:00",78.99,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.99,,0
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 00:30:00",78.92,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.92,,0
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 01:15:00",78.88,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.88,,0
+"gw-act-cond","μS/cm","PNNL_23","WaterLevel600","Actual_Conductivity600","2023-11-04 00:45:00",78.95,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-act-cond",78.95,,0

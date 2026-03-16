@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 09:15:00",13.55,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",13.55,,0
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 09:30:00",13.54,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",13.54,,0
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 09:45:00",13.5,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",13.5,,0
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 09:00:00",13.53,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",13.53,,0
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 08:30:00",12.64,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",12.64,,0
+"sonde-cable","V","Compass_OWC_W_321","ExoTable","Cable_v","2023-04-21 08:45:00",12.88,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-cable",12.88,,0

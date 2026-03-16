@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","SWAMP","2023-04-08 00:15:00","TEROS12","A","5",,0.572064958,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 00:15:00","TEROS12","A","6",,0.617321251,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 00:30:00","TEROS12","A","5",,0.571099087,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 00:30:00","TEROS12","A","6",,0.617918617,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 00:45:00","TEROS12","A","5",,0.571820581,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 00:45:00","TEROS12","A","6",,0.618046624,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:00:00","TEROS12","A","5",,0.571851613,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:00:00","TEROS12","A","6",,0.617069116,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:15:00","TEROS12","A","5",,0.571727485,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:15:00","TEROS12","A","6",,0.616952746,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:30:00","TEROS12","A","5",,0.571762396,"soil-vwc-30cm","d37376ae",0,0,0
+"SWH","SWAMP","2023-04-08 01:30:00","TEROS12","A","6",,0.618015592,"soil-vwc-30cm","d37376ae",0,0,0

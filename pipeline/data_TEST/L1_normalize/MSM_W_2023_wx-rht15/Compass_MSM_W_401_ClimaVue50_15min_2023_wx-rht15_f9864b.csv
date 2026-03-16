@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 00:30:00",15.71,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",15.71,,0
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 01:00:00",15.41,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",15.41,,0
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 00:45:00",15.52,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",15.52,,0
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 00:15:00",15.8,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",15.8,,0
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 01:15:00",15.23,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",15.23,,0
+"wx-rht15","degC","Compass_MSM_W_401","ClimaVue50_15min","RHT_C_Avg","2023-10-05 00:00:00",16.01,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-rht15",16.01,,0

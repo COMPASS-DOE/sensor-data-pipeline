@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:40:00",52,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",52,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:35:00",52,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",52,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:30:00",52,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",52,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 17:05:00",53,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",53,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 17:10:00",51,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",51,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:20:00",52,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",52,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:45:00",53,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",53,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:25:00",51,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",51,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 17:00:00",53,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",53,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:50:00",52,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",52,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(16,3)","2024-06-06 16:55:00",53,"dfa79cd7","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-EC-30cm",53,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 17:10:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:35:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:20:00",19,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",19,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:55:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 17:05:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:45:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:50:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:30:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:40:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 16:25:00",20,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",20,0,0
+"soil-EC-30cm","µS/cm","PNNL_23","Terosdata","Teros(19,3)","2024-06-06 17:00:00",19,"dfa79cd7","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-EC-30cm",19,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 00:15:00",0.533,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.749284,0,0
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 00:45:00",0.532,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.680336,0,0
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 01:15:00",0.527,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.335596,0,0
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 01:30:00",0.53,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.54244,0,0
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 00:30:00",0.533,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.749284,0,0
+"gw-pressure","mbar","Compass_MSM_UP_403","WaterLevel600A","Pressure600A","2023-10-05 01:00:00",0.528,"904ca955","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-pressure",36.404544,0,0

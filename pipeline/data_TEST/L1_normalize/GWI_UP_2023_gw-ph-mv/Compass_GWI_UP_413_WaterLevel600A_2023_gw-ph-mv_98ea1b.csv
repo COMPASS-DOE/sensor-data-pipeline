@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 01:00:00",134.4,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.4,,0
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 01:15:00",134.4,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.4,,0
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 00:15:00",134.5,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.5,,0
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 00:30:00",134.4,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.4,,0
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 00:45:00",134.4,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.4,,0
+"gw-ph-mv","mV","Compass_GWI_UP_413","WaterLevel600A","pH_mV600A","2023-02-07 01:30:00",134.4,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-ph-mv",134.4,,0

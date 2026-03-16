@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 00:00:00",8.9,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.9,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 00:45:00",8.9,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.9,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 01:00:00",8.9,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.9,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 00:15:00",8.9,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.9,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 00:30:00",8.9,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.9,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(5,2)","2023-04-08 01:15:00",8.8,"9a97db43","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-temp-30cm",8.8,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 00:00:00",9.2,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.2,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 01:00:00",9.1,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.1,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 00:15:00",9.2,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.2,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 00:30:00",9.2,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.2,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 00:45:00",9.2,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.2,0,0
+"soil-temp-30cm","degC","Compass_OWC_UP_323","TerosTableA","TerosA(6,2)","2023-04-08 01:15:00",9.1,"9a97db43","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-temp-30cm",9.1,0,0

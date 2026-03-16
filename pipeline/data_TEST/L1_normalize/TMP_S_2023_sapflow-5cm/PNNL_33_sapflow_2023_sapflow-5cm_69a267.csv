@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 01:15:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 00:45:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 00:00:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 00:15:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 00:30:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(9)","2023-11-04 01:00:00",0.506,"0af788e8","TMP","S","Sapflow","33","SD14","I2","TMP-S-Sapflow-33-SD14-sapflow-5cm",0.506,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 01:00:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 00:00:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 01:15:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 00:15:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 00:45:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0
+"sapflow-5cm","mV","PNNL_33","sapflow","DiffVolt_Avg(10)","2023-11-04 00:30:00",0.695,"0af788e8","TMP","S","Sapflow","33","SD12","F4","TMP-S-Sapflow-33-SD12-sapflow-5cm",0.695,0,0

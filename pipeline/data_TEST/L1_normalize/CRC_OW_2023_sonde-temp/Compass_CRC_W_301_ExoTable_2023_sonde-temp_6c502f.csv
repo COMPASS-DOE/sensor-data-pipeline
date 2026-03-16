@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 09:15:00",14.023,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",14.023,0,0
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 09:30:00",14.209,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",14.209,0,0
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 08:45:00",13.6,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",13.6,0,0
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 08:30:00",13.484,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",13.484,0,0
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 09:45:00",14.473,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",14.473,0,0
+"sonde-temp","C","Compass_CRC_W_301","ExoTable","Temp_C","2023-04-21 09:00:00",13.832,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-temp",13.832,0,0

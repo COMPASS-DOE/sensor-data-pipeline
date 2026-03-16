@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 03:00:00",2,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",2,0,0
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 04:00:00",1.8,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",1.8,0,0
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 05:00:00",2,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",2,0,0
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 00:00:00",2,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",2,0,0
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 02:00:00",1.7,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",1.7,0,0
+"wx-tempmin15","degC","Compass_GWI_W_411","ClimaVue50_15min","AirT_C_Min","2023-02-07 01:00:00",0.7,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-tempmin15",0.7,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 00:15:00",0.173279,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.173279,,0
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 00:30:00",0.173322,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.173322,,0
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 00:45:00",0.17338,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.17338,,0
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 00:00:00",0.173242,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.173242,,0
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 01:15:00",0.173444,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.173444,,0
+"gw-tds","ppt","PNNL_23","WaterLevel200","TDS","2023-11-04 01:00:00",0.173374,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-tds",0.173374,,0

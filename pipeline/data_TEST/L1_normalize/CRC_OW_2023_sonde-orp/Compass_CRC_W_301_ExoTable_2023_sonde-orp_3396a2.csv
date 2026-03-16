@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 00:00:00",-130.26,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-130.26,0,0
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 00:45:00",-84.03,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-84.03,0,0
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 00:30:00",-93.18,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-93.18,0,0
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 00:15:00",-119.81,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-119.81,0,0
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 01:00:00",-75.61,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-75.61,0,0
+"sonde-orp","mV","Compass_CRC_W_301","ExoTable","ORP_mv","2023-05-08 01:15:00",-68.34,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-orp",-68.34,0,0

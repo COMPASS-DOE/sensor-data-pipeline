@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 01:00:00",3148.77,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.525807883,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 00:15:00",3149.72,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.526176388,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 00:30:00",3148.89,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.525854431,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 00:45:00",3148.22,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.525594538,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 01:15:00",3148.37,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.525652723,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(1,1)","2023-04-08 01:30:00",3148.3,"84fdefec","SWH","TR","TEROS12","B","1",,"SWH-TR-TEROS12-B-1-soil-vwc-10cm",0.52562557,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 00:15:00",3203.68,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.547107472,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 01:00:00",3202.82,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.546773878,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 01:15:00",3203.41,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.547002739,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 01:30:00",3201.3,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.54618427,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 00:30:00",3202.91,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.546808789,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(2,1)","2023-04-08 00:45:00",3204.18,"84fdefec","SWH","TR","TEROS12","B","2",,"SWH-TR-TEROS12-B-2-soil-vwc-10cm",0.547301422,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 00:15:00",3127.06,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.517386574,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 01:00:00",3125.3,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.51670387,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 01:15:00",3124.89,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.516544831,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 00:30:00",3125.75,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.516878425,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 00:45:00",3124.86,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.516533194,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(3,1)","2023-04-08 01:30:00",3125.2,"84fdefec","SWH","TR","TEROS12","B","3",,"SWH-TR-TEROS12-B-3-soil-vwc-10cm",0.51666508,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 01:00:00",3070.67,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.495512893,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 01:15:00",3074.13,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.496855027,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 00:15:00",3069.86,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.495198694,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 00:30:00",3069.6,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.49509784,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 00:45:00",3070.16,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.495315064,0,0
+"soil-vwc-10cm","m3/m3","Compass_SWH_TR_422","TerosTableB","TerosB(4,1)","2023-04-08 01:30:00",3077.43,"84fdefec","SWH","TR","TEROS12","B","4",,"SWH-TR-TEROS12-B-4-soil-vwc-10cm",0.498135097,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 00:00:00",-0.33,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.33,,0
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 00:45:00",-0.34,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.34,,0
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 01:00:00",-0.33,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.33,,0
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 00:15:00",-0.35,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.35,,0
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 00:30:00",-0.36,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.36,,0
+"gw-part-pressure","Torr","COMPASS_GCW_TR_432","WaterLevel600B","RDO_part_Pressure600B","2023-06-07 01:15:00",-0.36,"7656c197","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-part-pressure",-0.36,,0

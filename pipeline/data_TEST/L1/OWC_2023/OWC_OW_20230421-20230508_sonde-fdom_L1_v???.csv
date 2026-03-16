@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"OWC","OW","2023-04-21 08:30:00","EXO","A",,,51.23,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-04-21 08:45:00","EXO","A",,,51.51,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-04-21 09:00:00","EXO","A",,,51.83,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-04-21 09:15:00","EXO","A",,,50.96,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-04-21 09:30:00","EXO","A",,,49.82,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-04-21 09:45:00","EXO","A",,,49.94,"sonde-fdom","e534e675",0,0,0
+"OWC","OW","2023-05-08 00:00:00","EXO","A",,,60.05,"sonde-fdom","67c0d898",0,0,0
+"OWC","OW","2023-05-08 00:15:00","EXO","A",,,58.14,"sonde-fdom","67c0d898",0,0,0
+"OWC","OW","2023-05-08 00:30:00","EXO","A",,,59.94,"sonde-fdom","67c0d898",0,0,0
+"OWC","OW","2023-05-08 00:45:00","EXO","A",,,56.8,"sonde-fdom","67c0d898",0,0,0
+"OWC","OW","2023-05-08 01:00:00","EXO","A",,,61.23,"sonde-fdom","67c0d898",0,0,0
+"OWC","OW","2023-05-08 01:15:00","EXO","A",,,56.31,"sonde-fdom","67c0d898",0,0,0

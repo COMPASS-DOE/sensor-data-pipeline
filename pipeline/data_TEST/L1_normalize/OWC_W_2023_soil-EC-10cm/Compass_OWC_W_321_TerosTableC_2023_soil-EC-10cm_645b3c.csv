@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 00:45:00",474,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",474,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 00:15:00",483,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",483,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 00:00:00",489,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",489,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 00:30:00",458,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",458,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 01:15:00",449,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",449,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(1,3)","2023-04-08 01:00:00",455,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-EC-10cm",455,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 01:00:00",322,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",322,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 01:15:00",323,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",323,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 00:15:00",313,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",313,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 00:30:00",338,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",338,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 00:00:00",315,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",315,0,0
+"soil-EC-10cm","µS/cm","Compass_OWC_W_321","TerosTableC","TerosC(2,3)","2023-04-08 00:45:00",352,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-EC-10cm",352,0,0

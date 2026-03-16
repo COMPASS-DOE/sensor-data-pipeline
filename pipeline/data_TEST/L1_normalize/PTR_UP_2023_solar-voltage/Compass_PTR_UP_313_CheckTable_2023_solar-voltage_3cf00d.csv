@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 00:45:00",25.13,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.13,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 01:15:00",25.11,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.11,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 01:45:00",25.09,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.09,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 01:30:00",25.1,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.1,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 01:00:00",25.12,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.12,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 02:15:00",25.07,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.07,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 02:00:00",25.08,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.08,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 02:45:00",25.05,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.05,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 00:15:00",25.15,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.15,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 00:30:00",25.14,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.14,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 02:30:00",25.06,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.06,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 03:15:00",25.03,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.03,0,0
+"solar-voltage","V","Compass_PTR_UP_313","CheckTable","SolarV","2023-08-06 03:00:00",25.04,"afd5a6af","PTR","UP","Datalogger","313",,,"PTR-UP-Datalogger-313-NA-solar-voltage",25.04,0,0

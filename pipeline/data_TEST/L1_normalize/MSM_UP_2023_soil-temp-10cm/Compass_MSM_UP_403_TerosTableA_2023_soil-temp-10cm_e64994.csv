@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 01:15:00",20,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 00:15:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 00:30:00",20,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 00:45:00",20,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 01:30:00",20,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(1,2)","2023-10-05 01:00:00",20,"9c80b39b","MSM","UP","TEROS12","A","1",,"MSM-UP-TEROS12-A-1-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 01:15:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 00:45:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 01:30:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 00:15:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 00:30:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(2,2)","2023-10-05 01:00:00",20.1,"9c80b39b","MSM","UP","TEROS12","A","2",,"MSM-UP-TEROS12-A-2-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 00:45:00",19.9,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",19.9,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 01:00:00",19.9,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",19.9,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 01:30:00",19.9,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",19.9,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 00:15:00",20,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 01:15:00",19.9,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",19.9,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(3,2)","2023-10-05 00:30:00",20,"9c80b39b","MSM","UP","TEROS12","A","3",,"MSM-UP-TEROS12-A-3-soil-temp-10cm",20,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 01:00:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 01:15:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 00:45:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 00:30:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 00:15:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_UP_403","TerosTableA","TerosA(4,2)","2023-10-05 01:30:00",19.7,"9c80b39b","MSM","UP","TEROS12","A","4",,"MSM-UP-TEROS12-A-4-soil-temp-10cm",19.7,0,0

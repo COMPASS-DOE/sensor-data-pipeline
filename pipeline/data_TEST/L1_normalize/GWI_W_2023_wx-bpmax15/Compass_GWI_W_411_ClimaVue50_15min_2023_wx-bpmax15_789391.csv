@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 02:00:00",1028.8,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1028.8,1,0
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 04:00:00",1028.9,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1028.9,1,0
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 03:00:00",1028.9,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1028.9,1,0
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 01:00:00",1028.5,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1028.5,1,0
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 00:00:00",1028.6,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1028.6,1,0
+"wx-bpmax15","mbar","Compass_GWI_W_411","ClimaVue50_15min","BP_mbar_Max","2023-01-08 05:00:00",1029,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-bpmax15",1029,1,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 00:00:00",11.515,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.515,,0
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 01:00:00",11.524,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.524,,0
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 00:15:00",11.515,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.515,,0
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 00:30:00",11.515,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.515,,0
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 00:45:00",11.542,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.542,,0
+"gw-voltage-ext","V","Compass_MSM_UP_403","WaterLevel600A","Voltage_Ext600A","2023-09-05 01:15:00",11.524,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-voltage-ext",11.524,,0

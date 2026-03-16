@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-09 00:00:00",74.32,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",74.32,0,0
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-08 00:00:00",134.7,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",134.7,0,0
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-13 00:00:00",95.3,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",95.3,0,0
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-10 00:00:00",151.8,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",151.8,0,0
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-12 00:00:00",101.1,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",101.1,0,0
+"wx-par-den24","µmol/m2/s","Compass_GWI_W_411","ClimaVue50_24hr","PAR_Den_C_Avg","2023-01-11 00:00:00",99.2,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-par-den24",99.2,0,0

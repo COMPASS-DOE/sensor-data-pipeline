@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 00:00:00",1070.4,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1070.4,,0
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 00:30:00",1070.3,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1070.3,,0
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 01:00:00",1070,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1070,,0
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 01:15:00",1069.4,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1069.4,,0
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 00:15:00",1070.4,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1070.4,,0
+"gw-depth","cm","PNNL_13","WaterLevel600","Depth600","2023-11-04 00:45:00",1070,8e+307,"TMP","C","AquaTROLL600","685442",,,"TMP-C-AquaTROLL600-685442-NA-gw-depth",1070,,0

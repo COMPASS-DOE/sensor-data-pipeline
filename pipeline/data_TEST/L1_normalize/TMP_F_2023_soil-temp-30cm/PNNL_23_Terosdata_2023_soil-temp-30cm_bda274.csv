@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 01:00:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 00:45:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 00:15:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 01:15:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 00:30:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(16,2)","2023-11-04 00:00:00",13,"cd7d07ad","TMP","F","TEROS12","23","T120","C6","TMP-F-TEROS12-23-T120-soil-temp-30cm",13,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 01:15:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 00:15:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 00:00:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 01:00:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 00:45:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0
+"soil-temp-30cm","degC","PNNL_23","Terosdata","Teros(19,2)","2023-11-04 00:30:00",12.6,"cd7d07ad","TMP","F","TEROS12","23","T163","H6","TMP-F-TEROS12-23-T163-soil-temp-30cm",12.6,0,0

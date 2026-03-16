@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-13 00:00:00",18.07,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",18.07,0,0
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-08 00:00:00",2.527,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",2.527,0,0
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-11 00:00:00",6.265,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",6.265,0,0
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-10 00:00:00",3.964,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",3.964,0,0
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-12 00:00:00",13.19,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",13.19,0,0
+"wx-tempavg24","degC","Compass_OWC_W_321","ClimaVue50_24hr","AirT_C_Avg","2023-04-09 00:00:00",2.241,"bfa64e73","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-tempavg24",2.241,0,0

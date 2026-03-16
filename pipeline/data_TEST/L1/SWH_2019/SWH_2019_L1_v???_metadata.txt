@@ -1,0 +1,295 @@
+COMPASS-FME Level 1 sensor data site documentation
+Version: ???
+SWH_2019
+Thu Nov  6 11:33:34 2025
+
+
+General information
+—----------------------------------
+Level 1 (L1) environmental sensor data are close to raw, although they
+have been units-transformed and have out-of-instrument-bounds and
+out-of-service flags added. Duplicates are removed but otherwise these
+data are not filtered, and have not been subject to any additional
+algorithmic or human QA/QC. Any analyses making use of L1 data
+should be performed with care.
+
+
+Site information
+—----------------------------------
+Sweet Hall Marsh (SWH) is one of the COMPASS-FME synoptic sites located
+in the tidal fresh Pamunkey River, one of the two tributaries of the
+York River in Virginia, USA. This site consists of four plots: upland
+("UP"; located at 37.5708N, 76.8954W), swamp ("SWAMP"; located at
+37.57069N, 76.8957W), transition ("TR"; 37.56883N, 76.8964W), and
+wetland ("W"; 37.56659N, 76.8970W). It was established in June 2023.
+This site is also identified as a Chesapeake Bay National Research
+Reserve site.
+
+NOTE: Meteorological data for SWH are available in the SWH-W files.
+NOTE: The "02D" sapflow sensor in the SWAMP plot was accidentally
+installed incorrectly, with the heated probe on the bottom. This does
+not appear to affect data quality (see
+https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/281).
+
+Contacts for the Sweet Hall site:
+Stephanie J. Wilson <wilsonsj@si.edu>
+Pat Megonigal <megonigalp@si.edu>
+Nick Ward <nicholas.ward@pnnl.gov>
+
+Contacts for Sweet Hall data streams:
+Overall: S. Wilson
+Sapflow: S. Wilson; Stephanie Pennington <stephanie.pennington@pnnl.gov>; Alice Stearns <stearnsA@si.edu>
+TEROS: S. Wilson; Evan Phillips <PhillipsE@si.edu>; Roberta Bittencourt Peixoto <Roberta.BittencourtPeixoto@UToledo.Edu>; Peter Regier <peter.regier@pnnl.gov>
+AquaTROLL: S. Wilson; E. Phillips; P. Regier; Fausto Machado-Silva <Fausto.Silva@UToledo.Edu>
+ClimaVUE: S. Wilson; E. Phillips; A. Stearns; Roy Rich <RichR@si.edu>
+Dataloggers: S. Wilson; E. Phillips; A. Stearns; R. Rich
+
+Key publications:
+N/A as of yet
+
+
+Files in this folder
+—----------------------------------
+Files site- and plot-specific, annual, and have a naming convention of
+{SITE}_{PLOT}_{DATE RANGE}_{OUTPUT VARIABLE}_L1_{VERSION}.csv
+
+
+Filename                                                    Values MD5       
+SWH_W_20190117-20190120_gw-act-cond_L1_v???.csv                  0 5124d4da  
+SWH_W_20190117-20190120_gw-bar-pressure_L1_v???.csv              0 1de5c242  
+SWH_W_20190117-20190120_gw-battery_L1_v???.csv                   0 8567a3f7  
+SWH_W_20190117-20190120_gw-density_L1_v???.csv                   0 18ac4647  
+SWH_W_20190117-20190120_gw-depth_L1_v???.csv                     0 2eb94d4a  
+SWH_W_20190117-20190120_gw-part-pressure_L1_v???.csv             0 9288e453  
+SWH_W_20190117-20190120_gw-perc-sat_L1_v???.csv                  0 96ebe125  
+SWH_W_20190117-20190120_gw-ph_L1_v???.csv                        0 9b167700  
+SWH_W_20190117-20190120_gw-ph-mv_L1_v???.csv                     0 218e8b5d  
+SWH_W_20190117-20190120_gw-ph-orp_L1_v???.csv                    0 07504eb1  
+SWH_W_20190117-20190120_gw-pressure_L1_v???.csv                  0 1a209d5e  
+SWH_W_20190117-20190120_gw-rdo-conc_L1_v???.csv                  0 7e848965  
+SWH_W_20190117-20190120_gw-resistivity_L1_v???.csv               0 ad9ded7a  
+SWH_W_20190117-20190120_gw-salinity_L1_v???.csv                  0 6b539411  
+SWH_W_20190117-20190120_gw-spec-cond_L1_v???.csv                 0 9bc9e8a1  
+SWH_W_20190117-20190120_gw-tds_L1_v???.csv                       0 d06bfd33  
+SWH_W_20190117-20190120_gw-temperature_L1_v???.csv               0 205aab52  
+SWH_W_20190117-20190120_gw-voltage-ext_L1_v???.csv               0 c75b3ff7  
+SWH_W_20190117-20190120_soil-EC-10cm_L1_v???.csv                 0 6a4e89d0  
+SWH_W_20190117-20190120_soil-EC-30cm_L1_v???.csv                 0 1b4982f5  
+SWH_W_20190117-20190120_soil-temp-10cm_L1_v???.csv               0 3d6c9050  
+SWH_W_20190117-20190120_soil-temp-30cm_L1_v???.csv               0 bbf3477f  
+SWH_W_20190117-20190120_soil-vwc-10cm_L1_v???.csv                0 e91004c9  
+SWH_W_20190117-20190120_soil-vwc-30cm_L1_v???.csv                0 ba248fd2  
+SWH_W_20190117-20190120_solar-voltage_L1_v???.csv                6 e65d91ba  
+SWH_W_20190117-20190120_wx-barpress15_L1_v???.csv                0 cb7226a5  
+SWH_W_20190117-20190120_wx-bpmax15_L1_v???.csv                   0 5749f929  
+SWH_W_20190117-20190120_wx-bpmin15_L1_v???.csv                   0 64f0b365  
+SWH_W_20190117-20190120_wx-dist-min15_L1_v???.csv                0 e2b7e632  
+SWH_W_20190117-20190120_wx-invalid-wind15_L1_v???.csv            6 6f59e20a  
+SWH_W_20190117-20190120_wx-maxws-tmx15_L1_v???.csv               0 220dccb9  
+SWH_W_20190117-20190120_wx-maxws15_L1_v???.csv                   0 69b0a07b  
+SWH_W_20190117-20190120_wx-par-den15_L1_v???.csv                 1 c348062a  
+SWH_W_20190117-20190120_wx-par-tot15_L1_v???.csv                 1 42e4585a  
+SWH_W_20190117-20190120_wx-rain15_L1_v???.csv                    0 aebad27a  
+SWH_W_20190117-20190120_wx-rh15_L1_v???.csv                      0 0ed23419  
+SWH_W_20190117-20190120_wx-rht15_L1_v???.csv                     0 f45db302  
+SWH_W_20190117-20190120_wx-slr-fd15_L1_v???.csv                  0 51ed7350  
+SWH_W_20190117-20190120_wx-slr-tf15_L1_v???.csv                  0 55ee97e4  
+SWH_W_20190117-20190120_wx-strikes15_L1_v???.csv                 0 a8a67a60  
+SWH_W_20190117-20190120_wx-tempavg15_L1_v???.csv                 0 f9684289  
+SWH_W_20190117-20190120_wx-tempmax15_L1_v???.csv                 0 67e0f037  
+SWH_W_20190117-20190120_wx-tempmin15_L1_v???.csv                 0 91387b80  
+SWH_W_20190117-20190120_wx-tilt-ns15_L1_v???.csv                 0 3bf1fe40  
+SWH_W_20190117-20190120_wx-tilt-we15_L1_v???.csv                 0 7251b31c  
+SWH_W_20190117-20190120_wx-vappress15_L1_v???.csv                0 e7eed51f  
+SWH_W_20190117-20190120_wx-winddir-sd115_L1_v???.csv             6 78fa9910  
+SWH_W_20190117-20190120_wx-winddir15_L1_v???.csv                 6 06efc04b  
+SWH_W_20190117-20190120_wx-windspeed15_L1_v???.csv               0 4b89df1d  
+SWH_W_20190117-20190126_battery-voltage_L1_v???.csv             12 762a2d57  
+SWH_W_20190121-20190126_wx-bpmax24_L1_v???.csv                   0 037a773f  
+SWH_W_20190121-20190126_wx-bpmin24_L1_v???.csv                   0 77f57378  
+SWH_W_20190121-20190126_wx-maxws24_L1_v???.csv                   0 d972fc47  
+SWH_W_20190121-20190126_wx-par-den24_L1_v???.csv                 0 e327feed  
+SWH_W_20190121-20190126_wx-par-tot24_L1_v???.csv                 0 5e370e0d  
+SWH_W_20190121-20190126_wx-rain24_L1_v???.csv                    0 e0b22379  
+SWH_W_20190121-20190126_wx-rh24_L1_v???.csv                      0 d2470947  
+SWH_W_20190121-20190126_wx-rht24_L1_v???.csv                     0 9a6140fe  
+SWH_W_20190121-20190126_wx-rhtmax24_L1_v???.csv                  0 9ca487f9  
+SWH_W_20190121-20190126_wx-rhtmin24_L1_v???.csv                  0 5c365893  
+SWH_W_20190121-20190126_wx-slr-fd24_L1_v???.csv                  0 37291899  
+SWH_W_20190121-20190126_wx-slr-tf24_L1_v???.csv                  0 7b437b2d  
+SWH_W_20190121-20190126_wx-tempavg24_L1_v???.csv                 0 08ada80d  
+SWH_W_20190121-20190126_wx-tempmax24_L1_v???.csv                 0 ee55d9eb  
+SWH_W_20190121-20190126_wx-tempmin24_L1_v???.csv                 0 878d3e28  
+SWH_W_20190121-20190126_wx-tilt-ns24_L1_v???.csv                 0 485a96a8  
+SWH_W_20190121-20190126_wx-tilt-we24_L1_v???.csv                 0 bcd553d1  
+SWH_W_20190121-20190126_wx-vappress24_L1_v???.csv                0 26b0e9e5  
+
+
+File columns
+—----------------------------------
+Site            Site code; see site info above (character)
+Plot            Plot code; see site info above (character)
+TIMESTAMP       Datalogger timestamp in Etc/GMT+5 (POSIXct)
+Instrument      Name of measurement instrument (character)
+Instrument_ID   Identifier of instrument within plot (character)
+Sensor_ID       Identifier of individual sensor, tree, etc. being measured (character)
+Location        Spatial location; for TEMPEST, grid square (character)
+Value           Observed value (numeric). The no-data value is ''
+research_name   Measurement name (character)
+Source_file     ID (MD5 hash) of the source datalogger file this value came from
+F_OOB           Flag: out of instrumental bounds (logical; 1=TRUE)
+F_OOS           Flag: sensor listed as out of service (logical; 1=TRUE)
+F_MAD           Flag: possible outlier based on mean absolute deviation (MAD) from time period grouping (logical; 1=TRUE)
+
+
+Variable definitions
+—----------------------------------
+research_name        Units      Bounds       Description
+battery-voltage      V          11, 13       Battery voltage of the data logger
+solar-voltage        V          0, 30        Solar/line voltage of the data logger
+sapflow-3.5cm        mV         0, 1         Raw sap flow at 3.5 cm depth
+sapflow-5cm          mV         0, 1         Raw sap flow at 5 cm depth
+redox-10cm           mV         -2500, 2500  Redox at 10 cm depth; each sensor measures two values based on electrode "A" or "B" reference probes
+redox-20cm           mV         -2500, 2500  Redox at 20 cm depth; each sensor measures two values based on electrode "A" or "B" reference probes
+redox-35cm           mV         -2500, 2500  Redox at 35 cm depth; each sensor measures two values based on electrode "A" or "B" reference probes
+redox-55cm           mV         -2500, 2500  Redox at 55 cm depth; each sensor measures two values based on electrode "A" or "B" reference probes
+soil-vwc-5cm         m3/m3      0, 0.7       Soil volumetric water content at 5 cm calibrated for mineral soil
+soil-temp-5cm        degC       -40, 60      Soil temperature at 5 cm
+soil-EC-5cm          µS/cm     0, 20000     Soil electrical conductivity at 5 cm
+soil-vwc-10cm        m3/m3      0, 0.7       Soil volumetric water content at 10 cm calibrated for mineral soil
+soil-temp-10cm       degC       -40, 60      Soil temperature at 10 cm
+soil-EC-10cm         µS/cm     0, 20000     Soil electrical conductivity at 10 cm
+soil-vwc-15cm        m3/m3      0, 0.7       Soil volumetric water content at 15 cm calibrated for mineral soil
+soil-temp-15cm       degC       -40, 60      Soil temperature at 15 cm
+soil-EC-15cm         µS/cm     0, 20000     Soil electrical conductivity at 15 cm
+soil-vwc-30cm        m3/m3      0, 0.7       Soil volumetric water content at 30 cm calibrated for mineral soil
+soil-temp-30cm       degC       -40, 60      Soil temperature at 30 cm
+soil-EC-30cm         µS/cm     0, 20000     Soil electrical conductivity at 30 cm
+gw-bar-pressure      mmHg       NA, NA       
+gw-temperature       degC       -5, 50       Groundwater temperature
+gw-temperature-int   degC       -5, 50       
+gw-act-cond          μS/cm     NA, NA       
+gw-spec-cond         uS/cm      0, 350000    Groundwater specific conductivity
+gw-salinity          PSU        0, 350       Groundwater salinity
+gw-tds               ppt        NA, NA       Groundwater total dissolved solids
+gw-density           g/cm3      0.98, 1.05   Groundwater density
+gw-resistivity       ohm-cm     NA, NA       
+gw-ph                unitless   0, 14        Groundwater pH
+gw-ph-mv             mV         NA, NA       
+gw-ph-orp            mV         -1400, 1400  Groundwater oxidation-reduction potential
+gw-rdo-conc          mg/L       0, 20        Groundwater dissolved oxygen concentration
+gw-perc-sat          %          0, 100       
+gw-part-pressure     Torr       NA, NA       
+gw-pressure          mbar       -10, 910     Vented pressure corrected for barometric pressure
+gw-depth             cm         NA, NA       
+gw-voltage-ext       V          NA, NA       External battery voltage coming into the Aquatroll
+gw-battery           %          0, 100       Internal battery percentage
+wx-slr-fd15          MJ/m2      NA, NA       Average solar flux over 15 minute period
+wx-slr-tf15          W/m2       NA, NA       Total solar flux in over minute period
+wx-rain15            mm         NA, NA       Total rain over 15 minute period
+wx-windspeed15       m/s        NA, NA       Wind speed
+wx-winddir15         degrees    0, 359       Wind direction
+wx-winddir-sd115     degrees    0, 359       Standard deviation of wind direction part of CS windvector function
+wx-maxws15           m/s        0, 30        Maximum wind speed in 15 minute period
+wx-maxws-tmx15       m/s        NA, NA       Time of maximum windspeed in 15 minute period
+wx-invalid-wind15    count      NA, NA       Total invalid wind measurements over 15 minute period
+wx-tempavg15         degC       -50, 60      Average air temperature over 15 minute period
+wx-tempmax15         degC       -50, 60      Maximum air temperature in 15 minute period
+wx-temptmx15                    NA, NA       Time of maximum air temperature in 15 minute period
+wx-tempmin15         degC       -50, 60      Minimum air temperature in 15 minute period
+wx-temptmn15                    NA, NA       Time of minimum air temperature in 15 minute period
+wx-vappress15        mbar       0, 470       Average vapor pressure over 15 minute period
+wx-barpress15        mbar       50000, 110000 Barometric pressure
+wx-bpmax15           mbar       50000, 110000 Maximum barometric pressure in 15 minute period
+wx-bptmx15                      NA, NA       Time of maximum barometric pressure in 15 minute period
+wx-bpmin15           mbar       50000, 110000 Minimum barometric pressure in 15 minute period
+wx-bptmn15                      NA, NA       Time of minimum barometric pressure in 15 minute period
+wx-rh15              perc       0, 100       Relative humidity
+wx-rht15             degC       NA, NA       Average temperature of humidity sensor over 15 minute period
+wx-tilt-ns15         degrees    NA, NA       Average degree of sensor tilt in the N/S direction over 15 minute period
+wx-tilt-we15         degrees    NA, NA       Average degree of sensor tilt in the E/W direction over 15 minute period
+wx-strikes15         count      0, 65535     Total lightning strikes over 15 minute period
+wx-dist-min15        km         NA, NA       Minimum lightning strike distance in 15 minute time period
+wx-dist-tmn15                   NA, NA       Time of minimum lightning stike distance in 15 minute time period
+wx-par-den15         µmol/m2/s NA, NA       Average photosynthetically active radiation (PAR) flux density over 15 minute period; site specific correction factor applied
+wx-par-tot15         mmol/m2    NA, NA       Sum of total photosynthetically active radiation (PAR) flux density over 15 minute period
+wx-rain24            mm         0, 9600      Sum of rain accumulation over 24 hr period
+wx-slr-fd24          W/m2       0, 1750      Mean solar flux density over 24 hr period
+wx-slr-tf24          MJ/m2      0, NA        Sum of solar flux density over 24 hr period
+wx-winderrors24                 0, NA        Sum of wind error code over 24 hr period (wind data is invalid if error >0)
+wx-maxws24           m/s        0, 30        Maximum wind speed (10s gust) over 24 hr period
+wx-maxws-tmx24                  NA, NA       Time of maximum wind speed over 24 hr period
+wx-tempavg24         degC       -50, 60      Average air temperature over 24 hr period
+wx-tempmax24         degC       -50, 60      Maximum air temperature over 24 hr period
+wx-temptmx24                    NA, NA       Time of maximum air temperature over 24 hr period
+wx-tempmin24         degC       -50, 60      Minimum air temperature over 24 hr period
+wx-temptmn24                    NA, NA       Time of minimum air temperature over 24 hr period
+wx-vappress24        mbar       0, 470       Mean vapor pressure over 24 hr period
+wx-bpmax24           mbar       50000, 110000 Maximum barometric pressure over 24 hr period
+wx-bptmx24                      NA, NA       Time of maximum barometric pressure over 24 hr period
+wx-bpmin24           mbar       50000, 110000 Minimum barometric pressure over 24 hr period
+wx-bptmn24                      NA, NA       Time of minimum barometric pressure over 24 hr period
+wx-rh24              perc       0, 100       Maximum relative humidity over 24 hr period
+wx-rht24             perc       0, 100       Minimum relative humidity over 24 hr period
+wx-rhtmax24          degC       -50, 60      Maximum temperature of humidity sensor over 24 hr period
+wx-rhtmin24          degC       -50, 60      Minimum temperature of humidity sensor over 24 hr period
+wx-tilt-ns24         degrees    -90, 90      Maximum degree of sensor tilt in the N/S direction over 24 hr period
+wx-tilt-we24         degrees    -90, 90      Maximum degree of sensor tilt in the E/W direction over 24 hr period
+wx-par-den24         µmol/m2/s 0, 2000      Average photosynthetically active radiation (PAR) flux density over 24 hr period; site specific correction factor applied
+wx-par-tot24         mmol/m2    NA, NA       Sum of total photosynthetically active radiation (PAR) flux density over 24 hr period
+wx-vp15              kPa        NA, NA       Vapor pressure, = RH*SVP/100; from the GCREW met station and only appears at GCW-W
+wx-vpd15             kPa        NA, NA       Vapor pressure deficiti; from the GCREW met station and only appears at GCW-W
+wx-svp15             kPa        NA, NA       Saturated vapor pressure; from the GCREW met station and only appears at GCW-W
+wx-minws15           m/s        0, 30        Maximum wind speed in 15 minute period; from the GCREW met station and only appears at GCW-W
+wx-gcrew-rain15      cm         0, 960       Total rain over 15 minute period IN CENTIMETERS; from the GCREW met station and only appears at GCW-W
+sonde-conductivity   uS/cm      NA, NA       
+sonde-fdom           QSU        0, 300       Fluorescent dissolved organic matter concentration, Quinine Sulfate Units
+sonde-fdom-rfu       RFU        0, 100       Fluorescent dissolved organic matter concentration, Relative Fluorescent Units
+sonde-nlf-cond       uS/cm      NA, NA       
+sonde-odo-sat        %          0, 200       Dissolved oxygen concentration, percent air saturation
+sonde-odo-local      % saturation NA, NA       
+sonde-odo-mgl        mg/L       0, 50        Dissolved oxygen concentration, milligrams per liter
+sonde-pressure       psia       NA, NA       Water pressure
+sonde-salinity       ppt        NA, NA       Water salinity
+sonde-spcond         µS/cm     0, 1e+05     Water specific conductivity
+sonde-wiperpos       mV         NA, NA       
+sonde-ph             unitless   0, 14        Water pH
+sonde-ph-mv          mV         NA, NA       
+sonde-temp           C          -5, 50       Water temperature
+sonde-depth          m          0, 10        Sonde depth
+sonde-battery        V          NA, NA       Sonde battery voltage
+sonde-cable          V          NA, NA       Sonde cable power
+sonde-wipercur       mA         NA, NA       Wiper brush current
+sonde-tss            mg/L       NA, NA       Total suspended solids concentration
+sonde-orp            mV         -999, 999    Water oxidation reduction potential
+sonde-tds            mg/L       NA, NA       Total dissolved solids concentration
+sonde-vpos           m          NA, NA       
+sonde-turbidity      FNU        0, 4000      Turbidity, indirect measurement of the suspended solid concentration in water
+sonde-turb-raw                  NA, NA       
+
+
+Outlier flagging information
+—----------------------------------
+Mean absolute deviation (MAD) is used to identify outliers after first
+grouping data by time period. This table summarizes the time period
+and threshold settings for each variable:
+
+Variable             Time_grouping   Extra_params    Notes               
+sapflow-3.5cm        1 week          threshold=8     --                  
+soil-vwc-5cm         1 month         threshold=8     --                  
+soil-temp-5cm        1 week          threshold=8     --                  
+soil-vwc-10cm        1 month         threshold=8     Come back to this   
+soil-temp-10cm       1 week          threshold=8     --                  
+soil-vwc-15cm        1 month         threshold=8     --                  
+soil-temp-15cm       1 week          threshold=8     --                  
+soil-vwc-30cm        1 month         threshold=8     Come back to this   
+soil-temp-30cm       1 week          threshold=8     --                  
+gw-temperature       1 month         threshold=8     --                  
+wx-tempavg15         1 month         threshold=8     --                  
+wx-rh15              1 month         threshold=8     --                  
+sonde-odo-mgl        1 month         threshold=8     --                  
+sonde-fdom           1 month         threshold=8     --                  
+sonde-ph             1 week          threshold=8     --                  
+sonde-orp            1 week          threshold=8     --                  
+sonde-salinity       1 month         threshold=8     --                  
+sonde-spcond         1 month         threshold=8     --                  

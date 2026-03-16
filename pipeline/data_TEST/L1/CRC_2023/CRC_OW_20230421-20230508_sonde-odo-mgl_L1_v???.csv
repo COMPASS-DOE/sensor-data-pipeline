@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","OW","2023-04-21 08:30:00","EXO","A",,,0.55,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-04-21 08:45:00","EXO","A",,,0.51,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-04-21 09:00:00","EXO","A",,,0.73,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-04-21 09:15:00","EXO","A",,,0.57,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-04-21 09:30:00","EXO","A",,,0.85,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-04-21 09:45:00","EXO","A",,,1.68,"sonde-odo-mgl","ae176c4d",0,0,0
+"CRC","OW","2023-05-08 00:00:00","EXO","A",,,0.14,"sonde-odo-mgl","1030fe73",0,0,0
+"CRC","OW","2023-05-08 00:15:00","EXO","A",,,0.14,"sonde-odo-mgl","1030fe73",0,0,0
+"CRC","OW","2023-05-08 00:30:00","EXO","A",,,0.14,"sonde-odo-mgl","1030fe73",0,0,0
+"CRC","OW","2023-05-08 00:45:00","EXO","A",,,,"sonde-odo-mgl","1030fe73",,0,0
+"CRC","OW","2023-05-08 01:00:00","EXO","A",,,,"sonde-odo-mgl","1030fe73",,0,0
+"CRC","OW","2023-05-08 01:15:00","EXO","A",,,,"sonde-odo-mgl","1030fe73",,0,0

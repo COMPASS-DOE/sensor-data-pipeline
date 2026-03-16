@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 05:00:00",79.8,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",79.8,0,0
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 02:00:00",78,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",78,0,0
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 00:00:00",77.3,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",77.3,0,0
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 01:00:00",75.9,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",75.9,0,0
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 03:00:00",77.2,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",77.2,0,0
+"wx-rh15","perc","Compass_GWI_W_411","ClimaVue50_15min","RH","2023-01-08 04:00:00",77.3,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rh15",77.3,0,0

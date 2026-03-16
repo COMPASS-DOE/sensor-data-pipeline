@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 02:15:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 02:30:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 03:00:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 03:15:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 03:30:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0
+"gw-perc-sat","%","Compass_SWH_UP_423","WaterLevel600A","RDO_perc_sat600A","2024-08-29 02:45:00",,"3db0bd6d","SWH","SWAMP","AquaTROLL600","A",,,"SWH-SWAMP-AquaTROLL600-A-NA-gw-perc-sat",,,0

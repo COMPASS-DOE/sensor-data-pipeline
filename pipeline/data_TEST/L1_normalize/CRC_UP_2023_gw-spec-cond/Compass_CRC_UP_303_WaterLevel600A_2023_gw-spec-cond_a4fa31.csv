@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 00:00:00",2209.4,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2209.4,0,0
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 00:45:00",2210,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2210,0,0
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 01:00:00",2204.8,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2204.8,0,0
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 01:15:00",2209.1,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2209.1,0,0
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 00:15:00",2210,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2210,0,0
+"gw-spec-cond","uS/cm","Compass_CRC_UP_303","WaterLevel600A","Specific_Conductivity600A","2023-04-08 00:30:00",2209.9,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-spec-cond",2209.9,0,0

@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","W","2023-04-08 00:00:00","ClimaVUE50","A",,,1.68681,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-04-09 00:00:00","ClimaVUE50","A",,,1.70967,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-04-10 00:00:00","ClimaVUE50","A",,,1.773395,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-04-11 00:00:00","ClimaVUE50","A",,,1.70935,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-04-12 00:00:00","ClimaVUE50","A",,,1.66359,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-04-13 00:00:00","ClimaVUE50","A",,,1.78552,"wx-slr-tf24","fcfb1c9a",,0,
+"CRC","W","2023-05-08 00:00:00","ClimaVUE50","A",,,1.241765,"wx-slr-tf24","ec52a2dc",,0,
+"CRC","W","2023-05-09 00:00:00","ClimaVUE50","A",,,0.7600849,"wx-slr-tf24","ec52a2dc",,0,
+"CRC","W","2023-05-10 00:00:00","ClimaVUE50","A",,,2.04316,"wx-slr-tf24","ec52a2dc",,0,
+"CRC","W","2023-05-11 00:00:00","ClimaVUE50","A",,,2.058275,"wx-slr-tf24","ec52a2dc",,0,
+"CRC","W","2023-05-12 00:00:00","ClimaVUE50","A",,,2.06275,"wx-slr-tf24","ec52a2dc",,0,
+"CRC","W","2023-05-13 00:00:00","ClimaVUE50","A",,,1.134345,"wx-slr-tf24","ec52a2dc",,0,

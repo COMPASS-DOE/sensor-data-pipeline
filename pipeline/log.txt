@@ -1,0 +1,16 @@
+2025-11-06 11:38:43.396709  L2 doing derived  soil-salinity-10cm 
+2025-11-06 11:38:43.622567  L2 doing derived  soil-salinity-30cm 
+2025-11-06 11:38:43.731812  L2 doing derived  gw-wl-below-surface 
+2025-11-06 11:38:43.957749  L2 doing mac  SWH SWAMP gw-density 
+2025-11-06 11:38:44.486582  L2 doing mac  SWH SWAMP gw-pressure 
+2025-11-06 11:38:44.874156  L2 doing mac  SWH SWAMP gw-salinity 
+2025-11-06 11:38:45.20056  L2 doing mac  SWH SWAMP gw-temperature 
+2025-11-06 11:38:45.43928  L2 doing mac  SWH SWAMP soil-EC-10cm 
+2025-11-06 11:38:46.509786  L2 doing mac  SWH SWAMP soil-EC-30cm 
+2025-11-06 11:38:46.999431  L2 doing mac  SWH SWAMP soil-temp-10cm 
+2025-11-06 11:38:47.89336  L2 doing mac  SWH SWAMP soil-temp-30cm 
+2025-11-06 11:38:48.367988  L2 doing mac  SWH SWAMP soil-vwc-10cm 
+2025-11-06 11:38:49.210676  L2 doing mac  SWH SWAMP soil-vwc-30cm 
+2025-11-06 11:38:49.647019  L2 doing mac  SWH SWAMP soil-salinity-10cm 
+2025-11-06 11:38:50.575646  L2 doing mac  SWH SWAMP soil-salinity-30cm 
+2025-11-06 11:38:51.06955  L2 doing mac  SWH SWAMP gw-wl-below-surface 

@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 01:15:00",3139.17,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.522084043,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 01:00:00",3134.6,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.52031134,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 00:15:00",3136.73,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.521137567,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 00:45:00",3137.14,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.521296606,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 00:00:00",3134.55,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.520291945,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(1,1)","2023-04-08 00:30:00",3139.48,4e+307,"OWC","W","TEROS12","C","1",,"OWC-W-TEROS12-C-1-soil-vwc-10cm",0.522204292,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 00:15:00",3031.36,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.480264544,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 00:00:00",3032.22,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.480598138,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 00:45:00",3031.19,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.480198601,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 00:30:00",3031.31,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.480245149,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 01:15:00",3031.23,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.480214117,0,0
+"soil-vwc-10cm","m3/m3","Compass_OWC_W_321","TerosTableC","TerosC(2,1)","2023-04-08 01:00:00",3030.28,4e+307,"OWC","W","TEROS12","C","2",,"OWC-W-TEROS12-C-2-soil-vwc-10cm",0.479845612,0,0

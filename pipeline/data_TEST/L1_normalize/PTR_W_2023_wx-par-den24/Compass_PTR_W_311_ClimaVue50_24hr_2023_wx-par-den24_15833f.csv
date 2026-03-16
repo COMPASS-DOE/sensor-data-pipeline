@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-08 00:00:00",113,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",113,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-09 00:00:00",289.5,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",289.5,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-07 00:00:00",208.2,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",208.2,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-16 00:00:00",170.2,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",170.2,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-17 00:00:00",320.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",320.7,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-14 00:00:00",295.3,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",295.3,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-12 00:00:00",247.4,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",247.4,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-06 00:00:00",273.2,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",273.2,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-15 00:00:00",91.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",91.7,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-10 00:00:00",303.5,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",303.5,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-13 00:00:00",244.9,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",244.9,0,0
+"wx-par-den24","µmol/m2/s","Compass_PTR_W_311","ClimaVue50_24hr","PAR_Den_C_Avg","2023-08-11 00:00:00",321.5,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-par-den24",321.5,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 00:00:00",4555.569,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4555.569,,0
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 00:15:00",4554.618,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4554.618,,0
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 00:30:00",4553.526,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4553.526,,0
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 00:45:00",4552.064,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4552.064,,0
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 01:00:00",4552.214,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4552.214,,0
+"gw-resistivity","ohm-cm","PNNL_23","WaterLevel200","Resistivity","2023-11-04 01:15:00",4550.405,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-resistivity",4550.405,,0

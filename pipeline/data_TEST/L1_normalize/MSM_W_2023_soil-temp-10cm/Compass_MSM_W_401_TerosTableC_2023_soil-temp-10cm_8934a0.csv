@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 01:00:00",20.1,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 00:45:00",20.1,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 00:15:00",20.2,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.2,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 00:00:00",20.2,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.2,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 00:30:00",20.2,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.2,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(1,2)","2023-10-05 01:15:00",20.1,"d7d9ddf5","MSM","W","TEROS12","C","1",,"MSM-W-TEROS12-C-1-soil-temp-10cm",20.1,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 00:30:00",20.7,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 01:15:00",20.7,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 01:00:00",20.7,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 00:45:00",20.7,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 00:15:00",20.7,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.7,0,0
+"soil-temp-10cm","degC","Compass_MSM_W_401","TerosTableC","TerosC(2,2)","2023-10-05 00:00:00",20.8,"d7d9ddf5","MSM","W","TEROS12","C","2",,"MSM-W-TEROS12-C-2-soil-temp-10cm",20.8,0,0

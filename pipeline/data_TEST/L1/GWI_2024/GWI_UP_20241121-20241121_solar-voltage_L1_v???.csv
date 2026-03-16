@@ -1,0 +1,8 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","UP","2024-11-21 11:15:00","Datalogger","302",,,26.99,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 11:30:00","Datalogger","302",,,27.13,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 11:45:00","Datalogger","302",,,27.16,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 12:00:00","Datalogger","302",,,26.9,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 12:15:00","Datalogger","302",,,26.99,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 12:30:00","Datalogger","302",,,27.09,"solar-voltage","a02c6247",0,0,
+"GWI","UP","2024-11-21 12:45:00","Datalogger","302",,,27.16,"solar-voltage","a02c6247",0,0,

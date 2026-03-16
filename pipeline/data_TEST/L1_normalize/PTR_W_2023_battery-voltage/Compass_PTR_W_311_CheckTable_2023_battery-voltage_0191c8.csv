@@ -1,0 +1,11 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 00:15:00",12.58,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.58,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 01:45:00",12.63,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.63,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 00:45:00",12.6,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.6,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 02:15:00",12.54,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.54,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 01:15:00",12.64,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.64,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 00:00:00",12.67,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.67,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 01:00:00",12.62,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.62,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 00:30:00",12.59,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.59,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 01:30:00",12.56,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.56,0,0
+"battery-voltage","V","Compass_PTR_W_311","CheckTable","BattV","2023-08-06 02:00:00",12.63,"689ccdd2","PTR","W","Datalogger","311",,,"PTR-W-Datalogger-311-NA-battery-voltage",12.63,0,0

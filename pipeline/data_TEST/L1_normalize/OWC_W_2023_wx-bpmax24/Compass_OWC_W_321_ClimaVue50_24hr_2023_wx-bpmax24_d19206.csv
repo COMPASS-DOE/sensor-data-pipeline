@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-12 00:00:00",1001.7,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",1001.7,1,0
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-10 00:00:00",1001.9,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",1001.9,1,0
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-11 00:00:00",1003.9,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",1003.9,1,0
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-08 00:00:00",998.4,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",998.4,1,0
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-09 00:00:00",995.7,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",995.7,1,0
+"wx-bpmax24","mbar","Compass_OWC_W_321","ClimaVue50_24hr","BP_mbar_Max","2023-05-13 00:00:00",999.4,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-bpmax24",999.4,1,0

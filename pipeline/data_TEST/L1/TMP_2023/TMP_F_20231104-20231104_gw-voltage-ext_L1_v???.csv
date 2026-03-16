@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"TMP","F","2023-11-04 00:00:00","AquaTROLL600","685474",,,13.525,"gw-voltage-ext","aa151213",,0,
+"TMP","F","2023-11-04 00:15:00","AquaTROLL600","685474",,,13.552,"gw-voltage-ext","aa151213",,0,
+"TMP","F","2023-11-04 00:30:00","AquaTROLL600","685474",,,13.48,"gw-voltage-ext","aa151213",,0,
+"TMP","F","2023-11-04 00:45:00","AquaTROLL600","685474",,,13.489,"gw-voltage-ext","aa151213",,0,
+"TMP","F","2023-11-04 01:00:00","AquaTROLL600","685474",,,13.29,"gw-voltage-ext","aa151213",,0,
+"TMP","F","2023-11-04 01:15:00","AquaTROLL600","685474",,,13.561,"gw-voltage-ext","aa151213",,0,

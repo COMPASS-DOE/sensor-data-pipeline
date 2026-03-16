@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 00:15:00",0.593,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.593,0,0
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 00:45:00",0.593,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.593,0,0
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 01:00:00",0.593,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.593,0,0
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 01:15:00",0.592,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.592,0,0
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 00:30:00",0.593,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.593,0,0
+"sapflow-5cm","mV","PNNL_31","sapflow","DiffVolt_Avg(8)","2023-11-04 00:00:00",0.593,"da1334fb","TMP","S","Sapflow","31","SD16","C2","TMP-S-Sapflow-31-SD16-sapflow-5cm",0.593,0,0

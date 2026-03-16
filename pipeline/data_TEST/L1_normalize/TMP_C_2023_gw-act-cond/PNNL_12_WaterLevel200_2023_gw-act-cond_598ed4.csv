@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 00:15:00",20.71014,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.71014,,0
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 00:30:00",20.68131,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.68131,,0
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 00:00:00",20.74047,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.74047,,0
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 01:15:00",20.61048,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.61048,,0
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 00:45:00",20.65689,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.65689,,0
+"gw-act-cond","μS/cm","PNNL_12","WaterLevel200","Actual_Conductivity","2023-11-04 01:00:00",20.63939,"8b3055e5","TMP","C","AquaTROLL200","683451",,,"TMP-C-AquaTROLL200-683451-NA-gw-act-cond",20.63939,,0

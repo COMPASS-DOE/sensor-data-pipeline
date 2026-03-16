@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 00:15:00",11203,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11203,,0
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 01:30:00",11200,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11200,,0
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 01:15:00",11201,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11201,,0
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 01:00:00",11198,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11198,,0
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 00:30:00",11203,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11203,,0
+"gw-act-cond","μS/cm","Compass_GWI_UP_413","WaterLevel600A","Actual_Conductivity600A","2023-02-07 00:45:00",11204,Inf,"GWI","UP","AquaTROLL600","A",,,"GWI-UP-AquaTROLL600-A-NA-gw-act-cond",11204,,0

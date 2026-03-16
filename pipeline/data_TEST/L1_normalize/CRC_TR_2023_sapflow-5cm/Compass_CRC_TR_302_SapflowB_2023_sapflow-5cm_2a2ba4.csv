@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 00:00:00",0.727,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.727,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 01:00:00",0.726,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.726,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 00:15:00",0.726,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.726,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 01:15:00",0.726,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.726,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 00:30:00",0.725,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.725,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(9)","2023-05-08 00:45:00",0.726,"8e2f8f45","CRC","TR","Sapflow","B","01D",,"CRC-TR-Sapflow-B-01D-sapflow-5cm",0.726,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 00:00:00",-0.004,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",-0.004,1,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 00:15:00",-0.003,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",-0.003,1,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 00:30:00",-0.002,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",-0.002,1,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 00:45:00",-0.001,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",-0.001,1,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 01:00:00",-0.001,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",-0.001,1,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(10)","2023-05-08 01:15:00",0,"8e2f8f45","CRC","TR","Sapflow","B","02D",,"CRC-TR-Sapflow-B-02D-sapflow-5cm",0,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 00:00:00",0.004,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.004,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 00:15:00",0.004,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.004,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 00:30:00",0.005,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.005,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 00:45:00",0.006,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.006,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 01:00:00",0.006,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.006,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(11)","2023-05-08 01:15:00",0.007,"8e2f8f45","CRC","TR","Sapflow","B","03D",,"CRC-TR-Sapflow-B-03D-sapflow-5cm",0.007,0,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 00:30:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 00:45:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 00:00:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 01:00:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 00:15:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0
+"sapflow-5cm","mV","Compass_CRC_TR_302","SapflowB","DiffVoltB_Avg(12)","2023-05-08 01:15:00",,"8e2f8f45","CRC","TR","Sapflow","B","04D",,"CRC-TR-Sapflow-B-04D-sapflow-5cm",,,0

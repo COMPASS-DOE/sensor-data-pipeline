@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 01:15:00",25.41,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.41,0,0
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 01:45:00",25.38,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.38,0,0
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 01:00:00",25.42,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.42,0,0
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 02:15:00",25.36,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.36,0,0
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 01:30:00",25.4,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.4,0,0
+"solar-voltage","V","Compass_TZTEST_TR_999","CheckTable","SolarV","2023-05-08 02:00:00",25.37,"3cf6fb68","TZTEST","TR","Datalogger","999",,,"TZTEST-TR-Datalogger-999-NA-solar-voltage",25.37,0,0

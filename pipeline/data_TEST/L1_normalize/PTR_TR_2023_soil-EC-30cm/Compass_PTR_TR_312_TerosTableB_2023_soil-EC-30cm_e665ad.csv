@@ -1,0 +1,27 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 01:45:00",230,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",230,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 02:45:00",244,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",244,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 02:30:00",239,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",239,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 00:00:00",245,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",245,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 02:00:00",258,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",258,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 02:15:00",239,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",239,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 00:30:00",239,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",239,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 01:00:00",221,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",221,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 00:15:00",239,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",239,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 01:15:00",241,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",241,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 00:45:00",233,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",233,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 01:30:00",227,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",227,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(5,3)","2023-08-06 03:00:00",229,"fc32cb05","PTR","TR","TEROS12","B","5",,"PTR-TR-TEROS12-B-5-soil-EC-30cm",229,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 00:00:00",108,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",108,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 00:15:00",112,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",112,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 01:00:00",112,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",112,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 01:45:00",117,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",117,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 02:00:00",121,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",121,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 00:45:00",118,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",118,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 02:45:00",104,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",104,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 01:30:00",113,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",113,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 00:30:00",114,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",114,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 02:15:00",112,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",112,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 02:30:00",112,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",112,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 01:15:00",112,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",112,0,0
+"soil-EC-30cm","µS/cm","Compass_PTR_TR_312","TerosTableB","TerosB(6,3)","2023-08-06 03:00:00",126,"fc32cb05","PTR","TR","TEROS12","B","6",,"PTR-TR-TEROS12-B-6-soil-EC-30cm",126,0,0

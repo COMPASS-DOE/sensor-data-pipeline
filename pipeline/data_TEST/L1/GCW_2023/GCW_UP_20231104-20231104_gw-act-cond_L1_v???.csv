@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GCW","UP","2023-11-04 00:00:00","AquaTROLL200","683451",,,20.74047,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 00:00:00","AquaTROLL600","685442",,,85.62,"gw-act-cond","8e+307",,0,
+"GCW","UP","2023-11-04 00:15:00","AquaTROLL200","683451",,,20.71014,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 00:15:00","AquaTROLL600","685442",,,85.35,"gw-act-cond","8e+307",,0,
+"GCW","UP","2023-11-04 00:30:00","AquaTROLL200","683451",,,20.68131,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 00:30:00","AquaTROLL600","685442",,,85.24,"gw-act-cond","8e+307",,0,
+"GCW","UP","2023-11-04 00:45:00","AquaTROLL200","683451",,,20.65689,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 00:45:00","AquaTROLL600","685442",,,85.23,"gw-act-cond","8e+307",,0,
+"GCW","UP","2023-11-04 01:00:00","AquaTROLL200","683451",,,20.63939,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 01:00:00","AquaTROLL600","685442",,,85.7,"gw-act-cond","8e+307",,0,
+"GCW","UP","2023-11-04 01:15:00","AquaTROLL200","683451",,,20.61048,"gw-act-cond","8b3055e5",,0,
+"GCW","UP","2023-11-04 01:15:00","AquaTROLL600","685442",,,85.43,"gw-act-cond","8e+307",,0,

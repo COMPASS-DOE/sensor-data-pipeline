@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 00:30:00",993.6,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",993.6,1,0
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 01:00:00",993.3,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",993.3,1,0
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 00:15:00",993.4,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",993.4,1,0
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 01:15:00",993,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",993,1,0
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 00:00:00",992.7,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",992.7,1,0
+"wx-barpress15","mbar","Compass_CRC_W_301","ClimaVue50_15min","BP_mbar","2023-05-08 00:45:00",993.7,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-barpress15",993.7,1,0

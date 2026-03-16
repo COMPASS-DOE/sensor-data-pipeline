@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 01:30:00",-0.116,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.116,1,0
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 02:00:00",-0.13,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.13,1,0
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 01:15:00",-0.11,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.11,1,0
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 02:30:00",-0.069,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.069,1,0
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 01:45:00",-0.089,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.089,1,0
+"solar-voltage","V","Compass_MSM_Buoy","CheckTable","SolarV","2023-10-05 02:15:00",-0.114,"b4d8c8d0","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-solar-voltage",-0.114,1,0

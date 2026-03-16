@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 01:45:00",61244,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61244,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 01:00:00",61216,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61216,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 01:30:00",61243,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61243,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 02:45:00",61261,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61261,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 02:15:00",61251,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61251,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 03:00:00",61265,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61265,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 01:15:00",61246,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61246,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 00:00:00",61197,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61197,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 02:00:00",61245,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61245,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 00:30:00",61205,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61205,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 02:30:00",61258,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61258,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 00:45:00",61211,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61211,0,0
+"gw-spec-cond","uS/cm","Compass_PTR_W_311","WaterLevel600C","Specific_Conductivity600C","2023-08-06 00:15:00",61201,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-spec-cond",61201,0,0

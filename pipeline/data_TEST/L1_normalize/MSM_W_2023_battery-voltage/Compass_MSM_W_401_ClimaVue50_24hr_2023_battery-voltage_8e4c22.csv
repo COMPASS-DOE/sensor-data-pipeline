@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-05 00:00:00",11.84,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.84,0,0
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-06 00:00:00",11.84,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.84,0,0
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-08 00:00:00",11.83,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.83,0,0
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-09 00:00:00",11.81,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.81,0,0
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-07 00:00:00",11.83,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.83,0,0
+"battery-voltage","V","Compass_MSM_W_401","ClimaVue50_24hr","BattV_Min","2023-10-10 00:00:00",11.8,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-battery-voltage",11.8,0,0

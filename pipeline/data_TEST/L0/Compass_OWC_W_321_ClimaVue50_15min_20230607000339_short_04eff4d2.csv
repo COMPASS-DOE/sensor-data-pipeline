@@ -1,0 +1,193 @@
+Logger,Table,TIMESTAMP,loggernet_variable,value,Source_file
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,RECORD,1598,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,WS_ms_S_WVT,0.519,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,WindDir_D1_WVT,324.5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,WindDir_SD1_WVT,57.95,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,MaxWS_ms_Max,1.55,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,MaxWS_ms_TMx,2023-05-07 23:49:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,AirT_C_Avg,13.97,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,AirT_C_Max,14.3,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,AirT_C_TMx,2023-05-07 23:46:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,AirT_C_Min,13.5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,AirT_C_TMn,2023-05-08 00:00:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,VP_mbar_Avg,14.47333,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,BP_mbar,992.9,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,BP_mbar_Max,993,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,BP_mbar_TMx,2023-05-07 23:54:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,BP_mbar_Min,992.8,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,BP_mbar_TMn,2023-05-07 23:47:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,RH,90.8,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,RHT_C_Avg,14.27,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,TiltNS_deg_Avg,-0.62,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,TiltWE_deg_Avg,0.34,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,Dist_km_TMn,2023-05-07 23:46:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,RECORD,1599,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,WS_ms_S_WVT,0.612,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,WindDir_D1_WVT,36.05,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,WindDir_SD1_WVT,51.05,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,MaxWS_ms_Max,1.99,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,MaxWS_ms_TMx,2023-05-08 00:04:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,AirT_C_Avg,13.17,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,AirT_C_Max,13.4,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,AirT_C_TMx,2023-05-08 00:01:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,AirT_C_Min,12.8,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,AirT_C_TMn,2023-05-08 00:15:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,VP_mbar_Avg,13.68667,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,BP_mbar,993,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,BP_mbar_Max,993,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,BP_mbar_TMx,2023-05-08 00:14:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,BP_mbar_Min,992.8,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,BP_mbar_TMn,2023-05-08 00:06:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,RH,90.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,RHT_C_Avg,13.83,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,TiltNS_deg_Avg,-0.633,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,TiltWE_deg_Avg,0.273,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,Dist_km_TMn,2023-05-08 00:01:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:15:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,RECORD,1600,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,WS_ms_S_WVT,0.455,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,WindDir_D1_WVT,10.87,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,WindDir_SD1_WVT,79.48,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,MaxWS_ms_Max,1.86,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,MaxWS_ms_TMx,2023-05-08 00:16:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,AirT_C_Avg,12.79,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,AirT_C_Max,12.9,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,AirT_C_TMx,2023-05-08 00:17:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,AirT_C_Min,12.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,AirT_C_TMn,2023-05-08 00:30:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,VP_mbar_Avg,13.32667,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,BP_mbar,993.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,BP_mbar_Max,993.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,BP_mbar_TMx,2023-05-08 00:28:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,BP_mbar_Min,993,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,BP_mbar_TMn,2023-05-08 00:16:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,RH,90.1,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,RHT_C_Avg,13.32,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,TiltNS_deg_Avg,-0.607,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,TiltWE_deg_Avg,0.347,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,Dist_km_TMn,2023-05-08 00:16:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:30:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,RECORD,1601,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,WS_ms_S_WVT,0.343,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,WindDir_D1_WVT,56.29,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,WindDir_SD1_WVT,61.54,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,MaxWS_ms_Max,1.18,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,MaxWS_ms_TMx,2023-05-08 00:40:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,AirT_C_Avg,12.57,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,AirT_C_Max,12.7,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,AirT_C_TMx,2023-05-08 00:31:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,AirT_C_Min,12.5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,AirT_C_TMn,2023-05-08 00:36:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,VP_mbar_Avg,13.13333,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,BP_mbar,994.2,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,BP_mbar_Max,994.2,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,BP_mbar_TMx,2023-05-08 00:44:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,BP_mbar_Min,993.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,BP_mbar_TMn,2023-05-08 00:31:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,RH,90.5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,RHT_C_Avg,12.96,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,TiltNS_deg_Avg,-0.593,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,TiltWE_deg_Avg,0.333,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,Dist_km_TMn,2023-05-08 00:31:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 00:45:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,RECORD,1602,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,WS_ms_S_WVT,0.345,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,WindDir_D1_WVT,93.7,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,WindDir_SD1_WVT,67.84,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,MaxWS_ms_Max,0.92,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,MaxWS_ms_TMx,2023-05-08 00:53:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,AirT_C_Avg,12.53,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,AirT_C_Max,12.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,AirT_C_TMx,2023-05-08 00:53:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,AirT_C_Min,12.4,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,AirT_C_TMn,2023-05-08 00:47:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,VP_mbar_Avg,13.10667,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,BP_mbar,994.1,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,BP_mbar_Max,994.3,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,BP_mbar_TMx,2023-05-08 00:47:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,BP_mbar_Min,994.1,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,BP_mbar_TMn,2023-05-08 00:57:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,RH,90.4,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,RHT_C_Avg,12.75,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,TiltNS_deg_Avg,-0.6,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,TiltWE_deg_Avg,0.34,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,Dist_km_TMn,2023-05-08 00:46:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Format,TOA5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,RECORD,1603,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,SlrFD_W_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,SlrTF_MJ_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Rain_mm_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,WS_ms_S_WVT,0.396,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,WindDir_D1_WVT,92.9,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,WindDir_SD1_WVT,41.43,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,MaxWS_ms_Max,1.01,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,MaxWS_ms_TMx,2023-05-08 01:12:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Invalid_Wind_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,AirT_C_Avg,12.48,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,AirT_C_Max,12.5,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,AirT_C_TMx,2023-05-08 01:01:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,AirT_C_Min,12.4,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,AirT_C_TMn,2023-05-08 01:09:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,VP_mbar_Avg,13.02667,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,BP_mbar,993.7,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,BP_mbar_Max,994.1,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,BP_mbar_TMx,2023-05-08 01:01:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,BP_mbar_Min,993.7,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,BP_mbar_TMn,2023-05-08 01:15:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,RH,89.9,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,RHT_C_Avg,12.61,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,TiltNS_deg_Avg,-0.553,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,TiltWE_deg_Avg,0.38,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Strikes_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Dist_km_Min,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,Dist_km_TMn,2023-05-08 01:01:00,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,PAR_Den_C_Avg,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,PAR_Tot_C_Tot,0,04eff4d2
+Compass_OWC_W_321,ClimaVue50_15min,2023-05-08 01:15:00,CVMeta,013CAMPBELLCLIM50529VUE-500002132,04eff4d2

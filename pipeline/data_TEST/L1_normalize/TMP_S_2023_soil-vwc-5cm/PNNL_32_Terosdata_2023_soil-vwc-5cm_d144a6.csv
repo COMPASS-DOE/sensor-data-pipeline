@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 00:45:00",2435.98,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.249316642,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 01:15:00",2434.92,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.248905468,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 01:00:00",2434.68,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.248812372,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 00:30:00",2434.77,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.248847283,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 00:00:00",2434.84,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.248874436,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(14,1)","2023-11-04 00:15:00",2434.81,26027682,"TMP","S","TEROS12","32","T105","C6","TMP-S-TEROS12-32-T105-soil-vwc-5cm",0.248862799,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 00:45:00",2659.82,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.336144178,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 01:00:00",2658.28,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.335546812,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 00:30:00",2659.57,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.336047203,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 00:15:00",2659.79,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.336132541,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 01:15:00",2658.43,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.335604997,0,0
+"soil-vwc-5cm","m3/m3","PNNL_32","Terosdata","Teros(17,1)","2023-11-04 00:00:00",2658.52,26027682,"TMP","S","TEROS12","32","T106","H6","TMP-S-TEROS12-32-T106-soil-vwc-5cm",0.335639908,0,0

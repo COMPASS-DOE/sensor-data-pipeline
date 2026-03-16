@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2023-01-08 00:00:00","ClimaVUE50","A",,,6.4,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-01-08 01:00:00","ClimaVUE50","A",,,6.18,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-01-08 02:00:00","ClimaVUE50","A",,,5.17,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-01-08 03:00:00","ClimaVUE50","A",,,3.82,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-01-08 04:00:00","ClimaVUE50","A",,,3.58,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-01-08 05:00:00","ClimaVUE50","A",,,3.12,"wx-maxws15","8766611c",0,0,
+"GWI","W","2023-02-07 00:00:00","ClimaVUE50","A",,,1.49,"wx-maxws15","aef721b8",0,0,
+"GWI","W","2023-02-07 01:00:00","ClimaVUE50","A",,,1.38,"wx-maxws15","aef721b8",0,0,
+"GWI","W","2023-02-07 02:00:00","ClimaVUE50","A",,,1.85,"wx-maxws15","aef721b8",0,0,
+"GWI","W","2023-02-07 03:00:00","ClimaVUE50","A",,,2.54,"wx-maxws15","aef721b8",0,0,
+"GWI","W","2023-02-07 04:00:00","ClimaVUE50","A",,,2.19,"wx-maxws15","aef721b8",0,0,
+"GWI","W","2023-02-07 05:00:00","ClimaVUE50","A",,,2.33,"wx-maxws15","aef721b8",0,0,

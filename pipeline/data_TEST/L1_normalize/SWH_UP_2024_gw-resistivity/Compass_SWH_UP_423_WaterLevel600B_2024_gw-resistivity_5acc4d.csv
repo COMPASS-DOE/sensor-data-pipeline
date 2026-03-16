@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 12:30:00",99999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",99999,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 13:00:00",99999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",99999,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 12:15:00",99999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",99999,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 10:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 14:00:00",7200.6,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",7200.6,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 14:15:00",761.04,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",761.04,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 11:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 13:15:00",11410,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",11410,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 12:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 11:15:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 14:45:00",825.55,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",825.55,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 13:30:00",8001,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",8001,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 15:15:00",5251.9,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",5251.9,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 11:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 12:45:00",99999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",99999,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 11:30:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 15:00:00",845.56,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",845.56,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 13:45:00",7209.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",7209.3,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 15:45:00",6785.6,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",6785.6,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 14:30:00",798.51,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",798.51,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 15:30:00",6360.5,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",6360.5,,0
+"gw-resistivity","ohm-cm","Compass_SWH_UP_423","WaterLevel600B","Resistivity600B","2024-03-05 16:00:00",5634.4,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-resistivity",5634.4,,0

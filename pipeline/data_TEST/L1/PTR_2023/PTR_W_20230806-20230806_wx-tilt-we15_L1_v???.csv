@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"PTR","W","2023-08-06 00:00:00","ClimaVUE50","A",,,1.933,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 00:15:00","ClimaVUE50","A",,,1.867,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 00:30:00","ClimaVUE50","A",,,1.86,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 00:45:00","ClimaVUE50","A",,,1.927,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 01:00:00","ClimaVUE50","A",,,1.813,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 01:15:00","ClimaVUE50","A",,,1.907,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 01:30:00","ClimaVUE50","A",,,1.827,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 01:45:00","ClimaVUE50","A",,,1.993,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 02:00:00","ClimaVUE50","A",,,1.873,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 02:15:00","ClimaVUE50","A",,,1.86,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 02:30:00","ClimaVUE50","A",,,1.933,"wx-tilt-we15","a7cee264",,0,
+"PTR","W","2023-08-06 02:45:00","ClimaVUE50","A",,,1.853,"wx-tilt-we15","a7cee264",,0,

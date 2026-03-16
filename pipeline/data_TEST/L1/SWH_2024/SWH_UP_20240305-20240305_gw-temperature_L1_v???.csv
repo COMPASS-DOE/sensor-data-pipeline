@@ -1,0 +1,23 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","UP","2024-03-05 10:45:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 11:00:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 11:15:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 11:30:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 11:45:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 12:00:00","AquaTROLL600","B",,,,"gw-temperature","051c89f8",,0,0
+"SWH","UP","2024-03-05 12:15:00","AquaTROLL600","B",,,11.13,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 12:30:00","AquaTROLL600","B",,,11.15,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 12:45:00","AquaTROLL600","B",,,11.18,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 13:00:00","AquaTROLL600","B",,,11.19,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 13:15:00","AquaTROLL600","B",,,17.38,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 13:30:00","AquaTROLL600","B",,,17.41,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 13:45:00","AquaTROLL600","B",,,17.51,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 14:00:00","AquaTROLL600","B",,,17.58,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 14:15:00","AquaTROLL600","B",,,17.72,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 14:30:00","AquaTROLL600","B",,,17.58,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 14:45:00","AquaTROLL600","B",,,17.49,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 15:00:00","AquaTROLL600","B",,,17.39,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 15:15:00","AquaTROLL600","B",,,17.32,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 15:30:00","AquaTROLL600","B",,,17.14,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 15:45:00","AquaTROLL600","B",,,17.25,"gw-temperature","051c89f8",0,0,0
+"SWH","UP","2024-03-05 16:00:00","AquaTROLL600","B",,,17.89,"gw-temperature","051c89f8",0,0,0

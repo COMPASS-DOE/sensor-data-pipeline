@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 00:00:00",0.39,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.39,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 01:00:00",0.389,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.389,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 00:15:00",0.389,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.389,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 01:15:00",0.389,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.389,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 00:30:00",0.389,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.389,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(9)","2023-04-08 00:45:00",0.389,"ff586c72","CRC","UP","Sapflow","A","01D",,"CRC-UP-Sapflow-A-01D-sapflow-5cm",0.389,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 00:00:00",0.338,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.338,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 00:15:00",0.339,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.339,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 00:30:00",0.34,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.34,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 00:45:00",0.341,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.341,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 01:00:00",0.341,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.341,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(10)","2023-04-08 01:15:00",0.341,"ff586c72","CRC","UP","Sapflow","A","02D",,"CRC-UP-Sapflow-A-02D-sapflow-5cm",0.341,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 00:00:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 00:15:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 00:30:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 00:45:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 01:00:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(11)","2023-04-08 01:15:00",0.436,"ff586c72","CRC","UP","Sapflow","A","06D",,"CRC-UP-Sapflow-A-06D-sapflow-5cm",0.436,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 00:30:00",0.347,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.347,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 00:45:00",0.346,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.346,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 00:00:00",0.347,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.347,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 01:00:00",0.346,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.346,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 00:15:00",0.347,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.347,0,0
+"sapflow-5cm","mV","Compass_CRC_UP_303","SapflowA","DiffVoltA_Avg(12)","2023-04-08 01:15:00",0.346,"ff586c72","CRC","UP","Sapflow","A","08D",,"CRC-UP-Sapflow-A-08D-sapflow-5cm",0.346,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 01:00:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 00:30:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 01:15:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 00:00:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 00:15:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0
+"gw-salinity","PSU","Compass_MSM_TR_402","WaterLevel600B","Salinity600B","2023-09-05 00:45:00",10.09,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-salinity",10.09,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 01:00:00",73.08,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.08,,0
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 00:00:00",73.47,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.47,,0
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 00:15:00",73.13,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.13,,0
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 00:30:00",73.39,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.39,,0
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 00:45:00",73.06,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.06,,0
+"gw-depth","cm","Compass_MSM_W_401","WaterLevel600C","Depth600C","2023-10-05 01:15:00",73.15,"2226fd72","MSM","W","AquaTROLL600","C",,,"MSM-W-AquaTROLL600-C-NA-gw-depth",73.15,,0

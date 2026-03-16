@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 11:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 11:15:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 13:00:00",0,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",0,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 10:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 15:15:00",-151.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-151.3,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 14:00:00",-147.1,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-147.1,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 15:45:00",-157.1,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-157.1,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 13:30:00",-148.2,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-148.2,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 12:15:00",0,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",0,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 12:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 11:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 14:45:00",-147.4,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-147.4,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 14:30:00",-146.8,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-146.8,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 13:15:00",-149.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-149.3,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 12:30:00",0,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",0,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 14:15:00",-147.4,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-147.4,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 11:30:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 16:00:00",-161.1,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-161.1,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 13:45:00",-146.4,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-146.4,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 15:30:00",-152.2,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-152.2,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 12:45:00",0,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",0,,0
+"gw-ph-mv","mV","Compass_SWH_UP_423","WaterLevel600B","pH_mV600B","2024-03-05 15:00:00",-150,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph-mv",-150,,0

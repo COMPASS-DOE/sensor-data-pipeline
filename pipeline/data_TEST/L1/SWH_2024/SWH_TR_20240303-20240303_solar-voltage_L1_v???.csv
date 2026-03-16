@@ -1,0 +1,12 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","TR","2024-03-03 00:15:00","Datalogger","422",,,25.58,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 00:30:00","Datalogger","422",,,25.57,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 00:45:00","Datalogger","422",,,25.56,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 01:00:00","Datalogger","422",,,25.54,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 01:15:00","Datalogger","422",,,25.5,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 01:30:00","Datalogger","422",,,25.52,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 01:45:00","Datalogger","422",,,25.5,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 02:00:00","Datalogger","422",,,25.46,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 02:15:00","Datalogger","422",,,25.44,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 02:30:00","Datalogger","422",,,25.43,"solar-voltage","242f559b",0,0,
+"SWH","TR","2024-03-03 02:45:00","Datalogger","422",,,25.44,"solar-voltage","242f559b",0,0,

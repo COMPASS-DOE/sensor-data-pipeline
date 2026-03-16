@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 00:00:00",1.017,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",70.120116,0,0
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 00:30:00",1.017,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",70.120116,0,0
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 01:00:00",1.018,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",70.189064,0,0
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 01:15:00",1.015,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",69.98222,0,0
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 00:15:00",1.018,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",70.189064,0,0
+"gw-pressure","mbar","Compass_MSM_TR_402","WaterLevel600B","Pressure600B","2023-10-05 00:45:00",1.015,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-pressure",69.98222,0,0

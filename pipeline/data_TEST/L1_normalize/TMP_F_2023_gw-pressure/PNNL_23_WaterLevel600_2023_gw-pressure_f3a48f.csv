@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 00:00:00",15.02,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.59896,1,0
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 00:45:00",15.019,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.530012,1,0
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 01:00:00",15.017,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.392116,1,0
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 00:15:00",15.021,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.667908,1,0
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 00:30:00",15.022,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.736856,1,0
+"gw-pressure","mbar","PNNL_23","WaterLevel600","Pressure600","2023-11-04 01:15:00",15.013,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-pressure",1035.116324,1,0

@@ -1,0 +1,19 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 01:15:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 00:45:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 00:00:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 00:15:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 00:30:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(9)","2023-11-04 01:00:00",0.7,"956054b2","TMP","C","Sapflow","13","CD12","G3","TMP-C-Sapflow-13-CD12-sapflow-5cm",0.7,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 01:00:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 00:00:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 01:15:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 00:15:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 00:45:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(10)","2023-11-04 00:30:00",0.543,"956054b2","TMP","C","Sapflow","13","CD16","E4","TMP-C-Sapflow-13-CD16-sapflow-5cm",0.543,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 00:45:00",0.44,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.44,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 01:00:00",0.44,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.44,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 01:15:00",0.44,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.44,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 00:30:00",0.44,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.44,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 00:00:00",0.439,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.439,0,0
+"sapflow-5cm","mV","PNNL_13","sapflow","DiffVolt_Avg(11)","2023-11-04 00:15:00",0.439,"956054b2","TMP","C","Sapflow","13","CD3","C5","TMP-C-Sapflow-13-CD3-sapflow-5cm",0.439,0,0

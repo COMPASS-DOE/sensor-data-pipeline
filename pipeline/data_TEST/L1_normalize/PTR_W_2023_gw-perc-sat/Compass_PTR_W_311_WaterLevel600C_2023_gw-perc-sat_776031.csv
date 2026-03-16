@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 00:00:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 01:45:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 00:15:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 00:45:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 02:30:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 01:30:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 01:15:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 02:00:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 01:00:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 02:45:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 00:30:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 02:15:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0
+"gw-perc-sat","%","Compass_PTR_W_311","WaterLevel600C","RDO_perc_sat600C","2023-08-06 03:00:00",0,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-perc-sat",0,0,0

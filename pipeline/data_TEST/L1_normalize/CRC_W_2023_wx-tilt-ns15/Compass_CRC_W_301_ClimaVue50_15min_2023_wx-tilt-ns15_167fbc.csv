@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 00:30:00",-1.313,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.313,,0
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 01:15:00",-1.333,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.333,,0
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 01:00:00",-1.44,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.44,,0
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 00:00:00",-1.32,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.32,,0
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 00:15:00",-1.447,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.447,,0
+"wx-tilt-ns15","degrees","Compass_CRC_W_301","ClimaVue50_15min","TiltNS_deg_Avg","2023-05-08 00:45:00",-1.507,"70c64b5e","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-tilt-ns15",-1.507,,0

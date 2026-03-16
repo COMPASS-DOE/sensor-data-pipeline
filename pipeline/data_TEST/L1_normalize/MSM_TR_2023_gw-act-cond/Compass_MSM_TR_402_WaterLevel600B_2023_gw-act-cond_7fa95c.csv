@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 00:00:00",15765,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15765,,0
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 01:15:00",15762,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15762,,0
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 01:00:00",15769,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15769,,0
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 00:45:00",15767,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15767,,0
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 00:15:00",15759,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15759,,0
+"gw-act-cond","μS/cm","Compass_MSM_TR_402","WaterLevel600B","Actual_Conductivity600B","2023-09-05 00:30:00",15767,"149f7f4c","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-act-cond",15767,,0

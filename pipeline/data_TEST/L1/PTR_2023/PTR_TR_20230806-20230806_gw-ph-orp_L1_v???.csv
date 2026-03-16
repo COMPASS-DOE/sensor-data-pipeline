@@ -1,0 +1,10 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"PTR","TR","2023-08-06 00:00:00","AquaTROLL600","B",,,39.5,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 00:15:00","AquaTROLL600","B",,,43.2,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 00:30:00","AquaTROLL600","B",,,45.9,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 00:45:00","AquaTROLL600","B",,,48.1,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 01:00:00","AquaTROLL600","B",,,46.8,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 01:15:00","AquaTROLL600","B",,,48.6,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 01:30:00","AquaTROLL600","B",,,50.6,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 01:45:00","AquaTROLL600","B",,,51.8,"gw-ph-orp","c9d7f094",0,0,
+"PTR","TR","2023-08-06 02:00:00","AquaTROLL600","B",,,39,"gw-ph-orp","c9d7f094",0,0,

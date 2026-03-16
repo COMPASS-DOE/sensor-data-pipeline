@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 09:45:00",361.56,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.56,,0
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 08:45:00",361.68,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.68,,0
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 09:00:00",361.71,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.71,,0
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 09:15:00",361.71,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.71,,0
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 08:30:00",361.54,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.54,,0
+"sonde-tds","mg/L","Compass_OWC_W_321","ExoTable","TDS_mg_L","2023-04-21 09:30:00",361.64,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-tds",361.64,,0

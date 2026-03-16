@@ -1,0 +1,20 @@
+2025-11-04 16:41:44  
+2025-11-04 16:41:44 =================================================== 
+2025-11-04 16:41:44 Starting L0 
+2025-11-04 16:41:45 About to L0 
+2025-11-04 16:41:49 html output copied to ./data_TEST/Logs//L0_20251104.1641.html 
+2025-11-04 16:41:49  
+2025-11-04 16:41:49 =================================================== 
+2025-11-04 16:41:49 Starting L1_normalize 
+2025-11-04 16:41:52 About to L1_normalize 
+2025-11-04 16:42:29 html output copied to ./data_TEST/Logs//L1_normalize_20251104.1641.html 
+2025-11-04 16:42:29  
+2025-11-04 16:42:29 =================================================== 
+2025-11-04 16:42:29 Starting L1 
+2025-11-04 16:42:31 About to L1 
+2025-11-04 16:42:31 WARNING: Driver: an error occurred! 
+2025-11-04 16:42:31 [1m[33mError[39m in `quarto_render()`:[22m
+[38;5;252m[31m✖[38;5;252m Error running quarto cli.[39m
+[1mCaused by error:[22m
+[33m![39m System command 'quarto' failed
+ 

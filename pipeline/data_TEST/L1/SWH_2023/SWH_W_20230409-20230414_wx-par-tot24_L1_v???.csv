@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","W","2023-04-09 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,
+"SWH","W","2023-04-10 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,
+"SWH","W","2023-04-11 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,
+"SWH","W","2023-04-12 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,
+"SWH","W","2023-04-13 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,
+"SWH","W","2023-04-14 00:00:00","ClimaVUE50","A",,,7999,"wx-par-tot24","3a3623b9",,0,

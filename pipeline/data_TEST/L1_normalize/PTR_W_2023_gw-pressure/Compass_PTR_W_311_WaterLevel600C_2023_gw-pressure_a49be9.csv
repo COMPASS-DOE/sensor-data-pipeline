@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 01:45:00",0.674,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.470952,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 02:45:00",0.673,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.402004,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 02:30:00",0.674,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.470952,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 00:00:00",0.674,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.470952,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 02:00:00",0.673,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.402004,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 02:15:00",0.675,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.5399,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 00:30:00",0.677,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.677796,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 01:00:00",0.674,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.470952,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 00:15:00",0.679,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.815692,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 01:15:00",0.673,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.402004,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 00:45:00",0.675,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.5399,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 01:30:00",0.674,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.470952,0,0
+"gw-pressure","mbar","Compass_PTR_W_311","WaterLevel600C","Pressure600C","2023-08-06 03:00:00",0.673,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-pressure",46.402004,0,0

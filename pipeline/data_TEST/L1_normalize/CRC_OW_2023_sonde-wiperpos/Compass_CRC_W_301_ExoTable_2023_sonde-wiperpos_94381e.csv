@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 00:00:00",0,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",0,,0
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 01:15:00",,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",,,0
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 01:00:00",,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",,,0
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 00:30:00",0,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",0,,0
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 00:15:00",0,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",0,,0
+"sonde-wiperpos","mV","Compass_CRC_W_301","ExoTable","Wiper_Position_mv","2023-05-08 00:45:00",,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-wiperpos",,,0

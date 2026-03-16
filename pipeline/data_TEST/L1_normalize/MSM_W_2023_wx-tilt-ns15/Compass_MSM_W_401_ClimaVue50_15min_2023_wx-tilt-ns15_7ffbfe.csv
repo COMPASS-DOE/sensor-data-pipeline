@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 00:30:00",-0.607,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.607,,0
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 01:15:00",-0.6,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.6,,0
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 01:00:00",-0.62,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.62,,0
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 00:00:00",-0.66,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.66,,0
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 00:15:00",-0.587,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.587,,0
+"wx-tilt-ns15","degrees","Compass_MSM_W_401","ClimaVue50_15min","TiltNS_deg_Avg","2023-10-05 00:45:00",-0.62,"3df3c09a","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tilt-ns15",-0.62,,0

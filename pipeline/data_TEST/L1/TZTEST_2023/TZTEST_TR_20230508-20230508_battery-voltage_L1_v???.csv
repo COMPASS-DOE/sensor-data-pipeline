@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"TZTEST","TR","2023-05-08 01:00:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,
+"TZTEST","TR","2023-05-08 01:15:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,
+"TZTEST","TR","2023-05-08 01:30:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,
+"TZTEST","TR","2023-05-08 01:45:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,
+"TZTEST","TR","2023-05-08 02:00:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,
+"TZTEST","TR","2023-05-08 02:15:00","Datalogger","999",,,11.93,"battery-voltage","3cf6fb68",0,0,

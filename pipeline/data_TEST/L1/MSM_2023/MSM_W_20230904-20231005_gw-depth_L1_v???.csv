@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","W","2023-09-04 23:45:00","AquaTROLL600","C",,,73,"gw-depth","9f724e16",,0,
+"MSM","W","2023-09-05 00:00:00","AquaTROLL600","C",,,73.05,"gw-depth","9f724e16",,0,
+"MSM","W","2023-09-05 00:15:00","AquaTROLL600","C",,,72.81,"gw-depth","9f724e16",,0,
+"MSM","W","2023-09-05 00:30:00","AquaTROLL600","C",,,72.89,"gw-depth","9f724e16",,0,
+"MSM","W","2023-09-05 00:45:00","AquaTROLL600","C",,,72.78,"gw-depth","9f724e16",,0,
+"MSM","W","2023-09-05 01:00:00","AquaTROLL600","C",,,73,"gw-depth","9f724e16",,0,
+"MSM","W","2023-10-05 00:00:00","AquaTROLL600","C",,,73.47,"gw-depth","2226fd72",,0,
+"MSM","W","2023-10-05 00:15:00","AquaTROLL600","C",,,73.13,"gw-depth","2226fd72",,0,
+"MSM","W","2023-10-05 00:30:00","AquaTROLL600","C",,,73.39,"gw-depth","2226fd72",,0,
+"MSM","W","2023-10-05 00:45:00","AquaTROLL600","C",,,73.06,"gw-depth","2226fd72",,0,
+"MSM","W","2023-10-05 01:00:00","AquaTROLL600","C",,,73.08,"gw-depth","2226fd72",,0,
+"MSM","W","2023-10-05 01:15:00","AquaTROLL600","C",,,73.15,"gw-depth","2226fd72",,0,

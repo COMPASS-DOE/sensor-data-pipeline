@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 02:15:00",3.47,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.47,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 02:30:00",3.89,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.89,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 01:15:00",3.17,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.17,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 00:45:00",3.33,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.33,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 00:30:00",2.44,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",2.44,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 01:30:00",2.65,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",2.65,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 00:00:00",2.77,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",2.77,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 00:15:00",3.33,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.33,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 02:00:00",3.06,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.06,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 01:00:00",2.85,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",2.85,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 02:45:00",3.78,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.78,0,0
+"wx-maxws15","m/s","Compass_PTR_W_311","ClimaVue50_15min","MaxWS_ms_Max","2023-08-06 01:45:00",3.22,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-maxws15",3.22,0,0

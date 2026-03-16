@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 00:00:00",2851.02,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.410310658,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 00:15:00",2851.72,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.410582188,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 00:45:00",2850.95,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.410283505,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 01:00:00",2852.5,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.41088475,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 01:15:00",2852.62,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.410931298,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,1)","2023-07-07 00:30:00",2849.95,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-vwc-30cm",0.409895605,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 01:00:00",2877.68,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.420652072,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 00:00:00",2877.77,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.420686983,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 00:15:00",2877.4,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.42054346,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 00:30:00",2877.27,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.420493033,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 00:45:00",2878.44,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.420946876,0,0
+"soil-vwc-30cm","m3/m3","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,1)","2023-07-07 01:15:00",2878.22,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-vwc-30cm",0.420861538,0,0

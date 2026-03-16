@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 13:00:00",26.03,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",26.03,0,0
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 13:30:00",26.1,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",26.1,0,0
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 11:45:00",26.95,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",26.95,0,0
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 14:00:00",26.3,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",26.3,0,0
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 13:15:00",25.99,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",25.99,0,0
+"solar-voltage","V","Compass_GWI_TR_412","CheckTable","SolarV","2024-11-15 13:45:00",26.68,18802900,"GWI","TR","Datalogger","302",,,"GWI-TR-Datalogger-302-NA-solar-voltage",26.68,0,0

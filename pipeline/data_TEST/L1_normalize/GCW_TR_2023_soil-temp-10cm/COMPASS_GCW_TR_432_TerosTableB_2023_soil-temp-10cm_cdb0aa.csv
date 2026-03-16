@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 01:00:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 00:00:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 00:15:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 00:30:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 01:15:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(1,2)","2023-06-07 00:45:00",15.9,"03fbaeec","GCW","TR","TEROS12","B","1",,"GCW-TR-TEROS12-B-1-soil-temp-10cm",15.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 01:00:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 00:30:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 01:15:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 00:00:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 00:15:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(2,2)","2023-06-07 00:45:00",16.3,"03fbaeec","GCW","TR","TEROS12","B","2",,"GCW-TR-TEROS12-B-2-soil-temp-10cm",16.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 00:30:00",16.6,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.6,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 00:45:00",16.6,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.6,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 01:15:00",16.6,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.6,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 00:00:00",16.7,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.7,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 01:00:00",16.6,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.6,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(3,2)","2023-06-07 00:15:00",16.6,"03fbaeec","GCW","TR","TEROS12","B","3",,"GCW-TR-TEROS12-B-3-soil-temp-10cm",16.6,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 00:45:00",17.2,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.2,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 01:00:00",17.2,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.2,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 00:30:00",17.3,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 00:15:00",17.3,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 00:00:00",17.3,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_TR_432","TerosTableB","TerosB(4,2)","2023-06-07 01:15:00",17.2,"03fbaeec","GCW","TR","TEROS12","B","4",,"GCW-TR-TEROS12-B-4-soil-temp-10cm",17.2,0,0

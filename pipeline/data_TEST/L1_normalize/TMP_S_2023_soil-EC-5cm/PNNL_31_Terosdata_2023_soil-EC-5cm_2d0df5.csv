@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 00:45:00",83,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",83,0,0
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 01:15:00",83,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",83,0,0
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 00:00:00",83,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",83,0,0
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 00:30:00",84,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",84,0,0
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 00:15:00",83,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",83,0,0
+"soil-EC-5cm","µS/cm","PNNL_31","Terosdata","Teros(14,3)","2023-11-04 01:00:00",82,"34f715b8","TMP","S","TEROS12","31","T089","C3","TMP-S-TEROS12-31-T089-soil-EC-5cm",82,0,0

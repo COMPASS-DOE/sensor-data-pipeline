@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","TR","2023-09-05 00:00:00","AquaTROLL600","B",,,16950,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-09-05 00:15:00","AquaTROLL600","B",,,16949,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-09-05 00:30:00","AquaTROLL600","B",,,16954,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-09-05 00:45:00","AquaTROLL600","B",,,16953,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-09-05 01:00:00","AquaTROLL600","B",,,16955,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-09-05 01:15:00","AquaTROLL600","B",,,16952,"gw-spec-cond","149f7f4c",0,0,
+"MSM","TR","2023-10-05 00:00:00","AquaTROLL600","B",,,18352,"gw-spec-cond","052ff667",0,0,
+"MSM","TR","2023-10-05 00:15:00","AquaTROLL600","B",,,18352,"gw-spec-cond","052ff667",0,0,
+"MSM","TR","2023-10-05 00:30:00","AquaTROLL600","B",,,18351,"gw-spec-cond","052ff667",0,0,
+"MSM","TR","2023-10-05 00:45:00","AquaTROLL600","B",,,18349,"gw-spec-cond","052ff667",0,0,
+"MSM","TR","2023-10-05 01:00:00","AquaTROLL600","B",,,18350,"gw-spec-cond","052ff667",0,0,
+"MSM","TR","2023-10-05 01:15:00","AquaTROLL600","B",,,18348,"gw-spec-cond","052ff667",0,0,

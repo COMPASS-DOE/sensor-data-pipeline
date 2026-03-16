@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 02:15:00",-330.6,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-330.6,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 02:45:00",-328.7,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-328.7,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 01:45:00",-329.9,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-329.9,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 00:30:00",-327.3,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-327.3,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 02:30:00",-329,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-329,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 01:00:00",-327.3,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-327.3,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 01:30:00",-329.8,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-329.8,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 00:00:00",-329.5,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-329.5,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 02:00:00",-329.5,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-329.5,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 00:45:00",-327.1,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-327.1,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 03:00:00",-328.6,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-328.6,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 01:15:00",-330.1,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-330.1,0,0
+"gw-ph-orp","mV","Compass_PTR_W_311","WaterLevel600C","pH_ORP600C","2023-08-06 00:15:00",-330.3,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-ph-orp",-330.3,0,0

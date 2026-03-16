@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-14 00:00:00",67.9,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",67.9,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-09 00:00:00",61.6,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",61.6,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-06 00:00:00",67.3,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",67.3,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-11 00:00:00",64.9,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",64.9,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-10 00:00:00",62.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",62.7,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-17 00:00:00",65.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",65.7,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-08 00:00:00",80.3,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",80.3,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-16 00:00:00",85.2,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",85.2,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-07 00:00:00",75,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",75,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-12 00:00:00",69.6,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",69.6,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-13 00:00:00",70.9,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",70.9,0,0
+"wx-rht24","perc","Compass_PTR_W_311","ClimaVue50_24hr","RH_Min","2023-08-15 00:00:00",87.5,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rht24",87.5,0,0

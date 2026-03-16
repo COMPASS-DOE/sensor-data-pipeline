@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-09 00:00:00",6.18,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",6.18,0,0
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-11 00:00:00",6.07,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",6.07,0,0
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-08 00:00:00",6.4,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",6.4,0,0
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-13 00:00:00",14.9,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",14.9,0,0
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-12 00:00:00",4.78,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",4.78,0,0
+"wx-maxws24","m/s","Compass_GWI_W_411","ClimaVue50_24hr","MaxWS_ms_Max","2023-01-10 00:00:00",11.59,"2fdaea99","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-maxws24",11.59,0,0

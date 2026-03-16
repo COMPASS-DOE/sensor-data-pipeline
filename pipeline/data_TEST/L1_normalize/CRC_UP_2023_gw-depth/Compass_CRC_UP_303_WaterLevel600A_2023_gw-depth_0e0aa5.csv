@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 01:15:00",422.44,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",422.44,,0
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 00:15:00",423.47,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",423.47,,0
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 00:30:00",423.02,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",423.02,,0
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 00:45:00",422.81,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",422.81,,0
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 01:00:00",422.48,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",422.48,,0
+"gw-depth","cm","Compass_CRC_UP_303","WaterLevel600A","Depth600A","2023-05-08 01:30:00",422.4,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-depth",422.4,,0

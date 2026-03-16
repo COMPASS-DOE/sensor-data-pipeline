@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-09 00:00:00",89.7,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",89.7,0,0
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-08 00:00:00",143,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",143,0,0
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-13 00:00:00",167.4,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",167.4,0,0
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-10 00:00:00",245.6,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",245.6,0,0
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-12 00:00:00",236.1,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",236.1,0,0
+"wx-par-den24","µmol/m2/s","Compass_OWC_W_321","ClimaVue50_24hr","PAR_Den_C_Avg","2023-05-11 00:00:00",245,"43fc1365","OWC","W","ClimaVUE50","A",,,"OWC-W-ClimaVUE50-A-NA-wx-par-den24",245,0,0

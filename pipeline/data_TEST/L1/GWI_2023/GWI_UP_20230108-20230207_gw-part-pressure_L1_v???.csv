@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","UP","2023-01-08 00:00:00","AquaTROLL600","A",,,3.42,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-01-08 00:15:00","AquaTROLL600","A",,,3.34,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-01-08 00:30:00","AquaTROLL600","A",,,3.41,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-01-08 00:45:00","AquaTROLL600","A",,,3.41,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-01-08 01:00:00","AquaTROLL600","A",,,3.47,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-01-08 01:15:00","AquaTROLL600","A",,,3.46,"gw-part-pressure","e8b9a25d",,0,
+"GWI","UP","2023-02-07 00:15:00","AquaTROLL600","A",,,-0.11,"gw-part-pressure","Inf",,0,
+"GWI","UP","2023-02-07 00:30:00","AquaTROLL600","A",,,-0.11,"gw-part-pressure","Inf",,0,
+"GWI","UP","2023-02-07 00:45:00","AquaTROLL600","A",,,-0.11,"gw-part-pressure","Inf",,0,
+"GWI","UP","2023-02-07 01:00:00","AquaTROLL600","A",,,-0.12,"gw-part-pressure","Inf",,0,
+"GWI","UP","2023-02-07 01:15:00","AquaTROLL600","A",,,-0.12,"gw-part-pressure","Inf",,0,
+"GWI","UP","2023-02-07 01:30:00","AquaTROLL600","A",,,-0.11,"gw-part-pressure","Inf",,0,

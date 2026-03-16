@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 00:00:00",2919.03,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.436691737,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 00:15:00",2918.67,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.436552093,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 00:45:00",2917.22,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.435989638,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 01:00:00",2913.64,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.434600956,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 01:15:00",2914.11,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.434783269,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(5,1)","2023-04-08 00:30:00",2918.88,"becc4d6c","CRC","UP","TEROS12","A","5",,"CRC-UP-TEROS12-A-5-soil-vwc-30cm",0.436633552,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 01:00:00",2815.7,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.39661003,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 00:00:00",2815.61,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.396575119,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 00:15:00",2814.31,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.396070849,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 00:30:00",2813.88,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.395904052,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 00:45:00",2814.1,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.39598939,0,0
+"soil-vwc-30cm","m3/m3","Compass_CRC_UP_303","TerosTableA","TerosA(6,1)","2023-04-08 01:15:00",2814.47,"becc4d6c","CRC","UP","TEROS12","A","6",,"CRC-UP-TEROS12-A-6-soil-vwc-30cm",0.396132913,0,0

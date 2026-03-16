@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 08:30:00",5.47,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.47,0,0
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 09:45:00",5.52,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.52,0,0
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 09:30:00",5.54,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.54,0,0
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 09:00:00",5.84,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.84,0,0
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 08:45:00",5.85,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.85,0,0
+"sonde-fdom-rfu","RFU","Compass_CRC_W_301","ExoTable","FDOM_RFU","2023-04-21 09:15:00",5.85,"ae176c4d","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-fdom-rfu",5.85,0,0

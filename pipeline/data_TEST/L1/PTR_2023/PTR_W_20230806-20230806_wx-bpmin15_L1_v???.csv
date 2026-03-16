@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"PTR","W","2023-08-06 00:00:00","ClimaVUE50","A",,,995.3,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 00:15:00","ClimaVUE50","A",,,995.3,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 00:30:00","ClimaVUE50","A",,,995.1,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 00:45:00","ClimaVUE50","A",,,994.9,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 01:00:00","ClimaVUE50","A",,,994.6,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 01:15:00","ClimaVUE50","A",,,994.4,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 01:30:00","ClimaVUE50","A",,,994.2,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 01:45:00","ClimaVUE50","A",,,994.2,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 02:00:00","ClimaVUE50","A",,,994.1,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 02:15:00","ClimaVUE50","A",,,993.9,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 02:30:00","ClimaVUE50","A",,,993.7,"wx-bpmin15","a7cee264",1,0,
+"PTR","W","2023-08-06 02:45:00","ClimaVUE50","A",,,993.5,"wx-bpmin15","a7cee264",1,0,

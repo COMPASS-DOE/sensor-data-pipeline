@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2023-01-08 00:00:00","ClimaVUE50","A",,,2.963,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-01-08 01:00:00","ClimaVUE50","A",,,2.656,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-01-08 02:00:00","ClimaVUE50","A",,,2.282,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-01-08 03:00:00","ClimaVUE50","A",,,1.853,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-01-08 04:00:00","ClimaVUE50","A",,,1.547,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-01-08 05:00:00","ClimaVUE50","A",,,1.633,"wx-windspeed15","8766611c",,0,
+"GWI","W","2023-02-07 00:00:00","ClimaVUE50","A",,,0.399,"wx-windspeed15","aef721b8",,0,
+"GWI","W","2023-02-07 01:00:00","ClimaVUE50","A",,,0.565,"wx-windspeed15","aef721b8",,0,
+"GWI","W","2023-02-07 02:00:00","ClimaVUE50","A",,,0.856,"wx-windspeed15","aef721b8",,0,
+"GWI","W","2023-02-07 03:00:00","ClimaVUE50","A",,,1.082,"wx-windspeed15","aef721b8",,0,
+"GWI","W","2023-02-07 04:00:00","ClimaVUE50","A",,,0.794,"wx-windspeed15","aef721b8",,0,
+"GWI","W","2023-02-07 05:00:00","ClimaVUE50","A",,,0.908,"wx-windspeed15","aef721b8",,0,

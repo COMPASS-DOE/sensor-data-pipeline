@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 00:30:00",303.54,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",303.54,,0
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 00:45:00",301.65,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",301.65,,0
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 01:15:00",301.46,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",301.46,,0
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 00:00:00",303.37,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",303.37,,0
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 01:00:00",301.43,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",301.43,,0
+"gw-resistivity","ohm-cm","Compass_MSM_UP_403","WaterLevel600A","Resistivity600A","2023-09-05 00:15:00",303.44,"1f19ae2b","MSM","UP","AquaTROLL600","A",,,"MSM-UP-AquaTROLL600-A-NA-gw-resistivity",303.44,,0

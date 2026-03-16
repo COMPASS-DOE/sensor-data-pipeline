@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 01:00:00",8.3,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 00:45:00",8.3,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 00:15:00",8.4,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.4,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 00:00:00",8.4,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.4,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 00:30:00",8.4,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.4,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(1,2)","2023-01-08 01:15:00",8.3,"b5eccb7a","GWI","W","TEROS12","C","1",,"GWI-W-TEROS12-C-1-soil-temp-10cm",8.3,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 00:30:00",8.6,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.6,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 01:15:00",8.5,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.5,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 01:00:00",8.6,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.6,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 00:45:00",8.6,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.6,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 00:15:00",8.6,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.6,0,0
+"soil-temp-10cm","degC","Compass_GWI_W_411","TerosTableC","TerosC(2,2)","2023-01-08 00:00:00",8.7,"b5eccb7a","GWI","W","TEROS12","C","2",,"GWI-W-TEROS12-C-2-soil-temp-10cm",8.7,0,0

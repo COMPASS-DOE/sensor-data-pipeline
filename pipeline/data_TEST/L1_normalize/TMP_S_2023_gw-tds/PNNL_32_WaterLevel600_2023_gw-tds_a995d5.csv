@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 01:00:00",1792.2,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1792.2,,0
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 00:30:00",1791.7,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1791.7,,0
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 01:15:00",1791.9,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1791.9,,0
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 00:00:00",1792,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1792,,0
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 00:15:00",1791.7,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1791.7,,0
+"gw-tds","ppt","PNNL_32","WaterLevel600","TDS600","2023-11-04 00:45:00",1791.8,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-tds",1791.8,,0

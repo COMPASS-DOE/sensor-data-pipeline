@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","W","2023-04-08 00:00:00","AquaTROLL600","C",,,12.227,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-04-08 00:15:00","AquaTROLL600","C",,,12.218,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-04-08 00:30:00","AquaTROLL600","C",,,12.227,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-04-08 00:45:00","AquaTROLL600","C",,,12.218,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-04-08 01:00:00","AquaTROLL600","C",,,12.209,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-04-08 01:15:00","AquaTROLL600","C",,,12.164,"gw-voltage-ext","f9d2d9b5",,0,
+"CRC","W","2023-05-08 00:00:00","AquaTROLL600","C",,,12.2,"gw-voltage-ext","f8098de1",,0,
+"CRC","W","2023-05-08 00:15:00","AquaTROLL600","C",,,12.191,"gw-voltage-ext","f8098de1",,0,
+"CRC","W","2023-05-08 00:30:00","AquaTROLL600","C",,,12.191,"gw-voltage-ext","f8098de1",,0,
+"CRC","W","2023-05-08 00:45:00","AquaTROLL600","C",,,12.236,"gw-voltage-ext","f8098de1",,0,
+"CRC","W","2023-05-08 01:00:00","AquaTROLL600","C",,,12.173,"gw-voltage-ext","f8098de1",,0,
+"CRC","W","2023-05-08 01:15:00","AquaTROLL600","C",,,12.164,"gw-voltage-ext","f8098de1",,0,

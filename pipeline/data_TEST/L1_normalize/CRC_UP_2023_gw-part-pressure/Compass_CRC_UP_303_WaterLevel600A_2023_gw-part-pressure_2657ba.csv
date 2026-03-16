@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 00:15:00",-0.72,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.72,,0
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 01:00:00",-0.71,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.71,,0
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 01:15:00",-0.71,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.71,,0
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 00:30:00",-0.7,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.7,,0
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 00:45:00",-0.71,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.71,,0
+"gw-part-pressure","Torr","Compass_CRC_UP_303","WaterLevel600A","RDO_part_Pressure600A","2023-05-08 01:30:00",-0.72,"4d5a7b56","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-part-pressure",-0.72,,0

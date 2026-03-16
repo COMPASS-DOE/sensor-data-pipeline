@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 02:00:00",12.92,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.92,0,0
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 02:30:00",12.91,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.91,0,0
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 03:00:00",12.9,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.9,0,0
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 02:45:00",12.9,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.9,0,0
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 01:45:00",12.92,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.92,0,0
+"battery-voltage","V","Compass_MSM_Buoy","CheckTable","BattV","2023-09-04 02:15:00",12.92,"5f98d161","MSM","OW","Datalogger","Buoy",,,"MSM-OW-Datalogger-Buoy-NA-battery-voltage",12.92,0,0

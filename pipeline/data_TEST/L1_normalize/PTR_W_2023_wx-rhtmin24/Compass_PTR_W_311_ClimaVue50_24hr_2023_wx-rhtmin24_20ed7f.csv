@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-13 00:00:00",17.1,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",17.1,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-12 00:00:00",13.9,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",13.9,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-11 00:00:00",15.8,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",15.8,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-16 00:00:00",17.2,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",17.2,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-14 00:00:00",13.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",13.7,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-17 00:00:00",13.8,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",13.8,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-09 00:00:00",15,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",15,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-08 00:00:00",15.4,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",15.4,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-06 00:00:00",20,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",20,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-07 00:00:00",19.7,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",19.7,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-15 00:00:00",19.4,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",19.4,0,0
+"wx-rhtmin24","degC","Compass_PTR_W_311","ClimaVue50_24hr","RHT_C_Min","2023-08-10 00:00:00",14.3,7.8812e+63,"PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-rhtmin24",14.3,0,0

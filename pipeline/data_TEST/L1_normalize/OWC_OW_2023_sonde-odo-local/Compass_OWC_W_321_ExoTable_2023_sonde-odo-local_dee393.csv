@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 00:15:00",55.89,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",55.89,,0
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 00:45:00",61,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",61,,0
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 01:15:00",60.53,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",60.53,,0
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 00:30:00",57.89,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",57.89,,0
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 00:00:00",56.82,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",56.82,,0
+"sonde-odo-local","% saturation","Compass_OWC_W_321","ExoTable","ODO_local","2023-05-08 01:00:00",64.11,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-odo-local",64.11,,0

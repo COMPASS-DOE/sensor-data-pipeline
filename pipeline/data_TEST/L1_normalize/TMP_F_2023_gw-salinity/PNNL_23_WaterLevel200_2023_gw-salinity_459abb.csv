@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 00:00:00",0.127509,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.127509,0,0
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 00:15:00",0.127538,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.127538,0,0
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 00:30:00",0.12757,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.12757,0,0
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 00:45:00",0.127613,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.127613,0,0
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 01:00:00",0.127608,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.127608,0,0
+"gw-salinity","PSU","PNNL_23","WaterLevel200","Salinity","2023-11-04 01:15:00",0.127661,"2ef58778","TMP","F","AquaTROLL200","683345",,,"TMP-F-AquaTROLL200-683345-NA-gw-salinity",0.127661,0,0

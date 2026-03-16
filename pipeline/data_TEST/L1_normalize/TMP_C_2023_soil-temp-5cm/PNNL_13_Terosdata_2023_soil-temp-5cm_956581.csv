@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 00:30:00",12.1,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12.1,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 00:45:00",12.1,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12.1,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 00:15:00",12.1,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12.1,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 01:00:00",12,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 00:00:00",12.1,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12.1,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(17,2)","2023-11-04 01:15:00",12,"c2220d13","TMP","C","TEROS12","13","T174","H3","TMP-C-TEROS12-13-T174-soil-temp-5cm",12,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 01:00:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 00:45:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 01:15:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 00:00:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 00:30:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0
+"soil-temp-5cm","degC","PNNL_13","Terosdata","Teros(20,2)","2023-11-04 00:15:00",11.5,"c2220d13","TMP","C","TEROS12","13","T177","F4","TMP-C-TEROS12-13-T177-soil-temp-5cm",11.5,0,0

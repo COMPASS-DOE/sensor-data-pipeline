@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 00:00:00",145,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",145,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 00:30:00",150,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",150,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 01:00:00",139,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",139,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 01:15:00",151,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",151,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 00:15:00",152,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",152,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(5,3)","2023-07-07 00:45:00",154,"ea70d673","GCW","TR","TEROS12","B","5",,"GCW-TR-TEROS12-B-5-soil-EC-30cm",154,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 01:00:00",278,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",278,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 00:15:00",274,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",274,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 00:30:00",291,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",291,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 00:45:00",280,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",280,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 00:00:00",277,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",277,0,0
+"soil-EC-30cm","µS/cm","COMPASS_GCW_TR_432","TerosTableB","TerosB(6,3)","2023-07-07 01:15:00",274,"ea70d673","GCW","TR","TEROS12","B","6",,"GCW-TR-TEROS12-B-6-soil-EC-30cm",274,0,0

@@ -1,0 +1,14 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 00:00:00",65.11,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.11,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 02:45:00",65.04,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.04,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 02:15:00",65.21,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.21,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 01:45:00",65.15,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.15,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 02:30:00",65.15,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.15,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 02:00:00",65.08,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.08,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 00:30:00",65.3,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.3,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 01:00:00",65.11,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.11,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 03:00:00",65.06,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.06,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 00:15:00",65.49,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.49,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 00:45:00",65.2,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.2,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 01:30:00",65.14,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.14,,0
+"gw-depth","cm","Compass_PTR_W_311","WaterLevel600C","Depth600C","2023-08-06 01:15:00",65.03,"ce8b6a3d","PTR","W","AquaTROLL600","C",,,"PTR-W-AquaTROLL600-C-NA-gw-depth",65.03,,0

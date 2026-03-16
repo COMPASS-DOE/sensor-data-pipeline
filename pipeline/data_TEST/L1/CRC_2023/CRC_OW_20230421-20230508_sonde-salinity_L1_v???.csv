@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","OW","2023-04-21 08:30:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-04-21 08:45:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-04-21 09:00:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-04-21 09:15:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-04-21 09:30:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-04-21 09:45:00","EXO","A",,,0.29,"sonde-salinity","ae176c4d",,0,0
+"CRC","OW","2023-05-08 00:00:00","EXO","A",,,0.32,"sonde-salinity","1030fe73",,0,0
+"CRC","OW","2023-05-08 00:15:00","EXO","A",,,0.32,"sonde-salinity","1030fe73",,0,0
+"CRC","OW","2023-05-08 00:30:00","EXO","A",,,0.31,"sonde-salinity","1030fe73",,0,0
+"CRC","OW","2023-05-08 00:45:00","EXO","A",,,,"sonde-salinity","1030fe73",,0,0
+"CRC","OW","2023-05-08 01:00:00","EXO","A",,,,"sonde-salinity","1030fe73",,0,0
+"CRC","OW","2023-05-08 01:15:00","EXO","A",,,,"sonde-salinity","1030fe73",,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 01:15:00",1.813,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.813,,0
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 00:45:00",1.589,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.589,,0
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 00:15:00",1.542,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.542,,0
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 00:00:00",1.595,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.595,,0
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 01:00:00",1.595,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.595,,0
+"wx-windspeed15","m/s","Compass_CRC_W_301","ClimaVue50_15min","WS_ms_S_WVT","2023-04-08 00:30:00",1.526,"9bea3c3a","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-windspeed15",1.526,,0

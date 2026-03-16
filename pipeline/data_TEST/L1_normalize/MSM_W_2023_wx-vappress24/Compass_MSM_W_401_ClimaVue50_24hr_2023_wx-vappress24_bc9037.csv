@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-09 00:00:00",10.23521,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",10.23521,0,0
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-06 00:00:00",22.32694,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",22.32694,0,0
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-08 00:00:00",16.45972,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",16.45972,0,0
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-05 00:00:00",20.47472,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",20.47472,0,0
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-07 00:00:00",24.49708,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",24.49708,0,0
+"wx-vappress24","mbar","Compass_MSM_W_401","ClimaVue50_24hr","VP_mbar_Avg","2023-10-10 00:00:00",11.67736,"e0c1bbaa","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-vappress24",11.67736,0,0

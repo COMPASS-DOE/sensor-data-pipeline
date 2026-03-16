@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 00:00:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 00:45:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 01:00:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 00:15:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 00:30:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0
+"gw-density","g/cm3","COMPASS_GCW_W_431","WaterLevel600C","Water_Density600C","2023-07-07 01:15:00",1.006,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-density",1.006,0,0

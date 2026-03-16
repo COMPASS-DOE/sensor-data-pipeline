@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 01:00:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 00:15:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 00:00:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 00:45:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 00:30:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(19,3)","2023-11-04 01:15:00",8,"c2220d13","GCW","UP","TEROS12","13","T173","H3","TMP-C-TEROS12-13-T173-soil-EC-30cm",8,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 00:15:00",71,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",71,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 00:00:00",73,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",73,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 00:45:00",72,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",72,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 01:00:00",71,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",71,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 00:30:00",70,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",70,0,0
+"soil-EC-30cm","µS/cm","PNNL_13","Terosdata","Teros(22,3)","2023-11-04 01:15:00",72,"c2220d13","GCW","UP","TEROS12","13","T188","F4","TMP-C-TEROS12-13-T188-soil-EC-30cm",72,0,0

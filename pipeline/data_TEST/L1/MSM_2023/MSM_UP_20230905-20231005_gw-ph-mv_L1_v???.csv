@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","UP","2023-09-05 00:00:00","AquaTROLL600","A",,,117.2,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-09-05 00:15:00","AquaTROLL600","A",,,117.3,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-09-05 00:30:00","AquaTROLL600","A",,,117.7,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-09-05 00:45:00","AquaTROLL600","A",,,118.3,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-09-05 01:00:00","AquaTROLL600","A",,,119.3,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-09-05 01:15:00","AquaTROLL600","A",,,119,"gw-ph-mv","1f19ae2b",,0,
+"MSM","UP","2023-10-05 00:15:00","AquaTROLL600","A",,,121.8,"gw-ph-mv","904ca955",,0,
+"MSM","UP","2023-10-05 00:30:00","AquaTROLL600","A",,,122.3,"gw-ph-mv","904ca955",,0,
+"MSM","UP","2023-10-05 00:45:00","AquaTROLL600","A",,,121.1,"gw-ph-mv","904ca955",,0,
+"MSM","UP","2023-10-05 01:00:00","AquaTROLL600","A",,,121.3,"gw-ph-mv","904ca955",,0,
+"MSM","UP","2023-10-05 01:15:00","AquaTROLL600","A",,,121.9,"gw-ph-mv","904ca955",,0,
+"MSM","UP","2023-10-05 01:30:00","AquaTROLL600","A",,,122.3,"gw-ph-mv","904ca955",,0,

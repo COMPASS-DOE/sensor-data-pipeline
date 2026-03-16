@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 08:30:00",369.81,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",369.81,0,0
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 09:15:00",368.8,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",368.8,0,0
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 09:00:00",370.68,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",370.68,0,0
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 08:45:00",370.12,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",370.12,0,0
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 09:30:00",367.78,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",367.78,0,0
+"sonde-orp","mV","Compass_OWC_W_321","ExoTable","ORP_mv","2023-04-21 09:45:00",365.08,"e534e675","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-orp",365.08,0,0

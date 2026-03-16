@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 00:15:00",4911,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",4911,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 00:45:00",5220,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",5220,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 01:15:00",4966,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",4966,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 01:30:00",5185,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",5185,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 00:30:00",5027,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",5027,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(5,3)","2023-02-07 01:00:00",4737,"d83142db","GWI","TR","TEROS12","B","5",,"GWI-TR-TEROS12-B-5-soil-EC-30cm",4737,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 01:15:00",5741,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",5741,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 00:30:00",6831,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",6831,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 00:45:00",6623,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",6623,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 01:00:00",5685,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",5685,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 00:15:00",6028,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",6028,0,0
+"soil-EC-30cm","µS/cm","Compass_GWI_TR_412","TerosTableB","TerosB(6,3)","2023-02-07 01:30:00",7285,"d83142db","GWI","TR","TEROS12","B","6",,"GWI-TR-TEROS12-B-6-soil-EC-30cm",7285,0,0

@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 00:15:00",273,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",273,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 00:45:00",281,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",281,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 01:15:00",277,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",277,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 01:30:00",271,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",271,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 00:30:00",271,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",271,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(5,3)","2023-04-08 01:00:00",278,"d37376ae","SWH","SWAMP","TEROS12","A","5",,"SWH-SWAMP-TEROS12-A-5-soil-EC-30cm",278,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 01:15:00",94,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",94,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 00:30:00",89,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",89,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 00:45:00",92,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",92,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 01:00:00",98,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",98,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 00:15:00",90,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",90,0,0
+"soil-EC-30cm","µS/cm","Compass_SWH_UP_423","TerosTableA","TerosA(6,3)","2023-04-08 01:30:00",91,"d37376ae","SWH","SWAMP","TEROS12","A","6",,"SWH-SWAMP-TEROS12-A-6-soil-EC-30cm",91,0,0

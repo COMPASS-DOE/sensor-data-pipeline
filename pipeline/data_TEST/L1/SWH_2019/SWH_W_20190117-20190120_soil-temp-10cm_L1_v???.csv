@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","W","2019-01-17 06:30:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-17 06:30:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:00:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:00:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:15:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:15:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:30:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:30:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:45:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 04:45:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 05:00:00","TEROS12","C","1",,,"soil-temp-10cm","a13b673d",,0,0
+"SWH","W","2019-01-20 05:00:00","TEROS12","C","2",,,"soil-temp-10cm","a13b673d",,0,0

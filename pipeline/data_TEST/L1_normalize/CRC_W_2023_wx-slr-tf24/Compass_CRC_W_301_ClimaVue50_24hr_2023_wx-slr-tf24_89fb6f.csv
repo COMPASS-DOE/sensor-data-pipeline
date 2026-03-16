@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-12 00:00:00",2.06275,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",2.06275,,0
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-13 00:00:00",1.134345,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",1.134345,,0
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-10 00:00:00",2.04316,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",2.04316,,0
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-08 00:00:00",1.241765,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",1.241765,,0
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-11 00:00:00",2.058275,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",2.058275,,0
+"wx-slr-tf24","MJ/m2","Compass_CRC_W_301","ClimaVue50_24hr","SlrTF_MJ_Tot","2023-05-09 00:00:00",0.7600849,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-wx-slr-tf24",0.7600849,,0

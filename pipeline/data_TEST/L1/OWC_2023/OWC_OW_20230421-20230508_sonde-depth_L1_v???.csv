@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"OWC","OW","2023-04-21 08:30:00","EXO","A",,,0.579,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-04-21 08:45:00","EXO","A",,,0.578,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-04-21 09:00:00","EXO","A",,,0.578,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-04-21 09:15:00","EXO","A",,,0.578,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-04-21 09:30:00","EXO","A",,,0.578,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-04-21 09:45:00","EXO","A",,,0.579,"sonde-depth","e534e675",0,0,
+"OWC","OW","2023-05-08 00:00:00","EXO","A",,,0.421,"sonde-depth","67c0d898",0,0,
+"OWC","OW","2023-05-08 00:15:00","EXO","A",,,12.12,"sonde-depth","67c0d898",1,0,
+"OWC","OW","2023-05-08 00:30:00","EXO","A",,,0.417,"sonde-depth","67c0d898",0,0,
+"OWC","OW","2023-05-08 00:45:00","EXO","A",,,0.414,"sonde-depth","67c0d898",0,0,
+"OWC","OW","2023-05-08 01:00:00","EXO","A",,,0.412,"sonde-depth","67c0d898",0,0,
+"OWC","OW","2023-05-08 01:15:00","EXO","A",,,0.411,"sonde-depth","67c0d898",0,0,

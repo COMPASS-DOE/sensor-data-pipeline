@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GCW","TR","2023-06-07 00:00:00","AquaTROLL600","B",,,665.52,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-06-07 00:15:00","AquaTROLL600","B",,,665.06,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-06-07 00:30:00","AquaTROLL600","B",,,665.1,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-06-07 00:45:00","AquaTROLL600","B",,,664.95,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-06-07 01:00:00","AquaTROLL600","B",,,664.98,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-06-07 01:15:00","AquaTROLL600","B",,,664.88,"gw-resistivity","7656c197",,0,
+"GCW","TR","2023-07-07 00:00:00","AquaTROLL600","B",,,513.22,"gw-resistivity","09357236",,0,
+"GCW","TR","2023-07-07 00:15:00","AquaTROLL600","B",,,513.07,"gw-resistivity","09357236",,0,
+"GCW","TR","2023-07-07 00:30:00","AquaTROLL600","B",,,512.71,"gw-resistivity","09357236",,0,
+"GCW","TR","2023-07-07 00:45:00","AquaTROLL600","B",,,512.85,"gw-resistivity","09357236",,0,
+"GCW","TR","2023-07-07 01:00:00","AquaTROLL600","B",,,512.33,"gw-resistivity","09357236",,0,
+"GCW","TR","2023-07-07 01:15:00","AquaTROLL600","B",,,513.29,"gw-resistivity","09357236",,0,

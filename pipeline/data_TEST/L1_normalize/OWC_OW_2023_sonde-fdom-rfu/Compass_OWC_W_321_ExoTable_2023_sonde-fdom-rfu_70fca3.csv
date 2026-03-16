@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 00:00:00",36.14,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",36.14,0,0
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 01:15:00",33.88,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",33.88,0,0
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 01:00:00",36.86,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",36.86,0,0
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 00:30:00",36.08,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",36.08,0,0
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 00:15:00",34.99,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",34.99,0,0
+"sonde-fdom-rfu","RFU","Compass_OWC_W_321","ExoTable","FDOM_RFU","2023-05-08 00:45:00",34.17,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-fdom-rfu",34.17,0,0

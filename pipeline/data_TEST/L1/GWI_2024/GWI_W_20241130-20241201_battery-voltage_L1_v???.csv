@@ -1,0 +1,9 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2024-11-30 23:45:00","Datalogger","302",,,11.94,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 00:00:00","Datalogger","302",,,11.94,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 00:15:00","Datalogger","302",,,11.93,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 00:30:00","Datalogger","302",,,11.93,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 00:45:00","Datalogger","302",,,11.94,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 01:00:00","Datalogger","302",,,11.94,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 01:15:00","Datalogger","302",,,11.94,"battery-voltage","57844e1c",0,0,
+"GWI","W","2024-12-01 01:30:00","Datalogger","302",,,11.93,"battery-voltage","57844e1c",0,0,

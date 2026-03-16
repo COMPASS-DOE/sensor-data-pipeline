@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","OW","2023-09-04 01:45:00","Datalogger","Buoy",,,-0.152,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-09-04 02:00:00","Datalogger","Buoy",,,-0.122,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-09-04 02:15:00","Datalogger","Buoy",,,-0.133,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-09-04 02:30:00","Datalogger","Buoy",,,-0.142,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-09-04 02:45:00","Datalogger","Buoy",,,-0.112,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-09-04 03:00:00","Datalogger","Buoy",,,-0.176,"solar-voltage","5f98d161",1,0,
+"MSM","OW","2023-10-05 01:15:00","Datalogger","Buoy",,,-0.11,"solar-voltage","b4d8c8d0",1,0,
+"MSM","OW","2023-10-05 01:30:00","Datalogger","Buoy",,,-0.116,"solar-voltage","b4d8c8d0",1,0,
+"MSM","OW","2023-10-05 01:45:00","Datalogger","Buoy",,,-0.089,"solar-voltage","b4d8c8d0",1,0,
+"MSM","OW","2023-10-05 02:00:00","Datalogger","Buoy",,,-0.13,"solar-voltage","b4d8c8d0",1,0,
+"MSM","OW","2023-10-05 02:15:00","Datalogger","Buoy",,,-0.114,"solar-voltage","b4d8c8d0",1,0,
+"MSM","OW","2023-10-05 02:30:00","Datalogger","Buoy",,,-0.069,"solar-voltage","b4d8c8d0",1,0,

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 00:30:00",16.3,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",16.3,,0
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 01:00:00",16.7,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",16.7,,0
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 01:15:00",17.1,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",17.1,,0
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 00:00:00",18.5,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",18.5,,0
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 00:45:00",18.2,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",18.2,,0
+"gw-ph-mv","mV","PNNL_23","WaterLevel600","pH_mV600","2023-11-04 00:15:00",17.5,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-ph-mv",17.5,,0

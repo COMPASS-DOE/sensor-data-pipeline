@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 00:00:00",12.687,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.687,,0
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 01:00:00",12.66,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.66,,0
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 00:15:00",12.669,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.669,,0
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 00:30:00",12.678,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.678,,0
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 00:45:00",12.669,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.669,,0
+"gw-voltage-ext","V","COMPASS_GCW_W_431","WaterLevel600C","Voltage_Ext600C","2023-06-07 01:15:00",12.696,27099916,"GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-voltage-ext",12.696,,0

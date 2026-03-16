@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GCW","W","2023-06-07 00:00:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-06-07 00:15:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-06-07 00:30:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-06-07 00:45:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-06-07 01:00:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-06-07 01:15:00","AquaTROLL600","A",,,1.007,"gw-density","27099916",0,0,
+"GCW","W","2023-07-07 00:00:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,
+"GCW","W","2023-07-07 00:15:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,
+"GCW","W","2023-07-07 00:30:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,
+"GCW","W","2023-07-07 00:45:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,
+"GCW","W","2023-07-07 01:00:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,
+"GCW","W","2023-07-07 01:15:00","AquaTROLL600","A",,,1.006,"gw-density","d2397564",0,0,

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 00:45:00",0.582,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.582,,0
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 00:30:00",0.59,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.59,,0
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 00:00:00",0.611,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.611,,0
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 01:00:00",0.577,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.577,,0
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 01:15:00",0.574,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.574,,0
+"sonde-conductivity","uS/cm","Compass_CRC_W_301","ExoTable","Conductivity","2023-05-08 00:15:00",0.609,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-conductivity",0.609,,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 00:30:00",-32.37,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-32.37,,0
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 01:00:00",-32.57,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-32.57,,0
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 00:00:00",-26.56,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-26.56,,0
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 00:45:00",-32.07,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-32.07,,0
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 00:15:00",-32.46,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-32.46,,0
+"sonde-ph-mv","mV","Compass_CRC_W_301","ExoTable","pH_mv","2023-05-08 01:15:00",-31.71,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-ph-mv",-31.71,,0

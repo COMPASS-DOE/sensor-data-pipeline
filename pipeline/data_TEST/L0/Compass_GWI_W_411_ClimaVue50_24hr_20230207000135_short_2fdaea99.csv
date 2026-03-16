@@ -1,0 +1,211 @@
+Logger,Table,TIMESTAMP,loggernet_variable,value,Source_file
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,RECORD,276,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,BattV_Min,11.91,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,Rain_mm_Tot,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,SlrFD_W_Avg,103.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,SlrTF_MJ_Tot,0.74251,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,WS_ms_WVc(1),1.262,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,WS_ms_WVc(2),318.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,WS_ms_S_WVT,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,MaxWS_ms_Max,6.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,MaxWS_ms_TMx,2023-01-07 23:48:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,AirT_C_Avg,6.016,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,AirT_C_Max,10.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,AirT_C_TMx,2023-01-07 15:00:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,AirT_C_Min,2.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,AirT_C_TMn,2023-01-07 22:08:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,VP_mbar_Avg,6.913819,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,BP_mbar_Max,1028.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,BP_mbar_TMx,2023-01-07 23:28:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,BP_mbar_Min,1023.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,BP_mbar_TMn,2023-01-07 14:19:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,RH_Max,94.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,RH_Min,45.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,RHT_C_Max,13.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,RHT_C_Min,2.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltNS_deg_Max,-1.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltNS_deg_TMx,2023-01-07 23:35:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltNS_deg_Min,-3.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltNS_deg_TMn,2023-01-07 23:39:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltWE_deg_Max,2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltWE_deg_TMx,2023-01-07 23:00:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,TiltWE_deg_Min,-0.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,PAR_Den_C_Avg,134.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,PAR_Tot_C_Tot,7999,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-08 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,RECORD,277,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,BattV_Min,11.91,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,Rain_mm_Tot,14.04,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,SlrFD_W_Avg,55.45,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,SlrTF_MJ_Tot,0.39925,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,WS_ms_WVc(1),1.646,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,WS_ms_WVc(2),73.39,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,WS_ms_S_WVT,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,MaxWS_ms_Max,6.18,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,MaxWS_ms_TMx,2023-01-08 00:11:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,AirT_C_Avg,4.337,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,AirT_C_Max,6.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,AirT_C_TMx,2023-01-08 22:14:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,AirT_C_Min,1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,AirT_C_TMn,2023-01-08 07:47:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,VP_mbar_Avg,7.270833,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,BP_mbar_Max,1030.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,BP_mbar_TMx,2023-01-08 09:16:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,BP_mbar_Min,1020.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,BP_mbar_TMn,2023-01-08 23:54:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,RH_Max,100,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,RH_Min,73.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,RHT_C_Max,9.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,RHT_C_Min,0.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltNS_deg_Max,-2.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltNS_deg_TMx,2023-01-08 17:03:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltNS_deg_Min,-3.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltNS_deg_TMn,2023-01-08 19:52:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltWE_deg_Max,1.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltWE_deg_TMx,2023-01-08 00:27:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,TiltWE_deg_Min,-0.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,PAR_Den_C_Avg,74.32,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,PAR_Tot_C_Tot,6421,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-09 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,RECORD,278,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,BattV_Min,11.92,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,Rain_mm_Tot,2.193,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,SlrFD_W_Avg,118.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,SlrTF_MJ_Tot,0.8544599,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,WS_ms_WVc(1),2.276,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,WS_ms_WVc(2),322.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,WS_ms_S_WVT,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,MaxWS_ms_Max,11.59,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,MaxWS_ms_TMx,2023-01-09 13:24:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,AirT_C_Avg,6.568,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,AirT_C_Max,10.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,AirT_C_TMx,2023-01-09 14:37:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,AirT_C_Min,1.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,AirT_C_TMn,2023-01-09 23:31:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,VP_mbar_Avg,8.136319,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,BP_mbar_Max,1020.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,BP_mbar_TMx,2023-01-09 00:09:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,BP_mbar_Min,1014.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,BP_mbar_TMn,2023-01-09 06:01:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,RH_Max,100,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,RH_Min,56.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,RHT_C_Max,13.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,RHT_C_Min,0.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltNS_deg_Max,-0.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltNS_deg_TMx,2023-01-09 14:03:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltNS_deg_Min,-7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltNS_deg_TMn,2023-01-09 14:31:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltWE_deg_Max,4.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltWE_deg_TMx,2023-01-09 07:50:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,TiltWE_deg_Min,-1.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,PAR_Den_C_Avg,151.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,PAR_Tot_C_Tot,7999,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-10 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,RECORD,279,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,BattV_Min,11.91,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,Rain_mm_Tot,0.085,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,SlrFD_W_Avg,78.26,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,SlrTF_MJ_Tot,0.56344,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,WS_ms_WVc(1),1.069,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,WS_ms_WVc(2),115.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,WS_ms_S_WVT,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,MaxWS_ms_Max,6.07,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,MaxWS_ms_TMx,2023-01-10 14:49:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,AirT_C_Avg,3.892,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,AirT_C_Max,8.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,AirT_C_TMx,2023-01-10 14:17:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,AirT_C_Min,-1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,AirT_C_TMn,2023-01-10 05:32:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,VP_mbar_Avg,7.033889,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,BP_mbar_Max,1021.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,BP_mbar_TMx,2023-01-10 10:10:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,BP_mbar_Min,1018.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,BP_mbar_TMn,2023-01-10 13:46:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,RH_Max,100,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,RH_Min,74.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,RHT_C_Max,10.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,RHT_C_Min,-1.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltNS_deg_Max,-1.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltNS_deg_TMx,2023-01-10 17:09:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltNS_deg_Min,-3.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltNS_deg_TMn,2023-01-10 14:31:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltWE_deg_Max,2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltWE_deg_TMx,2023-01-10 13:56:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,TiltWE_deg_Min,-0.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,PAR_Den_C_Avg,99.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,PAR_Tot_C_Tot,7999,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-11 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,RECORD,280,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,BattV_Min,11.92,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,Rain_mm_Tot,0.187,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,SlrFD_W_Avg,76.96,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,SlrTF_MJ_Tot,0.554145,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,WS_ms_WVc(1),1.158,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,WS_ms_WVc(2),110.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,WS_ms_S_WVT,0,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,MaxWS_ms_Max,4.78,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,MaxWS_ms_TMx,2023-01-11 10:56:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,AirT_C_Avg,5.903,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,AirT_C_Max,8.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,AirT_C_TMx,2023-01-11 15:36:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,AirT_C_Min,0.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,AirT_C_TMn,2023-01-11 05:05:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,VP_mbar_Avg,8.557917,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,BP_mbar_Max,1024.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,BP_mbar_TMx,2023-01-11 10:47:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,BP_mbar_Min,1019.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,BP_mbar_TMn,2023-01-11 01:09:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,RH_Max,100,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,RH_Min,82.4,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,RHT_C_Max,11.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,RHT_C_Min,0.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltNS_deg_Max,-2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltNS_deg_TMx,2023-01-11 11:15:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltNS_deg_Min,-3.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltNS_deg_TMn,2023-01-11 10:50:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltWE_deg_Max,2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltWE_deg_TMx,2023-01-11 10:50:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,TiltWE_deg_Min,-0.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,PAR_Den_C_Avg,101.1,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,PAR_Tot_C_Tot,7999,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-12 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,Format,TOA5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,RECORD,281,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,BattV_Min,11.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,Rain_mm_Tot,2.89,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,SlrFD_W_Avg,68.62,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,SlrTF_MJ_Tot,0.494075,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,WS_ms_WVc(1),3.301,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,WS_ms_WVc(2),175.5,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,WS_ms_S_WVT,49,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,MaxWS_ms_Max,14.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,MaxWS_ms_TMx,2023-01-12 20:36:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,AirT_C_Avg,13.04,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,AirT_C_Max,18.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,AirT_C_TMx,2023-01-12 19:21:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,AirT_C_Min,6.8,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,AirT_C_TMn,2023-01-12 06:31:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,VP_mbar_Avg,12.33208,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,BP_mbar_Max,1022.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,BP_mbar_TMx,2023-01-12 00:01:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,BP_mbar_Min,1008.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,BP_mbar_TMn,2023-01-12 21:58:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,RH_Max,100,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,RH_Min,65.2,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,RHT_C_Max,18.9,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,RHT_C_Min,6.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltNS_deg_Max,5.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltNS_deg_TMx,2023-01-12 19:23:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltNS_deg_Min,-8.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltNS_deg_TMn,2023-01-12 19:31:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltWE_deg_Max,7.6,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltWE_deg_TMx,2023-01-12 23:10:00,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,TiltWE_deg_Min,-7.7,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,PAR_Den_C_Avg,95.3,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,PAR_Tot_C_Tot,7999,2fdaea99
+Compass_GWI_W_411,ClimaVue50_24hr,2023-01-13 00:00:00,CVMeta,013CAMPBELLCLIM50529VUE-500002163,2fdaea99

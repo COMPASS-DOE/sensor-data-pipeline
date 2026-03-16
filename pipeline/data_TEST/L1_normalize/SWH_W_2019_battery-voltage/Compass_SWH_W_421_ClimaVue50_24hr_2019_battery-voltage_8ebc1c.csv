@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-21 00:00:00",11.94,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-22 00:00:00",11.94,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-24 00:00:00",11.94,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-25 00:00:00",11.94,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-23 00:00:00",11.93,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_SWH_W_421","ClimaVue50_24hr","BattV_Min","2019-01-26 00:00:00",11.94,"5162cfb6","SWH","W","ClimaVUE50","A",,,"SWH-W-ClimaVUE50-A-NA-battery-voltage",11.94,0,0

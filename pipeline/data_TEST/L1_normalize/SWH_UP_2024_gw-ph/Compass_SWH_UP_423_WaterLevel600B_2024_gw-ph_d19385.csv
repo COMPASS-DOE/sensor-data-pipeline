@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 13:00:00",0.999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",0.999,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 15:15:00",9.84,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.84,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 11:15:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 12:15:00",0.999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",0.999,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 12:30:00",0.999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",0.999,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 11:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 10:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 11:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 13:15:00",9.81,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.81,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 14:00:00",9.77,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.77,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 14:45:00",9.77,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.77,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 11:30:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 13:30:00",9.79,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.79,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 12:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",,,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 15:45:00",9.9,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.9,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 12:45:00",0.999,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",0.999,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 16:00:00",10,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",10,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 15:00:00",9.82,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.82,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 15:30:00",9.86,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.86,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 14:15:00",9.77,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.77,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 14:30:00",9.76,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.76,0,0
+"gw-ph","unitless","Compass_SWH_UP_423","WaterLevel600B","pH600B","2024-03-05 13:45:00",9.75,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-ph",9.75,0,0

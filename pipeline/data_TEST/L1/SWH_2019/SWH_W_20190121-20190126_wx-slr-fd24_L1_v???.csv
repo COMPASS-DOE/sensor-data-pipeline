@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","W","2019-01-21 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,
+"SWH","W","2019-01-22 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,
+"SWH","W","2019-01-23 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,
+"SWH","W","2019-01-24 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,
+"SWH","W","2019-01-25 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,
+"SWH","W","2019-01-26 00:00:00","ClimaVUE50","A",,,,"wx-slr-fd24","5162cfb6",,0,

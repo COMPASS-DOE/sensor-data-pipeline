@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 00:45:00",79.1,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",79.1,,0
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 01:00:00",79,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",79,,0
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 00:00:00",74.8,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",74.8,,0
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 00:15:00",79.8,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",79.8,,0
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 00:30:00",79.3,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",79.3,,0
+"gw-ph-mv","mV","Compass_MSM_TR_402","WaterLevel600B","pH_mV600B","2023-10-05 01:15:00",78.8,"052ff667","MSM","TR","AquaTROLL600","B",,,"MSM-TR-AquaTROLL600-B-NA-gw-ph-mv",78.8,,0

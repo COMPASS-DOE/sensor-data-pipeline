@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 00:30:00",39.47,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",39.47,,0
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 01:00:00",37.11,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",37.11,,0
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 00:00:00",39.64,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",39.64,,0
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 01:15:00",37.16,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",37.16,,0
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 00:45:00",37.43,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",37.43,,0
+"sonde-wipercur","mA","Compass_OWC_W_321","ExoTable","Wiper_Current_ma","2023-05-08 00:15:00",388.42,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-wipercur",388.42,,0

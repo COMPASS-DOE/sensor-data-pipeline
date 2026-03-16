@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 08:45:00",0.043,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",0.043,0,0
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 09:15:00",0.031,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",0.031,0,0
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 08:30:00",0.066,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",0.066,0,0
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 09:45:00",-0.002,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",-0.002,1,0
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 09:00:00",0.012,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",0.012,0,0
+"solar-voltage","V","Compass_OWC_W_321","CheckTable","SolarV","2023-04-21 09:30:00",0.016,"7b0b0495","OWC","W","Datalogger","321",,,"OWC-W-Datalogger-321-NA-solar-voltage",0.016,0,0

@@ -1,0 +1,11 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 00:15:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 01:45:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 00:45:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 02:15:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 01:15:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 00:00:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 01:00:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 00:30:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 01:30:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_PTR_TR_312","CheckTable","BattV","2023-08-06 02:00:00",11.94,"0763619d","PTR","TR","Datalogger","312",,,"PTR-TR-Datalogger-312-NA-battery-voltage",11.94,0,0

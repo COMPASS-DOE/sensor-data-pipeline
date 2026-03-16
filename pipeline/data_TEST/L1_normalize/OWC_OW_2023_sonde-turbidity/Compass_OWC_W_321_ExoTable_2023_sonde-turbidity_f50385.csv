@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 00:45:00",92.8,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",92.8,0,0
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 01:00:00",73.43,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",73.43,0,0
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 00:00:00",79.47,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",79.47,0,0
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 00:15:00",,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",,,0
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 01:15:00",,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",,,0
+"sonde-turbidity","FNU","Compass_OWC_W_321","ExoTable","Turbidity_FNU","2023-05-08 00:30:00",90.68,"67c0d898","OWC","OW","EXO","A",,,"OWC-OW-EXO-A-NA-sonde-turbidity",90.68,0,0

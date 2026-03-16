@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 00:45:00",1.567,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.567,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 01:00:00",1.68,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.68,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 00:00:00",1.593,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.593,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 02:30:00",1.573,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.573,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 01:30:00",1.633,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.633,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 02:00:00",1.767,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.767,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 02:15:00",1.48,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.48,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 02:45:00",1.687,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.687,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 00:30:00",1.527,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.527,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 01:45:00",1.56,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.56,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 00:15:00",1.727,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.727,,0
+"wx-tilt-ns15","degrees","Compass_PTR_W_311","ClimaVue50_15min","TiltNS_deg_Avg","2023-08-06 01:15:00",1.613,"a7cee264","PTR","W","ClimaVUE50","A",,,"PTR-W-ClimaVUE50-A-NA-wx-tilt-ns15",1.613,,0

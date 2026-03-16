@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 08:45:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 09:15:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 09:45:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 09:30:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 08:30:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_CRC_TR_302","CheckTable","BattV","2023-04-21 09:00:00",11.93,"bf074b00","CRC","TR","Datalogger","302",,,"CRC-TR-Datalogger-302-NA-battery-voltage",11.93,0,0

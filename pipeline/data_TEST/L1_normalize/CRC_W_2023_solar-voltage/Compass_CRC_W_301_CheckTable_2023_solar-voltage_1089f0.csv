@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 08:45:00",14.27,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",14.27,0,0
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 09:15:00",14.32,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",14.32,0,0
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 08:30:00",14.33,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",14.33,0,0
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 09:45:00",13.79,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",13.79,0,0
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 09:00:00",14.18,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",14.18,0,0
+"solar-voltage","V","Compass_CRC_W_301","CheckTable","SolarV","2023-04-21 09:30:00",14.17,"d15758e1","CRC","W","Datalogger","301",,,"CRC-W-Datalogger-301-NA-solar-voltage",14.17,0,0

@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"CRC","OW","2023-04-21 08:30:00","EXO","A",,,5.47,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-04-21 08:45:00","EXO","A",,,5.85,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-04-21 09:00:00","EXO","A",,,5.84,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-04-21 09:15:00","EXO","A",,,5.85,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-04-21 09:30:00","EXO","A",,,5.54,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-04-21 09:45:00","EXO","A",,,5.52,"sonde-fdom-rfu","ae176c4d",0,0,
+"CRC","OW","2023-05-08 00:00:00","EXO","A",,,12.96,"sonde-fdom-rfu","1030fe73",0,0,
+"CRC","OW","2023-05-08 00:15:00","EXO","A",,,12.51,"sonde-fdom-rfu","1030fe73",0,0,
+"CRC","OW","2023-05-08 00:30:00","EXO","A",,,12.49,"sonde-fdom-rfu","1030fe73",0,0,
+"CRC","OW","2023-05-08 00:45:00","EXO","A",,,12,"sonde-fdom-rfu","1030fe73",0,0,
+"CRC","OW","2023-05-08 01:00:00","EXO","A",,,12,"sonde-fdom-rfu","1030fe73",0,0,
+"CRC","OW","2023-05-08 01:15:00","EXO","A",,,0.629,"sonde-fdom-rfu","1030fe73",0,0,

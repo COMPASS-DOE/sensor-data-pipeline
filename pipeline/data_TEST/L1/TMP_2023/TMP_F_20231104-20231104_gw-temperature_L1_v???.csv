@@ -1,0 +1,19 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"TMP","F","2023-11-04 00:00:00","AquaTROLL200","683416",,,15.83009,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 00:00:00","AquaTROLL200","683345",,,15.76461,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 00:00:00","AquaTROLL600","685474",,,14.67,"gw-temperature","aa151213",0,0,0
+"TMP","F","2023-11-04 00:15:00","AquaTROLL200","683416",,,15.82973,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 00:15:00","AquaTROLL200","683345",,,15.76425,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 00:15:00","AquaTROLL600","685474",,,14.68,"gw-temperature","aa151213",0,0,0
+"TMP","F","2023-11-04 00:30:00","AquaTROLL200","683416",,,15.82964,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 00:30:00","AquaTROLL200","683345",,,15.76398,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 00:30:00","AquaTROLL600","685474",,,14.68,"gw-temperature","aa151213",0,0,0
+"TMP","F","2023-11-04 00:45:00","AquaTROLL200","683416",,,15.82885,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 00:45:00","AquaTROLL200","683345",,,15.76337,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 00:45:00","AquaTROLL600","685474",,,14.68,"gw-temperature","aa151213",0,0,0
+"TMP","F","2023-11-04 01:00:00","AquaTROLL200","683416",,,15.82893,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 01:00:00","AquaTROLL200","683345",,,15.76354,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 01:00:00","AquaTROLL600","685474",,,14.67,"gw-temperature","aa151213",0,0,0
+"TMP","F","2023-11-04 01:15:00","AquaTROLL200","683416",,,15.82867,"gw-temperature","9fda9515",0,0,0
+"TMP","F","2023-11-04 01:15:00","AquaTROLL200","683345",,,15.76319,"gw-temperature","2ef58778",0,0,0
+"TMP","F","2023-11-04 01:15:00","AquaTROLL600","685474",,,14.68,"gw-temperature","aa151213",0,0,0

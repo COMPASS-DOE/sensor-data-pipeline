@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 00:00:00",113,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",113,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 00:30:00",100,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",100,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 01:00:00",87,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",87,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 01:15:00",97,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",97,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 00:15:00",104,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",104,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(5,3)","2023-05-08 00:45:00",107,"048ffa9a","OWC","UP","TEROS12","A","5",,"OWC-UP-TEROS12-A-5-soil-EC-30cm",107,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 01:00:00",200,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",200,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 00:15:00",192,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",192,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 00:30:00",193,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",193,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 00:45:00",182,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",182,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 00:00:00",190,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",190,0,0
+"soil-EC-30cm","µS/cm","Compass_OWC_UP_323","TerosTableA","TerosA(6,3)","2023-05-08 01:15:00",200,"048ffa9a","OWC","UP","TEROS12","A","6",,"OWC-UP-TEROS12-A-6-soil-EC-30cm",200,0,0

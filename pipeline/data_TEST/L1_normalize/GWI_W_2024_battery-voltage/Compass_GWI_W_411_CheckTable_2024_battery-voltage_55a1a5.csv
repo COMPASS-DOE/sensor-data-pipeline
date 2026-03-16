@@ -1,0 +1,9 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 00:00:00",11.94,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 00:30:00",11.93,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 01:00:00",11.94,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 01:30:00",11.93,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.93,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 00:45:00",11.94,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-11-30 23:45:00",11.94,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 01:15:00",11.94,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_GWI_W_411","CheckTable","BattV","2024-12-01 00:15:00",11.93,"57844e1c","GWI","W","Datalogger","302",,,"GWI-W-Datalogger-302-NA-battery-voltage",11.93,0,0

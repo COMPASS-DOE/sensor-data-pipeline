@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-20 04:00:00",11.94,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-20 04:30:00",11.94,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-20 05:00:00",11.94,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-20 04:45:00",11.94,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",11.94,0,0
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-17 06:30:00",12.35,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",12.35,0,0
+"battery-voltage","V","Compass_SWH_W_421","CheckTable","BattV","2019-01-20 04:15:00",11.94,"fe536f37","SWH","W","Datalogger","421",,,"SWH-W-Datalogger-421-NA-battery-voltage",11.94,0,0

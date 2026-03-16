@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 00:15:00",15.88126,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.88126,0,0
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 00:30:00",15.88064,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.88064,0,0
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 00:45:00",15.88056,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.88056,0,0
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 00:00:00",15.88116,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.88116,0,0
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 01:15:00",15.87985,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.87985,0,0
+"gw-temperature","degC","PNNL_31","WaterLevel200","Temperature","2023-11-04 01:00:00",15.8802,"eb201f6b","TMP","S","AquaTROLL200","683408",,,"TMP-S-AquaTROLL200-683408-NA-gw-temperature",15.8802,0,0

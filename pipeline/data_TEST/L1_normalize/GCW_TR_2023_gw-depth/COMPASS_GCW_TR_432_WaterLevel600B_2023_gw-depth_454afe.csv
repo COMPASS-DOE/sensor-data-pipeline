@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 01:00:00",82.97,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",82.97,,0
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 00:00:00",83.15,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",83.15,,0
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 00:15:00",83.3,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",83.3,,0
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 00:30:00",83.09,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",83.09,,0
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 00:45:00",83.05,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",83.05,,0
+"gw-depth","cm","COMPASS_GCW_TR_432","WaterLevel600B","Depth600B","2023-07-07 01:15:00",82.83,"09357236","GCW","TR","AquaTROLL600","B",,,"GCW-TR-AquaTROLL600-B-NA-gw-depth",82.83,,0

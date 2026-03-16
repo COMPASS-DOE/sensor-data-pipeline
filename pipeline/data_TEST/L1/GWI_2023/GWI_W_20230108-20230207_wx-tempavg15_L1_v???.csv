@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2023-01-08 00:00:00","ClimaVUE50","A",,,4.622,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-01-08 01:00:00","ClimaVUE50","A",,,4.448,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-01-08 02:00:00","ClimaVUE50","A",,,3.627,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-01-08 03:00:00","ClimaVUE50","A",,,2.782,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-01-08 04:00:00","ClimaVUE50","A",,,2.167,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-01-08 05:00:00","ClimaVUE50","A",,,1.802,"wx-tempavg15","8766611c",0,0,0
+"GWI","W","2023-02-07 00:00:00","ClimaVUE50","A",,,2.93,"wx-tempavg15","aef721b8",0,0,0
+"GWI","W","2023-02-07 01:00:00","ClimaVUE50","A",,,1.915,"wx-tempavg15","aef721b8",0,0,0
+"GWI","W","2023-02-07 02:00:00","ClimaVUE50","A",,,2.66,"wx-tempavg15","aef721b8",0,0,0
+"GWI","W","2023-02-07 03:00:00","ClimaVUE50","A",,,2.755,"wx-tempavg15","aef721b8",0,0,0
+"GWI","W","2023-02-07 04:00:00","ClimaVUE50","A",,,2.282,"wx-tempavg15","aef721b8",0,0,0
+"GWI","W","2023-02-07 05:00:00","ClimaVUE50","A",,,2.57,"wx-tempavg15","aef721b8",0,0,0

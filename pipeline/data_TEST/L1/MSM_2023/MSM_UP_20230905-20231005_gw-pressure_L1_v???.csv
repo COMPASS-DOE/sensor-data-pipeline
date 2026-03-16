@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","UP","2023-09-05 00:00:00","AquaTROLL600","A",,,-0.896324,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-09-05 00:15:00","AquaTROLL600","A",,,-1.03422,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-09-05 00:30:00","AquaTROLL600","A",,,-1.172116,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-09-05 00:45:00","AquaTROLL600","A",,,-0.965272,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-09-05 01:00:00","AquaTROLL600","A",,,-1.103168,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-09-05 01:15:00","AquaTROLL600","A",,,-1.310012,"gw-pressure","1f19ae2b",0,0,
+"MSM","UP","2023-10-05 00:15:00","AquaTROLL600","A",,,36.749284,"gw-pressure","904ca955",0,0,
+"MSM","UP","2023-10-05 00:30:00","AquaTROLL600","A",,,36.749284,"gw-pressure","904ca955",0,0,
+"MSM","UP","2023-10-05 00:45:00","AquaTROLL600","A",,,36.680336,"gw-pressure","904ca955",0,0,
+"MSM","UP","2023-10-05 01:00:00","AquaTROLL600","A",,,36.404544,"gw-pressure","904ca955",0,0,
+"MSM","UP","2023-10-05 01:15:00","AquaTROLL600","A",,,36.335596,"gw-pressure","904ca955",0,0,
+"MSM","UP","2023-10-05 01:30:00","AquaTROLL600","A",,,36.54244,"gw-pressure","904ca955",0,0,

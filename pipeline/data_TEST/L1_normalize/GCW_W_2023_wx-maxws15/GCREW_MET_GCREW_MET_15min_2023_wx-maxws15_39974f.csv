@@ -1,0 +1,18 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 06:00:00",1.8228,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.8228,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 04:00:00",1.4896,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.4896,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 02:45:00",2.6852,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",2.6852,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 03:30:00",1.764,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.764,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 04:45:00",1.3132,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.3132,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 04:30:00",1.6072,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.6072,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 03:45:00",1.6856,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.6856,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 03:00:00",1.2348,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.2348,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 04:15:00",1.4504,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.4504,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 05:15:00",2.2344,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",2.2344,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 05:45:00",1.568,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.568,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 02:15:00",2.254,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",2.254,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 05:30:00",1.7836,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.7836,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 02:30:00",2.1168,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",2.1168,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 05:00:00",1.666,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.666,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 02:00:00",1.6464,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.6464,0,0
+"wx-maxws15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Max","2023-12-27 03:15:00",1.5876,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-maxws15",1.5876,0,0

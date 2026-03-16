@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"SWH","SWAMP","2023-04-08 00:15:00","TEROS12","A","5",,273,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 00:15:00","TEROS12","A","6",,90,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 00:30:00","TEROS12","A","5",,271,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 00:30:00","TEROS12","A","6",,89,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 00:45:00","TEROS12","A","5",,281,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 00:45:00","TEROS12","A","6",,92,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:00:00","TEROS12","A","5",,278,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:00:00","TEROS12","A","6",,98,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:15:00","TEROS12","A","5",,277,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:15:00","TEROS12","A","6",,94,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:30:00","TEROS12","A","5",,271,"soil-EC-30cm","d37376ae",0,0,
+"SWH","SWAMP","2023-04-08 01:30:00","TEROS12","A","6",,91,"soil-EC-30cm","d37376ae",0,0,

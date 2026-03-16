@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","W","2023-09-05 00:00:00","ClimaVUE50","A",,,2.4,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-09-06 00:00:00","ClimaVUE50","A",,,2.6,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-09-07 00:00:00","ClimaVUE50","A",,,2.7,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-09-08 00:00:00","ClimaVUE50","A",,,3.5,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-09-09 00:00:00","ClimaVUE50","A",,,4.5,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-09-10 00:00:00","ClimaVUE50","A",,,5.5,"wx-tilt-we24","96da9f20",0,0,
+"MSM","W","2023-10-05 00:00:00","ClimaVUE50","A",,,2.5,"wx-tilt-we24","e0c1bbaa",0,0,
+"MSM","W","2023-10-06 00:00:00","ClimaVUE50","A",,,2.8,"wx-tilt-we24","e0c1bbaa",0,0,
+"MSM","W","2023-10-07 00:00:00","ClimaVUE50","A",,,1.9,"wx-tilt-we24","e0c1bbaa",0,0,
+"MSM","W","2023-10-08 00:00:00","ClimaVUE50","A",,,6.4,"wx-tilt-we24","e0c1bbaa",0,0,
+"MSM","W","2023-10-09 00:00:00","ClimaVUE50","A",,,3.3,"wx-tilt-we24","e0c1bbaa",0,0,
+"MSM","W","2023-10-10 00:00:00","ClimaVUE50","A",,,2.7,"wx-tilt-we24","e0c1bbaa",0,0,

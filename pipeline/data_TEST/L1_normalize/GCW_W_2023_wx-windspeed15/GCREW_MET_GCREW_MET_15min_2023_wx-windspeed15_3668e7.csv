@@ -1,0 +1,18 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 02:15:00",0.7854155,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.7854155,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 02:30:00",1.246778,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",1.246778,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 05:45:00",0.8505311,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.8505311,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 06:00:00",0.909331,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.909331,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 02:00:00",0.6731511,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.6731511,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 02:45:00",1.028238,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",1.028238,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 04:30:00",0.7649444,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.7649444,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 03:45:00",0.7387021,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.7387021,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 03:30:00",0.9408,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.9408,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 04:45:00",0.7364155,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.7364155,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 05:15:00",0.9448288,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.9448288,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 03:00:00",0.5187467,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.5187467,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 04:15:00",0.6960177,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.6960177,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 03:15:00",0.7676666,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.7676666,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 05:00:00",0.5810311,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.5810311,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 04:00:00",0.6679244,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.6679244,,0
+"wx-windspeed15","m/s","GCREW_MET","GCREW_MET_15min","WS_ms_RM_Avg","2023-12-27 05:30:00",0.8098066,"d884c324","GCW","W","RM Young 05103-10-L",,,,"GCW-W-RM Young 05103-10-L-NA-NA-wx-windspeed15",0.8098066,,0

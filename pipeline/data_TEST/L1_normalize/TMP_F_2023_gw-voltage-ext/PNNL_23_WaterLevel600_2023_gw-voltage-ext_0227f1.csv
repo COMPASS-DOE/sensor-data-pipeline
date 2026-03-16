@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 00:00:00",13.525,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.525,,0
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 01:00:00",13.29,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.29,,0
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 00:15:00",13.552,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.552,,0
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 00:30:00",13.48,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.48,,0
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 00:45:00",13.489,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.489,,0
+"gw-voltage-ext","V","PNNL_23","WaterLevel600","Voltage_Ext600","2023-11-04 01:15:00",13.561,"aa151213","TMP","F","AquaTROLL600","685474",,,"TMP-F-AquaTROLL600-685474-NA-gw-voltage-ext",13.561,,0

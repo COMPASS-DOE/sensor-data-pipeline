@@ -1,0 +1,25 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2023-01-08 00:00:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:00:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:15:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:15:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:30:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:30:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:45:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 00:45:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 01:00:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 01:00:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 01:15:00","TEROS12","C","5",,10.3,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-01-08 01:15:00","TEROS12","C","6",,10,"soil-temp-30cm","b5eccb7a",0,0,0
+"GWI","W","2023-02-07 00:00:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:00:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:15:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:15:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:30:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:30:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:45:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 00:45:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 01:00:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 01:00:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 01:15:00","TEROS12","C","5",,8.1,"soil-temp-30cm","9c5e0c2a",0,0,0
+"GWI","W","2023-02-07 01:15:00","TEROS12","C","6",,7.9,"soil-temp-30cm","9c5e0c2a",0,0,0

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 00:45:00",-438.7,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.7,0,0
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 01:00:00",-438.8,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.8,0,0
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 00:00:00",-438.6,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.6,0,0
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 00:15:00",-438.5,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.5,0,0
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 00:30:00",-438.6,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.6,0,0
+"gw-ph-orp","mV","PNNL_32","WaterLevel600","pH_ORP600","2023-11-04 01:15:00",-438.5,"7b3bda2b","TMP","S","AquaTROLL600","685410",,,"TMP-S-AquaTROLL600-685410-NA-gw-ph-orp",-438.5,0,0

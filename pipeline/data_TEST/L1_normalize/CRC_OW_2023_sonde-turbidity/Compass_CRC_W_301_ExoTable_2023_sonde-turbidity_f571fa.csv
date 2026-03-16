@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 00:45:00",82.74,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",82.74,0,0
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 01:00:00",89.58,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",89.58,0,0
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 00:00:00",91.15,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",91.15,0,0
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 00:15:00",89.76,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",89.76,0,0
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 01:15:00",92.1,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",92.1,0,0
+"sonde-turbidity","FNU","Compass_CRC_W_301","ExoTable","Turbidity_FNU","2023-05-08 00:30:00",87.5,"1030fe73","CRC","OW","EXO","A",,,"CRC-OW-EXO-A-NA-sonde-turbidity",87.5,0,0

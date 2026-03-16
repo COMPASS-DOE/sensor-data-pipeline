@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 14:00:00",0.422,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",29.096056,0,0
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 14:30:00",0.42,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",28.95816,0,0
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 15:00:00",0.421,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",29.027108,0,0
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 15:15:00",0.424,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",29.233952,0,0
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 14:15:00",0.422,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",29.096056,0,0
+"gw-pressure","mbar","Compass_OWC_UP_323","WaterLevel600B","Pressure600B","2023-05-09 14:45:00",0.423,"63f329cc","OWC","WTE","AquaTROLL600","B",,,"OWC-WTE-AquaTROLL600-B-NA-gw-pressure",29.165004,0,0

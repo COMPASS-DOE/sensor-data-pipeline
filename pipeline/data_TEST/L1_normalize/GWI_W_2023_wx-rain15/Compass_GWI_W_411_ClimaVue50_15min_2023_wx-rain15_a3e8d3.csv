@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 03:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 04:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 01:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 05:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 02:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0
+"wx-rain15","mm","Compass_GWI_W_411","ClimaVue50_15min","Rain_mm_Tot","2023-02-07 00:00:00",0,"aef721b8","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-rain15",0,,0

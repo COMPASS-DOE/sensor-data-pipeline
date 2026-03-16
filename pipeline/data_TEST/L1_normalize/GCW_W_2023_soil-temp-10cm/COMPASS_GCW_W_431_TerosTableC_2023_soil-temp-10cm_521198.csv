@@ -1,0 +1,13 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 01:00:00",19.1,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.1,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 00:45:00",19.2,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.2,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 00:15:00",19.3,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 00:00:00",19.3,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.3,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 00:30:00",19.2,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.2,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(1,2)","2023-06-07 01:15:00",19.1,Inf,"GCW","W","TEROS12","C","1",,"GCW-W-TEROS12-C-1-soil-temp-10cm",19.1,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 00:30:00",19,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",19,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 01:15:00",18.9,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",18.9,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 01:00:00",19,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",19,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 00:45:00",19,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",19,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 00:15:00",19.1,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",19.1,0,0
+"soil-temp-10cm","degC","COMPASS_GCW_W_431","TerosTableC","TerosC(2,2)","2023-06-07 00:00:00",19.1,Inf,"GCW","W","TEROS12","C","2",,"GCW-W-TEROS12-C-2-soil-temp-10cm",19.1,0,0

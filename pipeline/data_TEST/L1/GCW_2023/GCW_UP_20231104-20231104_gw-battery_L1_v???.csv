@@ -1,0 +1,7 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GCW","UP","2023-11-04 00:00:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,
+"GCW","UP","2023-11-04 00:15:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,
+"GCW","UP","2023-11-04 00:30:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,
+"GCW","UP","2023-11-04 00:45:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,
+"GCW","UP","2023-11-04 01:00:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,
+"GCW","UP","2023-11-04 01:15:00","AquaTROLL600","685442",,,50,"gw-battery","8e+307",0,0,

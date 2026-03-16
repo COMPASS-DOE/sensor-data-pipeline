@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"GWI","W","2023-01-08 00:00:00","ClimaVUE50","A",,,134.7,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-01-09 00:00:00","ClimaVUE50","A",,,74.32,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-01-10 00:00:00","ClimaVUE50","A",,,151.8,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-01-11 00:00:00","ClimaVUE50","A",,,99.2,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-01-12 00:00:00","ClimaVUE50","A",,,101.1,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-01-13 00:00:00","ClimaVUE50","A",,,95.3,"wx-par-den24","2fdaea99",0,0,
+"GWI","W","2023-02-07 00:00:00","ClimaVUE50","A",,,149.7,"wx-par-den24","12daf824",0,0,
+"GWI","W","2023-02-08 00:00:00","ClimaVUE50","A",,,185.5,"wx-par-den24","12daf824",0,0,
+"GWI","W","2023-02-09 00:00:00","ClimaVUE50","A",,,186,"wx-par-den24","12daf824",0,0,
+"GWI","W","2023-02-10 00:00:00","ClimaVUE50","A",,,133.3,"wx-par-den24","12daf824",0,0,
+"GWI","W","2023-02-11 00:00:00","ClimaVUE50","A",,,188.4,"wx-par-den24","12daf824",0,0,
+"GWI","W","2023-02-12 00:00:00","ClimaVUE50","A",,,170.8,"wx-par-den24","12daf824",0,0,

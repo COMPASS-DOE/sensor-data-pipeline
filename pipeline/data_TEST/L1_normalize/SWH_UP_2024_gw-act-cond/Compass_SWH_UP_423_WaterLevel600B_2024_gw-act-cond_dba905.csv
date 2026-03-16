@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 10:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 11:15:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 13:00:00",115.2,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",115.2,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 11:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 15:15:00",190.41,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",190.41,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 12:30:00",115.2,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",115.2,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 15:45:00",147.37,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",147.37,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 11:30:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 12:15:00",115.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",115.3,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 12:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 11:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 14:45:00",1211.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",1211.3,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 13:30:00",124.98,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",124.98,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 13:15:00",87.64,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",87.64,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 14:00:00",138.88,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",138.88,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 14:15:00",1314,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",1314,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 16:00:00",177.48,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",177.48,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 14:30:00",1252.3,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",1252.3,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 13:45:00",138.71,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",138.71,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 15:30:00",157.22,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",157.22,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 12:45:00",115.2,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",115.2,,0
+"gw-act-cond","μS/cm","Compass_SWH_UP_423","WaterLevel600B","Actual_Conductivity600B","2024-03-05 15:00:00",1182.6,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-act-cond",1182.6,,0

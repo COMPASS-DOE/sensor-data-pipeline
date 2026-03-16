@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 00:00:00",15161,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",15161,0,0
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 00:45:00",16040,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",16040,0,0
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 01:00:00",16041,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",16041,0,0
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 01:15:00",15282,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",15282,0,0
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 00:15:00",16040,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",16040,0,0
+"gw-spec-cond","uS/cm","COMPASS_GCW_W_431","WaterLevel600C","Specific_Conductivity600C","2023-07-07 00:30:00",16041,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-spec-cond",16041,0,0

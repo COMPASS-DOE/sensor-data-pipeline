@@ -1,0 +1,18 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 02:15:00",1.965313,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965313,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 03:45:00",1.965222,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965222,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 03:00:00",1.983137,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.983137,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 03:30:00",1.965302,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965302,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 06:00:00",2.000897,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",2.000897,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 05:00:00",1.983037,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.983037,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 04:00:00",1.96534,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.96534,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 02:30:00",1.965323,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965323,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 02:45:00",1.965491,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965491,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 04:30:00",1.983055,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.983055,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 02:00:00",1.965588,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965588,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 04:15:00",1.965366,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.965366,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 05:30:00",2.000951,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",2.000951,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 04:45:00",2.001168,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",2.001168,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 03:15:00",2.00095,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",2.00095,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 05:45:00",2.018534,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",2.018534,,0
+"wx-svp15","kPa","GCREW_MET","GCREW_MET_15min","SVP","2023-12-27 05:15:00",1.983173,"d884c324","GCW","W","CS106",,,,"GCW-W-CS106-NA-NA-wx-svp15",1.983173,,0

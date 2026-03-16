@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-09 00:00:00",23.5,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",23.5,0,0
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-08 00:00:00",24.1,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",24.1,0,0
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-10 00:00:00",22.3,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",22.3,0,0
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-05 00:00:00",22.4,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",22.4,0,0
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-06 00:00:00",23.2,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",23.2,0,0
+"wx-tempmin24","degC","Compass_MSM_W_401","ClimaVue50_24hr","AirT_C_Min","2023-09-07 00:00:00",22.2,"96da9f20","MSM","W","ClimaVUE50","A",,,"MSM-W-ClimaVUE50-A-NA-wx-tempmin24",22.2,0,0

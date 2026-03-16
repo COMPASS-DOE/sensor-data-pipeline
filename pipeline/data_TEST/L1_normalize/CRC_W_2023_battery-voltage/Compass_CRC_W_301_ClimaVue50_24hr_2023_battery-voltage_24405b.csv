@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-08 00:00:00",12.66,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.66,0,0
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-09 00:00:00",12.66,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.66,0,0
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-11 00:00:00",12.61,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.61,0,0
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-12 00:00:00",12.63,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.63,0,0
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-10 00:00:00",12.64,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.64,0,0
+"battery-voltage","V","Compass_CRC_W_301","ClimaVue50_24hr","BattV_Min","2023-05-13 00:00:00",12.66,"ec52a2dc","CRC","W","ClimaVUE50","A",,,"CRC-W-ClimaVUE50-A-NA-battery-voltage",12.66,0,0

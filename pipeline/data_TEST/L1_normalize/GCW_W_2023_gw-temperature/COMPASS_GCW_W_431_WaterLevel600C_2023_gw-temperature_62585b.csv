@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 01:00:00",15.57,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.57,0,0
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 00:00:00",15.57,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.57,0,0
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 00:15:00",15.55,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.55,0,0
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 00:30:00",15.56,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.56,0,0
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 01:15:00",15.56,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.56,0,0
+"gw-temperature","degC","COMPASS_GCW_W_431","WaterLevel600C","Temperature600C","2023-07-07 00:45:00",15.56,"d2397564","GCW","W","AquaTROLL600","A",,,"GCW-W-AquaTROLL600-A-NA-gw-temperature",15.56,0,0

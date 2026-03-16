@@ -1,0 +1,13 @@
+"Site","Plot","TIMESTAMP","Instrument","Instrument_ID","Sensor_ID","Location","Value","research_name","Source_file","F_OOB","F_OOS","F_MAD"
+"MSM","W","2023-09-05 00:00:00","ClimaVUE50","A",,,29.87667,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-09-06 00:00:00","ClimaVUE50","A",,,29.85743,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-09-07 00:00:00","ClimaVUE50","A",,,30.74646,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-09-08 00:00:00","ClimaVUE50","A",,,33.40951,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-09-09 00:00:00","ClimaVUE50","A",,,32.84743,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-09-10 00:00:00","ClimaVUE50","A",,,28.78062,"wx-vappress24","96da9f20",0,0,
+"MSM","W","2023-10-05 00:00:00","ClimaVUE50","A",,,20.47472,"wx-vappress24","e0c1bbaa",0,0,
+"MSM","W","2023-10-06 00:00:00","ClimaVUE50","A",,,22.32694,"wx-vappress24","e0c1bbaa",0,0,
+"MSM","W","2023-10-07 00:00:00","ClimaVUE50","A",,,24.49708,"wx-vappress24","e0c1bbaa",0,0,
+"MSM","W","2023-10-08 00:00:00","ClimaVUE50","A",,,16.45972,"wx-vappress24","e0c1bbaa",0,0,
+"MSM","W","2023-10-09 00:00:00","ClimaVUE50","A",,,10.23521,"wx-vappress24","e0c1bbaa",0,0,
+"MSM","W","2023-10-10 00:00:00","ClimaVUE50","A",,,11.67736,"wx-vappress24","e0c1bbaa",0,0,

@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 05:00:00",13.52,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",13.52,0,0
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 02:00:00",11.51,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",11.51,0,0
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 04:00:00",13.59,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",13.59,0,0
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 03:00:00",12.1,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",12.1,0,0
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 01:00:00",7.243,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",7.243,0,0
+"wx-winddir-sd115","degrees","Compass_GWI_W_411","ClimaVue50_15min","WindDir_SD1_WVT","2023-01-08 00:00:00",6.776,"8766611c","GWI","W","ClimaVUE50","A",,,"GWI-W-ClimaVUE50-A-NA-wx-winddir-sd115",6.776,0,0

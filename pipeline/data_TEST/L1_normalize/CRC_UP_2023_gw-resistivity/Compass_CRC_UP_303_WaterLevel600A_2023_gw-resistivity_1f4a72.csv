@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 00:30:00",633.42,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",633.42,,0
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 00:45:00",633.43,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",633.43,,0
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 01:15:00",633.73,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",633.73,,0
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 00:00:00",633.59,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",633.59,,0
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 01:00:00",634.99,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",634.99,,0
+"gw-resistivity","ohm-cm","Compass_CRC_UP_303","WaterLevel600A","Resistivity600A","2023-04-08 00:15:00",633.46,"aa9a1e9b","CRC","UP","AquaTROLL600","A",,,"CRC-UP-AquaTROLL600-A-NA-gw-resistivity",633.46,,0

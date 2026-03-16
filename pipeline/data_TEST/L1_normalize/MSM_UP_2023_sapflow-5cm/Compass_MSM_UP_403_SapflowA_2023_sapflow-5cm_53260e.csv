@@ -1,0 +1,25 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 00:15:00",0.596,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.596,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 01:15:00",0.595,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.595,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 00:30:00",0.596,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.596,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 01:30:00",0.595,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.595,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 00:45:00",0.595,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.595,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(9)","2023-10-05 01:00:00",0.595,8.3273e+20,"MSM","UP","Sapflow","A","01D",,"MSM-UP-Sapflow-A-01D-sapflow-5cm",0.595,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 00:15:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 00:30:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 00:45:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 01:00:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 01:15:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(10)","2023-10-05 01:30:00",0.629,8.3273e+20,"MSM","UP","Sapflow","A","02D",,"MSM-UP-Sapflow-A-02D-sapflow-5cm",0.629,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 00:15:00",0.512,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.512,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 00:30:00",0.513,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.513,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 00:45:00",0.513,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.513,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 01:00:00",0.513,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.513,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 01:15:00",0.513,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.513,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(11)","2023-10-05 01:30:00",0.513,8.3273e+20,"MSM","UP","Sapflow","A","03D",,"MSM-UP-Sapflow-A-03D-sapflow-5cm",0.513,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 00:45:00",0.608,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.608,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 01:00:00",0.609,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.609,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 00:15:00",0.608,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.608,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 01:15:00",0.609,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.609,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 00:30:00",0.608,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.608,0,0
+"sapflow-5cm","mV","Compass_MSM_UP_403","SapflowA","DiffVoltA_Avg(12)","2023-10-05 01:30:00",0.609,8.3273e+20,"MSM","UP","Sapflow","A","04D",,"MSM-UP-Sapflow-A-04D-sapflow-5cm",0.609,0,0

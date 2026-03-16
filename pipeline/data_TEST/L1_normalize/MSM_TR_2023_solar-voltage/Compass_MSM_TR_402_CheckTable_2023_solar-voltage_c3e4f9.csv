@@ -1,0 +1,7 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 00:15:00",25.59,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.59,0,0
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 00:45:00",25.58,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.58,0,0
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 00:00:00",25.6,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.6,0,0
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 01:15:00",25.56,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.56,0,0
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 00:30:00",25.59,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.59,0,0
+"solar-voltage","V","Compass_MSM_TR_402","CheckTable","SolarV","2023-09-05 01:00:00",25.56,"d6665ae3","MSM","TR","Datalogger","402",,,"MSM-TR-Datalogger-402-NA-solar-voltage",25.56,0,0

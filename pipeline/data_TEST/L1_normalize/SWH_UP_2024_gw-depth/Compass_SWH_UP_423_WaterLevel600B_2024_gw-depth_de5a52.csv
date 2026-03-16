@@ -1,0 +1,23 @@
+"research_name","units","Logger","Table","loggernet_variable","TIMESTAMP","value_raw","Source_file","Site","Plot","Instrument","Instrument_ID","Sensor_ID","Location","design_link","Value","F_OOB","F_OOS"
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 13:00:00",94,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",94,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 15:15:00",-0.008,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.008,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 15:45:00",-0.008,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.008,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 10:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 12:15:00",94,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",94,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 11:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 11:45:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 13:30:00",-0.006,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.006,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 11:15:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 12:30:00",94,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",94,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 14:45:00",-0.008,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.008,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 11:30:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 13:15:00",0,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",0,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 14:00:00",-0.009,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.009,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 15:30:00",-0.009,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.009,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 12:45:00",94,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",94,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 14:30:00",-0.009,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.009,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 12:00:00",,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 13:45:00",-0.009,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.009,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 14:15:00",-0.011,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.011,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 16:00:00",-0.006,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.006,,0
+"gw-depth","cm","Compass_SWH_UP_423","WaterLevel600B","Depth600B","2024-03-05 15:00:00",-0.009,"051c89f8","SWH","UP","AquaTROLL600","B",,,"SWH-UP-AquaTROLL600-B-NA-gw-depth",-0.009,,0
