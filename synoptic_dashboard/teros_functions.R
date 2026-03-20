@@ -56,7 +56,7 @@ process_teros <- function() {
 
   #NEED TO ADD INVENTORY LATER
 
-  teros_files$name %>%
+teros_files$name %>%
     map(fileread, nrow(teros_files)) %>%
     bind_rows()
 

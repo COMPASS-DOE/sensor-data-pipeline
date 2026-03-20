@@ -49,8 +49,8 @@ ui <- dashboardPage(
                                         "Moneystump Marsh" = "MSM",
                                         "Goodwin Island" = "GWI"),
                          selected = "GWI"),
-            #dataTableOutput("sf_table"),
-            plotlyOutput("sapflow_ts")),
+            plotlyOutput("sapflow_ts"),
+            dataTableOutput("sf_table")),
 
       tabItem(tabName = "teros",
               dataTableOutput("teros_table")),
