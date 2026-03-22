@@ -8,3 +8,6 @@ synoptic_dashboard/test_data/
 /.secrets
 /synoptic_dashboard/.secrets
 synoptic_dashboard/rsconnect/shinyapps.io/compassdashboards/BETA_synoptic_dashboard.dcf
+
+# Ignore pipeline files (REMOVE THIS IS EVER MERGED INTO MAIN)
+/pipeline
