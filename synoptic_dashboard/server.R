@@ -49,19 +49,19 @@ shinyServer(function(input, output) {
           setView(lng = -80.25, lat = 40.19, zoom = 6)
   })
 
-  output$sf_table <- renderDataTable(reactive_df()$sapflow %>%
+  output$sf_table <- DT::renderDT(reactive_df()$sapflow %>%
                                           tail(n = 10))
 
-  output$troll_table <- renderDataTable(reactive_df()$aquatroll %>%
+  output$troll_table <- DT::renderDT(reactive_df()$aquatroll %>%
                                           tail(n = 10))
 
-  output$teros_table <- renderDataTable(reactive_df()$teros %>%
+  output$teros_table <- DT::renderDT(reactive_df()$teros %>%
                                           tail(n = 10))
 
   output$troll_ts <- renderPlotly({
 
     b <- reactive_df()$aquatroll %>%
-      ggplot(aes_string(x = "datetime", y = input$select, color = "location")) +
+      ggplot(aes(x = "datetime", y = .data[[input$select]], color = location)) +
       geom_line() +
       facet_wrap(~site, ncol = 1, scales = "free") +
       labs(x = "")

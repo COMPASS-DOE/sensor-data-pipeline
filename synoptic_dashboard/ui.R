@@ -50,10 +50,10 @@ ui <- dashboardPage(
                                         "Goodwin Island" = "GWI"),
                          selected = "GWI"),
             plotlyOutput("sapflow_ts"),
-            dataTableOutput("sf_table")),
+            DT::DTOutput("sf_table")),
 
       tabItem(tabName = "teros",
-              dataTableOutput("teros_table")),
+              DT::DTOutput("teros_table")),
 
       tabItem(tabName = "troll",
               selectInput("select", label = h3("Select box"),
@@ -62,7 +62,7 @@ ui <- dashboardPage(
                                          "DO (mg/L)" = "rdo_concen"),
                           selected = "wl_below_surface_m"),
               plotlyOutput("troll_ts"),
-              dataTableOutput("troll_table"))
+              DT::DTOutput("troll_table"))
     )
   ),
   skin = "purple"
