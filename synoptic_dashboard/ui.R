@@ -53,6 +53,14 @@ ui <- dashboardPage(
             DT::DTOutput("sf_table")),
 
       tabItem(tabName = "teros",
+              selectInput("select_teros", label = h3("Site:"),
+                          choices = list("Old Woman Creek" = "OWC",
+                                         "Portage River" = "PTR",
+                                         "Crane Creek" = "CRC",
+                                         "Moneystump Marsh" = "MSM",
+                                         "Goodwin Island" = "GWI"),
+                          selected = "GWI"),
+              plotlyOutput("teros_ts"),
               DT::DTOutput("teros_table")),
 
       tabItem(tabName = "troll",

@@ -61,7 +61,7 @@ shinyServer(function(input, output) {
   output$troll_ts <- renderPlotly({
 
     b <- reactive_df()$aquatroll %>%
-      ggplot(aes(x = "datetime", y = .data[[input$select]], color = location)) +
+      ggplot(aes(x = datetime, y = .data[[input$select]], color = location)) +
       geom_line() +
       facet_wrap(~site, ncol = 1, scales = "free") +
       labs(x = "")
@@ -70,6 +70,19 @@ shinyServer(function(input, output) {
     }
   )
 
+  output$teros_ts <- renderPlotly({
+    
+    b <- reactive_df()$teros %>%
+      filter(grepl(input$select_teros, Site, ignore.case = TRUE)) %>%
+      ggplot(aes(x = TIMESTAMP, y = value, color = Logger)) +
+      geom_point() +
+      facet_wrap(~variable, ncol = 1, scales = "free") +
+      labs(x = "")
+    
+    ggplotly(b)
+  }
+  )
+  
   output$sapflow_ts <- renderPlotly({
 
       s <- reactive_df()$sapflow %>%
