@@ -20,24 +20,18 @@ source("global.R")
 # Define server logic
 shinyServer(function(input, output) {
 
-  ## Create reactive aquatroll dataframe
-  reactive_df <- reactive({
-
-     sapflow <- withProgress(process_sapflow(), message = "Updating sapflow...") %>%
-         filter(Timestamp > two_weeks_ago)
-     teros <- withProgress(process_teros(), message = "Updating TEROS...") %>%
-         filter(TIMESTAMP > two_weeks_ago)
-     aquatroll <- withProgress(process_the_troll(), message = "Updating AquaTroll...") %>%
-         filter(datetime > two_weeks_ago)
-    # aquatroll <- readRDS("./test_data/aquatroll.rds")
-    # teros <- readRDS("./test_data/teros.rds")
-    # sapflow <- readRDS("./test_data/sapflow.rds")
-
-    #browser()
-    #x <<- aquatroll
-    list(aquatroll = aquatroll,
-         teros = teros,
-         sapflow = sapflow)
+  ## Create reactive dataframes
+  reactive_sapflow_df <- reactive({
+    withProgress(process_sapflow(), message = "Updating sapflow...") %>%
+      filter(Timestamp > two_weeks_ago)
+  })
+  reactive_teros_df <- reactive({
+    withProgress(process_teros(), message = "Updating TEROS...") %>%
+      filter(TIMESTAMP > two_weeks_ago)
+  })
+  reactive_aquatroll_df <- reactive({
+    withProgress(process_the_troll(), message = "Updating AquaTroll...") %>%
+      filter(datetime > two_weeks_ago)
   })
 
   output$map <- renderLeaflet({
@@ -49,19 +43,19 @@ shinyServer(function(input, output) {
           setView(lng = -80.25, lat = 40.19, zoom = 6)
   })
 
-  output$sf_table <- renderDataTable(reactive_df()$sapflow %>%
+  output$sf_table <- DT::renderDT(reactive_sapflow_df() %>%
                                           tail(n = 10))
 
-  output$troll_table <- renderDataTable(reactive_df()$aquatroll %>%
+  output$troll_table <- DT::renderDT(reactive_aquatroll_df() %>%
                                           tail(n = 10))
 
-  output$teros_table <- renderDataTable(reactive_df()$teros %>%
+  output$teros_table <- DT::renderDT(reactive_teros_df() %>%
                                           tail(n = 10))
 
   output$troll_ts <- renderPlotly({
 
-    b <- reactive_df()$aquatroll %>%
-      ggplot(aes_string(x = "datetime", y = input$select, color = "location")) +
+    b <- reactive_aquatroll_df() %>%
+      ggplot(aes(x = datetime, y = .data[[input$select]], color = location)) +
       geom_line() +
       facet_wrap(~site, ncol = 1, scales = "free") +
       labs(x = "")
@@ -70,9 +64,22 @@ shinyServer(function(input, output) {
     }
   )
 
+  output$teros_ts <- renderPlotly({
+    
+    b <- reactive_teros_df() %>%
+      filter(grepl(input$select_teros, Site, ignore.case = TRUE)) %>%
+      ggplot(aes(x = TIMESTAMP, y = value, color = Logger)) +
+      geom_point() +
+      facet_wrap(~variable, ncol = 1, scales = "free") +
+      labs(x = "")
+    
+    ggplotly(b)
+  }
+  )
+  
   output$sapflow_ts <- renderPlotly({
 
-      s <- reactive_df()$sapflow %>%
+      s <- reactive_sapflow_df() %>%
           filter(Site == input$selectsf) %>%
           group_by(Site, Location, Port) %>%
           drop_na(Value) %>%
