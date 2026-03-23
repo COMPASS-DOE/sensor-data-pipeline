@@ -10,6 +10,7 @@ library(shinydashboard)
 library(tidyverse)
 library(leaflet)
 library(parsedate)
+library(DT)
 
 source("aquatroll_functions.R")
 source("sapflow_functions.R")
