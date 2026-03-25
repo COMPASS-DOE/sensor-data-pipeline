@@ -5,7 +5,6 @@ title-block-banner: true
 params:
   # ----- Parameters that change
   DATA_ROOT: "data_TEST/"
-  run_parallel: false
   # ----- Parameters that don't normally change
   html_outfile: "L1_normalize.html"
   L0: "L0/"
@@ -29,7 +28,7 @@ format:
 editor: visual
 ---
 
-This script
+This script is an intermediate step between L0 and L1. It
 
 -   Reads in the L0 files one by one
 
@@ -84,6 +83,7 @@ DESIGN_TABLE_ENTRIES <- with(dt_ex, paste(Logger, Table, loggernet_variable)) # 
 # Read the site time zone table
 METADATA_TZ_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_TIMEZONES_TABLE)
 tzt <- read_csv(METADATA_TZ_TABLE, col_types = "ccc")
+L1_DATA_TIMEZONE <- params$L1_DATA_TIMEZONE # for convenience
 
 # Read the variable metadata table
 METADATA_VARS_TABLE <- file.path(params$METADATA_ROOT, params$METADATA_VARS_TABLE)
@@ -98,9 +98,10 @@ bt <- mt[!is.na(mt$research_name) & !is.na(mt$final_units),] # filter
 bt$units = bt$final_units # rename
 bt <- bt[c("research_name", "units", "low_bound", "high_bound")] # select
 
+# Construct our list of L0 files to process and output location
 L0 <- file.path(params$DATA_ROOT, params$L0)
 files_to_process <- list.files(L0, pattern = "*.csv$", full.names = TRUE)
-
+# ...and the output folder
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 
 source("helpers.R")
@@ -272,12 +273,12 @@ for(i in seq_along(files_to_process)) {
     site <- dat$Site[1]
     if(site %in% tzt$Site) {
         site_tz <- tzt$Datalogger_time_zone[which(site == tzt$Site)]
-        if(site_tz != params$L1_DATA_TIMEZONE) {
-            message("\tChanging timestamps from ", site_tz, " to ", params$L1_DATA_TIMEZONE)
+        if(site_tz != L1_DATA_TIMEZONE) {
+            message("\tChanging timestamps from ", site_tz, " to ", L1_DATA_TIMEZONE)
             # The timestamps were recorded in the site's time zone, which differs
             # from the L1 timezone, so convert to POSIXct and change tz
             timestamps <- ymd_hms(dat$TIMESTAMP, tz = site_tz)
-            timestamps <- with_tz(timestamps, tzone = params$L1_DATA_TIMEZONE)
+            timestamps <- with_tz(timestamps, tzone = L1_DATA_TIMEZONE)
             dat$TIMESTAMP <- format(timestamps, "%Y-%m-%d %H:%M:%S")
         }
     } else {
@@ -325,7 +326,7 @@ for(i in seq_along(files_to_process)) {
 
 # Check whether all out-of-service tables were checked
 # If not, this probably indicates a naming mistake
-if(!params$run_parallel && !all(oos_data_used)) {
+if(!all(oos_data_used)) {
     warning("Out-of-service tables never used: ",
          paste(names(oos_data_used)[!oos_data_used], collapse = ","))
 }

@@ -62,13 +62,16 @@ source("L1-utils.R")
 source("metadata-utils.R")
 start_timer("everything")
 
-# Get the column metadata file
+# Get the column metadata file. This provides descriptions
+# about each column, specifies the column order of output data,
+# and serves as a confirmation check for the presence of columns.
 column_md <- read.csv(file.path(params$METADATA_ROOT,
                                 params$L1_METADATA,
                                 params$METADATA_COLUMNS_TABLE),
                       comment.char = "#",
                       stringsAsFactors = FALSE)
 
+# L1 processes folders, not files; assemble the list of those
 L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 dirs_to_process <- scan_folders(L1_NORMALIZE)
 
@@ -84,7 +87,7 @@ L1_VAR_MD <- L1_VAR_MD[L1_VAR_MD$research_name != "",]
 
 L1 <- file.path(params$DATA_ROOT, params$L1)
 
-# Don't write plot for test data; partial workaround for
+# Don't write plots for test data; this is a partial workaround for
 # https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/415
 WRITE_PLOTS <- !grepl("TEST", params$DATA_ROOT)
 
@@ -227,6 +230,10 @@ options(warn = oldwarn)
 L1 metadata template directory is `r params$L1_METADATA`.
 
 ```{r metadata}
+# We first write the overall README, i.e. for the entire L1 release,
+# and then proceed folder by folder in generating the metadata files
+# specific to each site-year folder.
+
 # Write the overall README
 start_timer("metadata")
 readme_fn <- file.path(params$METADATA_ROOT,
@@ -243,7 +250,8 @@ readme_outfn <- file.path(L1, basename(readme_fn))
 message("Writing overall README ", readme_outfn, "...")
 writeLines(readme, readme_outfn)
 
-# Get the L1 template file
+# Get the L1 template file used for generating specific metadata
+# file for each site-year folder
 template_file <- file.path(params$METADATA_ROOT,
                            params$L1_METADATA, 
                            "L1_metadata_template.txt")
@@ -309,7 +317,7 @@ for(dd in data_dirs) {
     md <- append(md, qaqc_for_insert, after = qaqc_info_pos)
     md <- md[-qaqc_info_pos]
 
-    # Write the final metadata file
+    # Write the final metadata file into the site_year folder 
     mdfn <- paste0(dd, "_L1_v", params$L1_VERSION, "_metadata.txt")
     message("\tWriting ", mdfn, "...")
     writeLines(md, file.path(L1, dd, mdfn))
@@ -320,6 +328,7 @@ stop_timer("metadata")
 ## Documentation and code
 
 ```{r docs-and-code}
+# Copy example code into release folder
 start_timer("docs-code")
 ok <- file.copy(params$CODE_EXAMPLES, L1, recursive = TRUE)
 if(ok) {
@@ -343,7 +352,6 @@ Total NA rows written: `r n_na`
 ## Clean up
 
 ```{r cleanup}
-#fdb_cleanup() # Close flags database
 stop_timer("everything")
 
 print(timer_tracker)

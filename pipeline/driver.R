@@ -99,8 +99,7 @@ driver_try(
                   execute_params = list(DATA_ROOT = ROOT,
                                         L1_DATA_TIMEZONE = L1_DATA_TZ,
                                         html_outfile = outfile,
-                                        logfile = LOGFILE,
-                                        run_parallel = TRUE))
+                                        logfile = LOGFILE))
 )
 copy_output("L1_normalize.html", outfile)
 L1_normalize_time <- format(round(difftime(Sys.time(), begin), 1))
