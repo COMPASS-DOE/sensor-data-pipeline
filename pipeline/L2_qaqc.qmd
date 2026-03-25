@@ -23,11 +23,11 @@ format:
 editor: visual
 ---
 
-This script
+This script is an intermediate step between L1 and L2. It
 
 -   Reads in the L1 data files one by one
 
--   Drops NA data rows (shouldn't be any?)
+-   Drops NA data rows (although there shouldn't be any)
 
 -   Drops flagged data: `F_OOB`, `F_OOS`, outliers `F_MAD`
 
@@ -50,6 +50,7 @@ library(lubridate)
 library(zoo)
 library(ggplot2)
 
+# Construct our list of L1 files to process and output location
 L1 <- file.path(params$DATA_ROOT, params$L1)
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 
@@ -57,6 +58,8 @@ files_to_process <- list.files(L1,
                                pattern = "[A-Z]{3}_[A-Z]+[1-3]*_[0-9]{8}-[0-9]{8}_.+csv$", 
                                full.names = TRUE, recursive = TRUE)
 
+# The QAQC table holds settings related to outlier detection 
+# and MAC (mean annual cycle) for each variable
 QAQC_TABLE <- file.path(params$METADATA_ROOT, params$QAQC_TABLE)
 qaqct <- read_csv(QAQC_TABLE, col_types = "cccccc")
 qaqct <- qaqct[!is.na(qaqct$variable),]
@@ -103,9 +106,9 @@ f <- function(fn, out_dir) {
                        Year = unique(year(dat$TIMESTAMP)),
                        Rows = nrow(dat))
     
-    # loop through all the F_ flags, count, and add to summary table,
+    # Loop through all the F_ flags, count, and add to summary table
     flag_cols <- grep("^F_", colnames(dat))
-    dat$F_drop <- rep(0L, nrow(dat)) # signals whether to drop row or not
+    dat$F_drop <- rep(0L, nrow(dat)) # new flag: drop row or not
     for(fname in colnames(dat)[flag_cols]) {
         # NA flags are treated as false (zero)
         dat[[fname]][is.na(dat[[fname]])] <- FALSE
@@ -123,18 +126,18 @@ f <- function(fn, out_dir) {
     dat$TIMESTAMP <- round_date(dat$TIMESTAMP, unit = params$timestamp_round)
     dat_summarised <- L2_aggregate(dat)
     
-    # Complete the data: fill in (with NA) all timestamps and all combinations
-    # of Instrument, Sensor, etc. This guarantees a smooth time series for
-    # each sensor
+    # Complete the data: fill in (with NA) all timestamps and all
+    # combinations of Instrument, Sensor, etc. This guarantees a 
+    # smooth time series for each sensor
     rows <- nrow(dat_summarised)
-    dat_complete <- L2_complete(dat_summarised) # function is in L2_qaqc-utils
+    dat_complete <- L2_complete(dat_summarised)
     message("\tCompleted data; started with ", rows, 
             " rows...now ", nrow(dat_complete))
     
-    # Interpolate across small gaps for each site, plot, instrument, and sensor
-        
-    # 'maxgap' controls zoo::na_approx's gap-filling behavior; we compute it
-    # based on the data interval and the max_gap_fill entry in the QAQC table
+    # Interpolate across small gaps for each sensor
+    # 'maxgap' controls zoo::na_approx's gap-filling behavior; 
+    # we compute it based on the data interval and the max_gap_fill 
+    # entry in the QAQC table
     if(is.numeric(dat_complete$Value)) {
         i <- which(qaqct$variable == rn)
         od_period <- period(qaqct$max_interp[i])
@@ -201,3 +204,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+

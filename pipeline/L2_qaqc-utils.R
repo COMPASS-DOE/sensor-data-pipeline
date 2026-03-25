@@ -6,8 +6,9 @@ library(testthat)
 
 
 # Aggregate (average) the data for each timestep, computing `n` and `n_drop`
-# I have been trying not to use dplyr, a heavyweight dependency, but all
-# the base R solutions for this step are super slow and we are short on time
+# I have been trying not to use dplyr, a heavyweight and ever-changing
+# dependency, but all the base R solutions for this step are slow and
+# we are short on time
 library(dplyr)
 L2_aggregate <- function(x) {
     x <- x %>% group_by(Site, Plot, TIMESTAMP, Instrument, Instrument_ID,

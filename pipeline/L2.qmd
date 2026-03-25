@@ -59,6 +59,7 @@ library(ggplot2)
 theme_set(theme_bw())
 library(arrow)
 
+# Construct our input and output locations
 L2_QAQC <- file.path(params$DATA_ROOT, params$L2_QAQC)
 L2 <- file.path(params$DATA_ROOT, params$L2)
 
@@ -100,7 +101,7 @@ source("metadata-utils.R")
 
 vmd_combined <- combine_variable_metadata(L2_VAR_MD, derived_vars)
 
-# Don't write plot for test data; partial workaround for
+# Don't write plots for test data; partial workaround for
 # https://github.com/COMPASS-DOE/sensor-data-pipeline/issues/415
 WRITE_PLOTS <- !grepl("TEST", params$DATA_ROOT)
 
@@ -163,9 +164,10 @@ for(i in seq_len(nrow(derived_vars))) {
         
         names(dat_needed) <- grp$research_name
         
-        # We now have all the research-name data needed to compute derived variable "dv" for
-        # this site and plot and year. BUT it's possible that the relevant instruments didn't
-        # all measure the same thing. (This occurs at DLG, where we have TEROS12s measuring
+        # We now have all the research-name data needed to compute derived
+        # variable "dv" for this site and plot and year. BUT it's possible 
+        # that the relevant instruments didn't all measure the same thing.
+        # (This occurs at DLG, where we have TEROS12s measuring
         # three variables but TEROS21s measuring only two. Argh.)
         # So, calculate the derived variable instrument by instrument
         instruments <- unique(unlist(sapply(dat_needed, function(x) x$Instrument)))
@@ -206,8 +208,8 @@ for(i in seq_len(nrow(derived_vars))) {
 
 ```{r mac-processing}
 
-# The site-research name table holds the unique combinations of those attributes
-# We will process all files at once that match the attributes for a given row
+# The site-research name table holds the unique combinations site, plot,
+# and research name. We process at once all files that match each row
 site_rn_table <- unique(ftp_table[c("site", "plot", "research_name")])
 
 smry <- site_rn_table
@@ -275,7 +277,7 @@ for(i in seq_len(nrow(site_rn_table))) {
           dat <- left_join(dat, mac, by = c("month", "mday", "hour", "minute"))
           stopifnot(nrow(dat) == oldrows) # sanity check
 
-        # call gap-filling routine for each Instrument_ID and Sensor_ID
+        # Call gap-filling routine for each Instrument_ID and Sensor_ID
         # split doesn't work with NA values (???) so replace those...
         dat <- replace_na(dat, list(Instrument_ID = "", Sensor_ID = ""))
         # ...then split and apply
@@ -308,7 +310,7 @@ for(i in seq_len(nrow(site_rn_table))) {
             }
         }
         
-        message("\tGap filled ", 
+        message("\tMAC'd ", 
                 sum(is.na(dat_gf$Value)) - sum(is.na(dat_gf$Value_MAC)),
                 " values in ", these_files$filename[j])
         # Update the summary and files-to-process tables
@@ -359,6 +361,9 @@ knitr::kable(smry)
 L2 metadata template directory is `r params$L2_METADATA`.
 
 ```{r metadata}
+# We first write the overall README, i.e. for the entire L2 release,
+# and then proceed folder by folder in generating the metadata files
+# specific to each site-year folder.
 
 source("metadata-utils.R")
 
@@ -455,6 +460,7 @@ for(dd in data_dirs) {
 ## Documentation and code
 
 ```{r docs-and-code}
+# Copy example code into release folder
 ok <- file.copy(params$CODE_EXAMPLES, L2, recursive = TRUE)
 if(ok) {
     message("Copied ", params$CODE_EXAMPLES, " to ", L2)
@@ -470,3 +476,4 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
+

@@ -2,7 +2,6 @@
 
 library(lubridate)
 library(readr)
-#library(arrow)
 
 # Constants used in this file and elsewhere in the system
 GIT_COMMIT <- substr(system("git rev-parse HEAD", intern = TRUE), 1, 7)
