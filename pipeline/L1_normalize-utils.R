@@ -252,9 +252,9 @@ expect_silent(unit_conversion(x$value, x$research_name, y, quiet = TRUE))
 
 # The second thing we pass is the observation data frame
 
-# This function returns a logical vector, of the same length as the data_df
-# input, that becomes F_OOS
-oos <- function(oos_df, data_df) {
+# This function returns a logical vector, of the same length as the
+# data_df input, that becomes F_OOS
+check_oos <- function(oos_df, data_df) {
     oos_df <- as.data.frame(oos_df)
 
     # Make sure that any 'extra' condition columns (in addition to the
@@ -303,37 +303,38 @@ test_oos <- function() {
 
     # No other conditions beyond time window
     oos_df <- data.frame(oos_begin = 1, oos_end = 1)
-    stopifnot(oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
     oos_df <- data.frame(oos_begin = 4, oos_end = 5)
-    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
     oos_df <- data.frame(oos_begin = 0, oos_end = 2)
-    stopifnot(oos(oos_df, data_df) == c(TRUE, TRUE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(TRUE, TRUE, FALSE))
     oos_df <- data.frame(oos_begin = 0, oos_end = 3)
-    stopifnot(oos(oos_df, data_df) == c(TRUE, TRUE, TRUE))
+    stopifnot(check_oos(oos_df, data_df) == c(TRUE, TRUE, TRUE))
 
     # x condition - doesn't match even though timestamp does
     oos_df <- data.frame(oos_begin = 1, oos_end = 1, x = "b")
-    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
     # x condition - matches and timestamp does
     oos_df <- data.frame(oos_begin = 1, oos_end = 1, x = "a")
-    stopifnot(oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(TRUE, FALSE, FALSE))
     # x condition - some match, some don't
     oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "b")
-    stopifnot(oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
     # x and y condition
     oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "b", y = 5)
-    stopifnot(oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(FALSE, TRUE, FALSE))
     oos_df <- data.frame(oos_begin = 1, oos_end = 2, x = "a", y = 5)
-    stopifnot(oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
+    stopifnot(check_oos(oos_df, data_df) == c(FALSE, FALSE, FALSE))
 
     # Error thrown if condition column(s) not present
     oos_df <- data.frame(oos_begin = 1, oos_end = 2, z = 1)
-    out <- try(oos(oos_df, data_df), silent = TRUE)
+    out <- try(check_oos(oos_df, data_df), silent = TRUE)
     stopifnot(class(out) == "try-error")
 }
 test_oos()
 
-# Read all out-of-service files and check their formatting
+# Read all out-of-service files, check their formatting,
+# and return as a list of the oos data tibbles
 read_oos_data <- function(oos_dir) {
     message("Dir is ", oos_dir)
     oos_files <- list.files(oos_dir, pattern = "\\.csv$", full.names = TRUE)

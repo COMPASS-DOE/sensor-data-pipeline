@@ -106,11 +106,8 @@ L1_NORMALIZE <- file.path(params$DATA_ROOT, params$L1_NORMALIZE)
 
 source("helpers.R")
 
-# Read out-of-service data and set up a structure to keep track
-# of whether each table is used or not
+# Read out-of-service data
 oos_data <- read_oos_data(params$OOS)
-oos_data_used <- rep(FALSE, length.out = length(oos_data))
-names(oos_data_used) <- names(oos_data)
 
 # Restore old warning setting
 options(warn = oldwarn)
@@ -260,9 +257,8 @@ for(i in seq_along(files_to_process)) {
             # Is this reasonable? If not, we need to run through
             # all `oos_data` entries, OR'ing the results as we go, 
             # instead of breaking out
-            dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
+            dat$F_OOS <- as.integer(check_oos(oos_data[[tbl]], dat))
             if(sum(dat$F_OOS)) message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
-            oos_data_used[tbl] <- TRUE # won't work when parallelized
             break
         }
     }
@@ -322,13 +318,6 @@ for(i in seq_along(files_to_process)) {
     }
 
     out[[i]] <- smry
-}
-
-# Check whether all out-of-service tables were checked
-# If not, this probably indicates a naming mistake
-if(!all(oos_data_used)) {
-    warning("Out-of-service tables never used: ",
-         paste(names(oos_data_used)[!oos_data_used], collapse = ","))
 }
 ```
 
