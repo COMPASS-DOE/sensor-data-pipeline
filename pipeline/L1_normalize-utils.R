@@ -333,7 +333,8 @@ test_oos <- function() {
 }
 test_oos()
 
-# Read all out-of-service files and check their formatting
+# Read all out-of-service files, check their formatting,
+# and return as a list of the oos data tibbles
 read_oos_data <- function(oos_dir) {
     message("Dir is ", oos_dir)
     oos_files <- list.files(oos_dir, pattern = "\\.csv$", full.names = TRUE)
