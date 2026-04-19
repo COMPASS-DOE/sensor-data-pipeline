@@ -1,11 +1,11 @@
 # out-of-service
 
 This folder holds out-of-service (OOS) tables that are
-read by `L1_normalize.qmd` and used to add out-of-service flags to data.
+read by `L1_normalize.qmd` to add out-of-service flags to data.
 
-Note that **the CSV filenames are important.** They are used as a 
-pattern that's checked against the data 'Table' during L1_normalize
-processing.
+**Note that the CSV filenames are important:** they are used as a 
+pattern that's checked against the data 'Table' column during
+L1_normalize processing.
 
 OOS tables are CSV files and _must_ have at least three columns:
 * `Site` - Site name for which these OOS entries apply
