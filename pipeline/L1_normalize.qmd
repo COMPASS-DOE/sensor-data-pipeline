@@ -257,7 +257,7 @@ for(i in seq_along(files_to_process)) {
             # Is this reasonable? If not, we need to run through
             # all `oos_data` entries, OR'ing the results as we go, 
             # instead of breaking out
-            dat$F_OOS <- as.integer(oos(oos_data[[tbl]], dat))
+            dat$F_OOS <- as.integer(check_oos(oos_data[[tbl]], dat))
             if(sum(dat$F_OOS)) message("\tAdded ", sum(dat$F_OOS), " OOS flags for ", tbl)
             break
         }
