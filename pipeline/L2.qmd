@@ -38,13 +38,13 @@ editor: visual
 
 This script
 
--   Reads in the L2_qaqc data files one by one
+- Reads in the L2_qaqc data files one by one
 
--   Computes derived variables
+- Computes derived variables
 
--   Calls gap-filling algorithms (currently only mean annual cycle)
+- Calls gap-filling algorithms (currently only mean annual cycle)
 
--   Writes L2 files and accompanying documentation
+- Writes L2 files and accompanying documentation
 
 ## Initializing
 
@@ -327,6 +327,9 @@ for(i in seq_len(nrow(site_rn_table))) {
         # Clean up and check that the data frame has correct columns
         dat_gf <- check_drop_sort_columns(dat_gf, column_md, params$METADATA_COLUMNS_TABLE)
 
+        # Ensure that the timestamp column is in correct time zone
+        dat_gf$TIMESTAMP <- force_tz(dat_gf$TIMESTAMP, tzone = params$L2_DATA_TIMEZONE)
+        
         write_to_folders(dat_gf,
                          root_dir = L2, 
                          data_level = "L2",
@@ -476,4 +479,3 @@ Git commit `r GIT_COMMIT`.
 ```{r reproducibility}
 sessionInfo()
 ```
-
