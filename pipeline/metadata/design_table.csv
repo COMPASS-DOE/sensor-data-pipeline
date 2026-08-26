@@ -3168,76 +3168,75 @@ ERT-84,Teros21Table,"Teros21({12,16},3)",TMP,S,TEROS21,ERT,"{12,16}",,,soil-EC-7
 ERT-84,Redox5,Format,TMP,,,,,,,,
 ERT-84,Redox5,RECORD,TMP,,,,,,,,
 ERT-84,Redox5,Statname,TMP,,,,,,,,
-ERT-84,Redox5,BattV,TMP,,,,,,,,
-ERT-84,Redox5,RedoxRa({1:4}),TMP,F,RedoxA,ERT,{1:4}a,,,,redox-35cm
-ERT-84,Redox5,RedoxRa({5:8}),TMP,F,RedoxA,ERT,{5:8}a,,,,redox-25cm
-ERT-84,Redox5,RedoxRa({9:12}),TMP,F,RedoxA,ERT,{9:12}a,,,,redox-15cm
-ERT-84,Redox5,RedoxRa({13:16}),TMP,F,RedoxA,ERT,{13:16}a,,,,redox-5cm
-ERT-84,Redox5,RedoxRa({17:20}),TMP,F,RedoxA,ERT,{17:20}a,,,,redox-35cm
-ERT-84,Redox5,RedoxRa({21:24}),TMP,F,RedoxA,ERT,{21:24}a,,,,redox-25cm
-ERT-84,Redox5,RedoxRa({25:28}),TMP,F,RedoxA,ERT,{25:28}a,,,,redox-15cm
-ERT-84,Redox5,RedoxRa({29:32}),TMP,F,RedoxA,ERT,{29:32}a,,,,redox-5cm
-ERT-84,Redox5,RedoxRa({33:36}),TMP,S,RedoxA,ERT,{33:36}a,,,,redox-35cm
-ERT-84,Redox5,RedoxRa({37:40}),TMP,S,RedoxA,ERT,{37:40}a,,,,redox-25cm
-ERT-84,Redox5,RedoxRa({41:44}),TMP,S,RedoxA,ERT,{41:44}a,,,,redox-15cm
-ERT-84,Redox5,RedoxRa({45:48}),TMP,S,RedoxA,ERT,{45:48}a,,,,redox-5cm
-ERT-84,Redox5,RedoxRa({49:52}),TMP,S,RedoxA,ERT,{49:52}a,,,,redox-35cm
-ERT-84,Redox5,RedoxRa({53:56}),TMP,S,RedoxA,ERT,{53:56}a,,,,redox-25cm
-ERT-84,Redox5,RedoxRa({57:60}),TMP,S,RedoxA,ERT,{57:60}a,,,,redox-15cm
-ERT-84,Redox5,RedoxRa({61:64}),TMP,S,RedoxA,ERT,{61:64}a,,,,redox-5cm
-ERT-84,Redox5,RedoxRb({1:4}),TMP,F,RedoxB,ERT,{1:4}b,,,,redox-35cm
-ERT-84,Redox5,RedoxRb({5:8}),TMP,F,RedoxB,ERT,{5:8}b,,,,redox-25cm
-ERT-84,Redox5,RedoxRb({9:12}),TMP,F,RedoxB,ERT,{9:12}b,,,,redox-15cm
-ERT-84,Redox5,RedoxRb({13:16}),TMP,F,RedoxB,ERT,{13:16}b,,,,redox-5cm
-ERT-84,Redox5,RedoxRb({17:20}),TMP,F,RedoxB,ERT,{17:20}b,,,,redox-35cm
-ERT-84,Redox5,RedoxRb({21:24}),TMP,F,RedoxB,ERT,{21:24}b,,,,redox-25cm
-ERT-84,Redox5,RedoxRb({25:28}),TMP,F,RedoxB,ERT,{25:28}b,,,,redox-15cm
-ERT-84,Redox5,RedoxRb({29:32}),TMP,F,RedoxB,ERT,{29:32}b,,,,redox-5cm
-ERT-84,Redox5,RedoxRb({33:36}),TMP,S,RedoxB,ERT,{33:36}b,,,,redox-35cm
-ERT-84,Redox5,RedoxRb({37:40}),TMP,S,RedoxB,ERT,{37:40}b,,,,redox-25cm
-ERT-84,Redox5,RedoxRb({41:44}),TMP,S,RedoxB,ERT,{41:44}b,,,,redox-15cm
-ERT-84,Redox5,RedoxRb({45:48}),TMP,S,RedoxB,ERT,{45:48}b,,,,redox-5cm
-ERT-84,Redox5,RedoxRb({49:52}),TMP,S,RedoxB,ERT,{49:52}b,,,,redox-35cm
-ERT-84,Redox5,RedoxRb({53:56}),TMP,S,RedoxB,ERT,{53:56}b,,,,redox-25cm
-ERT-84,Redox5,RedoxRb({57:60}),TMP,S,RedoxB,ERT,{57:60}b,,,,redox-15cm
-ERT-84,Redox5,RedoxRb({61:64}),TMP,S,RedoxB,ERT,{61:64}b,,,,redox-5cm
+ERT-84,Redox5,RedoxRa({1:4}),TMP,F,RedoxA,ERT,{1:4}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({5:8}),TMP,F,RedoxA,ERT,{5:8}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({9:12}),TMP,F,RedoxA,ERT,{9:12}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({13:16}),TMP,F,RedoxA,ERT,{13:16}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({17:20}),TMP,F,RedoxA,ERT,{17:20}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({21:24}),TMP,F,RedoxA,ERT,{21:24}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({25:28}),TMP,F,RedoxA,ERT,{25:28}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({29:32}),TMP,F,RedoxA,ERT,{29:32}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({33:36}),TMP,S,RedoxA,ERT,{33:36}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({37:40}),TMP,S,RedoxA,ERT,{37:40}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({41:44}),TMP,S,RedoxA,ERT,{41:44}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({45:48}),TMP,S,RedoxA,ERT,{45:48}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({49:52}),TMP,S,RedoxA,ERT,{49:52}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({53:56}),TMP,S,RedoxA,ERT,{53:56}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({57:60}),TMP,S,RedoxA,ERT,{57:60}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRa({61:64}),TMP,S,RedoxA,ERT,{61:64}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({1:4}),TMP,F,RedoxB,ERT,{1:4}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({5:8}),TMP,F,RedoxB,ERT,{5:8}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({9:12}),TMP,F,RedoxB,ERT,{9:12}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({13:16}),TMP,F,RedoxB,ERT,{13:16}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({17:20}),TMP,F,RedoxB,ERT,{17:20}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({21:24}),TMP,F,RedoxB,ERT,{21:24}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({25:28}),TMP,F,RedoxB,ERT,{25:28}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({29:32}),TMP,F,RedoxB,ERT,{29:32}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({33:36}),TMP,S,RedoxB,ERT,{33:36}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({37:40}),TMP,S,RedoxB,ERT,{37:40}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({41:44}),TMP,S,RedoxB,ERT,{41:44}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({45:48}),TMP,S,RedoxB,ERT,{45:48}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({49:52}),TMP,S,RedoxB,ERT,{49:52}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({53:56}),TMP,S,RedoxB,ERT,{53:56}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({57:60}),TMP,S,RedoxB,ERT,{57:60}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox5,RedoxRb({61:64}),TMP,S,RedoxB,ERT,{61:64}b,,,,Duplicates RedoxTEST table
 ,,,,,,,,,,,
 ERT-84,Redox15,Format,TMP,,,,,,,,
 ERT-84,Redox15,RECORD,TMP,,,,,,,,
 ERT-84,Redox15,Statname,TMP,,,,,,,,
 ERT-84,Redox15,BattV,TMP,,,,,,,,
-ERT-84,Redox15,RedoxRa({1:4}),TMP,F,RedoxA,ERT,{1:4}a,,,,redox-35cm
-ERT-84,Redox15,RedoxRa({5:8}),TMP,F,RedoxA,ERT,{5:8}a,,,,redox-25cm
-ERT-84,Redox15,RedoxRa({9:12}),TMP,F,RedoxA,ERT,{9:12}a,,,,redox-15cm
-ERT-84,Redox15,RedoxRa({13:16}),TMP,F,RedoxA,ERT,{13:16}a,,,,redox-5cm
-ERT-84,Redox15,RedoxRa({17:20}),TMP,F,RedoxA,ERT,{17:20}a,,,,redox-35cm
-ERT-84,Redox15,RedoxRa({21:24}),TMP,F,RedoxA,ERT,{21:24}a,,,,redox-25cm
-ERT-84,Redox15,RedoxRa({25:28}),TMP,F,RedoxA,ERT,{25:28}a,,,,redox-15cm
-ERT-84,Redox15,RedoxRa({29:32}),TMP,F,RedoxA,ERT,{29:32}a,,,,redox-5cm
-ERT-84,Redox15,RedoxRa({33:36}),TMP,S,RedoxA,ERT,{33:36}a,,,,redox-35cm
-ERT-84,Redox15,RedoxRa({37:40}),TMP,S,RedoxA,ERT,{37:40}a,,,,redox-25cm
-ERT-84,Redox15,RedoxRa({41:44}),TMP,S,RedoxA,ERT,{41:44}a,,,,redox-15cm
-ERT-84,Redox15,RedoxRa({45:48}),TMP,S,RedoxA,ERT,{45:48}a,,,,redox-5cm
-ERT-84,Redox15,RedoxRa({49:52}),TMP,S,RedoxA,ERT,{49:52}a,,,,redox-35cm
-ERT-84,Redox15,RedoxRa({53:56}),TMP,S,RedoxA,ERT,{53:56}a,,,,redox-25cm
-ERT-84,Redox15,RedoxRa({57:60}),TMP,S,RedoxA,ERT,{57:60}a,,,,redox-15cm
-ERT-84,Redox15,RedoxRa({61:64}),TMP,S,RedoxA,ERT,{61:64}a,,,,redox-5cm
-ERT-84,Redox15,RedoxRb({1:4}),TMP,F,RedoxB,ERT,{1:4}b,,,,redox-35cm
-ERT-84,Redox15,RedoxRb({5:8}),TMP,F,RedoxB,ERT,{5:8}b,,,,redox-25cm
-ERT-84,Redox15,RedoxRb({9:12}),TMP,F,RedoxB,ERT,{9:12}b,,,,redox-15cm
-ERT-84,Redox15,RedoxRb({13:16}),TMP,F,RedoxB,ERT,{13:16}b,,,,redox-5cm
-ERT-84,Redox15,RedoxRb({17:20}),TMP,F,RedoxB,ERT,{17:20}b,,,,redox-35cm
-ERT-84,Redox15,RedoxRb({21:24}),TMP,F,RedoxB,ERT,{21:24}b,,,,redox-25cm
-ERT-84,Redox15,RedoxRb({25:28}),TMP,F,RedoxB,ERT,{25:28}b,,,,redox-15cm
-ERT-84,Redox15,RedoxRb({29:32}),TMP,F,RedoxB,ERT,{29:32}b,,,,redox-5cm
-ERT-84,Redox15,RedoxRb({33:36}),TMP,S,RedoxB,ERT,{33:36}b,,,,redox-35cm
-ERT-84,Redox15,RedoxRb({37:40}),TMP,S,RedoxB,ERT,{37:40}b,,,,redox-25cm
-ERT-84,Redox15,RedoxRb({41:44}),TMP,S,RedoxB,ERT,{41:44}b,,,,redox-15cm
-ERT-84,Redox15,RedoxRb({45:48}),TMP,S,RedoxB,ERT,{45:48}b,,,,redox-5cm
-ERT-84,Redox15,RedoxRb({49:52}),TMP,S,RedoxB,ERT,{49:52}b,,,,redox-35cm
-ERT-84,Redox15,RedoxRb({53:56}),TMP,S,RedoxB,ERT,{53:56}b,,,,redox-25cm
-ERT-84,Redox15,RedoxRb({57:60}),TMP,S,RedoxB,ERT,{57:60}b,,,,redox-15cm
-ERT-84,Redox15,RedoxRb({61:64}),TMP,S,RedoxB,ERT,{61:64}b,,,,redox-5cm
+ERT-84,Redox15,RedoxRa({1:4}),TMP,F,RedoxA,ERT,{1:4}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({5:8}),TMP,F,RedoxA,ERT,{5:8}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({9:12}),TMP,F,RedoxA,ERT,{9:12}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({13:16}),TMP,F,RedoxA,ERT,{13:16}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({17:20}),TMP,F,RedoxA,ERT,{17:20}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({21:24}),TMP,F,RedoxA,ERT,{21:24}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({25:28}),TMP,F,RedoxA,ERT,{25:28}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({29:32}),TMP,F,RedoxA,ERT,{29:32}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({33:36}),TMP,S,RedoxA,ERT,{33:36}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({37:40}),TMP,S,RedoxA,ERT,{37:40}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({41:44}),TMP,S,RedoxA,ERT,{41:44}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({45:48}),TMP,S,RedoxA,ERT,{45:48}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({49:52}),TMP,S,RedoxA,ERT,{49:52}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({53:56}),TMP,S,RedoxA,ERT,{53:56}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({57:60}),TMP,S,RedoxA,ERT,{57:60}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRa({61:64}),TMP,S,RedoxA,ERT,{61:64}a,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({1:4}),TMP,F,RedoxB,ERT,{1:4}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({5:8}),TMP,F,RedoxB,ERT,{5:8}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({9:12}),TMP,F,RedoxB,ERT,{9:12}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({13:16}),TMP,F,RedoxB,ERT,{13:16}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({17:20}),TMP,F,RedoxB,ERT,{17:20}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({21:24}),TMP,F,RedoxB,ERT,{21:24}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({25:28}),TMP,F,RedoxB,ERT,{25:28}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({29:32}),TMP,F,RedoxB,ERT,{29:32}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({33:36}),TMP,S,RedoxB,ERT,{33:36}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({37:40}),TMP,S,RedoxB,ERT,{37:40}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({41:44}),TMP,S,RedoxB,ERT,{41:44}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({45:48}),TMP,S,RedoxB,ERT,{45:48}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({49:52}),TMP,S,RedoxB,ERT,{49:52}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({53:56}),TMP,S,RedoxB,ERT,{53:56}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({57:60}),TMP,S,RedoxB,ERT,{57:60}b,,,,Duplicates RedoxTEST table
+ERT-84,Redox15,RedoxRb({61:64}),TMP,S,RedoxB,ERT,{61:64}b,,,,Duplicates RedoxTEST table
 ,,,,,,,,,,,
 ERT-84,RedoxTEST,Format,TMP,,,ERT,,,,,
 ERT-84,RedoxTEST,RECORD,TMP,,,ERT,,,,,
@@ -3981,3 +3980,4 @@ GCREW_MET,GCREW_MET_15min,WS_ms_WS_Max,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS_Min,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS_Avg,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS,GCW,W,,,,,,,
+ERT-84,Redox5,BattV,TMP,,,,,,,,
