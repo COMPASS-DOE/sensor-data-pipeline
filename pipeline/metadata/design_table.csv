@@ -3168,6 +3168,7 @@ ERT-84,Teros21Table,"Teros21({12,16},3)",TMP,S,TEROS21,ERT,"{12,16}",,,soil-EC-7
 ERT-84,Redox5,Format,TMP,,,,,,,,
 ERT-84,Redox5,RECORD,TMP,,,,,,,,
 ERT-84,Redox5,Statname,TMP,,,,,,,,
+ERT-84,Redox5,BattV,TMP,,,,,,,,
 ERT-84,Redox5,RedoxRa({1:4}),TMP,F,RedoxA,ERT,{1:4}a,,,,Duplicates RedoxTEST table
 ERT-84,Redox5,RedoxRa({5:8}),TMP,F,RedoxA,ERT,{5:8}a,,,,Duplicates RedoxTEST table
 ERT-84,Redox5,RedoxRa({9:12}),TMP,F,RedoxA,ERT,{9:12}a,,,,Duplicates RedoxTEST table
@@ -3980,4 +3981,4 @@ GCREW_MET,GCREW_MET_15min,WS_ms_WS_Max,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS_Min,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS_Avg,GCW,W,,,,,,,
 GCREW_MET,GCREW_MET_15min,WS_ms_WS,GCW,W,,,,,,,
-ERT-84,Redox5,BattV,TMP,,,,,,,,
+,,,,,,,,,,,
