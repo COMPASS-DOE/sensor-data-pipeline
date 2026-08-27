@@ -7,6 +7,7 @@ RedoxTable,Redox,redox-5cm,mV,mV,x * 1,-2500,2500,"Redox at 5 cm depth; each sen
 RedoxTable,Redox,redox-10cm,mV,mV,x * 1,-2500,2500,"Redox at 10 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-15cm,mV,mV,x * 1,-2500,2500,"Redox at 15 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-20cm,mV,mV,x * 1,-2500,2500,"Redox at 20 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
+RedoxTable,Redox,redox-25cm,mV,mV,x * 1,-2500,2500,"Redox at 25 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-35cm,mV,mV,x * 1,-2500,2500,"Redox at 35 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 RedoxTable,Redox,redox-55cm,mV,mV,x * 1,-2500,2500,"Redox at 55 cm depth; each sensor measures two values based on electrode ""A"" or ""B"" reference probes"
 TerosTable,VWC,soil-vwc-5cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 5 cm calibrated for mineral soil
@@ -24,6 +25,12 @@ TerosTable,EC,soil-EC-30cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductiv
 TerosTable,VWC,soil-vwc-40cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 40 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-40cm,degC,degC,x * 1,-40,60,Soil temperature at 40 cm
 TerosTable,EC,soil-EC-40cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 40 cm
+TerosTable,VWC,soil-vwc-50cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 50 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-50cm,degC,degC,x * 1,-40,60,Soil temperature at 50 cm
+TerosTable,EC,soil-EC-50cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 50 cm
+TerosTable,VWC,soil-vwc-70cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 70 cm calibrated for mineral soil
+TerosTable,TSOIL,soil-temp-70cm,degC,degC,x * 1,-40,60,Soil temperature at 70 cm
+TerosTable,EC,soil-EC-70cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 70 cm
 WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,Barometric pressure
 WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
 WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,Internal temperature
