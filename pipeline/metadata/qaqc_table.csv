@@ -167,6 +167,6 @@ soil-salinity-30cm,,,,,FALSE,Derived variable
 soil-salinity-40cm,,,,,FALSE,Derived variable
 gw-wl-below-surface,,,,,TRUE,Derived variable
 ,,,,,,
-surface-water-level,1 week,MAD,threshold=8,1 hour,FALSE,
-swl-noise,1 week,MAD,threshold=8,1 hour,FALSE,
-swl-tilt-angle,1 week,MAD,threshold=8,1 hour,FALSE,
+distance-to-surface,1 week,MAD,threshold=8,1 hour,FALSE,
+dts-noise,1 week,MAD,threshold=8,1 hour,FALSE,
+dts-tilt-angle,1 week,MAD,threshold=8,1 hour,FALSE,
