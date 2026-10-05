@@ -160,3 +160,6 @@ ExoTable_Xtra,Rhodamine_ugL,sonde-rhodamine,µg/L,µg/L,x * 1,,,Rhodamine concen
 ExoTable_Xtra,TAL_PC_cellsmL,sonde-tal,cells/mL,cells/mL,x * 1,,,Total algae concentration
 ExoTable_Xtra,BGA_PC_ugL,sonde-bga-pc,µg/L,µg/L,x * 1,,,Blue-green algae concentration
 ExoTable_Xtra,BGA_PC_Raw,sonde-bga-pc-raw,unitless,unitless,x * 1,,,Blue-green algae (raw value)
+Level_Troll15,Depth_to_Water_m,surface-water-level,cm,cm,x * 1,0,5,Water level from Level TROLL NC non-contact radar level sensor
+Level_Troll15,Signal_to_Noise_dB,swl-noise,dB,dB,x * 1,30,3000,Signal to noise ratio
+Level_Troll15,Tilt_Angle_deg,swl-tilt-angle,degrees,degrees,x * 1,0,3,Tilt angle of the sensor
