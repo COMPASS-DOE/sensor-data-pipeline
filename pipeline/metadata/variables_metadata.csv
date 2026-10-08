@@ -71,7 +71,7 @@ ClimaVue50_15min,BP_mbar_Max,wx-bpmax15,mbar,mbar,x * 1,500,1100,Maximum baromet
 ClimaVue50_15min,BP_mbar_TMx,wx-bptmx15,,,x * 1,,,Time of maximum barometric pressure in 15 minute period
 ClimaVue50_15min,BP_mbar_Min,wx-bpmin15,mbar,mbar,x * 1,500,1100,Minimum barometric pressure in 15 minute period
 ClimaVue50_15min,BP_mbar_TMn,wx-bptmn15,,,x * 1,,,Time of minimum barometric pressure in 15 minute period
-ClimaVue50_15min,RH,wx-rh15,perc,perc,x * 1,0,100,Relative humidity
+ClimaVue50_15min,RH,wx-rh15,perc,perc,x * 1,0,100.2,Relative humidity; can be slightly over 100%
 ClimaVue50_15min,RHT_C_Avg,wx-rht15,degC,degC,x * 1,,,Average temperature of humidity sensor over 15 minute period
 ClimaVue50_15min,VPD_Max,wx-vpdmax15,kPa,kPa,x * 1,,,Maximum vapor pressure deficit in 15 minutes period
 ClimaVue50_15min,VPD_Min,wx-vpdmin15,kPa,kPa,x * 1,,,Minimum vapor pressure deficit in 15 minutes period
