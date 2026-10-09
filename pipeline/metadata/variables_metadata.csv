@@ -16,21 +16,26 @@ TerosTable,EC,soil-EC-5cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivi
 TerosTable,VWC,soil-vwc-10cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 10 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-10cm,degC,degC,x * 1,-40,60,Soil temperature at 10 cm
 TerosTable,EC,soil-EC-10cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 10 cm
+Teros21Table,MP,soil-mp-10cm,kPa,kPa,x * 1,-100000,0,Soil matric potential at 10 cm
 TerosTable,VWC,soil-vwc-15cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 15 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-15cm,degC,degC,x * 1,-40,60,Soil temperature at 15 cm
 TerosTable,EC,soil-EC-15cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 15 cm
 TerosTable,VWC,soil-vwc-30cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 30 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-30cm,degC,degC,x * 1,-40,60,Soil temperature at 30 cm
 TerosTable,EC,soil-EC-30cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 30 cm
+Teros21Table,MP,soil-mp-30cm,kPa,kPa,x * 1,-100000,0,Soil matric potential at 30 cm
 TerosTable,VWC,soil-vwc-40cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 40 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-40cm,degC,degC,x * 1,-40,60,Soil temperature at 40 cm
 TerosTable,EC,soil-EC-40cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 40 cm
+Teros21Table,MP,soil-mp-40cm,kPa,kPa,x * 1,-100000,0,Soil matric potential at 40 cm
 TerosTable,VWC,soil-vwc-50cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 50 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-50cm,degC,degC,x * 1,-40,60,Soil temperature at 50 cm
 TerosTable,EC,soil-EC-50cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 50 cm
+Teros21Table,MP,soil-mp-50cm,kPa,kPa,x * 1,-100000,0,Soil matric potential at 50 cm
 TerosTable,VWC,soil-vwc-70cm,m3/m3,m3/m3,(3.879*10^-4) * x - 0.6956,0,0.7,Soil volumetric water content at 70 cm calibrated for mineral soil
 TerosTable,TSOIL,soil-temp-70cm,degC,degC,x * 1,-40,60,Soil temperature at 70 cm
 TerosTable,EC,soil-EC-70cm,µS/cm,μS/cm,x * 1,0,20000,Soil electrical conductivity at 70 cm
+Teros21Table,MP,soil-mp-70cm,kPa,kPa,x * 1,-100000,0,Soil matric potential at 70 cm
 WaterLevel,Barometric_Pressure600,gw-bar-pressure,mmHg,mmHg,x * 1,,,Barometric pressure
 WaterLevel,Temperature600,gw-temperature,degC,degC,x * 1,-5,50,Groundwater temperature
 WaterLevel,Temperature_Int600,gw-temperature-int,degC,degC,x * 1,-5,50,Internal temperature
