@@ -29,6 +29,11 @@ jobs:
             any::ggplot2
             any::testthat
             any::zoo
+            any::remotes
+
+      - name: Install compasstools
+        run: Rscript -e "remotes::install_github('COMPASS-DOE/compasstools')"
+
       - name: Run data workflow
         run: |
           cd pipeline/

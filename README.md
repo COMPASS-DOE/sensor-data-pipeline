@@ -6,9 +6,9 @@
 [![Static Badge](https://img.shields.io/badge/any_text-TEMPEST-violet?label=ESS-DIVE)](https://doi.org/10.15485/2479200)
 <!-- badges: end -->
 
-COMPASS-FME processing pipeline for environmental sensor data.
+COMPASS processing pipeline for environmental sensor data. This software was documented by [Pennington et al. (2025)](https://doi.org/10.1029/2025jg008807).
 
-Latest data release is `v2-1`, 30 January 2026.
+The latest data release is `v2-1`, 30 January 2026, and is available on ESS-DIVE: [10.15485/2588618](https://doi.org/10.15485/2588618) and [10.15485/2588616](https://doi.org/10.15485/2588616).
 
 <details>
 <summary>

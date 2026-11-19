@@ -9,15 +9,26 @@ soil-EC-5cm,,,,1 hour,TRUE,Too variable; no QAQC
 soil-vwc-10cm,1 month,MAD,threshold=8,2 hours,TRUE,Come back to this
 soil-temp-10cm,1 week,MAD,threshold=8,2 hours,TRUE,
 soil-EC-10cm,,,,2 hours,TRUE,Too variable; no QAQC
+soil-mp-10cm,,,,2 hours,TRUE,
 soil-vwc-15cm,1 month,MAD,threshold=8,2 hours,TRUE,
 soil-temp-15cm,1 week,MAD,threshold=8,2 hours,TRUE,
 soil-EC-15cm,,,,2 hours,TRUE,Too variable; no QAQC
 soil-vwc-30cm,1 month,MAD,threshold=8,2 hours,TRUE,Come back to this
 soil-temp-30cm,1 week,MAD,threshold=8,3 hours,TRUE,
 soil-EC-30cm,,,,3 hours,TRUE,Too variable; no QAQC
-soil-vwc-40cm,,,,3 hours,TRUE,
-soil-temp-40cm,,,,3 hours,TRUE,
+soil-mp-30cm,,,,2 hours,TRUE,
+soil-vwc-40cm,1 month,MAD,threshold=8,3 hours,TRUE,
+soil-temp-40cm,1 week,MAD,threshold=8,3 hours,TRUE,
 soil-EC-40cm,,,,3 hours,TRUE,
+soil-mp-40cm,,,,2 hours,TRUE,
+soil-vwc-50cm,1 month,MAD,threshold=8,3 hours,TRUE,
+soil-temp-50cm,1 week,MAD,threshold=8,3 hours,TRUE,
+soil-EC-50cm,,,,3 hours,TRUE,
+soil-mp-50cm,,,,2 hours,TRUE,
+soil-vwc-70cm,1 month,MAD,threshold=8,3 hours,TRUE,
+soil-temp-70cm,1 week,MAD,threshold=8,3 hours,TRUE,
+soil-EC-70cm,,,,3 hours,TRUE,
+soil-mp-70cm,,,,2 hours,TRUE,
 ,,,,,,
 gw-salinity,,,,1 hour,TRUE,Too variable; no QAQC
 gw-pressure-vented,,,,1 hour,TRUE,Too variable; no QAQC
@@ -61,6 +72,7 @@ redox-5cm,1 week,,threshold=8,1 hour,TRUE,
 redox-10cm,1 week,,threshold=8,1 hour,TRUE,
 redox-15cm,1 week,,threshold=8,1 hour,TRUE,
 redox-20cm,1 week,,threshold=8,1 hour,TRUE,
+redox-25cm,1 week,,threshold=8,1 hour,TRUE,
 redox-35cm,1 week,,threshold=8,1 hour,TRUE,
 redox-55cm,1 week,,threshold=8,1 hour,TRUE,
 sapflow-5cm,1 week,,threshold=8,1 hour,TRUE,
@@ -159,3 +171,7 @@ soil-salinity-15cm,,,,,FALSE,Derived variable
 soil-salinity-30cm,,,,,FALSE,Derived variable
 soil-salinity-40cm,,,,,FALSE,Derived variable
 gw-wl-below-surface,,,,,TRUE,Derived variable
+,,,,,,
+distance-to-surface,1 week,MAD,threshold=8,1 hour,FALSE,
+dts-noise,1 week,MAD,threshold=8,1 hour,FALSE,
+dts-tilt-angle,1 week,MAD,threshold=8,1 hour,FALSE,
